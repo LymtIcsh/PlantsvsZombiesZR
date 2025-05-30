@@ -1,0 +1,983 @@
+fileFormatVersion: 2
+guid: 746602493cedfa14f925c7ec5e647fdd
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 2028bb11b33bfff42bc4268121c86354
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  multiSpriteImportData: []
+  layeredSpriteImportData:
+  - name: Zombie_outerarm_upper
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 137
+      y: 154
+      width: 17
+      height: 35
+    spriteID: 279f7ccf28356834ebdac71ebe54832b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 137, y: 154}
+    spritePosition: {x: 85, y: 80}
+  - name: Zombie_outerarm_lower
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 137
+      y: 197
+      width: 19
+      height: 28
+    spriteID: 2b1dfcb18866d624aadab9e67b741029
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 137, y: 197}
+    spritePosition: {x: 76, y: 58}
+  - name: Zombie_outerarm_hand
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 137
+      y: 119
+      width: 25
+      height: 27
+    spriteID: bb77a2d6c7479e848bd962e49670adcd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 137, y: 119}
+    spritePosition: {x: 70, y: 37}
+  - name: "\u56FE\u5C42 4"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 87
+      y: 119
+      width: 31
+      height: 48
+    spriteID: dd7537ed8f14bcf4fabb206f5e010454
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 87, y: 119}
+    spritePosition: {x: 15, y: 96}
+  - name: "\u56FE\u5C42 7"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 222
+      width: 34
+      height: 26
+    spriteID: c6b11c49b8a25764ab2ebf178540130c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 222}
+    spritePosition: {x: 10, y: 110}
+  - name: "\u56FE\u5C42 9"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 87
+      y: 219
+      width: 34
+      height: 27
+    spriteID: c82c1e56936793c4d98aaf8ed8912662
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 87, y: 219}
+    spritePosition: {x: 10, y: 99}
+  - name: "\u56FE\u5C42 8"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 137
+      y: 4
+      width: 34
+      height: 26
+    spriteID: 98d845448bf9ed14d8c27da06a314ebc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 137, y: 4}
+    spritePosition: {x: 5, y: 119}
+  - name: "\u56FE\u5C42 5"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 137
+      y: 38
+      width: 34
+      height: 26
+    spriteID: 2e1bef3ba4a2d59418289aeaac3e949f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 137, y: 38}
+    spritePosition: {x: 4, y: 109}
+  - name: "\u56FE\u5C42 3"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 87
+      y: 63
+      width: 40
+      height: 48
+    spriteID: f944af81712edc44e956b0b4c6e95f1f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 87, y: 63}
+    spritePosition: {x: 7, y: 96}
+  - name: "\u56FE\u5C42 2"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 75
+      height: 78
+    spriteID: a99b360dbcf2bb34ba93387113971a1d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 37, y: 88}
+  - name: PeaShooter_headleaf_nearest
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 87
+      y: 4
+      width: 42
+      height: 51
+    spriteID: b5cf4c1061f6ac34aa0c2359e17a232b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 87, y: 4}
+    spritePosition: {x: 75, y: 104}
+  - name: "\u56FE\u5C42 13"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 185
+      width: 19
+      height: 9
+    spriteID: fca329f0b1a38cb4f9f419e412b6495b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 185}
+    spritePosition: {x: 45, y: 130}
+  - name: "\u56FE\u5C42 23"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 137
+      y: 233
+      width: 25
+      height: 19
+    spriteID: e2094c497c0da01439ff1e249fd37e8a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 137, y: 233}
+    spritePosition: {x: 42, y: 118}
+  - name: "\u56FE\u5C42 21"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 159
+      width: 25
+      height: 18
+    spriteID: 36dc0fe7d81b66e4cb81fbfe0287422f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 159}
+    spritePosition: {x: 42, y: 120}
+  - name: "\u56FE\u5C42 1"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 90
+      width: 63
+      height: 54
+    spriteID: 114a2a7f85c4b074fb8353cd9917ca2d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 90}
+    spritePosition: {x: 34, y: 95}
+  - name: Zombie_tie
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 33
+      width: 17
+      height: 30
+    spriteID: 8e9b7095f39091b4b8adaeb07bbbed4d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 33}
+    spritePosition: {x: 64, y: 70}
+  - name: Zombie_body
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 152
+      width: 53
+      height: 62
+    spriteID: 0aa7dbdf05f85fc4f9875cdb6f434665
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 152}
+    spritePosition: {x: 68, y: 57}
+  - name: Zombie_outerleg_upper
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 137
+      y: 72
+      width: 21
+      height: 39
+    spriteID: 7fd02a228fd43bf40b13779a634477a2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 137, y: 72}
+    spritePosition: {x: 99, y: 38}
+  - name: Zombie_outerleg_lower
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 46
+      y: 222
+      width: 24
+      height: 30
+    spriteID: bdc6db0b01248c44db1a2574698923b3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 46, y: 222}
+    spritePosition: {x: 105, y: 17}
+  - name: Zombie_outerleg_foot
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 4
+      width: 42
+      height: 21
+    spriteID: 21d619379ff3b5a4b916c24e2a156c61
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 4}
+    spritePosition: {x: 84, y: 7}
+  - name: Zombie_innerleg_foot
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 102
+      width: 27
+      height: 17
+    spriteID: 741d859ef374a884795245da0eec599c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 102}
+    spritePosition: {x: 79, y: 15}
+  - name: Zombie_innerleg_upper
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 33
+      width: 15
+      height: 26
+    spriteID: 463a29f9a4d5fb04286e36bdd52f23d0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 33}
+    spritePosition: {x: 87, y: 44}
+  - name: Zombie_innerleg_lower
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 87
+      y: 175
+      width: 32
+      height: 36
+    spriteID: b76dbc2efa3546045b18e0e170bf2c4c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 87, y: 175}
+    spritePosition: {x: 73, y: 18}
+  - name: Zombie_innerarm_upper
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 206
+      y: 127
+      width: 15
+      height: 23
+    spriteID: 3ae3e1a5bccb1554db18fd979d2b5db5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 206, y: 127}
+    spritePosition: {x: 64, y: 82}
+  - name: Zombie_innerarm_lower
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 127
+      width: 19
+      height: 24
+    spriteID: 5c08736387dbbc54aba0aa8450ce7707
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 127}
+    spritePosition: {x: 60, y: 62}
+  - name: Zombie_innerarm_hand
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 71
+      width: 20
+      height: 23
+    spriteID: a34798445e6d3af4dbf8f76329106714
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 71}
+    spritePosition: {x: 58, y: 45}
+  spriteImportData: []
+  rigSpriteImportData: []
+  sharedRigSpriteImportData: []
+  mosaicSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  padding: 4
+  spriteSizeExpand: 0
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  pSDLayerImportSetting: []
+  psdLayers:
+  - name: Zombie_outerarm_upper
+    spriteName: Zombie_outerarm_upper
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 279f7ccf28356834ebdac71ebe54832b
+    layerID: 18
+    mosaicPosition: {x: 137, y: 154}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_outerarm_lower
+    spriteName: Zombie_outerarm_lower
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2b1dfcb18866d624aadab9e67b741029
+    layerID: 17
+    mosaicPosition: {x: 137, y: 197}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_outerarm_hand
+    spriteName: Zombie_outerarm_hand
+    isGroup: 0
+    parentIndex: -1
+    spriteID: bb77a2d6c7479e848bd962e49670adcd
+    layerID: 15
+    mosaicPosition: {x: 137, y: 119}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: head
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 5f541cc85e534784d8f2d0c6c2787e26
+    layerID: 71
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: "\u56FE\u5C42 4"
+    spriteName: "\u56FE\u5C42 4"
+    isGroup: 0
+    parentIndex: 3
+    spriteID: dd7537ed8f14bcf4fabb206f5e010454
+    layerID: 70
+    mosaicPosition: {x: 87, y: 119}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "\u56FE\u5C42 7"
+    spriteName: "\u56FE\u5C42 7"
+    isGroup: 0
+    parentIndex: 3
+    spriteID: c6b11c49b8a25764ab2ebf178540130c
+    layerID: 69
+    mosaicPosition: {x: 4, y: 222}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "\u56FE\u5C42 9"
+    spriteName: "\u56FE\u5C42 9"
+    isGroup: 0
+    parentIndex: 3
+    spriteID: c82c1e56936793c4d98aaf8ed8912662
+    layerID: 68
+    mosaicPosition: {x: 87, y: 219}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "\u56FE\u5C42 8"
+    spriteName: "\u56FE\u5C42 8"
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 98d845448bf9ed14d8c27da06a314ebc
+    layerID: 67
+    mosaicPosition: {x: 137, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "\u56FE\u5C42 5"
+    spriteName: "\u56FE\u5C42 5"
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 2e1bef3ba4a2d59418289aeaac3e949f
+    layerID: 66
+    mosaicPosition: {x: 137, y: 38}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "\u56FE\u5C42 3"
+    spriteName: "\u56FE\u5C42 3"
+    isGroup: 0
+    parentIndex: 3
+    spriteID: f944af81712edc44e956b0b4c6e95f1f
+    layerID: 65
+    mosaicPosition: {x: 87, y: 63}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "\u56FE\u5C42 2"
+    spriteName: "\u56FE\u5C42 2"
+    isGroup: 0
+    parentIndex: 3
+    spriteID: a99b360dbcf2bb34ba93387113971a1d
+    layerID: 64
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PeaShooter_headleaf_nearest
+    spriteName: PeaShooter_headleaf_nearest
+    isGroup: 0
+    parentIndex: 3
+    spriteID: b5cf4c1061f6ac34aa0c2359e17a232b
+    layerID: 72
+    mosaicPosition: {x: 87, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "\u56FE\u5C42 13"
+    spriteName: "\u56FE\u5C42 13"
+    isGroup: 0
+    parentIndex: 3
+    spriteID: fca329f0b1a38cb4f9f419e412b6495b
+    layerID: 63
+    mosaicPosition: {x: 179, y: 185}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "\u56FE\u5C42 23"
+    spriteName: "\u56FE\u5C42 23"
+    isGroup: 0
+    parentIndex: 3
+    spriteID: e2094c497c0da01439ff1e249fd37e8a
+    layerID: 62
+    mosaicPosition: {x: 137, y: 233}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "\u56FE\u5C42 21"
+    spriteName: "\u56FE\u5C42 21"
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 36dc0fe7d81b66e4cb81fbfe0287422f
+    layerID: 61
+    mosaicPosition: {x: 179, y: 159}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "\u56FE\u5C42 1"
+    spriteName: "\u56FE\u5C42 1"
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 114a2a7f85c4b074fb8353cd9917ca2d
+    layerID: 60
+    mosaicPosition: {x: 4, y: 90}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_tie
+    spriteName: Zombie_tie
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8e9b7095f39091b4b8adaeb07bbbed4d
+    layerID: 23
+    mosaicPosition: {x: 179, y: 33}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_body
+    spriteName: Zombie_body
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0aa7dbdf05f85fc4f9875cdb6f434665
+    layerID: 6
+    mosaicPosition: {x: 4, y: 152}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_outerleg_upper
+    spriteName: Zombie_outerleg_upper
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7fd02a228fd43bf40b13779a634477a2
+    layerID: 22
+    mosaicPosition: {x: 137, y: 72}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_outerleg_lower
+    spriteName: Zombie_outerleg_lower
+    isGroup: 0
+    parentIndex: -1
+    spriteID: bdc6db0b01248c44db1a2574698923b3
+    layerID: 21
+    mosaicPosition: {x: 46, y: 222}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_outerleg_foot
+    spriteName: Zombie_outerleg_foot
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 21d619379ff3b5a4b916c24e2a156c61
+    layerID: 20
+    mosaicPosition: {x: 179, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_jaw
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1db400861fd79e84fa5701e842c5a3f6
+    layerID: 13
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Zombie_innerleg_foot
+    spriteName: Zombie_innerleg_foot
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 741d859ef374a884795245da0eec599c
+    layerID: 10
+    mosaicPosition: {x: 179, y: 102}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_innerleg_upper
+    spriteName: Zombie_innerleg_upper
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 463a29f9a4d5fb04286e36bdd52f23d0
+    layerID: 12
+    mosaicPosition: {x: 204, y: 33}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_innerleg_lower
+    spriteName: Zombie_innerleg_lower
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b76dbc2efa3546045b18e0e170bf2c4c
+    layerID: 11
+    mosaicPosition: {x: 87, y: 175}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_innerarm_upper
+    spriteName: Zombie_innerarm_upper
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3ae3e1a5bccb1554db18fd979d2b5db5
+    layerID: 9
+    mosaicPosition: {x: 206, y: 127}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_innerarm_lower
+    spriteName: Zombie_innerarm_lower
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5c08736387dbbc54aba0aa8450ce7707
+    layerID: 8
+    mosaicPosition: {x: 179, y: 127}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_innerarm_hand
+    spriteName: Zombie_innerarm_hand
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a34798445e6d3af4dbf8f76329106714
+    layerID: 7
+    mosaicPosition: {x: 179, y: 71}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_head
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7914a5284c15f064ebfafef34d33be6a
+    layerID: 4
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  mosaicPSDLayers: []
+  rigPSDLayers: []
+  sharedRigPSDLayers: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

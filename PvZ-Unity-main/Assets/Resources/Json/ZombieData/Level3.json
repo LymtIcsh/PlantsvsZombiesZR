@@ -1,0 +1,85 @@
+{
+  "totalZombies": 10,
+  "info": [
+    {
+      "isWave": false,
+      "deltaTime": 20,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 20,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 20,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 20,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 20,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 20,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 20,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 20,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 20,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 20,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 20,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 20,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 10,
+      "isFinalWave": false
+    },
+    {
+      "isWave": true,
+      "deltaTime": 0,
+      "isFinalWave": true
+    }
+  ],
+  "zombieWeights": [
+    {
+      "name": "ZombieNormal",
+      "weight": 1
+    },
+    {
+      "name": "ConeZombie",
+      "weight": 0.3
+    }
+  ]
+}

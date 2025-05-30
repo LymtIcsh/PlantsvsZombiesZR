@@ -1,0 +1,1088 @@
+fileFormatVersion: 2
+guid: 3e1772881d313c640bd0c44766aee48e
+importerOverride:
+  nativeImporterType: 2089858483
+  scriptedImporterType:
+    serializedVersion: 2
+    Hash: b10b55a1aa6a1aa32521bc0cab59632e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 175
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 7299b62d35eb11d49aadfb8b65985cfa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  multiSpriteImportData: []
+  layeredSpriteImportData:
+  - name: "\u56FE\u5C42 1"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 70
+      height: 52
+    spriteID: 2e55bea2cff005e4ab7edf7941d75d76
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 56, y: 71}
+  - name: SunFlower_leftpetal4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 168
+      width: 18
+      height: 17
+    spriteID: 8dd3e0173f6ecd64db307f7193fedb03
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 168}
+    spritePosition: {x: 49, y: 97}
+  - name: SunFlower_leftpetal3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 193
+      width: 18
+      height: 17
+    spriteID: 0a55dbba755020a4394601da3cbfbf06
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 193}
+    spritePosition: {x: 55, y: 106}
+  - name: "SunFlower_leftpetal2 \u62F7\u8D1D"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 59
+      y: 142
+      width: 12
+      height: 16
+    spriteID: e81ed6a82e737764a9b8128955a54427
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 59, y: 142}
+    spritePosition: {x: 64, y: 114}
+  - name: SunFlower_leftpetal2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 4
+      width: 12
+      height: 16
+    spriteID: 593b703f7ce652549a12ce221488971e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 112, y: 4}
+    spritePosition: {x: 73, y: 116}
+  - name: SunFlower_bottompetals
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 142
+      width: 23
+      height: 18
+    spriteID: 14c931211f967a24b90325c2445f243f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 142}
+    spritePosition: {x: 82, y: 59}
+  - name: SunFlower_toppetals
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 82
+      y: 41
+      width: 21
+      height: 12
+    spriteID: 70d77b7aadf4a3842bf121b88982dde7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 82, y: 41}
+    spritePosition: {x: 78, y: 120}
+  - name: SunFlower_rightpetal9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 204
+      width: 14
+      height: 14
+    spriteID: dd0e0792766999c4997de686b20a72de
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 204}
+    spritePosition: {x: 103, y: 67}
+  - name: SunFlower_rightpetal8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 226
+      width: 14
+      height: 14
+    spriteID: 5aa14275fd1e7c546923c56041ff782f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 226}
+    spritePosition: {x: 108, y: 70}
+  - name: SunFlower_rightpetal7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 215
+      width: 16
+      height: 14
+    spriteID: dca29a2c77d8c9e42af94c1fbe1dd6b5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 54, y: 215}
+    spritePosition: {x: 116, y: 74}
+  - name: SunFlower_rightpetal6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 79
+      y: 107
+      width: 14
+      height: 12
+    spriteID: 99b2626d720eead4ea21849778826636
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 79, y: 107}
+    spritePosition: {x: 121, y: 83}
+  - name: SunFlower_rightpetal5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 79
+      y: 127
+      width: 14
+      height: 12
+    spriteID: 5b59903320cbed942b7f1fe3593f5868
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 79, y: 127}
+    spritePosition: {x: 123, y: 93}
+  - name: SunFlower_rightpetal4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 79
+      y: 86
+      width: 14
+      height: 13
+    spriteID: 9f580a223f700f44e9c16bb6faa43b41
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 79, y: 86}
+    spritePosition: {x: 117, y: 102}
+  - name: SunFlower_rightpetal3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 79
+      y: 147
+      width: 12
+      height: 11
+    spriteID: dbafe9c0bc0f2de4cad6cf9792768636
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 79, y: 147}
+    spritePosition: {x: 113, y: 109}
+  - name: SunFlower_rightpetal2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 79
+      y: 64
+      width: 14
+      height: 14
+    spriteID: 33198777d0150814480ff712b35d23ed
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 79, y: 64}
+    spritePosition: {x: 104, y: 113}
+  - name: SunFlower_rightpetal1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 111
+      y: 41
+      width: 12
+      height: 13
+    spriteID: 83b38e4dd4d4fb04bad92844aa357fd7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 111, y: 41}
+    spritePosition: {x: 97, y: 117}
+  - name: SunFlower_leftpetal8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 218
+      width: 14
+      height: 17
+    spriteID: 4adaeb900c4bf1c44a59061978699340
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 218}
+    spritePosition: {x: 73, y: 64}
+  - name: SunFlower_leftpetal7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 180
+      width: 14
+      height: 16
+    spriteID: 7ee8304d13d43ac419d14fb8937ce4b8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 180}
+    spritePosition: {x: 60, y: 68}
+  - name: SunFlower_leftpetal6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 168
+      width: 17
+      height: 17
+    spriteID: cce75c18d30883c4eb99e1cb716898a0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 54, y: 168}
+    spritePosition: {x: 51, y: 73}
+  - name: SunFlower_leftpetal5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 193
+      width: 17
+      height: 14
+    spriteID: 794e5f9742b20404ca164af9049d58cf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 54, y: 193}
+    spritePosition: {x: 45, y: 85}
+  - name: PeaShooter_stalk_bottom
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 112
+      width: 15
+      height: 19
+    spriteID: 9e04776e10bcba247a215b0ac03b222c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 112}
+    spritePosition: {x: 85, y: 45}
+  - name: PeaShooter_stalk_top
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 237
+      width: 16
+      height: 13
+    spriteID: 580e7ebe026ba1b429ef6c56d9419e77
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 54, y: 237}
+    spritePosition: {x: 81, y: 60}
+  - name: PeaShooter_frontleaf_lefttip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 82
+      y: 4
+      width: 22
+      height: 29
+    spriteID: 3e20becee9f859443bd6efd31fedb464
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 82, y: 4}
+    spritePosition: {x: 54, y: 20}
+  - name: PeaShooter_frontleaf_righttip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 142
+      width: 16
+      height: 30
+    spriteID: 1051cd2091c490b45aee9c5169ae493f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 142}
+    spritePosition: {x: 120, y: 29}
+  - name: PeaShooter_frontleaf
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 64
+      width: 67
+      height: 40
+    spriteID: 487b9f8b1510fd246af43ab013d8412a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 64}
+    spritePosition: {x: 61, y: 22}
+  - name: PeaShooter_backleaf_righttip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 79
+      y: 166
+      width: 12
+      height: 10
+    spriteID: 35c1008f536595d45a40ff17143f8ff3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 79, y: 166}
+    spritePosition: {x: 104, y: 53}
+  - name: PeaShooter_backleaf_lefttip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 101
+      y: 64
+      width: 15
+      height: 12
+    spriteID: 7064efac7cdb7f549963db0765be959a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 101, y: 64}
+    spritePosition: {x: 65, y: 51}
+  - name: PeaShooter_backleaf
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 112
+      width: 44
+      height: 22
+    spriteID: 50e0206836459a5489a5d39f5b24b87f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 112}
+    spritePosition: {x: 69, y: 42}
+  spriteImportData: []
+  rigSpriteImportData: []
+  sharedRigSpriteImportData: []
+  mosaicSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  padding: 4
+  spriteSizeExpand: 0
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  pSDLayerImportSetting: []
+  psdLayers:
+  - name: "\u7EC4 2 \u62F7\u8D1D 2"
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: b7c1bc0e661ddbb46bbc0760f734d135
+    layerID: 123
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: "\u56FE\u5C42 1"
+    spriteName: "\u56FE\u5C42 1"
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 2e55bea2cff005e4ab7edf7941d75d76
+    layerID: 122
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SunFlower_leftpetal4
+    spriteName: SunFlower_leftpetal4
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 8dd3e0173f6ecd64db307f7193fedb03
+    layerID: 121
+    mosaicPosition: {x: 28, y: 168}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SunFlower_leftpetal3
+    spriteName: SunFlower_leftpetal3
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 0a55dbba755020a4394601da3cbfbf06
+    layerID: 120
+    mosaicPosition: {x: 28, y: 193}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "SunFlower_leftpetal2 \u62F7\u8D1D"
+    spriteName: "SunFlower_leftpetal2 \u62F7\u8D1D"
+    isGroup: 0
+    parentIndex: 0
+    spriteID: e81ed6a82e737764a9b8128955a54427
+    layerID: 119
+    mosaicPosition: {x: 59, y: 142}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SunFlower_leftpetal2
+    spriteName: SunFlower_leftpetal2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 593b703f7ce652549a12ce221488971e
+    layerID: 118
+    mosaicPosition: {x: 112, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SunFlower_bottompetals
+    spriteName: SunFlower_bottompetals
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 14c931211f967a24b90325c2445f243f
+    layerID: 117
+    mosaicPosition: {x: 28, y: 142}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SunFlower_toppetals
+    spriteName: SunFlower_toppetals
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 70d77b7aadf4a3842bf121b88982dde7
+    layerID: 116
+    mosaicPosition: {x: 82, y: 41}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SunFlower_rightpetal9
+    spriteName: SunFlower_rightpetal9
+    isGroup: 0
+    parentIndex: 0
+    spriteID: dd0e0792766999c4997de686b20a72de
+    layerID: 115
+    mosaicPosition: {x: 4, y: 204}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SunFlower_rightpetal8
+    spriteName: SunFlower_rightpetal8
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 5aa14275fd1e7c546923c56041ff782f
+    layerID: 114
+    mosaicPosition: {x: 4, y: 226}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SunFlower_rightpetal7
+    spriteName: SunFlower_rightpetal7
+    isGroup: 0
+    parentIndex: 0
+    spriteID: dca29a2c77d8c9e42af94c1fbe1dd6b5
+    layerID: 113
+    mosaicPosition: {x: 54, y: 215}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SunFlower_rightpetal6
+    spriteName: SunFlower_rightpetal6
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 99b2626d720eead4ea21849778826636
+    layerID: 112
+    mosaicPosition: {x: 79, y: 107}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SunFlower_rightpetal5
+    spriteName: SunFlower_rightpetal5
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 5b59903320cbed942b7f1fe3593f5868
+    layerID: 111
+    mosaicPosition: {x: 79, y: 127}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SunFlower_rightpetal4
+    spriteName: SunFlower_rightpetal4
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 9f580a223f700f44e9c16bb6faa43b41
+    layerID: 110
+    mosaicPosition: {x: 79, y: 86}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SunFlower_rightpetal3
+    spriteName: SunFlower_rightpetal3
+    isGroup: 0
+    parentIndex: 0
+    spriteID: dbafe9c0bc0f2de4cad6cf9792768636
+    layerID: 109
+    mosaicPosition: {x: 79, y: 147}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SunFlower_rightpetal2
+    spriteName: SunFlower_rightpetal2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 33198777d0150814480ff712b35d23ed
+    layerID: 108
+    mosaicPosition: {x: 79, y: 64}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SunFlower_rightpetal1
+    spriteName: SunFlower_rightpetal1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 83b38e4dd4d4fb04bad92844aa357fd7
+    layerID: 107
+    mosaicPosition: {x: 111, y: 41}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SunFlower_leftpetal8
+    spriteName: SunFlower_leftpetal8
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 4adaeb900c4bf1c44a59061978699340
+    layerID: 106
+    mosaicPosition: {x: 28, y: 218}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SunFlower_leftpetal7
+    spriteName: SunFlower_leftpetal7
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 7ee8304d13d43ac419d14fb8937ce4b8
+    layerID: 105
+    mosaicPosition: {x: 4, y: 180}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SunFlower_leftpetal6
+    spriteName: SunFlower_leftpetal6
+    isGroup: 0
+    parentIndex: 0
+    spriteID: cce75c18d30883c4eb99e1cb716898a0
+    layerID: 104
+    mosaicPosition: {x: 54, y: 168}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SunFlower_leftpetal5
+    spriteName: SunFlower_leftpetal5
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 794e5f9742b20404ca164af9049d58cf
+    layerID: 103
+    mosaicPosition: {x: 54, y: 193}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PeaShooter_stalk_bottom
+    spriteName: PeaShooter_stalk_bottom
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9e04776e10bcba247a215b0ac03b222c
+    layerID: 125
+    mosaicPosition: {x: 56, y: 112}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PeaShooter_stalk_top
+    spriteName: PeaShooter_stalk_top
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 580e7ebe026ba1b429ef6c56d9419e77
+    layerID: 124
+    mosaicPosition: {x: 54, y: 237}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "\u7EC4 1"
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 0bbece23d32622f40a558138060f8856
+    layerID: 35
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: PeaShooter_frontleaf_lefttip
+    spriteName: PeaShooter_frontleaf_lefttip
+    isGroup: 0
+    parentIndex: 23
+    spriteID: 3e20becee9f859443bd6efd31fedb464
+    layerID: 34
+    mosaicPosition: {x: 82, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PeaShooter_frontleaf_righttip
+    spriteName: PeaShooter_frontleaf_righttip
+    isGroup: 0
+    parentIndex: 23
+    spriteID: 1051cd2091c490b45aee9c5169ae493f
+    layerID: 33
+    mosaicPosition: {x: 4, y: 142}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PeaShooter_frontleaf
+    spriteName: PeaShooter_frontleaf
+    isGroup: 0
+    parentIndex: 23
+    spriteID: 487b9f8b1510fd246af43ab013d8412a
+    layerID: 32
+    mosaicPosition: {x: 4, y: 64}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PeaShooter_backleaf_righttip
+    spriteName: PeaShooter_backleaf_righttip
+    isGroup: 0
+    parentIndex: 23
+    spriteID: 35c1008f536595d45a40ff17143f8ff3
+    layerID: 30
+    mosaicPosition: {x: 79, y: 166}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PeaShooter_backleaf_lefttip
+    spriteName: PeaShooter_backleaf_lefttip
+    isGroup: 0
+    parentIndex: 23
+    spriteID: 7064efac7cdb7f549963db0765be959a
+    layerID: 29
+    mosaicPosition: {x: 101, y: 64}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PeaShooter_backleaf
+    spriteName: PeaShooter_backleaf
+    isGroup: 0
+    parentIndex: 23
+    spriteID: 50e0206836459a5489a5d39f5b24b87f
+    layerID: 28
+    mosaicPosition: {x: 4, y: 112}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  mosaicPSDLayers: []
+  rigPSDLayers: []
+  sharedRigPSDLayers: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

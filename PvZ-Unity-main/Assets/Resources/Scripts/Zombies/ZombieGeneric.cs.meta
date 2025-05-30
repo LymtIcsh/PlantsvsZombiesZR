@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: fcb591eec9c82144a9959ecb7b39a9a8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - highlightMaterial: {instanceID: 0}
+  - coneBroken1: {instanceID: 0}
+  - coneBroken2: {instanceID: 0}
+  - coneBroken3: {instanceID: 0}
+  - coneDrop: {instanceID: 0}
+  - bucketBroken1: {instanceID: 0}
+  - bucketBroken2: {instanceID: 0}
+  - bucketBroken3: {instanceID: 0}
+  - bucketDrop: {instanceID: 0}
+  - fullHead: {fileID: 21300000, guid: e669dede47274104d86679df7d435c75, type: 3}
+  - brokenArm: {instanceID: 0}
+  - zombieHeadDrops: {instanceID: 0}
+  - zombieArmDrops: {instanceID: 0}
+  - zombieForestSlider: {instanceID: 0}
+  - "\u6B63\u5728\u5543\u54AC\u76EE\u6807": {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

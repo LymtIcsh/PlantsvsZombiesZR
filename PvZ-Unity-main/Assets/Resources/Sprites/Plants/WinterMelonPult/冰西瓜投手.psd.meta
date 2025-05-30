@@ -1,0 +1,586 @@
+fileFormatVersion: 2
+guid: 05da5b8f877425d4caecfebc4517d3aa
+importerOverride:
+  nativeImporterType: 2089858483
+  scriptedImporterType:
+    serializedVersion: 2
+    Hash: b10b55a1aa6a1aa32521bc0cab59632e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 92036b9df70f1b643b66c756a0798fee
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  multiSpriteImportData: []
+  layeredSpriteImportData:
+  - name: PeaShooter_frontleaf_righttip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 114
+      y: 4
+      width: 8
+      height: 16
+    spriteID: 67dc32c378530174aaeb6649ce2f9a24
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 114, y: 4}
+    spritePosition: {x: 110, y: 6}
+  - name: PeaShooter_frontleaf_lefttip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 99
+      y: 29
+      width: 14
+      height: 18
+    spriteID: a5eb990f4d5d5f14db3a9e3b766e0009
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 99, y: 29}
+    spritePosition: {x: 65, y: 4}
+  - name: "\u524D\u53F6"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 69
+      y: 165
+      width: 48
+      height: 20
+    spriteID: 45a59c85d64048e47931020d2774ad60
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 69, y: 165}
+    spritePosition: {x: 67, y: 4}
+  - name: Melonpult_eyebrow
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 116
+      width: 12
+      height: 6
+    spriteID: 4dc494f3b4798684bbd86da9d8c6c10a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 112, y: 116}
+    spritePosition: {x: 84, y: 36}
+  - name: Melonpult_eyebrow
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 92
+      width: 12
+      height: 6
+    spriteID: 83d7b35dbc6f63445abd722775e8e37a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 92}
+    spritePosition: {x: 104, y: 38}
+  - name: WinterMelon_blink2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 4
+      width: 33
+      height: 17
+    spriteID: e55eba0bfa8dff345b45b7514f4706d6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 4}
+    spritePosition: {x: 85, y: 22}
+  - name: WinterMelon_blink1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 69
+      y: 116
+      width: 35
+      height: 17
+    spriteID: c5eb2ad285d235143b1e75c3844998a8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 69, y: 116}
+    spritePosition: {x: 83, y: 22}
+  - name: WinterMelon_melon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 65
+      width: 64
+      height: 43
+    spriteID: c191a6dc2dd361e40a6a79102b891af5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 65}
+    spritePosition: {x: 59, y: 13}
+  - name: WinterMelon_stalk
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 65
+      width: 34
+      height: 19
+    spriteID: 0c1a86414be62a34a8629b00f692eba3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 65}
+    spritePosition: {x: 65, y: 51}
+  - name: WinterMelon_basket_overlay
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 165
+      width: 57
+      height: 31
+    spriteID: 6f32e161dec16d34f906a118204cbf40
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 165}
+    spritePosition: {x: 15, y: 42}
+  - name: WinterMelon_projectile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 61
+      height: 53
+    spriteID: 1e265f5585e186b4c89ff5a8d6b7e904
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 4, y: 57}
+  - name: WinterMelon_basket
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 116
+      width: 57
+      height: 41
+    spriteID: b49c3e9aa6b4a234998031bac3ecc289
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 116}
+    spritePosition: {x: 15, y: 42}
+  - name: PeaShooter_frontleaf_lefttip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 92
+      width: 18
+      height: 14
+    spriteID: 79c6c84fd2b2b2b4d88d126a38b90ded
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 92}
+    spritePosition: {x: 108, y: 15}
+  - name: PeaShooter_frontleaf_lefttip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 29
+      width: 18
+      height: 18
+    spriteID: f2f6a762a19c80d4ea59bf27242cee98
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 29}
+    spritePosition: {x: 59, y: 13}
+  spriteImportData: []
+  rigSpriteImportData: []
+  sharedRigSpriteImportData: []
+  mosaicSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  padding: 4
+  spriteSizeExpand: 0
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  pSDLayerImportSetting: []
+  psdLayers:
+  - name: PeaShooter_frontleaf_righttip
+    spriteName: PeaShooter_frontleaf_righttip
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 67dc32c378530174aaeb6649ce2f9a24
+    layerID: 10
+    mosaicPosition: {x: 114, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PeaShooter_frontleaf_lefttip
+    spriteName: PeaShooter_frontleaf_lefttip
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a5eb990f4d5d5f14db3a9e3b766e0009
+    layerID: 9
+    mosaicPosition: {x: 99, y: 29}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "\u524D\u53F6"
+    spriteName: "\u524D\u53F6"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 45a59c85d64048e47931020d2774ad60
+    layerID: 19
+    mosaicPosition: {x: 69, y: 165}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Melonpult_eyebrow
+    spriteName: Melonpult_eyebrow
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4dc494f3b4798684bbd86da9d8c6c10a
+    layerID: 22
+    mosaicPosition: {x: 112, y: 116}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Melonpult_eyebrow
+    spriteName: Melonpult_eyebrow
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 83d7b35dbc6f63445abd722775e8e37a
+    layerID: 5
+    mosaicPosition: {x: 102, y: 92}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: WinterMelon_blink2
+    spriteName: WinterMelon_blink2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e55eba0bfa8dff345b45b7514f4706d6
+    layerID: 48
+    mosaicPosition: {x: 73, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: WinterMelon_blink1
+    spriteName: WinterMelon_blink1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c5eb2ad285d235143b1e75c3844998a8
+    layerID: 47
+    mosaicPosition: {x: 69, y: 116}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: WinterMelon_melon
+    spriteName: WinterMelon_melon
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c191a6dc2dd361e40a6a79102b891af5
+    layerID: 43
+    mosaicPosition: {x: 4, y: 65}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: WinterMelon_stalk
+    spriteName: WinterMelon_stalk
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0c1a86414be62a34a8629b00f692eba3
+    layerID: 42
+    mosaicPosition: {x: 76, y: 65}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: WinterMelon_basket_overlay
+    spriteName: WinterMelon_basket_overlay
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6f32e161dec16d34f906a118204cbf40
+    layerID: 45
+    mosaicPosition: {x: 4, y: 165}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: WinterMelon_projectile
+    spriteName: WinterMelon_projectile
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1e265f5585e186b4c89ff5a8d6b7e904
+    layerID: 46
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: WinterMelon_basket
+    spriteName: WinterMelon_basket
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b49c3e9aa6b4a234998031bac3ecc289
+    layerID: 44
+    mosaicPosition: {x: 4, y: 116}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PeaShooter_frontleaf_lefttip
+    spriteName: PeaShooter_frontleaf_lefttip
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 79c6c84fd2b2b2b4d88d126a38b90ded
+    layerID: 27
+    mosaicPosition: {x: 76, y: 92}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PeaShooter_frontleaf_lefttip
+    spriteName: PeaShooter_frontleaf_lefttip
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f2f6a762a19c80d4ea59bf27242cee98
+    layerID: 24
+    mosaicPosition: {x: 73, y: 29}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  mosaicPSDLayers: []
+  rigPSDLayers: []
+  sharedRigPSDLayers: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

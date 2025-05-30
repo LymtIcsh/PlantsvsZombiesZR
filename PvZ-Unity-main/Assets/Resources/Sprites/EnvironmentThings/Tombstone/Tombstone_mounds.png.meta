@@ -1,0 +1,640 @@
+fileFormatVersion: 2
+guid: da36018ac17b5e74a82b980845e038e6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8476043701271413174
+    second: Tombstone_mounds_0
+  - first:
+      213: 1200537292013507391
+    second: Tombstone_mounds_1
+  - first:
+      213: 9056505625748601997
+    second: Tombstone_mounds_2
+  - first:
+      213: -1540929768874380138
+    second: Tombstone_mounds_3
+  - first:
+      213: -600779935621904846
+    second: Tombstone_mounds_4
+  - first:
+      213: -8951867154221264966
+    second: Tombstone_mounds_5
+  - first:
+      213: 6201413787438297969
+    second: Tombstone_mounds_6
+  - first:
+      213: -6869612966878118310
+    second: Tombstone_mounds_7
+  - first:
+      213: 9062278653712699243
+    second: Tombstone_mounds_8
+  - first:
+      213: 5427207518325632592
+    second: Tombstone_mounds_9
+  - first:
+      213: 6271545493260192389
+    second: Tombstone_mounds_10
+  - first:
+      213: 4863211947519381912
+    second: Tombstone_mounds_11
+  - first:
+      213: 8643660092701567712
+    second: Tombstone_mounds_12
+  - first:
+      213: -2196612872396491659
+    second: Tombstone_mounds_13
+  - first:
+      213: 1698675337876563466
+    second: Tombstone_mounds_14
+  - first:
+      213: -2416539089917986857
+    second: Tombstone_mounds_15
+  - first:
+      213: 8627271757412062328
+    second: Tombstone_mounds_16
+  - first:
+      213: 8976265824674703849
+    second: Tombstone_mounds_17
+  - first:
+      213: 8051900749982668484
+    second: Tombstone_mounds_18
+  - first:
+      213: -2680178327958621553
+    second: Tombstone_mounds_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tombstone_mounds_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 273
+        width: 76
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4eb705692b0f5a80800000000000000
+      internalID: -8476043701271413174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tombstone_mounds_1
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 274
+        width: 66
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f33131e6e4a29a010800000000000000
+      internalID: 1200537292013507391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tombstone_mounds_2
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 276
+        width: 83
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8c721912eb2fad70800000000000000
+      internalID: 9056505625748601997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tombstone_mounds_3
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 274
+        width: 81
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 694fa661a848d9ae0800000000000000
+      internalID: -1540929768874380138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tombstone_mounds_4
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 272
+        width: 85
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2360315e4d999a7f0800000000000000
+      internalID: -600779935621904846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tombstone_mounds_5
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 182
+        width: 76
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abf8724904494c380800000000000000
+      internalID: -8951867154221264966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tombstone_mounds_6
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 182
+        width: 65
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1733871bbf8df0650800000000000000
+      internalID: 6201413787438297969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tombstone_mounds_7
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 181
+        width: 73
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5effc4476b3aa0a0800000000000000
+      internalID: -6869612966878118310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tombstone_mounds_8
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 181
+        width: 65
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6f862aeb6ea3cd70800000000000000
+      internalID: 9062278653712699243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tombstone_mounds_9
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 182
+        width: 66
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05ee02cbb70515b40800000000000000
+      internalID: 5427207518325632592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tombstone_mounds_10
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 91
+        width: 76
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58ac976e561090750800000000000000
+      internalID: 6271545493260192389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tombstone_mounds_11
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 92
+        width: 66
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8911457ff799d7340800000000000000
+      internalID: 4863211947519381912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tombstone_mounds_12
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 94
+        width: 83
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ea62b8ee0374f770800000000000000
+      internalID: 8643660092701567712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tombstone_mounds_13
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 92
+        width: 81
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 574b1cf0b301481e0800000000000000
+      internalID: -2196612872396491659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tombstone_mounds_14
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 90
+        width: 85
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0669d64838e29710800000000000000
+      internalID: 1698675337876563466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tombstone_mounds_15
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 76
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d7b797408ab67ed0800000000000000
+      internalID: -2416539089917986857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tombstone_mounds_16
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 0
+        width: 66
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8745e4144f93ab770800000000000000
+      internalID: 8627271757412062328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tombstone_mounds_17
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 2
+        width: 83
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e9e631953a129c70800000000000000
+      internalID: 8976265824674703849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tombstone_mounds_18
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 0
+        width: 81
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c61b6142191ebf60800000000000000
+      internalID: 8051900749982668484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tombstone_mounds_19
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 0
+        width: 85
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f82735bc2081ecad0800000000000000
+      internalID: -2680178327958621553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Tombstone_mounds_0: -8476043701271413174
+      Tombstone_mounds_1: 1200537292013507391
+      Tombstone_mounds_10: 6271545493260192389
+      Tombstone_mounds_11: 4863211947519381912
+      Tombstone_mounds_12: 8643660092701567712
+      Tombstone_mounds_13: -2196612872396491659
+      Tombstone_mounds_14: 1698675337876563466
+      Tombstone_mounds_15: -2416539089917986857
+      Tombstone_mounds_16: 8627271757412062328
+      Tombstone_mounds_17: 8976265824674703849
+      Tombstone_mounds_18: 8051900749982668484
+      Tombstone_mounds_19: -2680178327958621553
+      Tombstone_mounds_2: 9056505625748601997
+      Tombstone_mounds_3: -1540929768874380138
+      Tombstone_mounds_4: -600779935621904846
+      Tombstone_mounds_5: -8951867154221264966
+      Tombstone_mounds_6: 6201413787438297969
+      Tombstone_mounds_7: -6869612966878118310
+      Tombstone_mounds_8: 9062278653712699243
+      Tombstone_mounds_9: 5427207518325632592
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

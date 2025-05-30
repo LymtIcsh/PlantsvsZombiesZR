@@ -1,0 +1,95 @@
+{
+  "totalZombies": 30,
+  "info": [
+    {
+      "isWave": false,
+      "deltaTime": 0,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 0,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 0,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 5,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 5,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 5,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 5,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 5,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 5,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 5,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 5,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 5,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 0,
+      "isFinalWave": false
+    },
+    {
+      "isWave": true,
+      "deltaTime": 0,
+      "isFinalWave": true
+    }
+  ],
+  "zombieWeights": [
+    {
+      "name": "PeaShooterZ",
+      "weight": 1
+    },
+    {
+      "name": "FirePeaShooterZ",
+      "weight": 1
+    },
+    {
+      "name": "RepeaterZ",
+      "weight": 1
+    },
+    {
+      "name": "RepeaterPaperZombie",
+      "weight": 0.5
+    }
+   
+   
+  ]
+}

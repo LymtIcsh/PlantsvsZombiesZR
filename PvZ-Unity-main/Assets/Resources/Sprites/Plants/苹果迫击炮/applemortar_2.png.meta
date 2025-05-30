@@ -1,0 +1,865 @@
+fileFormatVersion: 2
+guid: f8f3a5dea8f91ae46bfaf28f783bab5c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8300572780278362527
+    second: applemortar_2_0
+  - first:
+      213: 7528321034024733817
+    second: applemortar_2_1
+  - first:
+      213: 109036849010500897
+    second: applemortar_2_2
+  - first:
+      213: -7021030881556624471
+    second: applemortar_2_3
+  - first:
+      213: 2181569713849537462
+    second: applemortar_2_4
+  - first:
+      213: 4560301558371020136
+    second: applemortar_2_5
+  - first:
+      213: -3494170753561071340
+    second: applemortar_2_6
+  - first:
+      213: -477024712454741608
+    second: applemortar_2_7
+  - first:
+      213: 4196872981656484640
+    second: applemortar_2_8
+  - first:
+      213: -5648549778916029126
+    second: applemortar_2_9
+  - first:
+      213: 574271102812636218
+    second: applemortar_2_10
+  - first:
+      213: -2864498444750810816
+    second: applemortar_2_11
+  - first:
+      213: -8228868068757288185
+    second: applemortar_2_12
+  - first:
+      213: 1863982897490771367
+    second: applemortar_2_13
+  - first:
+      213: 4489646813264809631
+    second: applemortar_2_14
+  - first:
+      213: -4289874913557134225
+    second: applemortar_2_15
+  - first:
+      213: -4471777069213879263
+    second: applemortar_2_16
+  - first:
+      213: 3966380107667331717
+    second: applemortar_2_17
+  - first:
+      213: -3119073063165539712
+    second: applemortar_2_18
+  - first:
+      213: -7567281215139091777
+    second: applemortar_2_19
+  - first:
+      213: 5534786950905011153
+    second: applemortar_2_20
+  - first:
+      213: 5586917887617229535
+    second: applemortar_2_21
+  - first:
+      213: -8852638610549319265
+    second: applemortar_2_22
+  - first:
+      213: 439106756668345251
+    second: applemortar_2_23
+  - first:
+      213: -8495478614759600634
+    second: applemortar_2_24
+  - first:
+      213: 5516239316470150406
+    second: applemortar_2_25
+  - first:
+      213: 4436918049417600020
+    second: applemortar_2_26
+  - first:
+      213: 250636058266051256
+    second: applemortar_2_27
+  - first:
+      213: -7301750135212173419
+    second: applemortar_2_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: applemortar_2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 131
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f91b4c027fe813370800000000000000
+      internalID: 8300572780278362527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_1
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 137
+        width: 23
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97c452cf718f97860800000000000000
+      internalID: 7528321034024733817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 248
+        width: 43
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 125e2bcbf60638100800000000000000
+      internalID: 109036849010500897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_3
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 242
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ab05cbbc99409e90800000000000000
+      internalID: -7021030881556624471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_4
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 143
+        width: 53
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b390c6a81e764e10800000000000000
+      internalID: 2181569713849537462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_5
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 123
+        width: 53
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86d6d571b12794f30800000000000000
+      internalID: 4560301558371020136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_6
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 226
+        width: 49
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 411fe696636328fc0800000000000000
+      internalID: -3494170753561071340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_7
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 144
+        width: 99
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8916d092d844169f0800000000000000
+      internalID: -477024712454741608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5
+        width: 132
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02bb117adb94e3a30800000000000000
+      internalID: 4196872981656484640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_9
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 110
+        width: 61
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3d499347e15c91b0800000000000000
+      internalID: -5648549778916029126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_10
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 121
+        width: 50
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a344bef768838f700800000000000000
+      internalID: 574271102812636218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_11
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 114
+        width: 34
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04118fc57d14f38d0800000000000000
+      internalID: -2864498444750810816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_12
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 42
+        width: 43
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70bca2207103dcd80800000000000000
+      internalID: -8228868068757288185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_13
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 85
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ad3758c1923ed910800000000000000
+      internalID: 1863982897490771367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_14
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 73
+        width: 42
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9e0d9f4dfd6e4e30800000000000000
+      internalID: 4489646813264809631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_15
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 95
+        width: 50
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f64419eae7d4774c0800000000000000
+      internalID: -4289874913557134225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_16
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 61
+        width: 53
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 124f4c2b27e01f1c0800000000000000
+      internalID: -4471777069213879263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_17
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 4
+        width: 48
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58adfa171b96b0730800000000000000
+      internalID: 3966380107667331717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_18
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 70
+        width: 53
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08a47891393d6b4d0800000000000000
+      internalID: -3119073063165539712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_19
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 73
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbae528f3dd9bf690800000000000000
+      internalID: -7567281215139091777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_20
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 65
+        width: 41
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1db192448638fcc40800000000000000
+      internalID: 5534786950905011153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_21
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 38
+        width: 50
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd263b0d738b88d40800000000000000
+      internalID: 5586917887617229535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_22
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 29
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f99dc45461c152580800000000000000
+      internalID: -8852638610549319265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_23
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 33
+        width: 39
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3abc0b9c445081600800000000000000
+      internalID: 439106756668345251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_24
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 8
+        width: 46
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60e835af53ff91a80800000000000000
+      internalID: -8495478614759600634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_25
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 14
+        width: 49
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6053f3a9e6e9d8c40800000000000000
+      internalID: 5516239316470150406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_26
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 13
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41c1e094579139d30800000000000000
+      internalID: 4436918049417600020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_27
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 7
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b22ad4ca207a7300800000000000000
+      internalID: 250636058266051256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: applemortar_2_28
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 6
+        width: 50
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 597940830f8faaa90800000000000000
+      internalID: -7301750135212173419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      applemortar_2_0: 8300572780278362527
+      applemortar_2_1: 7528321034024733817
+      applemortar_2_10: 574271102812636218
+      applemortar_2_11: -2864498444750810816
+      applemortar_2_12: -8228868068757288185
+      applemortar_2_13: 1863982897490771367
+      applemortar_2_14: 4489646813264809631
+      applemortar_2_15: -4289874913557134225
+      applemortar_2_16: -4471777069213879263
+      applemortar_2_17: 3966380107667331717
+      applemortar_2_18: -3119073063165539712
+      applemortar_2_19: -7567281215139091777
+      applemortar_2_2: 109036849010500897
+      applemortar_2_20: 5534786950905011153
+      applemortar_2_21: 5586917887617229535
+      applemortar_2_22: -8852638610549319265
+      applemortar_2_23: 439106756668345251
+      applemortar_2_24: -8495478614759600634
+      applemortar_2_25: 5516239316470150406
+      applemortar_2_26: 4436918049417600020
+      applemortar_2_27: 250636058266051256
+      applemortar_2_28: -7301750135212173419
+      applemortar_2_3: -7021030881556624471
+      applemortar_2_4: 2181569713849537462
+      applemortar_2_5: 4560301558371020136
+      applemortar_2_6: -3494170753561071340
+      applemortar_2_7: -477024712454741608
+      applemortar_2_8: 4196872981656484640
+      applemortar_2_9: -5648549778916029126
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

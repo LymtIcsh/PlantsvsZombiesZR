@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d572474dae1444a43ae5bfdb3fc0c567
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - highlightMaterial: {fileID: 2100000, guid: 29862a078a525a649b6dbb7f687adefe, type: 2}
+  - flowersunPrefab: {instanceID: 0}
+  - diamonPea: {instanceID: 0}
+  - burnRegionCollider: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

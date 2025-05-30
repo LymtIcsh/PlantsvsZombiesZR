@@ -1,0 +1,757 @@
+fileFormatVersion: 2
+guid: 17c3bb2decdd0b744b4396c7cac45728
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7965316723306402886
+    second: FireGatling_0
+  - first:
+      213: 7903435312827083971
+    second: FireGatling_1
+  - first:
+      213: 8432676615280902894
+    second: FireGatling_2
+  - first:
+      213: -5853859605231728886
+    second: FireGatling_3
+  - first:
+      213: -8351473265567900645
+    second: FireGatling_4
+  - first:
+      213: 2772653963764631247
+    second: FireGatling_5
+  - first:
+      213: 1209977218542423996
+    second: FireGatling_6
+  - first:
+      213: -7090945166981303383
+    second: FireGatling_7
+  - first:
+      213: -331273014008049133
+    second: FireGatling_8
+  - first:
+      213: -8708202259951808851
+    second: FireGatling_9
+  - first:
+      213: 9160760623373973150
+    second: FireGatling_10
+  - first:
+      213: -390891519632563306
+    second: FireGatling_11
+  - first:
+      213: 128320436921652807
+    second: FireGatling_12
+  - first:
+      213: 7660158890701441473
+    second: FireGatling_13
+  - first:
+      213: 2393460729449906997
+    second: FireGatling_14
+  - first:
+      213: -2979435745731884514
+    second: FireGatling_15
+  - first:
+      213: 2620109411427666905
+    second: FireGatling_16
+  - first:
+      213: -3384997784919897008
+    second: FireGatling_17
+  - first:
+      213: -4515911739066584011
+    second: FireGatling_18
+  - first:
+      213: 5661389475702670985
+    second: FireGatling_19
+  - first:
+      213: -7289625736970597117
+    second: FireGatling_20
+  - first:
+      213: 3507775019583811710
+    second: FireGatling_21
+  - first:
+      213: -8592337890927358067
+    second: FireGatling_22
+  - first:
+      213: -4932931465175639115
+    second: FireGatling_23
+  - first:
+      213: 590732154248246910
+    second: FireGatling_24
+  - first:
+      213: 792109665770656715
+    second: FireGatling_25
+  - first:
+      213: -4686767462344667633
+    second: FireGatling_26
+  - first:
+      213: -7367516550761888289
+    second: FireGatling_27
+  - first:
+      213: 2461789428963808411
+    second: FireGatling_28
+  - first:
+      213: 1681570060804054569
+    second: FireGatling_29
+  - first:
+      213: 5527564639837520699
+    second: FireGatling_30
+  - first:
+      213: -3890513523187977981
+    second: FireGatling_31
+  - first:
+      213: -476335260296699857
+    second: FireGatling_32
+  - first:
+      213: 2179661294363888435
+    second: FireGatling_33
+  - first:
+      213: -504572742131463979
+    second: FireGatling_34
+  - first:
+      213: -515717160163869
+    second: FireGatling_35
+  - first:
+      213: -984175913501015693
+    second: FireGatling_36
+  - first:
+      213: 5521640472153701100
+    second: FireGatling_37
+  - first:
+      213: 1651615850207981932
+    second: FireGatling_38
+  - first:
+      213: -899340192798764902
+    second: FireGatling_39
+  - first:
+      213: -2840571615507749240
+    second: FireGatling_40
+  - first:
+      213: 7907617471135031653
+    second: FireGatling_41
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FireGatling_0
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 342
+        width: 219
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abbe7d764a2857190800000000000000
+      internalID: -7965316723306402886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGatling_1
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 557
+        width: 243
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cc2656fa84aead60800000000000000
+      internalID: 7903435312827083971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGatling_2
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 786
+        width: 240
+        height: 225
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee2cf8f04b2e60570800000000000000
+      internalID: 8432676615280902894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGatling_6
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 898
+        width: 158
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbf49899ed3bac010800000000000000
+      internalID: 1209977218542423996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGatling_8
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 898
+        width: 168
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 312906ce2f4176bf0800000000000000
+      internalID: -331273014008049133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGatling_10
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 655
+        width: 180
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e96779c404f812f70800000000000000
+      internalID: 9160760623373973150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGatling_11
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 846
+        width: 52
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 693a692eb36439af0800000000000000
+      internalID: -390891519632563306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGatling_13
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 788
+        width: 64
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c94f430de95e4a60800000000000000
+      internalID: 7660158890701441473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGatling_15
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 655
+        width: 64
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1acc8899fae6a6d0800000000000000
+      internalID: -2979435745731884514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGatling_16
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 649
+        width: 186
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dbcdc4b0af7c5420800000000000000
+      internalID: 2620109411427666905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGatling_20
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 384
+        width: 294
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30d825aa30c06da90800000000000000
+      internalID: -7289625736970597117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGatling_25
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 535
+        width: 158
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc3d9635b832efa00800000000000000
+      internalID: 792109665770656715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGatling_26
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 535
+        width: 68
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0e461613d145feb0800000000000000
+      internalID: -4686767462344667633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGatling_29
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 421
+        width: 66
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92e582b9f03265710800000000000000
+      internalID: 1681570060804054569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGatling_33
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 420
+        width: 160
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33b4a3d1666bf3e10800000000000000
+      internalID: 2179661294363888435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGatling_34
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3
+        width: 352
+        height: 377
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d8c8eda3c56ff8f0800000000000000
+      internalID: -504572742131463979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGatling_35
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 179
+        width: 126
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e52ddd35fa2efff0800000000000000
+      internalID: -515717160163869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGatling_38
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 178
+        width: 94
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c613d097dd7bbe610800000000000000
+      internalID: 1651615850207981932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGatling_39
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 185
+        width: 122
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a909ffb0cd6e483f0800000000000000
+      internalID: -899340192798764902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGatling_40
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 3
+        width: 282
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8866a9a6a234498d0800000000000000
+      internalID: -2840571615507749240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGatling_41
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 59
+        width: 123
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5612da291308dbd60800000000000000
+      internalID: 7907617471135031653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGatling_3
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 307
+        width: 111
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 281bd9b1c024c6c409b0c69fa3f6b0c0
+      internalID: -5853859605231728886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 39ec149c86fdc01438c2504f4b4a677a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      FireGatling_0: -7965316723306402886
+      FireGatling_1: 7903435312827083971
+      FireGatling_10: 9160760623373973150
+      FireGatling_11: -390891519632563306
+      FireGatling_12: 128320436921652807
+      FireGatling_13: 7660158890701441473
+      FireGatling_14: 2393460729449906997
+      FireGatling_15: -2979435745731884514
+      FireGatling_16: 2620109411427666905
+      FireGatling_17: -3384997784919897008
+      FireGatling_18: -4515911739066584011
+      FireGatling_19: 5661389475702670985
+      FireGatling_2: 8432676615280902894
+      FireGatling_20: -7289625736970597117
+      FireGatling_21: 3507775019583811710
+      FireGatling_22: -8592337890927358067
+      FireGatling_23: -4932931465175639115
+      FireGatling_24: 590732154248246910
+      FireGatling_25: 792109665770656715
+      FireGatling_26: -4686767462344667633
+      FireGatling_27: -7367516550761888289
+      FireGatling_28: 2461789428963808411
+      FireGatling_29: 1681570060804054569
+      FireGatling_3: -5853859605231728886
+      FireGatling_30: 5527564639837520699
+      FireGatling_31: -3890513523187977981
+      FireGatling_32: -476335260296699857
+      FireGatling_33: 2179661294363888435
+      FireGatling_34: -504572742131463979
+      FireGatling_35: -515717160163869
+      FireGatling_36: -984175913501015693
+      FireGatling_37: 5521640472153701100
+      FireGatling_38: 1651615850207981932
+      FireGatling_39: -899340192798764902
+      FireGatling_4: -8351473265567900645
+      FireGatling_40: -2840571615507749240
+      FireGatling_41: 7907617471135031653
+      FireGatling_5: 2772653963764631247
+      FireGatling_6: 1209977218542423996
+      FireGatling_7: -7090945166981303383
+      FireGatling_8: -331273014008049133
+      FireGatling_9: -8708202259951808851
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,462 @@
+fileFormatVersion: 2
+guid: 074fc10bfc22a4b499206bbbca8c7072
+importerOverride:
+  nativeImporterType: 2089858483
+  scriptedImporterType:
+    serializedVersion: 2
+    Hash: b10b55a1aa6a1aa32521bc0cab59632e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 754b3722d78ea3b42b40eb99dd5f1863
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  multiSpriteImportData: []
+  layeredSpriteImportData:
+  - name: "GoldMagnet_eyebrow \u62F7\u8D1D"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 114
+      y: 153
+      width: 10
+      height: 8
+    spriteID: bf725213e6fdbb04faf17ed7ff1555f6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 114, y: 153}
+    spritePosition: {x: 126, y: 138}
+  - name: GoldMagnet_eyebrow
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 98
+      y: 121
+      width: 10
+      height: 8
+    spriteID: 4e1569cb9454f814a827cb5d2d5d5b8b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 98, y: 121}
+    spritePosition: {x: 90, y: 131}
+  - name: "\u56FE\u5C42 1"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 111
+      height: 109
+    spriteID: f44307c4190943a45b9dc8fa8779e1a7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 47, y: 105}
+  - name: GoldMagnet_leaf3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 121
+      width: 39
+      height: 24
+    spriteID: 432ba6c3de086f441a677f176e915149
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 121}
+    spritePosition: {x: 114, y: 101}
+  - name: GoldMagnet_leaf4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 153
+      width: 30
+      height: 16
+    spriteID: b7dbb215dc819884db5ac1086049640a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 153}
+    spritePosition: {x: 127, y: 117}
+  - name: GoldMagnet_leaf2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 41
+      y: 153
+      width: 27
+      height: 30
+    spriteID: a23d617b887bf5c429161fd503a56803
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 41, y: 153}
+    spritePosition: {x: 84, y: 87}
+  - name: GoldMagnet_leaf1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 153
+      width: 29
+      height: 32
+    spriteID: a755b66cf1c6a8944a081c9eea593712
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 153}
+    spritePosition: {x: 71, y: 91}
+  - name: "GoldMagnet_leaf5 \u62F7\u8D1D"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 77
+      y: 121
+      width: 13
+      height: 12
+    spriteID: a81ec60262ab3684f9148dedd2e5c6f9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 77, y: 121}
+    spritePosition: {x: 103, y: 81}
+  - name: GoldMagnet_leaf5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 51
+      y: 121
+      width: 18
+      height: 18
+    spriteID: e7ded7fce254c6b4692f4ca5957df6a1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 51, y: 121}
+    spritePosition: {x: 120, y: 82}
+  - name: GoldMagnet_stem
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 193
+      width: 20
+      height: 37
+    spriteID: d1ca84798632a344c9c32b6176e7f8fd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 193}
+    spritePosition: {x: 107, y: 74}
+  spriteImportData: []
+  rigSpriteImportData: []
+  sharedRigSpriteImportData: []
+  mosaicSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  padding: 4
+  spriteSizeExpand: 0
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  pSDLayerImportSetting: []
+  psdLayers:
+  - name: "GoldMagnet_eyebrow \u62F7\u8D1D"
+    spriteName: "GoldMagnet_eyebrow \u62F7\u8D1D"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: bf725213e6fdbb04faf17ed7ff1555f6
+    layerID: 8
+    mosaicPosition: {x: 114, y: 153}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: GoldMagnet_eyebrow
+    spriteName: GoldMagnet_eyebrow
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4e1569cb9454f814a827cb5d2d5d5b8b
+    layerID: 7
+    mosaicPosition: {x: 98, y: 121}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "\u56FE\u5C42 1"
+    spriteName: "\u56FE\u5C42 1"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f44307c4190943a45b9dc8fa8779e1a7
+    layerID: 2
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: GoldMagnet_leaf3
+    spriteName: GoldMagnet_leaf3
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 432ba6c3de086f441a677f176e915149
+    layerID: 12
+    mosaicPosition: {x: 4, y: 121}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: GoldMagnet_leaf4
+    spriteName: GoldMagnet_leaf4
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b7dbb215dc819884db5ac1086049640a
+    layerID: 9
+    mosaicPosition: {x: 76, y: 153}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: GoldMagnet_leaf2
+    spriteName: GoldMagnet_leaf2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a23d617b887bf5c429161fd503a56803
+    layerID: 11
+    mosaicPosition: {x: 41, y: 153}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: GoldMagnet_leaf1
+    spriteName: GoldMagnet_leaf1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a755b66cf1c6a8944a081c9eea593712
+    layerID: 10
+    mosaicPosition: {x: 4, y: 153}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "GoldMagnet_leaf5 \u62F7\u8D1D"
+    spriteName: "GoldMagnet_leaf5 \u62F7\u8D1D"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a81ec60262ab3684f9148dedd2e5c6f9
+    layerID: 6
+    mosaicPosition: {x: 77, y: 121}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: GoldMagnet_leaf5
+    spriteName: GoldMagnet_leaf5
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e7ded7fce254c6b4692f4ca5957df6a1
+    layerID: 5
+    mosaicPosition: {x: 51, y: 121}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: GoldMagnet_stem
+    spriteName: GoldMagnet_stem
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d1ca84798632a344c9c32b6176e7f8fd
+    layerID: 4
+    mosaicPosition: {x: 4, y: 193}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  mosaicPSDLayers: []
+  rigPSDLayers: []
+  sharedRigPSDLayers: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

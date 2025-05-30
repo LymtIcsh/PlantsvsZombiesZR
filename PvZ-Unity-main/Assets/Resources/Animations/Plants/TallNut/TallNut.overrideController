@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TallNut
+  m_Controller: {fileID: 9100000, guid: 4c63e250098e0c14a8c00e4f265216ef, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: eebee0eeefc54504186aba20c0851d26, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 14f04412d0699f345b9a8f2fafecc28d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1a6d2974bcf9ff947934439d7c5858d2, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d1e2ab55e0d8c2643aa3a1ae429ea33b, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d622dd067ffe31c44ba56a999a8070b7, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f33b59dbd7cd7a74a88cadc874f28f85, type: 2}

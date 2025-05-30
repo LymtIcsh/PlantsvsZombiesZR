@@ -1,0 +1,530 @@
+fileFormatVersion: 2
+guid: f273a32d600887641ae8d9895db73b37
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3067039932177000926
+    second: fire pea_0
+  - first:
+      213: 3273765073311289940
+    second: fire pea_1
+  - first:
+      213: -5777440085581180715
+    second: fire pea_2
+  - first:
+      213: 8844231701298235368
+    second: fire pea_3
+  - first:
+      213: 1893154534283792215
+    second: fire pea_4
+  - first:
+      213: -6065173478491687152
+    second: fire pea_5
+  - first:
+      213: 4836565799064589998
+    second: fire pea_6
+  - first:
+      213: 2641565741352033294
+    second: fire pea_7
+  - first:
+      213: 4244876414201841125
+    second: fire pea_8
+  - first:
+      213: -3382220044265329085
+    second: fire pea_9
+  - first:
+      213: 3728983395607263053
+    second: fire pea_10
+  - first:
+      213: 3216749767213210201
+    second: fire pea_11
+  - first:
+      213: 9086906413817270845
+    second: fire pea_12
+  - first:
+      213: 6583213087534712334
+    second: fire pea_13
+  - first:
+      213: -7965521631583227287
+    second: fire pea_14
+  - first:
+      213: 2602347650658940102
+    second: fire pea_15
+  - first:
+      213: -3315886919441198037
+    second: fire pea_16
+  - first:
+      213: -3766293722397462510
+    second: fire pea_17
+  - first:
+      213: -6786632362950739858
+    second: fire pea_18
+  - first:
+      213: -2962119264925818482
+    second: fire pea_19
+  - first:
+      213: -4782939141745180434
+    second: fire pea_20
+  - first:
+      213: 6423421567767112123
+    second: fire pea_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 125
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fire pea_0
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 927
+        width: 52
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 226d6aa7e6faf65d0800000000000000
+      internalID: -3067039932177000926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire pea_1
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 789
+        width: 238
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 452dcc03dffbe6d20800000000000000
+      internalID: 3273765073311289940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire pea_3
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 869
+        width: 64
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e74123afd50dba70800000000000000
+      internalID: 8844231701298235368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire pea_4
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 810
+        width: 68
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75fc7e0c406d54a10800000000000000
+      internalID: 1893154534283792215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire pea_6
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 727
+        width: 122
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea65c0218feee1340800000000000000
+      internalID: 4836565799064589998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire pea_7
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 677
+        width: 64
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0c1120db0ab8a420800000000000000
+      internalID: 2641565741352033294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire pea_8
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 558
+        width: 244
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e54fefbb94d8ea30800000000000000
+      internalID: 4244876414201841125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire pea_9
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 338
+        width: 212
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34eeb5d1ac0ff01d0800000000000000
+      internalID: -3382220044265329085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire pea_11
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 548
+        width: 94
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95a5016ced034ac20800000000000000
+      internalID: 3216749767213210201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire pea_12
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 608
+        width: 123
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d321cc62d3d2b1e70800000000000000
+      internalID: 9086906413817270845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire pea_15
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 449
+        width: 186
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c4399386656d1420800000000000000
+      internalID: 2602347650658940102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire pea_16
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 449
+        width: 66
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b24d7534a6a9bf1d0800000000000000
+      internalID: -3315886919441198037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire pea_19
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 274
+        width: 282
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8161c7f83074e6d0800000000000000
+      internalID: -2962119264925818482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire pea_20
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 3
+        width: 294
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee087f111369f9db0800000000000000
+      internalID: -4782939141745180434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire pea_21
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 3
+        width: 148
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb9675512e3942950800000000000000
+      internalID: 6423421567767112123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 7feb71f66636e8b4c954cd75b1aa3184
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      fire pea_0: -3067039932177000926
+      fire pea_1: 3273765073311289940
+      fire pea_10: 3728983395607263053
+      fire pea_11: 3216749767213210201
+      fire pea_12: 9086906413817270845
+      fire pea_13: 6583213087534712334
+      fire pea_14: -7965521631583227287
+      fire pea_15: 2602347650658940102
+      fire pea_16: -3315886919441198037
+      fire pea_17: -3766293722397462510
+      fire pea_18: -6786632362950739858
+      fire pea_19: -2962119264925818482
+      fire pea_2: -5777440085581180715
+      fire pea_20: -4782939141745180434
+      fire pea_21: 6423421567767112123
+      fire pea_3: 8844231701298235368
+      fire pea_4: 1893154534283792215
+      fire pea_5: -6065173478491687152
+      fire pea_6: 4836565799064589998
+      fire pea_7: 2641565741352033294
+      fire pea_8: 4244876414201841125
+      fire pea_9: -3382220044265329085
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,44 @@
+{
+  "totalZombies": 20,
+  "info": [
+    {
+      "isWave": false,
+      "deltaTime": 0,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 20,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 20,
+      "isFinalWave": false
+    },
+    {
+      "isWave": false,
+      "deltaTime": 20,
+      "isFinalWave": false
+    },
+    {
+      "isWave": true,
+      "deltaTime": 0,
+      "isFinalWave": true
+    }
+  ],
+  "zombieWeights": [
+    {
+      "name": "SteelZombie",
+      "weight": 0.8
+    },
+    {
+      "name": "SteelConeZombie",
+      "weight": 0.5
+    },
+    {
+      "name": "SteelBucketZombie",
+      "weight": 0.2
+    }
+  ]
+}

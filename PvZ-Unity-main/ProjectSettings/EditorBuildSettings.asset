@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Logo.unity
+    guid: 8f008dd8f6cc4244694636d441e77c12
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/GameScene.unity
+    guid: 0579a43038d47964e91ef66859a97703
+  - enabled: 1
+    path: Assets/Scenes/Login.unity
+    guid: a4ab14b3dc6a70343a169a5174325f98
+  - enabled: 1
+    path: Assets/Scenes/ChooseIllustrated.unity
+    guid: 50718c2a62ce92749ac41189a6d5f40b
+  - enabled: 1
+    path: Assets/Scenes/ChooseGame.unity
+    guid: 7fb8a6448e326a94f81e2deb7105e0df
+  - enabled: 1
+    path: Assets/Scenes/EnvironmentGame.unity
+    guid: 3774de6a550203648b5b7f6f02d14625
+  - enabled: 1
+    path: Assets/Scenes/Garden.unity
+    guid: c1371dfb1250a0c43a065a427ac1af5f
+  - enabled: 1
+    path: Assets/Scenes/Illustrated.unity
+    guid: c1ae3b9642e0d4c4ca40d549a790d653
+  - enabled: 1
+    path: Assets/Scenes/Store.unity
+    guid: 2b77446dc363dd243bc6566c3171a74b
+  m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

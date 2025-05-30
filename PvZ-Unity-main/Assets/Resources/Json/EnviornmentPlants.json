@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "Name": "ForestMelonPult",
+      "Enviornment": "Forest",
+      "Raw": "MelonPult"
+    },
+    {
+      "Name": "WinterMelonPult",
+      "Enviornment": "SnowIce",
+      "Raw": "MelonPult"
+    },
+    {
+      "Name": "ForestFumeShroom",
+      "Enviornment": "Forest",
+      "Raw": "FumeShroom"
+    },
+    {
+      "Name": "WinterSunFlower",
+      "Enviornment": "SnowIce",
+      "Raw": "SunFlower"
+    },
+    {
+      "Name": "TorchWood",
+      "Enviornment": "Day",
+      "Raw": "Wood"
+    },
+
+    {
+      "Name": "ForestSunFlower",
+      "Enviornment": "Forest",
+      "Raw": "SunFlower"
+    },
+    {
+      "Name": "ForestWallNut",
+      "Enviornment": "Forest",
+      "Raw": "WallNut"
+    },
+    {
+      "Name": "DiamonWood",
+      "Enviornment": "Forest",
+      "Raw": "Wood"
+    },
+    {
+      "Name": "ForestSmallPuff",
+      "Enviornment": "Forest",
+      "Raw": "SmallPuff"
+    },
+    {
+      "Name": "ForestSunShroom",
+      "Enviornment": "Forest",
+      "Raw": "SunShroom"
+    },
+    {
+      "Name": "WoodWallNut",
+      "Enviornment": "Forest_P",
+      "Raw": "WallNut"
+    },
+    {
+      "Name": "SnowPea",
+      "Enviornment": "SnowIce",
+      "Raw": "CommonShooter"
+    },
+    {
+      "Name": "SnowPeaRepeater",
+      "Enviornment": "SnowIce",
+      "Raw": "Repeater"
+    },
+    {
+      "Name": "ForestSpikeweed",
+      "Enviornment": "Forest",
+      "Raw": "Spikeweed"
+    },
+
+    {
+      "Name": "SteelWallNut",
+      "Enviornment": "Steel",
+      "Raw": "WallNut"
+    }
+  ]
+}
