@@ -11,8 +11,8 @@ public class ChooseCardManager : MonoBehaviour
 {
     public GameObject cardGroup;
     public GameObject seedBank;
-    public GameObject ¿¨Æ¬±³¾°;
-    public GameObject ¿¨Æ¬;
+    public GameObject å¡ç‰‡èƒŒæ™¯;
+    public GameObject å¡ç‰‡;
     public int cardWidth = 43;
     public int additionalWidth = 78;
     public GameObject gameManagement;
@@ -22,20 +22,20 @@ public class ChooseCardManager : MonoBehaviour
     public PlantIntroduction plantIntroduction;
 
 
-    private bool FinishChoosing;//ÅĞ¶ÏÊÇ·ñÑ¡¿¨Íê±Ï
+    private bool FinishChoosing;//åˆ¤æ–­æ˜¯å¦é€‰å¡å®Œæ¯•
 
     public float moveDistance = -583f;
     public float moveTime = 2f;
     public float delayTime = 2f;
 
-    private List<GameObject> availableCardPositions = new List<GameObject>(); // ÓÃÓÚ¼ÇÂ¼¿¨Æ¬±³¾°µÄÎ»ÖÃ
-    private List<GameObject> selectedCards = new List<GameObject>(); // ¼ÇÂ¼ÒÑÑ¡ÔñµÄ¿¨Æ¬,Òª¸Ä³ÉPRIVATE
-    private List<GameObject> waitingCards = new List<GameObject>(); // ¼ÇÂ¼´ıÑ¡ÔñµÄ¿¨Æ¬
-    private Dictionary<GameObject, Vector3> originalPositions = new Dictionary<GameObject, Vector3>(); // ¼ÇÂ¼¿¨Æ¬µÄÔ­Ê¼ÊÀ½ç×ø±ê
+    private List<GameObject> availableCardPositions = new List<GameObject>(); // ç”¨äºè®°å½•å¡ç‰‡èƒŒæ™¯çš„ä½ç½®
+    private List<GameObject> selectedCards = new List<GameObject>(); // è®°å½•å·²é€‰æ‹©çš„å¡ç‰‡,è¦æ”¹æˆPRIVATE
+    private List<GameObject> waitingCards = new List<GameObject>(); // è®°å½•å¾…é€‰æ‹©çš„å¡ç‰‡
+    private Dictionary<GameObject, Vector3> originalPositions = new Dictionary<GameObject, Vector3>(); // è®°å½•å¡ç‰‡çš„åŸå§‹ä¸–ç•Œåæ ‡
 
-    public List<GameObject> Pages = new List<GameObject>();//¿¨Æ¬µÄÒ³
-    private int nowPage = 0;//ÏÖÔÚµÄ¿¨Æ¬Ò³ÂëºÅ 
-    private int CardPage = 0;//¿¨Æ¬´¦ÔÚÄÇÒ»Ò³ÖĞ
+    public List<GameObject> Pages = new List<GameObject>();//å¡ç‰‡çš„é¡µ
+    private int nowPage = 0;//ç°åœ¨çš„å¡ç‰‡é¡µç å· 
+    private int CardPage = 0;//å¡ç‰‡å¤„åœ¨é‚£ä¸€é¡µä¸­
     void Start()
     {
 
@@ -73,13 +73,13 @@ public class ChooseCardManager : MonoBehaviour
             background.transform.localPosition = endLocalPosition;
         }
         else
-        {//Èç¹ûÑ¡¹ıÁË¿¨Æ¬£¬Ìø¹ıÏòÓÒÒÆ¶¯£¬²¢ÇÒ¸øÏò×óÒÆ¶¯ÖØĞÂ¸³Öµ
+        {//å¦‚æœé€‰è¿‡äº†å¡ç‰‡ï¼Œè·³è¿‡å‘å³ç§»åŠ¨ï¼Œå¹¶ä¸”ç»™å‘å·¦ç§»åŠ¨é‡æ–°èµ‹å€¼
             endLocalPosition = startLocalPosition;
             returnLocalPosition = new Vector3(startLocalPosition.x - moveDistance, startLocalPosition.y, startLocalPosition.z);
         }
 
-        if ((GameManagement.levelData.Ò»ÖÜÄ¿¿ÉÑ¡¿¨ || LevelManagerStatic.IsLevelCompleted(GameManagement.level))
-            && FinishChoosing == false && !GameManagement.levelData.½ûÖ¹ÈÎºÎÖÜÄ¿Ñ¡¿¨ && !GameManagement.levelData.ConveyorGame)
+        if ((GameManagement.levelData.ä¸€å‘¨ç›®å¯é€‰å¡ || LevelManagerStatic.IsLevelCompleted(GameManagement.level))
+            && FinishChoosing == false && !GameManagement.levelData.ç¦æ­¢ä»»ä½•å‘¨ç›®é€‰å¡ && !GameManagement.levelData.ConveyorGame)
         {
             /*
             seedBank.SetActive(true);
@@ -90,7 +90,7 @@ public class ChooseCardManager : MonoBehaviour
             GenerateCards(13);
             // int count = cardDict.Count;
             int count = PlantStructManager.GetDataBaseLength();
-            ³õÊ¼»¯´ıÑ¡Ôñ¿¨Æ¬(count);
+            åˆå§‹åŒ–å¾…é€‰æ‹©å¡ç‰‡(count);
         }
         else
         {
@@ -104,46 +104,46 @@ public class ChooseCardManager : MonoBehaviour
             }
             background.transform.localPosition = returnLocalPosition;
 
-            // 3. ÒÆ¶¯Íê³Éºóµ÷ÓÃ³¡¾°ÒÆ¶¯ºó·½·¨
-            ³¡¾°ÒÆ¶¯ºó();
+            // 3. ç§»åŠ¨å®Œæˆåè°ƒç”¨åœºæ™¯ç§»åŠ¨åæ–¹æ³•
+            åœºæ™¯ç§»åŠ¨å();
         }
 
     }
 
-    public void ³¡¾°ÒÆ¶¯ºó()
+    public void åœºæ™¯ç§»åŠ¨å()
     {
-        gameObject.GetComponent<ShowZombieManager>().Çå³ıÕ¹Ê¾½©Ê¬();
-        gameManagement.GetComponent<GameManagement>().³õÊ¼»¯ÓÎÏ·();
+        gameObject.GetComponent<ShowZombieManager>().æ¸…é™¤å±•ç¤ºåƒµå°¸();
+        gameManagement.GetComponent<GameManagement>().åˆå§‹åŒ–æ¸¸æˆ();
     }
-    #region ³õÊ¼ÉèÖÃ
-    public void GenerateCards(int cardCount)//ÉèÖÃ¿¨Æ¬²Û¿¨Æ¬±³¾°
+    #region åˆå§‹è®¾ç½®
+    public void GenerateCards(int cardCount)//è®¾ç½®å¡ç‰‡æ§½å¡ç‰‡èƒŒæ™¯
     {
-        // Çå¿ÕÏÖÓĞµÄ¿¨Æ¬ÈİÆ÷
+        // æ¸…ç©ºç°æœ‰çš„å¡ç‰‡å®¹å™¨
         foreach (Transform child in cardGroup.transform)
         {
             Destroy(child.gameObject);
         }
-        // ¶¯Ì¬Éú³É¿¨Æ¬±³¾°
+        // åŠ¨æ€ç”Ÿæˆå¡ç‰‡èƒŒæ™¯
         for (int i = 0; i < cardCount; i++)
         {
-            GameObject newCardBackGround = Instantiate(¿¨Æ¬±³¾°, cardGroup.transform);
+            GameObject newCardBackGround = Instantiate(å¡ç‰‡èƒŒæ™¯, cardGroup.transform);
             newCardBackGround.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
-            availableCardPositions.Add(newCardBackGround); // ¼ÇÂ¼¿¨Æ¬±³¾°µÄÎ»ÖÃ
+            availableCardPositions.Add(newCardBackGround); // è®°å½•å¡ç‰‡èƒŒæ™¯çš„ä½ç½®
             RectTransform cardRectTransform = newCardBackGround.GetComponent<RectTransform>();
             cardRectTransform.anchoredPosition = new Vector2(i * cardWidth, 0);
         }
 
-        // ÉèÖÃcardGroup¿í¶È
+        // è®¾ç½®cardGroupå®½åº¦
         float cardGroupWidth = cardCount * cardWidth - 1;
         cardGroup.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, cardGroupWidth);
         seedBank.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, cardGroupWidth + additionalWidth);
     }
 
-    public void ³õÊ¼»¯´ıÑ¡Ôñ¿¨Æ¬(int cardCount)
+    public void åˆå§‹åŒ–å¾…é€‰æ‹©å¡ç‰‡(int cardCount)
     {
         foreach(GameObject page in Pages)
         {
-            // Çå¿ÕÏÖÓĞµÄ´ıÑ¡Ôñ¿¨Æ¬
+            // æ¸…ç©ºç°æœ‰çš„å¾…é€‰æ‹©å¡ç‰‡
             foreach (Transform child in page.transform)
             {
                 Destroy(child.gameObject);
@@ -151,83 +151,83 @@ public class ChooseCardManager : MonoBehaviour
         }
         
 
-        int ÁĞ = 1;
-        int ĞĞ = 1;
+        int åˆ— = 1;
+        int è¡Œ = 1;
         float yOffset = 0;
 
         
 
         foreach (GameObject page in Pages)
         {
-            ÁĞ = 1;
-            ĞĞ = 1;
+            åˆ— = 1;
+            è¡Œ = 1;
             yOffset = 0;
             for (int i = 0; i < 30; i++)
             {
 
-                GameObject cardBackground = Instantiate(¿¨Æ¬±³¾°, page.transform);
+                GameObject cardBackground = Instantiate(å¡ç‰‡èƒŒæ™¯, page.transform);
                 RectTransform cardRectTransform = cardBackground.GetComponent<RectTransform>();
-                cardRectTransform.anchoredPosition = new Vector2((ÁĞ - 1) * cardWidth, yOffset);
-                ÁĞ++;
-                if (ÁĞ > 6)
+                cardRectTransform.anchoredPosition = new Vector2((åˆ— - 1) * cardWidth, yOffset);
+                åˆ—++;
+                if (åˆ— > 6)
                 {
-                    ÁĞ = 1;
+                    åˆ— = 1;
                     yOffset -= 61;
                 }
             }
         }
 
-        ÁĞ = 1;
+        åˆ— = 1;
         yOffset = 0;
-        foreach (PlantStruct Ö²Îï in PlantStructManager.PlantStructDatabase)
+        foreach (PlantStruct æ¤ç‰© in PlantStructManager.PlantStructDatabase)
         {
-            if ((LevelManagerStatic.IsLevelCompleted(Ö²Îï.GetLevel) || Ö²Îï.GetLevel == -1) && Ö²Îï.envType != EnvironmentType.Other)
+            if ((LevelManagerStatic.IsLevelCompleted(æ¤ç‰©.GetLevel) || æ¤ç‰©.GetLevel == -1) && æ¤ç‰©.envType != EnvironmentType.Other)
             {
-                GameObject »ÒÉ«¿¨Æ¬ = Instantiate(¿¨Æ¬, Pages[0].transform);
-                Vector3 vector3 = »ÒÉ«¿¨Æ¬.transform.position;
+                GameObject ç°è‰²å¡ç‰‡ = Instantiate(å¡ç‰‡, Pages[0].transform);
+                Vector3 vector3 = ç°è‰²å¡ç‰‡.transform.position;
                 vector3.z += 1;
-                »ÒÉ«¿¨Æ¬.transform.position = vector3;
-                GameObject newCard = Instantiate(¿¨Æ¬, Pages[0].transform);
+                ç°è‰²å¡ç‰‡.transform.position = vector3;
+                GameObject newCard = Instantiate(å¡ç‰‡, Pages[0].transform);
 
-                »ÒÉ«¿¨Æ¬.GetComponent<Image>().color = Color.gray;
-                »ÒÉ«¿¨Æ¬.GetComponent<CardClickListener>().PlantImage.color = Color.gray;
-                »ÒÉ«¿¨Æ¬.GetComponent<Button>().enabled = false;
-                waitingCards.Add(newCard); // Ìí¼Óµ½´ıÑ¡Ôñ¿¨Æ¬ÁĞ±í
+                ç°è‰²å¡ç‰‡.GetComponent<Image>().color = Color.gray;
+                ç°è‰²å¡ç‰‡.GetComponent<CardClickListener>().PlantImage.color = Color.gray;
+                ç°è‰²å¡ç‰‡.GetComponent<Button>().enabled = false;
+                waitingCards.Add(newCard); // æ·»åŠ åˆ°å¾…é€‰æ‹©å¡ç‰‡åˆ—è¡¨
                 RectTransform newCardTransform = newCard.GetComponent<RectTransform>();
-                newCardTransform.anchoredPosition = new Vector2((ÁĞ - 1) * cardWidth, yOffset);
-                »ÒÉ«¿¨Æ¬.GetComponent<RectTransform>().anchoredPosition = new Vector2((ÁĞ - 1) * cardWidth, yOffset);
+                newCardTransform.anchoredPosition = new Vector2((åˆ— - 1) * cardWidth, yOffset);
+                ç°è‰²å¡ç‰‡.GetComponent<RectTransform>().anchoredPosition = new Vector2((åˆ— - 1) * cardWidth, yOffset);
 
 
 
 
-                »ÒÉ«¿¨Æ¬.GetComponent<CardClickListener>().Initialize(this, Ö²Îï);
-                newCard.GetComponent<CardClickListener>().Initialize(this, Ö²Îï);
+                ç°è‰²å¡ç‰‡.GetComponent<CardClickListener>().Initialize(this, æ¤ç‰©);
+                newCard.GetComponent<CardClickListener>().Initialize(this, æ¤ç‰©);
 
-                ÁĞ++;
-                if (ÁĞ > 6
+                åˆ—++;
+                if (åˆ— > 6
                     )
                 {
-                    ÁĞ = 1;
-                    ĞĞ += 1;
-                    yOffset = -(ĞĞ - 1) * 61;
+                    åˆ— = 1;
+                    è¡Œ += 1;
+                    yOffset = -(è¡Œ - 1) * 61;
                 }
 
 
 
 
 
-                »ÒÉ«¿¨Æ¬.transform.SetParent(Pages[CardPage].transform);
+                ç°è‰²å¡ç‰‡.transform.SetParent(Pages[CardPage].transform);
                 newCard.transform.SetParent(Pages[CardPage].transform);
 
 
-                if (ĞĞ > 5)
+                if (è¡Œ > 5)
                 {
-                    ĞĞ = 1;
-                    yOffset = -(ĞĞ - 1) * 61;
+                    è¡Œ = 1;
+                    yOffset = -(è¡Œ - 1) * 61;
                     CardPage++;
                 }
-                //ÉèÖÃ¿¨Æ¬µÄ³õÊ¼¼¤»îÇé¿ö
-                for (int i = 0; i < Pages.Count; i++)//³õÊ¼ÔÚµÚÒ»Ò³
+                //è®¾ç½®å¡ç‰‡çš„åˆå§‹æ¿€æ´»æƒ…å†µ
+                for (int i = 0; i < Pages.Count; i++)//åˆå§‹åœ¨ç¬¬ä¸€é¡µ
                 {
                     if (nowPage == i)
                     {
@@ -235,7 +235,7 @@ public class ChooseCardManager : MonoBehaviour
                         {
 
                             if (!selectedCards.Contains(child.gameObject))
-                            {//ÔÚ¿¨²ÛÄÚµÄ¿¨²»¸Ä±ä¼¤»î×´Ì¬
+                            {//åœ¨å¡æ§½å†…çš„å¡ä¸æ”¹å˜æ¿€æ´»çŠ¶æ€
                                 child.gameObject.SetActive(true);
                             }
 
@@ -260,19 +260,19 @@ public class ChooseCardManager : MonoBehaviour
     #endregion
     public void OnCardClicked(GameObject clickedCard)
     {
-        print("µã»÷¿¨Æ¬");
-        // Èç¹û¿¨Æ¬ÒÑ±»Ñ¡Ôñ£¬È¡ÏûÑ¡Ôñ²¢·µ»ØÔ­Î»
+        print("ç‚¹å‡»å¡ç‰‡");
+        // å¦‚æœå¡ç‰‡å·²è¢«é€‰æ‹©ï¼Œå–æ¶ˆé€‰æ‹©å¹¶è¿”å›åŸä½
         if (selectedCards.Contains(clickedCard))
         {
-            // »Ö¸´¿¨Æ¬µÄÔ­Ê¼Î»ÖÃ
+            // æ¢å¤å¡ç‰‡çš„åŸå§‹ä½ç½®
             RectTransform cardRectTransform = clickedCard.GetComponent<RectTransform>();
             Debug.Log(cardRectTransform);
-            cardRectTransform.position = originalPositions[clickedCard]; // ÉèÖÃ»ØÔ­Ê¼µÄÊÀ½ç×ø±ê
+            cardRectTransform.position = originalPositions[clickedCard]; // è®¾ç½®å›åŸå§‹çš„ä¸–ç•Œåæ ‡
 
             selectedCards.Remove(clickedCard);
             waitingCards.Add(clickedCard);
 
-            //È·±£È¡ÏûÑ¡Ôñºó£¬²»ÔÚÏÖÔÚÒ³ÃæµÄ¿¨Æª´¦ÓÚÎ´¼¤»î×´Ì¬
+            //ç¡®ä¿å–æ¶ˆé€‰æ‹©åï¼Œä¸åœ¨ç°åœ¨é¡µé¢çš„å¡ç¯‡å¤„äºæœªæ¿€æ´»çŠ¶æ€
             Transform[] PageTransforms = Pages[nowPage].GetComponentsInChildren<Transform>();
             List<GameObject> CardgameObjects = new List<GameObject>();
             for (int i = 0; i < PageTransforms.Length; i++)
@@ -286,7 +286,7 @@ public class ChooseCardManager : MonoBehaviour
 
 
             StartCoroutine(RearrangeSelectedCards());
-            print("»ØÊÕ¿¨Æ¬");
+            print("å›æ”¶å¡ç‰‡");
         }
         else
         {
@@ -300,11 +300,11 @@ public class ChooseCardManager : MonoBehaviour
 
                 Vector3 targetWorldPosition = availablePosition.transform.position;
 
-                // ½«¿¨Æ¬µÄÊÀ½ç×ø±êÉèÖÃÎªÄ¿±êÎ»ÖÃ
+                // å°†å¡ç‰‡çš„ä¸–ç•Œåæ ‡è®¾ç½®ä¸ºç›®æ ‡ä½ç½®
                 cardRectTransform.position = targetWorldPosition;
                 selectedCards.Add(clickedCard);
                 waitingCards.Remove(clickedCard);
-                print("·ÅÖÃ¿¨Æ¬");
+                print("æ”¾ç½®å¡ç‰‡");
             }
         }
     }
@@ -315,7 +315,7 @@ public class ChooseCardManager : MonoBehaviour
             Resources.Load<GameObject>("Prefabs/Plants/" + card.plant_Struct.plantName));
     }
 
-    private IEnumerator RearrangeSelectedCards()//ÊµÏÖ¿¨²ÛÄÚ¿¨Æ¬µÄ½ôÃÜÅÅÁĞ
+    private IEnumerator RearrangeSelectedCards()//å®ç°å¡æ§½å†…å¡ç‰‡çš„ç´§å¯†æ’åˆ—
     {
         for (int i = 0; i < selectedCards.Count; i++)
         {
@@ -329,10 +329,10 @@ public class ChooseCardManager : MonoBehaviour
     }
 
     public void ExitChoosingCard()
-    { //½áÊøÑ¡¿¨
+    { //ç»“æŸé€‰å¡
         if (!FinishChoosing)
         {
-            print("½áÊøÑ¡¿¨");
+            print("ç»“æŸé€‰å¡");
             StopCoroutine(MoveBackground());
             StartCoroutine(MoveBackground());
             FinishChoosing = true;
@@ -344,10 +344,10 @@ public class ChooseCardManager : MonoBehaviour
     }
 
 
-    public void RoadCards()//½«Ñ¡ºÃµÄ¿¨Æ¬ÒÔCardµÄĞÎÊ½·Å½ø¿¨²ÛÖĞ
+    public void RoadCards()//å°†é€‰å¥½çš„å¡ç‰‡ä»¥Cardçš„å½¢å¼æ”¾è¿›å¡æ§½ä¸­
     {
-        GameManagement.levelData.plantCards.Clear();//Çå¿ÕÖ®Ç°µÄÑ¡¿¨
-        StaticThingsManagement.±£´æÉÏ´ÎÑ¡Ôñ¿¨ÅÆ.Clear();
+        GameManagement.levelData.plantCards.Clear();//æ¸…ç©ºä¹‹å‰çš„é€‰å¡
+        StaticThingsManagement.ä¿å­˜ä¸Šæ¬¡é€‰æ‹©å¡ç‰Œ.Clear();
         for (int i = 0; i < selectedCards.Count; i++)
         {
             GameManagement.levelData.plantCards.Add(selectedCards[i].
@@ -355,23 +355,23 @@ public class ChooseCardManager : MonoBehaviour
         }
         for (int i = 0; i < selectedCards.Count; i++)
         {
-            StaticThingsManagement.±£´æÉÏ´ÎÑ¡Ôñ¿¨ÅÆ.Add(selectedCards[i]);
+            StaticThingsManagement.ä¿å­˜ä¸Šæ¬¡é€‰æ‹©å¡ç‰Œ.Add(selectedCards[i]);
         }
     }
 
-    public void ÖØÑ¡ÉÏ´Î¿¨ÅÆ()
+    public void é‡é€‰ä¸Šæ¬¡å¡ç‰Œ()
     {
 
     }
-    #region ·­Ò³
+    #region ç¿»é¡µ
     public void NextPage()
     {
 
-        //·­Ò³,ÏÂÒ»Ò³     
+        //ç¿»é¡µ,ä¸‹ä¸€é¡µ     
         nowPage++;
-        nowPage = nowPage % Pages.Count;//·ÀÖ¹¹ı½ç
+        nowPage = nowPage % Pages.Count;//é˜²æ­¢è¿‡ç•Œ
         if (nowPage < 0) { nowPage = Pages.Count - 1; }
-        for (int i = 0; i < Pages.Count; i++)//³õÊ¼ÔÚµÚÒ»Ò³
+        for (int i = 0; i < Pages.Count; i++)//åˆå§‹åœ¨ç¬¬ä¸€é¡µ
         {
             if (nowPage == i)
             {
@@ -379,7 +379,7 @@ public class ChooseCardManager : MonoBehaviour
                 {
 
                     if (!selectedCards.Contains(child.gameObject))
-                    {//ÔÚ¿¨²ÛÄÚµÄ¿¨²»¸Ä±ä¼¤»î×´Ì¬
+                    {//åœ¨å¡æ§½å†…çš„å¡ä¸æ”¹å˜æ¿€æ´»çŠ¶æ€
                         child.gameObject.SetActive(true);
                     }
 
@@ -406,11 +406,11 @@ public class ChooseCardManager : MonoBehaviour
     }
     public void LastPage()
     {
-        //·­Ò³,ÉÏÒ»Ò³     
+        //ç¿»é¡µ,ä¸Šä¸€é¡µ     
         nowPage--;
-        nowPage = nowPage % Pages.Count;//·ÀÖ¹¹ı½ç
+        nowPage = nowPage % Pages.Count;//é˜²æ­¢è¿‡ç•Œ
         if (nowPage < 0) { nowPage = Pages.Count - 1; }
-        for (int i = 0; i < Pages.Count; i++)//³õÊ¼ÔÚµÚÒ»Ò³
+        for (int i = 0; i < Pages.Count; i++)//åˆå§‹åœ¨ç¬¬ä¸€é¡µ
         {
             if (nowPage == i)
             {
@@ -418,7 +418,7 @@ public class ChooseCardManager : MonoBehaviour
                 {
 
                     if (!selectedCards.Contains(child.gameObject))
-                    {//ÔÚ¿¨²ÛÄÚµÄ¿¨²»¸Ä±ä¼¤»î×´Ì¬
+                    {//åœ¨å¡æ§½å†…çš„å¡ä¸æ”¹å˜æ¿€æ´»çŠ¶æ€
                         child.gameObject.SetActive(true);
                     }
 
@@ -445,5 +445,3 @@ public class ChooseCardManager : MonoBehaviour
     }
     #endregion
 }
-
-

@@ -70,7 +70,7 @@ ScriptedImporter:
     compressionQualitySet: 0
     textureFormatSet: 0
     applyGammaDecoding: 0
-  singleSpriteImportData:
+  spriteImportData:
   - name: 
     originalName: 
     pivot: {x: 0, y: 0}
@@ -82,7 +82,7 @@ ScriptedImporter:
       y: 0
       width: 0
       height: 0
-    spriteID: 4974e96a2c749944fb66d0ba9d3d4bea
+    spriteID: 
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -92,8 +92,8 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
     spritePosition: {x: 0, y: 0}
-  multiSpriteImportData: []
-  layeredSpriteImportData:
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
   - name: firegun1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -105,7 +105,7 @@ ScriptedImporter:
       y: 55
       width: 73
       height: 51
-    spriteID: 19e3386a704821e438ea14ff127cd221
+    spriteID: 886883aecc83be045a0edbf625e65d5a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -126,7 +126,7 @@ ScriptedImporter:
       y: 4
       width: 204
       height: 43
-    spriteID: c005f4b07f2f2264280c3f06220d6230
+    spriteID: 127780b4d8005c44a8fba74bcc590ac8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -147,7 +147,7 @@ ScriptedImporter:
       y: 55
       width: 50
       height: 93
-    spriteID: 5ab7ff74bc9949644b6523b5fd902f24
+    spriteID: 6bf5f1eb58fecf642822c96784412336
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -168,7 +168,7 @@ ScriptedImporter:
       y: 114
       width: 64
       height: 49
-    spriteID: b2f73070cc0e82247957a1423453e054
+    spriteID: f53a8c033614efb4db0bfebb629a6b23
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -178,18 +178,15 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 62, y: 114}
     spritePosition: {x: 85, y: 103}
-  spriteImportData: []
-  rigSpriteImportData: []
-  sharedRigSpriteImportData: []
-  mosaicSpriteImportData: []
-  sharedRigCharacterData:
+  characterData:
     bones: []
     parts: []
     dimension: {x: 0, y: 0}
     characterGroups: []
     pivot: {x: 0, y: 0}
     boneReadOnly: 0
-  characterData:
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
     bones: []
     parts: []
     dimension: {x: 0, y: 0}
@@ -206,22 +203,20 @@ ScriptedImporter:
   generatePhysicsShape: 0
   paperDollMode: 0
   keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
   padding: 4
   spriteSizeExpand: 0
-  skeletonAssetReferenceID: 
-  pipeline: {instanceID: 0}
-  pipelineVersion: 
   spriteCategoryList:
     categories: []
   spritePackingTag: 
   resliceFromLayer: 0
-  pSDLayerImportSetting: []
-  psdLayers:
+  mosaicPSDLayers: []
+  rigPSDLayers:
   - name: firegun1
     spriteName: firegun1
     isGroup: 0
     parentIndex: -1
-    spriteID: 19e3386a704821e438ea14ff127cd221
+    spriteID: 886883aecc83be045a0edbf625e65d5a
     layerID: 9
     mosaicPosition: {x: 62, y: 55}
     flatten: 0
@@ -231,7 +226,7 @@ ScriptedImporter:
     spriteName: firegun2
     isGroup: 0
     parentIndex: -1
-    spriteID: c005f4b07f2f2264280c3f06220d6230
+    spriteID: 127780b4d8005c44a8fba74bcc590ac8
     layerID: 5
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
@@ -241,7 +236,7 @@ ScriptedImporter:
     spriteName: bottol
     isGroup: 0
     parentIndex: -1
-    spriteID: 5ab7ff74bc9949644b6523b5fd902f24
+    spriteID: 6bf5f1eb58fecf642822c96784412336
     layerID: 6
     mosaicPosition: {x: 4, y: 55}
     flatten: 0
@@ -251,15 +246,14 @@ ScriptedImporter:
     spriteName: helmet
     isGroup: 0
     parentIndex: -1
-    spriteID: b2f73070cc0e82247957a1423453e054
+    spriteID: f53a8c033614efb4db0bfebb629a6b23
     layerID: 7
     mosaicPosition: {x: 62, y: 114}
     flatten: 0
     isImported: 1
     isVisible: 1
-  mosaicPSDLayers: []
-  rigPSDLayers: []
   sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   spriteSizeExpandChanged: 0

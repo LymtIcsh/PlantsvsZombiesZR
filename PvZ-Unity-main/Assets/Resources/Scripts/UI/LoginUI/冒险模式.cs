@@ -14,7 +14,7 @@ public class 冒险模式 : MonoBehaviour
     public Sprite 冒险;
     public Sprite 冒险高亮;
     public GameObject 僵尸手;
-    public Animator animator;
+    public Animator animator; 
     public float 间隔时间 = 2f;//用于计算两个音效空余时间
     bool allLevelsCompleted = true; //记录是否全部关卡通关
 

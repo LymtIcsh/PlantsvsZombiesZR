@@ -75,7 +75,7 @@ ScriptedImporter:
     compressionQualitySet: 0
     textureFormatSet: 0
     applyGammaDecoding: 0
-  singleSpriteImportData:
+  spriteImportData:
   - name: 
     originalName: 
     pivot: {x: 0, y: 0}
@@ -87,7 +87,7 @@ ScriptedImporter:
       y: 0
       width: 0
       height: 0
-    spriteID: 92036b9df70f1b643b66c756a0798fee
+    spriteID: 
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -97,8 +97,8 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
     spritePosition: {x: 0, y: 0}
-  multiSpriteImportData: []
-  layeredSpriteImportData:
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
   - name: PeaShooter_frontleaf_righttip
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -110,7 +110,7 @@ ScriptedImporter:
       y: 4
       width: 8
       height: 16
-    spriteID: 67dc32c378530174aaeb6649ce2f9a24
+    spriteID: 41a5c45682e527e4f92eae611e4891ec
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -131,7 +131,7 @@ ScriptedImporter:
       y: 29
       width: 14
       height: 18
-    spriteID: a5eb990f4d5d5f14db3a9e3b766e0009
+    spriteID: 5d6219124494f504faccbdb1a4ce9531
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -152,7 +152,7 @@ ScriptedImporter:
       y: 165
       width: 48
       height: 20
-    spriteID: 45a59c85d64048e47931020d2774ad60
+    spriteID: 0a1b3b0ec9d6405448a16a9e42f506b8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -173,7 +173,7 @@ ScriptedImporter:
       y: 116
       width: 12
       height: 6
-    spriteID: 4dc494f3b4798684bbd86da9d8c6c10a
+    spriteID: a048a6337b9704945a26c83828bcd596
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -194,7 +194,7 @@ ScriptedImporter:
       y: 92
       width: 12
       height: 6
-    spriteID: 83d7b35dbc6f63445abd722775e8e37a
+    spriteID: f23e2b159a3ae8b44848a5984fa5c4eb
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -215,7 +215,7 @@ ScriptedImporter:
       y: 4
       width: 33
       height: 17
-    spriteID: e55eba0bfa8dff345b45b7514f4706d6
+    spriteID: 1c0aaac2ecaa126499366ffe514ef8a6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -236,7 +236,7 @@ ScriptedImporter:
       y: 116
       width: 35
       height: 17
-    spriteID: c5eb2ad285d235143b1e75c3844998a8
+    spriteID: 07014603fd7ae5a4a9f821a4a064aa6d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -257,7 +257,7 @@ ScriptedImporter:
       y: 65
       width: 64
       height: 43
-    spriteID: c191a6dc2dd361e40a6a79102b891af5
+    spriteID: a579324694656b94fb23ecd296b4095f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -278,7 +278,7 @@ ScriptedImporter:
       y: 65
       width: 34
       height: 19
-    spriteID: 0c1a86414be62a34a8629b00f692eba3
+    spriteID: cba204e0aacd8be42bfd2a702111f31b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -299,7 +299,7 @@ ScriptedImporter:
       y: 165
       width: 57
       height: 31
-    spriteID: 6f32e161dec16d34f906a118204cbf40
+    spriteID: 9005860b5ef265e4eb74311c5d100218
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -320,7 +320,7 @@ ScriptedImporter:
       y: 4
       width: 61
       height: 53
-    spriteID: 1e265f5585e186b4c89ff5a8d6b7e904
+    spriteID: 0db7a0c27b0a35d4992180c4c8296bec
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -341,7 +341,7 @@ ScriptedImporter:
       y: 116
       width: 57
       height: 41
-    spriteID: b49c3e9aa6b4a234998031bac3ecc289
+    spriteID: faa836446c916bb4091492fbef6a3dc5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -362,7 +362,7 @@ ScriptedImporter:
       y: 92
       width: 18
       height: 14
-    spriteID: 79c6c84fd2b2b2b4d88d126a38b90ded
+    spriteID: 81ce20b52369a8a4386d49b76100010b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -383,7 +383,7 @@ ScriptedImporter:
       y: 29
       width: 18
       height: 18
-    spriteID: f2f6a762a19c80d4ea59bf27242cee98
+    spriteID: 2632828c70e2a60439d4bfefd49ac598
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -393,18 +393,15 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 73, y: 29}
     spritePosition: {x: 59, y: 13}
-  spriteImportData: []
-  rigSpriteImportData: []
-  sharedRigSpriteImportData: []
-  mosaicSpriteImportData: []
-  sharedRigCharacterData:
+  characterData:
     bones: []
     parts: []
     dimension: {x: 0, y: 0}
     characterGroups: []
     pivot: {x: 0, y: 0}
     boneReadOnly: 0
-  characterData:
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
     bones: []
     parts: []
     dimension: {x: 0, y: 0}
@@ -421,22 +418,20 @@ ScriptedImporter:
   generatePhysicsShape: 0
   paperDollMode: 0
   keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
   padding: 4
   spriteSizeExpand: 0
-  skeletonAssetReferenceID: 
-  pipeline: {instanceID: 0}
-  pipelineVersion: 
   spriteCategoryList:
     categories: []
   spritePackingTag: 
   resliceFromLayer: 0
-  pSDLayerImportSetting: []
-  psdLayers:
+  mosaicPSDLayers: []
+  rigPSDLayers:
   - name: PeaShooter_frontleaf_righttip
     spriteName: PeaShooter_frontleaf_righttip
     isGroup: 0
     parentIndex: -1
-    spriteID: 67dc32c378530174aaeb6649ce2f9a24
+    spriteID: 41a5c45682e527e4f92eae611e4891ec
     layerID: 10
     mosaicPosition: {x: 114, y: 4}
     flatten: 0
@@ -446,7 +441,7 @@ ScriptedImporter:
     spriteName: PeaShooter_frontleaf_lefttip
     isGroup: 0
     parentIndex: -1
-    spriteID: a5eb990f4d5d5f14db3a9e3b766e0009
+    spriteID: 5d6219124494f504faccbdb1a4ce9531
     layerID: 9
     mosaicPosition: {x: 99, y: 29}
     flatten: 0
@@ -456,7 +451,7 @@ ScriptedImporter:
     spriteName: "\u524D\u53F6"
     isGroup: 0
     parentIndex: -1
-    spriteID: 45a59c85d64048e47931020d2774ad60
+    spriteID: 0a1b3b0ec9d6405448a16a9e42f506b8
     layerID: 19
     mosaicPosition: {x: 69, y: 165}
     flatten: 0
@@ -466,7 +461,7 @@ ScriptedImporter:
     spriteName: Melonpult_eyebrow
     isGroup: 0
     parentIndex: -1
-    spriteID: 4dc494f3b4798684bbd86da9d8c6c10a
+    spriteID: a048a6337b9704945a26c83828bcd596
     layerID: 22
     mosaicPosition: {x: 112, y: 116}
     flatten: 0
@@ -476,7 +471,7 @@ ScriptedImporter:
     spriteName: Melonpult_eyebrow
     isGroup: 0
     parentIndex: -1
-    spriteID: 83d7b35dbc6f63445abd722775e8e37a
+    spriteID: f23e2b159a3ae8b44848a5984fa5c4eb
     layerID: 5
     mosaicPosition: {x: 102, y: 92}
     flatten: 0
@@ -486,7 +481,7 @@ ScriptedImporter:
     spriteName: WinterMelon_blink2
     isGroup: 0
     parentIndex: -1
-    spriteID: e55eba0bfa8dff345b45b7514f4706d6
+    spriteID: 1c0aaac2ecaa126499366ffe514ef8a6
     layerID: 48
     mosaicPosition: {x: 73, y: 4}
     flatten: 0
@@ -496,7 +491,7 @@ ScriptedImporter:
     spriteName: WinterMelon_blink1
     isGroup: 0
     parentIndex: -1
-    spriteID: c5eb2ad285d235143b1e75c3844998a8
+    spriteID: 07014603fd7ae5a4a9f821a4a064aa6d
     layerID: 47
     mosaicPosition: {x: 69, y: 116}
     flatten: 0
@@ -506,7 +501,7 @@ ScriptedImporter:
     spriteName: WinterMelon_melon
     isGroup: 0
     parentIndex: -1
-    spriteID: c191a6dc2dd361e40a6a79102b891af5
+    spriteID: a579324694656b94fb23ecd296b4095f
     layerID: 43
     mosaicPosition: {x: 4, y: 65}
     flatten: 0
@@ -516,7 +511,7 @@ ScriptedImporter:
     spriteName: WinterMelon_stalk
     isGroup: 0
     parentIndex: -1
-    spriteID: 0c1a86414be62a34a8629b00f692eba3
+    spriteID: cba204e0aacd8be42bfd2a702111f31b
     layerID: 42
     mosaicPosition: {x: 76, y: 65}
     flatten: 0
@@ -526,7 +521,7 @@ ScriptedImporter:
     spriteName: WinterMelon_basket_overlay
     isGroup: 0
     parentIndex: -1
-    spriteID: 6f32e161dec16d34f906a118204cbf40
+    spriteID: 9005860b5ef265e4eb74311c5d100218
     layerID: 45
     mosaicPosition: {x: 4, y: 165}
     flatten: 0
@@ -536,7 +531,7 @@ ScriptedImporter:
     spriteName: WinterMelon_projectile
     isGroup: 0
     parentIndex: -1
-    spriteID: 1e265f5585e186b4c89ff5a8d6b7e904
+    spriteID: 0db7a0c27b0a35d4992180c4c8296bec
     layerID: 46
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
@@ -546,7 +541,7 @@ ScriptedImporter:
     spriteName: WinterMelon_basket
     isGroup: 0
     parentIndex: -1
-    spriteID: b49c3e9aa6b4a234998031bac3ecc289
+    spriteID: faa836446c916bb4091492fbef6a3dc5
     layerID: 44
     mosaicPosition: {x: 4, y: 116}
     flatten: 0
@@ -556,7 +551,7 @@ ScriptedImporter:
     spriteName: PeaShooter_frontleaf_lefttip
     isGroup: 0
     parentIndex: -1
-    spriteID: 79c6c84fd2b2b2b4d88d126a38b90ded
+    spriteID: 81ce20b52369a8a4386d49b76100010b
     layerID: 27
     mosaicPosition: {x: 76, y: 92}
     flatten: 0
@@ -566,15 +561,14 @@ ScriptedImporter:
     spriteName: PeaShooter_frontleaf_lefttip
     isGroup: 0
     parentIndex: -1
-    spriteID: f2f6a762a19c80d4ea59bf27242cee98
+    spriteID: 2632828c70e2a60439d4bfefd49ac598
     layerID: 24
     mosaicPosition: {x: 73, y: 29}
     flatten: 0
     isImported: 1
     isVisible: 1
-  mosaicPSDLayers: []
-  rigPSDLayers: []
   sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   spriteSizeExpandChanged: 0

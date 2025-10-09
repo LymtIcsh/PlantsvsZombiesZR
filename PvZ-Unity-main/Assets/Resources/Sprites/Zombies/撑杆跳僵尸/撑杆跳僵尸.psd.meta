@@ -75,7 +75,7 @@ ScriptedImporter:
     compressionQualitySet: 0
     textureFormatSet: 0
     applyGammaDecoding: 0
-  singleSpriteImportData:
+  spriteImportData:
   - name: 
     originalName: 
     pivot: {x: 0, y: 0}
@@ -87,7 +87,7 @@ ScriptedImporter:
       y: 0
       width: 0
       height: 0
-    spriteID: d57ab983df411bf44a75fb5f12971191
+    spriteID: 
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -97,8 +97,8 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
     spritePosition: {x: 0, y: 0}
-  multiSpriteImportData: []
-  layeredSpriteImportData:
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
   - name: Zombie_polevaulter_outerarm_lower
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -110,7 +110,7 @@ ScriptedImporter:
       y: 754
       width: 106
       height: 130
-    spriteID: b063898132700d04189de12573a51ed5
+    spriteID: bac51f734b73746478e083123daebe1f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -131,7 +131,7 @@ ScriptedImporter:
       y: 470
       width: 41
       height: 104
-    spriteID: 8ec49c7a3504844459574035c1f53e49
+    spriteID: 5967cb739ca4efd43a19107c7d19f3f3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -152,7 +152,7 @@ ScriptedImporter:
       y: 270
       width: 41
       height: 104
-    spriteID: 77b97e3f43dbf9f479eb5e478f2a4f33
+    spriteID: 871df37b160dae9478b44f63e6b9dd1f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -173,7 +173,7 @@ ScriptedImporter:
       y: 754
       width: 105
       height: 112
-    spriteID: 77e0ebf4b9240a541aea1bf1aa6a030e
+    spriteID: 025d896e96579814a9aa985534cb0d59
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -194,7 +194,7 @@ ScriptedImporter:
       y: 4
       width: 279
       height: 170
-    spriteID: 9e491f3d1f26c8547a4bce3ba500a7b8
+    spriteID: 82487291e2152f345b0d020e17c41a14
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -215,7 +215,7 @@ ScriptedImporter:
       y: 681
       width: 134
       height: 62
-    spriteID: 7c9c3976e3035a242adc5e77fb6ad3ed
+    spriteID: e36d0c4ab0005d3478249cb0320bced2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -236,7 +236,7 @@ ScriptedImporter:
       y: 262
       width: 221
       height: 200
-    spriteID: 6ada8814502fb0f4da68949f678afc40
+    spriteID: b80e2dae0006de444b5bbbadb8a038b5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -257,7 +257,7 @@ ScriptedImporter:
       y: 4
       width: 221
       height: 250
-    spriteID: 84ea95e01a605bc48b0a0aa21b0f8b50
+    spriteID: a45c084def670df4499dd7de581c5e20
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -278,7 +278,7 @@ ScriptedImporter:
       y: 470
       width: 171
       height: 138
-    spriteID: 092b210ad2e64684781d25d4110efe50
+    spriteID: dc03a34ff0e28944fb606193f7c4ac66
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -299,7 +299,7 @@ ScriptedImporter:
       y: 270
       width: 79
       height: 154
-    spriteID: 7406a69963a8284448d901f10ed1297e
+    spriteID: a70aa7d56bedc57428edab56f1034bd2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -320,7 +320,7 @@ ScriptedImporter:
       y: 616
       width: 87
       height: 50
-    spriteID: dbbf959c6a522b243b2cf1ba59b1e494
+    spriteID: 2576277c113f0764e8ec25c2df2be450
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -341,7 +341,7 @@ ScriptedImporter:
       y: 892
       width: 109
       height: 125
-    spriteID: fb67a6df7866d684ba9bcb383cc79ea2
+    spriteID: 72ab9286e0d700b4581344c67530034d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -362,7 +362,7 @@ ScriptedImporter:
       y: 432
       width: 133
       height: 75
-    spriteID: 1c83f7ef0a286844e95cb2adafe53aa1
+    spriteID: b01c590c817dd0946a564b1d34baf589
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -383,7 +383,7 @@ ScriptedImporter:
       y: 182
       width: 155
       height: 80
-    spriteID: 975191692ae11144ca63ac9b6ad64c2a
+    spriteID: 5326ccf0d67ce524fab608a4efc85202
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -404,7 +404,7 @@ ScriptedImporter:
       y: 674
       width: 55
       height: 70
-    spriteID: 22781a50075c655428a2b5fbe0d37fcc
+    spriteID: 95402cdb48ba01b4aaf47531f4b530c9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -425,7 +425,7 @@ ScriptedImporter:
       y: 616
       width: 109
       height: 130
-    spriteID: 498c5a5b4b1e84a4bb5f984b3b67ea52
+    spriteID: e0d14d05224cf9e44ac85f1216e8ad09
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -446,7 +446,7 @@ ScriptedImporter:
       y: 598
       width: 123
       height: 75
-    spriteID: 35fce9d4ad29362479e121a6d502e9b1
+    spriteID: 72e50348070103040b85fcb3649e5b60
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -467,7 +467,7 @@ ScriptedImporter:
       y: 515
       width: 125
       height: 75
-    spriteID: 8059fa5ddc5d7c94ca685f16ffb2f6b5
+    spriteID: c32653cf04f2f3b4eb0e7eac3171a658
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -488,7 +488,7 @@ ScriptedImporter:
       y: 751
       width: 45
       height: 80
-    spriteID: 9937e14db74307c4481fa3085aca6dec
+    spriteID: ceee74a9681aacf489eae80d9860f80c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -509,7 +509,7 @@ ScriptedImporter:
       y: 892
       width: 95
       height: 100
-    spriteID: 3e92471ad97fd5a44800d7ee3e5215ff
+    spriteID: c9e026cf08cd1bd4daaa63350f445b10
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -530,7 +530,7 @@ ScriptedImporter:
       y: 4
       width: 500
       height: 25
-    spriteID: 779f24f21b157024783a27e7b75cacd3
+    spriteID: 381578e83c948ac4ab2d954571e6f46c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -551,7 +551,7 @@ ScriptedImporter:
       y: 37
       width: 350
       height: 25
-    spriteID: 773bb5cc30c6ffd4fb27f80f3d9c9510
+    spriteID: 6df279214d5002c4191376cb9ede034f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -561,18 +561,15 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 520, y: 37}
     spritePosition: {x: 571, y: 822}
-  spriteImportData: []
-  rigSpriteImportData: []
-  sharedRigSpriteImportData: []
-  mosaicSpriteImportData: []
-  sharedRigCharacterData:
+  characterData:
     bones: []
     parts: []
     dimension: {x: 0, y: 0}
     characterGroups: []
     pivot: {x: 0, y: 0}
     boneReadOnly: 0
-  characterData:
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
     bones: []
     parts: []
     dimension: {x: 0, y: 0}
@@ -589,22 +586,20 @@ ScriptedImporter:
   generatePhysicsShape: 0
   paperDollMode: 0
   keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
   padding: 4
   spriteSizeExpand: 0
-  skeletonAssetReferenceID: 
-  pipeline: {instanceID: 0}
-  pipelineVersion: 
   spriteCategoryList:
     categories: []
   spritePackingTag: 
   resliceFromLayer: 0
-  pSDLayerImportSetting: []
-  psdLayers:
+  mosaicPSDLayers: []
+  rigPSDLayers:
   - name: Zombie_polevaulter_outerarm_lower
     spriteName: Zombie_polevaulter_outerarm_lower
     isGroup: 0
     parentIndex: -1
-    spriteID: b063898132700d04189de12573a51ed5
+    spriteID: bac51f734b73746478e083123daebe1f
     layerID: 27
     mosaicPosition: {x: 4, y: 754}
     flatten: 0
@@ -614,7 +609,7 @@ ScriptedImporter:
     spriteName: Zombie_polevaulter_outerarm_upper
     isGroup: 0
     parentIndex: -1
-    spriteID: 8ec49c7a3504844459574035c1f53e49
+    spriteID: 5967cb739ca4efd43a19107c7d19f3f3
     layerID: 21
     mosaicPosition: {x: 183, y: 470}
     flatten: 0
@@ -624,7 +619,7 @@ ScriptedImporter:
     spriteName: Zombie_polevaulter_outerarm_upper2
     isGroup: 0
     parentIndex: -1
-    spriteID: 77b97e3f43dbf9f479eb5e478f2a4f33
+    spriteID: 871df37b160dae9478b44f63e6b9dd1f
     layerID: 22
     mosaicPosition: {x: 320, y: 270}
     flatten: 0
@@ -634,7 +629,7 @@ ScriptedImporter:
     spriteName: Zombie_outerarm_hand
     isGroup: 0
     parentIndex: -1
-    spriteID: 77e0ebf4b9240a541aea1bf1aa6a030e
+    spriteID: 025d896e96579814a9aa985534cb0d59
     layerID: 40
     mosaicPosition: {x: 118, y: 754}
     flatten: 0
@@ -644,7 +639,7 @@ ScriptedImporter:
     spriteName: Zombie_polevaulter_hair
     isGroup: 0
     parentIndex: -1
-    spriteID: 9e491f3d1f26c8547a4bce3ba500a7b8
+    spriteID: 82487291e2152f345b0d020e17c41a14
     layerID: 15
     mosaicPosition: {x: 233, y: 4}
     flatten: 0
@@ -654,7 +649,7 @@ ScriptedImporter:
     spriteName: Zombie_jaw
     isGroup: 0
     parentIndex: -1
-    spriteID: 7c9c3976e3035a242adc5e77fb6ad3ed
+    spriteID: e36d0c4ab0005d3478249cb0320bced2
     layerID: 42
     mosaicPosition: {x: 233, y: 681}
     flatten: 0
@@ -664,7 +659,7 @@ ScriptedImporter:
     spriteName: Zombie_head
     isGroup: 0
     parentIndex: -1
-    spriteID: 6ada8814502fb0f4da68949f678afc40
+    spriteID: b80e2dae0006de444b5bbbadb8a038b5
     layerID: 43
     mosaicPosition: {x: 4, y: 262}
     flatten: 0
@@ -674,7 +669,7 @@ ScriptedImporter:
     spriteName: Zombie_polevaulter_body1
     isGroup: 0
     parentIndex: -1
-    spriteID: 84ea95e01a605bc48b0a0aa21b0f8b50
+    spriteID: a45c084def670df4499dd7de581c5e20
     layerID: 13
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
@@ -684,7 +679,7 @@ ScriptedImporter:
     spriteName: Zombie_polevaulter_body2
     isGroup: 0
     parentIndex: -1
-    spriteID: 092b210ad2e64684781d25d4110efe50
+    spriteID: dc03a34ff0e28944fb606193f7c4ac66
     layerID: 14
     mosaicPosition: {x: 4, y: 470}
     flatten: 0
@@ -694,7 +689,7 @@ ScriptedImporter:
     spriteName: Zombie_polevaulter_innerarm_lower
     isGroup: 0
     parentIndex: -1
-    spriteID: 7406a69963a8284448d901f10ed1297e
+    spriteID: a70aa7d56bedc57428edab56f1034bd2
     layerID: 28
     mosaicPosition: {x: 233, y: 270}
     flatten: 0
@@ -704,7 +699,7 @@ ScriptedImporter:
     spriteName: Zombie_polevaulter_innerarm_upper
     isGroup: 0
     parentIndex: -1
-    spriteID: dbbf959c6a522b243b2cf1ba59b1e494
+    spriteID: 2576277c113f0764e8ec25c2df2be450
     layerID: 10
     mosaicPosition: {x: 121, y: 616}
     flatten: 0
@@ -714,7 +709,7 @@ ScriptedImporter:
     spriteName: Zombie_polevaulter_outerleg_lower
     isGroup: 0
     parentIndex: -1
-    spriteID: fb67a6df7866d684ba9bcb383cc79ea2
+    spriteID: 72ab9286e0d700b4581344c67530034d
     layerID: 17
     mosaicPosition: {x: 4, y: 892}
     flatten: 0
@@ -724,7 +719,7 @@ ScriptedImporter:
     spriteName: Zombie_polevaulter_outerleg_toe
     isGroup: 0
     parentIndex: -1
-    spriteID: 1c83f7ef0a286844e95cb2adafe53aa1
+    spriteID: b01c590c817dd0946a564b1d34baf589
     layerID: 18
     mosaicPosition: {x: 233, y: 432}
     flatten: 0
@@ -734,7 +729,7 @@ ScriptedImporter:
     spriteName: Zombie_polevaulter_outerleg_foot
     isGroup: 0
     parentIndex: -1
-    spriteID: 975191692ae11144ca63ac9b6ad64c2a
+    spriteID: 5326ccf0d67ce524fab608a4efc85202
     layerID: 23
     mosaicPosition: {x: 233, y: 182}
     flatten: 0
@@ -744,7 +739,7 @@ ScriptedImporter:
     spriteName: Zombie_polevaulter_outerleg_upper
     isGroup: 0
     parentIndex: -1
-    spriteID: 22781a50075c655428a2b5fbe0d37fcc
+    spriteID: 95402cdb48ba01b4aaf47531f4b530c9
     layerID: 19
     mosaicPosition: {x: 121, y: 674}
     flatten: 0
@@ -754,7 +749,7 @@ ScriptedImporter:
     spriteName: Zombie_polevaulter_innerleg_lower
     isGroup: 0
     parentIndex: -1
-    spriteID: 498c5a5b4b1e84a4bb5f984b3b67ea52
+    spriteID: e0d14d05224cf9e44ac85f1216e8ad09
     layerID: 24
     mosaicPosition: {x: 4, y: 616}
     flatten: 0
@@ -764,7 +759,7 @@ ScriptedImporter:
     spriteName: Zombie_polevaulter_innerleg_toe
     isGroup: 0
     parentIndex: -1
-    spriteID: 35fce9d4ad29362479e121a6d502e9b1
+    spriteID: 72e50348070103040b85fcb3649e5b60
     layerID: 25
     mosaicPosition: {x: 233, y: 598}
     flatten: 0
@@ -774,7 +769,7 @@ ScriptedImporter:
     spriteName: Zombie_polevaulter_innerleg_foot
     isGroup: 0
     parentIndex: -1
-    spriteID: 8059fa5ddc5d7c94ca685f16ffb2f6b5
+    spriteID: c32653cf04f2f3b4eb0e7eac3171a658
     layerID: 12
     mosaicPosition: {x: 233, y: 515}
     flatten: 0
@@ -784,7 +779,7 @@ ScriptedImporter:
     spriteName: Zombie_polevaulter_innerleg_upper
     isGroup: 0
     parentIndex: -1
-    spriteID: 9937e14db74307c4481fa3085aca6dec
+    spriteID: ceee74a9681aacf489eae80d9860f80c
     layerID: 26
     mosaicPosition: {x: 233, y: 751}
     flatten: 0
@@ -794,7 +789,7 @@ ScriptedImporter:
     spriteName: Zombie_polevaulter_innerhand
     isGroup: 0
     parentIndex: -1
-    spriteID: 3e92471ad97fd5a44800d7ee3e5215ff
+    spriteID: c9e026cf08cd1bd4daaa63350f445b10
     layerID: 11
     mosaicPosition: {x: 121, y: 892}
     flatten: 0
@@ -804,7 +799,7 @@ ScriptedImporter:
     spriteName: Zombie_polevaulter_pole
     isGroup: 0
     parentIndex: -1
-    spriteID: 779f24f21b157024783a27e7b75cacd3
+    spriteID: 381578e83c948ac4ab2d954571e6f46c
     layerID: 20
     mosaicPosition: {x: 520, y: 4}
     flatten: 0
@@ -814,15 +809,14 @@ ScriptedImporter:
     spriteName: Zombie_polevaulter_pole2
     isGroup: 0
     parentIndex: -1
-    spriteID: 773bb5cc30c6ffd4fb27f80f3d9c9510
+    spriteID: 6df279214d5002c4191376cb9ede034f
     layerID: 16
     mosaicPosition: {x: 520, y: 37}
     flatten: 0
     isImported: 1
     isVisible: 1
-  mosaicPSDLayers: []
-  rigPSDLayers: []
   sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   spriteSizeExpandChanged: 0

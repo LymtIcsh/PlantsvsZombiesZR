@@ -6,18 +6,18 @@ public class LoginUIManagement : MonoBehaviour
 {
     public bool HasSpeedSlider = true;
 
-    public GameObject gameSettings; // ÍÏ×§ÒıÓÃ GameSettings UI ÎïÌå
+    public GameObject gameSettings; // æ‹–æ‹½å¼•ç”¨ GameSettings UI ç‰©ä½“
     
-    public Button buttonShow;       // ÍÏ×§ÒıÓÃ ÏÔÊ¾°´Å¥
-    public Button buttonHide;       // ÍÏ×§ÒıÓÃ Òş²Ø°´Å¥
-    public Slider speedSlider; // ÍÏ×§ÒıÓÃ»¬¶¯Ìõ
+    public Button buttonShow;       // æ‹–æ‹½å¼•ç”¨ æ˜¾ç¤ºæŒ‰é’®
+    public Button buttonHide;       // æ‹–æ‹½å¼•ç”¨ éšè—æŒ‰é’®
+    public Slider speedSlider; // æ‹–æ‹½å¼•ç”¨æ»‘åŠ¨æ¡
 
-    public Slider difficultySlider;  // »¬¶¯Ìõ×é¼ş
+    public Slider difficultySlider;  // æ»‘åŠ¨æ¡ç»„ä»¶
 
     public Slider musicVolumeSlider;
     public Slider sfxVolumeSlider;
 
-    public Toggle collectSunToggle; // ÔÚ Inspector ÖĞÍÏ·Å Toggle ¶ÔÏó
+    public Toggle collectSunToggle; // åœ¨ Inspector ä¸­æ‹–æ”¾ Toggle å¯¹è±¡
 
     public Button OpenMakerList;
     public Button CloseMakerList;
@@ -27,34 +27,34 @@ public class LoginUIManagement : MonoBehaviour
     public Text GameDifficultyText;
     public Text GameDifficultyText2;
 
-    public bool ¿ÉÒÔÉèÖÃĞÔÄÜÓÅ»¯Ä£Ê½;
+    public bool å¯ä»¥è®¾ç½®æ€§èƒ½ä¼˜åŒ–æ¨¡å¼;
 
-    public Toggle ĞÔÄÜÓÅ»¯°´Å¥;
+    public Toggle æ€§èƒ½ä¼˜åŒ–æŒ‰é’®;
 
     public Canvas targetCanvas;
     private bool isTopLayer = false;
-    // µ± Toggle ×´Ì¬±ä»¯Ê±µ÷ÓÃ
+    // å½“ Toggle çŠ¶æ€å˜åŒ–æ—¶è°ƒç”¨
     private void OnToggleValueChanged(bool isOn)
     {
         GameManagement.CollectSun = isOn;
     }
 
 
-    // µ±»¬¶¯ÌõµÄÖµ±ä»¯Ê±µ÷ÓÃ´Ëº¯Êı
+    // å½“æ»‘åŠ¨æ¡çš„å€¼å˜åŒ–æ—¶è°ƒç”¨æ­¤å‡½æ•°
     private void OnDifficultyChanged(float value)
     {
-        GameManagement.GameDifficult = value;  // ½«»¬¶¯ÌõµÄÖµ¸³¸øGameDifficult
-        GameDifficultyText.text = "ÄÑ¶È " + GameManagement.GameDifficult;
+        GameManagement.GameDifficult = value;  // å°†æ»‘åŠ¨æ¡çš„å€¼èµ‹ç»™GameDifficult
+        GameDifficultyText.text = "éš¾åº¦ " + GameManagement.GameDifficult;
         if(GameDifficultyText2 != null)
         {
-            GameDifficultyText2.text = "ÄÑ¶È" + GameManagement.GameDifficult;
+            GameDifficultyText2.text = "éš¾åº¦" + GameManagement.GameDifficult;
         }
     }
 
-    // µ±Ê±¼ä»¬¶¯ÌõµÄÖµ·¢Éú±ä»¯Ê±µ÷ÓÃ¸Ã·½·¨
+    // å½“æ—¶é—´æ»‘åŠ¨æ¡çš„å€¼å‘ç”Ÿå˜åŒ–æ—¶è°ƒç”¨è¯¥æ–¹æ³•
     void OnSpeedSliderValueChanged(float value)
     {
-        SetAchievement.SetAchievementCompleted("Ê±ÂÖÄæÂÃ£¨TRJ£©");
+        SetAchievement.SetAchievementCompleted("æ—¶è½®é€†æ—…ï¼ˆTRJï¼‰");
     }
 
     private void OnPerformanceValueChanged(bool isOn)
@@ -66,50 +66,50 @@ public class LoginUIManagement : MonoBehaviour
     void Start()
     {
 
-        // 1. ÏÈ¶ÁÈ¡ AudioManager ÖĞµ±Ç°µÄÖµ²¢¸³¸ø»¬Ìõ
+        // 1. å…ˆè¯»å– AudioManager ä¸­å½“å‰çš„å€¼å¹¶èµ‹ç»™æ»‘æ¡
         musicVolumeSlider.value = AudioManager.Instance.musicVolume;
         sfxVolumeSlider.value = AudioManager.Instance.sfxVolume;
 
-        // 2. °ó¶¨»Øµ÷£º»¬Ìõ¸Ä¶¯Ê±£¬µ÷ÓÃ AudioManager µÄ½Ó¿Ú
+        // 2. ç»‘å®šå›è°ƒï¼šæ»‘æ¡æ”¹åŠ¨æ—¶ï¼Œè°ƒç”¨ AudioManager çš„æ¥å£
         musicVolumeSlider.onValueChanged.AddListener(AudioManager.Instance.SetMusicVolume);
         sfxVolumeSlider.onValueChanged.AddListener(AudioManager.Instance.SetSFXVolume);
 
-        if (¿ÉÒÔÉèÖÃĞÔÄÜÓÅ»¯Ä£Ê½)
+        if (å¯ä»¥è®¾ç½®æ€§èƒ½ä¼˜åŒ–æ¨¡å¼)
         {
-            ĞÔÄÜÓÅ»¯°´Å¥.onValueChanged.AddListener(OnPerformanceValueChanged);
-            ĞÔÄÜÓÅ»¯°´Å¥.isOn = GameManagement.isPerformance;
+            æ€§èƒ½ä¼˜åŒ–æŒ‰é’®.onValueChanged.AddListener(OnPerformanceValueChanged);
+            æ€§èƒ½ä¼˜åŒ–æŒ‰é’®.isOn = GameManagement.isPerformance;
         }
 
 
-        // ¶©ÔÄ Toggle µÄÖµ±ä»¯ÊÂ¼ş
+        // è®¢é˜… Toggle çš„å€¼å˜åŒ–äº‹ä»¶
         collectSunToggle.onValueChanged.AddListener(OnToggleValueChanged);
         collectSunToggle.isOn = GameManagement.CollectSun;
 
-        // ³õÊ¼»¯»¬¶¯Ìõ£¬²¢¼àÌıÊıÖµ±ä»¯
+        // åˆå§‹åŒ–æ»‘åŠ¨æ¡ï¼Œå¹¶ç›‘å¬æ•°å€¼å˜åŒ–
         difficultySlider.onValueChanged.AddListener(OnDifficultyChanged);
-        // ÉèÖÃ»¬¶¯ÌõµÄ³õÊ¼ÖµÎªµ±Ç°µÄGameDifficult
+        // è®¾ç½®æ»‘åŠ¨æ¡çš„åˆå§‹å€¼ä¸ºå½“å‰çš„GameDifficult
         difficultySlider.value = GameManagement.GameDifficult;
-        GameDifficultyText.text = "ÄÑ¶È " + GameManagement.GameDifficult;
+        GameDifficultyText.text = "éš¾åº¦ " + GameManagement.GameDifficult;
         if (GameDifficultyText2 != null)
         {
-            GameDifficultyText2.text = "ÄÑ¶È" + GameManagement.GameDifficult;
+            GameDifficultyText2.text = "éš¾åº¦" + GameManagement.GameDifficult;
         }
 
         if (HasSpeedSlider)
         {
-            // ½«»¬¶¯ÌõµÄ³õÊ¼ÖµÉèÖÃÎªµ±Ç°ÓÎÏ·ËÙ¶È
+            // å°†æ»‘åŠ¨æ¡çš„åˆå§‹å€¼è®¾ç½®ä¸ºå½“å‰æ¸¸æˆé€Ÿåº¦
             speedSlider.value = Time.timeScale;
-            // Ìí¼Ó¼àÌıÆ÷£¬ËæÊ±¼à¿Ø»¬¶¯ÌõµÄÖµ±ä»¯
+            // æ·»åŠ ç›‘å¬å™¨ï¼Œéšæ—¶ç›‘æ§æ»‘åŠ¨æ¡çš„å€¼å˜åŒ–
             speedSlider.onValueChanged.AddListener(OnSpeedSliderValueChanged);
         }
         
         gameSettings.SetActive(false);
 
 
-        // È·±£¿ªÊ¼Ê± GameSettings ÊÇ²»¿É¼ûµÄ
+        // ç¡®ä¿å¼€å§‹æ—¶ GameSettings æ˜¯ä¸å¯è§çš„
         gameSettings.SetActive(false);
 
-        // Ìí¼Ó°´Å¥µã»÷ÊÂ¼ş¼àÌıÆ÷
+        // æ·»åŠ æŒ‰é’®ç‚¹å‡»äº‹ä»¶ç›‘å¬å™¨
         buttonShow.onClick.AddListener(ShowGameSettings);
         buttonHide.onClick.AddListener(HideGameSettings);
 
@@ -118,7 +118,7 @@ public class LoginUIManagement : MonoBehaviour
         
     }
 
-    // ÏÔÊ¾ GameSettings
+    // æ˜¾ç¤º GameSettings
     public void ShowGameSettings()
     {
         if (HasSpeedSlider)
@@ -132,26 +132,26 @@ public class LoginUIManagement : MonoBehaviour
         collectSunToggle.isOn = GameManagement.CollectSun;
         difficultySlider.value = GameManagement.GameDifficult;
         
-        StaticThingsManagement.´ò¿ª¶ş¼¶½çÃæ = true;
+        StaticThingsManagement.æ‰“å¼€äºŒçº§ç•Œé¢ = true;
         
         gameSettings.SetActive(true);
     }
 
-    // Òş²Ø GameSettings
+    // éšè— GameSettings
     public void HideGameSettings()
     {
         if (HasSpeedSlider)
         {
             Time.timeScale = speedSlider.value;
-            GameManagement.¾ÖÄÚÓÎÏ·ËÙ¶È = speedSlider.value;
+            GameManagement.å±€å†…æ¸¸æˆé€Ÿåº¦ = speedSlider.value;
         }
 
-        StaticThingsManagement.´ò¿ª¶ş¼¶½çÃæ = false;
+        StaticThingsManagement.æ‰“å¼€äºŒçº§ç•Œé¢ = false;
 
         gameSettings.SetActive(false);
     }
 
-    //¼ì²é GameSettings ÊÇ·ñÒÑÏÔÊ¾²¢ÇĞ»»ÆäÏÔÊ¾×´Ì¬
+    //æ£€æŸ¥ GameSettings æ˜¯å¦å·²æ˜¾ç¤ºå¹¶åˆ‡æ¢å…¶æ˜¾ç¤ºçŠ¶æ€
     public void ToggleGameSettings()
     {
         if(!buttonShow.isActiveAndEnabled)
@@ -160,11 +160,11 @@ public class LoginUIManagement : MonoBehaviour
         }
         if (gameSettings.activeSelf)
         {
-            HideGameSettings();  // Èç¹ûÒÑÏÔÊ¾£¬ÔòÒş²Ø
+            HideGameSettings();  // å¦‚æœå·²æ˜¾ç¤ºï¼Œåˆ™éšè—
         }
         else
         {
-            ShowGameSettings();  // Èç¹ûÎ´ÏÔÊ¾£¬ÔòÏÔÊ¾
+            ShowGameSettings();  // å¦‚æœæœªæ˜¾ç¤ºï¼Œåˆ™æ˜¾ç¤º
         }
     }
 
@@ -181,19 +181,19 @@ public class LoginUIManagement : MonoBehaviour
     {
         if (targetCanvas != null)
         {
-            // ÇĞ»» Canvas µÄÅÅĞò²ã¼¶
+            // åˆ‡æ¢ Canvas çš„æ’åºå±‚çº§
             if (isTopLayer)
             {
-                // Èç¹ûµ±Ç°ÊÇÔÚ TopUI ²ã¼¶£¬ÇĞ»»»Ø Default
+                // å¦‚æœå½“å‰æ˜¯åœ¨ TopUI å±‚çº§ï¼Œåˆ‡æ¢å› Default
                 targetCanvas.sortingLayerName = "BottomUI";
             }
             else
             {
-                // Èç¹ûµ±Ç°ÊÇÔÚ Default ²ã¼¶£¬ÇĞ»»µ½ TopUI
+                // å¦‚æœå½“å‰æ˜¯åœ¨ Default å±‚çº§ï¼Œåˆ‡æ¢åˆ° TopUI
                 targetCanvas.sortingLayerName = "TopUI";
             }
 
-            // ÇĞ»»×´Ì¬
+            // åˆ‡æ¢çŠ¶æ€
             isTopLayer = !isTopLayer;
         }
     }

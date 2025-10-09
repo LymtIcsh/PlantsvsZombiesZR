@@ -75,7 +75,7 @@ ScriptedImporter:
     compressionQualitySet: 0
     textureFormatSet: 0
     applyGammaDecoding: 0
-  singleSpriteImportData:
+  spriteImportData:
   - name: 
     originalName: 
     pivot: {x: 0, y: 0}
@@ -87,7 +87,7 @@ ScriptedImporter:
       y: 0
       width: 0
       height: 0
-    spriteID: bedb42726750e8c408be95480cffef41
+    spriteID: 
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -97,8 +97,8 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
     spritePosition: {x: 0, y: 0}
-  multiSpriteImportData: []
-  layeredSpriteImportData:
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
   - name: Squash_eyes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -110,7 +110,7 @@ ScriptedImporter:
       y: 106
       width: 21
       height: 3
-    spriteID: 33b998461dcd20441840409e45ce78c2
+    spriteID: 6fba5d7196870c34f9cef276aa848f8b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -131,7 +131,7 @@ ScriptedImporter:
       y: 106
       width: 37
       height: 18
-    spriteID: 5582c770d8ff61f4ca7f56276d0f2be5
+    spriteID: d242b6aa7734044419a4bef18f1a2865
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -152,7 +152,7 @@ ScriptedImporter:
       y: 106
       width: 30
       height: 17
-    spriteID: 92813e871a4d55745b3556b1b2a8012a
+    spriteID: 77573e774c0803c498ec304b1b2042b0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -173,7 +173,7 @@ ScriptedImporter:
       y: 4
       width: 86
       height: 94
-    spriteID: 42c39e60be40a0348925e6830fb13395
+    spriteID: 42c4d7bfed0938c4f8d68154296a31fe
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -183,18 +183,15 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
     spritePosition: {x: 77, y: 75}
-  spriteImportData: []
-  rigSpriteImportData: []
-  sharedRigSpriteImportData: []
-  mosaicSpriteImportData: []
-  sharedRigCharacterData:
+  characterData:
     bones: []
     parts: []
     dimension: {x: 0, y: 0}
     characterGroups: []
     pivot: {x: 0, y: 0}
     boneReadOnly: 0
-  characterData:
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
     bones: []
     parts: []
     dimension: {x: 0, y: 0}
@@ -211,22 +208,20 @@ ScriptedImporter:
   generatePhysicsShape: 0
   paperDollMode: 0
   keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
   padding: 4
   spriteSizeExpand: 0
-  skeletonAssetReferenceID: 
-  pipeline: {instanceID: 0}
-  pipelineVersion: 
   spriteCategoryList:
     categories: []
   spritePackingTag: 
   resliceFromLayer: 0
-  pSDLayerImportSetting: []
-  psdLayers:
+  mosaicPSDLayers: []
+  rigPSDLayers:
   - name: Squash_eyes
     spriteName: Squash_eyes
     isGroup: 0
     parentIndex: -1
-    spriteID: 33b998461dcd20441840409e45ce78c2
+    spriteID: 6fba5d7196870c34f9cef276aa848f8b
     layerID: 6
     mosaicPosition: {x: 87, y: 106}
     flatten: 0
@@ -236,7 +231,7 @@ ScriptedImporter:
     spriteName: Squash_eyebrows
     isGroup: 0
     parentIndex: -1
-    spriteID: 5582c770d8ff61f4ca7f56276d0f2be5
+    spriteID: d242b6aa7734044419a4bef18f1a2865
     layerID: 5
     mosaicPosition: {x: 4, y: 106}
     flatten: 0
@@ -246,7 +241,7 @@ ScriptedImporter:
     spriteName: Squash_stem
     isGroup: 0
     parentIndex: -1
-    spriteID: 92813e871a4d55745b3556b1b2a8012a
+    spriteID: 77573e774c0803c498ec304b1b2042b0
     layerID: 4
     mosaicPosition: {x: 49, y: 106}
     flatten: 0
@@ -256,15 +251,14 @@ ScriptedImporter:
     spriteName: "\u56FE\u5C42 1"
     isGroup: 0
     parentIndex: -1
-    spriteID: 42c39e60be40a0348925e6830fb13395
+    spriteID: 42c4d7bfed0938c4f8d68154296a31fe
     layerID: 2
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
-  mosaicPSDLayers: []
-  rigPSDLayers: []
   sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   spriteSizeExpandChanged: 0

@@ -75,7 +75,7 @@ ScriptedImporter:
     compressionQualitySet: 0
     textureFormatSet: 0
     applyGammaDecoding: 0
-  singleSpriteImportData:
+  spriteImportData:
   - name: 
     originalName: 
     pivot: {x: 0, y: 0}
@@ -87,7 +87,7 @@ ScriptedImporter:
       y: 0
       width: 0
       height: 0
-    spriteID: 754b3722d78ea3b42b40eb99dd5f1863
+    spriteID: 
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -97,8 +97,8 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
     spritePosition: {x: 0, y: 0}
-  multiSpriteImportData: []
-  layeredSpriteImportData:
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
   - name: "GoldMagnet_eyebrow \u62F7\u8D1D"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -110,7 +110,7 @@ ScriptedImporter:
       y: 153
       width: 10
       height: 8
-    spriteID: bf725213e6fdbb04faf17ed7ff1555f6
+    spriteID: ab0c7fdcaf80e3d4da742eb62e5859e2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -131,7 +131,7 @@ ScriptedImporter:
       y: 121
       width: 10
       height: 8
-    spriteID: 4e1569cb9454f814a827cb5d2d5d5b8b
+    spriteID: 11ee42216d41ee940aed04f5802f4b0c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -152,7 +152,7 @@ ScriptedImporter:
       y: 4
       width: 111
       height: 109
-    spriteID: f44307c4190943a45b9dc8fa8779e1a7
+    spriteID: 32aff1df97da4d246b3ab662a0b3bcdb
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -173,7 +173,7 @@ ScriptedImporter:
       y: 121
       width: 39
       height: 24
-    spriteID: 432ba6c3de086f441a677f176e915149
+    spriteID: 4fe30e374684b814e99f32978141388c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -194,7 +194,7 @@ ScriptedImporter:
       y: 153
       width: 30
       height: 16
-    spriteID: b7dbb215dc819884db5ac1086049640a
+    spriteID: 0dc0d03655d100f41bc85859b333176e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -215,7 +215,7 @@ ScriptedImporter:
       y: 153
       width: 27
       height: 30
-    spriteID: a23d617b887bf5c429161fd503a56803
+    spriteID: 3443f25771a427e4e94152de6e0da1cc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -236,7 +236,7 @@ ScriptedImporter:
       y: 153
       width: 29
       height: 32
-    spriteID: a755b66cf1c6a8944a081c9eea593712
+    spriteID: a070c46c1b64498488f4bcfebcf1ee5b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -257,7 +257,7 @@ ScriptedImporter:
       y: 121
       width: 13
       height: 12
-    spriteID: a81ec60262ab3684f9148dedd2e5c6f9
+    spriteID: 30e5cf559ed1878468aa2aa49b26da1b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -278,7 +278,7 @@ ScriptedImporter:
       y: 121
       width: 18
       height: 18
-    spriteID: e7ded7fce254c6b4692f4ca5957df6a1
+    spriteID: 91768ae5c84fee84ba7b521b82e740f5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -299,7 +299,7 @@ ScriptedImporter:
       y: 193
       width: 20
       height: 37
-    spriteID: d1ca84798632a344c9c32b6176e7f8fd
+    spriteID: 36426584a94ac7449bed48bfb40e1d85
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -309,18 +309,15 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 193}
     spritePosition: {x: 107, y: 74}
-  spriteImportData: []
-  rigSpriteImportData: []
-  sharedRigSpriteImportData: []
-  mosaicSpriteImportData: []
-  sharedRigCharacterData:
+  characterData:
     bones: []
     parts: []
     dimension: {x: 0, y: 0}
     characterGroups: []
     pivot: {x: 0, y: 0}
     boneReadOnly: 0
-  characterData:
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
     bones: []
     parts: []
     dimension: {x: 0, y: 0}
@@ -337,22 +334,20 @@ ScriptedImporter:
   generatePhysicsShape: 0
   paperDollMode: 0
   keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
   padding: 4
   spriteSizeExpand: 0
-  skeletonAssetReferenceID: 
-  pipeline: {instanceID: 0}
-  pipelineVersion: 
   spriteCategoryList:
     categories: []
   spritePackingTag: 
   resliceFromLayer: 0
-  pSDLayerImportSetting: []
-  psdLayers:
+  mosaicPSDLayers: []
+  rigPSDLayers:
   - name: "GoldMagnet_eyebrow \u62F7\u8D1D"
     spriteName: "GoldMagnet_eyebrow \u62F7\u8D1D"
     isGroup: 0
     parentIndex: -1
-    spriteID: bf725213e6fdbb04faf17ed7ff1555f6
+    spriteID: ab0c7fdcaf80e3d4da742eb62e5859e2
     layerID: 8
     mosaicPosition: {x: 114, y: 153}
     flatten: 0
@@ -362,7 +357,7 @@ ScriptedImporter:
     spriteName: GoldMagnet_eyebrow
     isGroup: 0
     parentIndex: -1
-    spriteID: 4e1569cb9454f814a827cb5d2d5d5b8b
+    spriteID: 11ee42216d41ee940aed04f5802f4b0c
     layerID: 7
     mosaicPosition: {x: 98, y: 121}
     flatten: 0
@@ -372,7 +367,7 @@ ScriptedImporter:
     spriteName: "\u56FE\u5C42 1"
     isGroup: 0
     parentIndex: -1
-    spriteID: f44307c4190943a45b9dc8fa8779e1a7
+    spriteID: 32aff1df97da4d246b3ab662a0b3bcdb
     layerID: 2
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
@@ -382,7 +377,7 @@ ScriptedImporter:
     spriteName: GoldMagnet_leaf3
     isGroup: 0
     parentIndex: -1
-    spriteID: 432ba6c3de086f441a677f176e915149
+    spriteID: 4fe30e374684b814e99f32978141388c
     layerID: 12
     mosaicPosition: {x: 4, y: 121}
     flatten: 0
@@ -392,7 +387,7 @@ ScriptedImporter:
     spriteName: GoldMagnet_leaf4
     isGroup: 0
     parentIndex: -1
-    spriteID: b7dbb215dc819884db5ac1086049640a
+    spriteID: 0dc0d03655d100f41bc85859b333176e
     layerID: 9
     mosaicPosition: {x: 76, y: 153}
     flatten: 0
@@ -402,7 +397,7 @@ ScriptedImporter:
     spriteName: GoldMagnet_leaf2
     isGroup: 0
     parentIndex: -1
-    spriteID: a23d617b887bf5c429161fd503a56803
+    spriteID: 3443f25771a427e4e94152de6e0da1cc
     layerID: 11
     mosaicPosition: {x: 41, y: 153}
     flatten: 0
@@ -412,7 +407,7 @@ ScriptedImporter:
     spriteName: GoldMagnet_leaf1
     isGroup: 0
     parentIndex: -1
-    spriteID: a755b66cf1c6a8944a081c9eea593712
+    spriteID: a070c46c1b64498488f4bcfebcf1ee5b
     layerID: 10
     mosaicPosition: {x: 4, y: 153}
     flatten: 0
@@ -422,7 +417,7 @@ ScriptedImporter:
     spriteName: "GoldMagnet_leaf5 \u62F7\u8D1D"
     isGroup: 0
     parentIndex: -1
-    spriteID: a81ec60262ab3684f9148dedd2e5c6f9
+    spriteID: 30e5cf559ed1878468aa2aa49b26da1b
     layerID: 6
     mosaicPosition: {x: 77, y: 121}
     flatten: 0
@@ -432,7 +427,7 @@ ScriptedImporter:
     spriteName: GoldMagnet_leaf5
     isGroup: 0
     parentIndex: -1
-    spriteID: e7ded7fce254c6b4692f4ca5957df6a1
+    spriteID: 91768ae5c84fee84ba7b521b82e740f5
     layerID: 5
     mosaicPosition: {x: 51, y: 121}
     flatten: 0
@@ -442,15 +437,14 @@ ScriptedImporter:
     spriteName: GoldMagnet_stem
     isGroup: 0
     parentIndex: -1
-    spriteID: d1ca84798632a344c9c32b6176e7f8fd
+    spriteID: 36426584a94ac7449bed48bfb40e1d85
     layerID: 4
     mosaicPosition: {x: 4, y: 193}
     flatten: 0
     isImported: 1
     isVisible: 1
-  mosaicPSDLayers: []
-  rigPSDLayers: []
   sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   spriteSizeExpandChanged: 0

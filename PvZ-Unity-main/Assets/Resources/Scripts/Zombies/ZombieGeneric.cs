@@ -10,35 +10,35 @@ using UnityEngine.UI;
 
 public class Zombie: MonoBehaviour
 {
-    #region ¶¨Òå
+    #region å®šä¹‰
 
-    public bool ¿ÉÒÔ¿ĞÒ§ = true;
+    public bool å¯ä»¥å•ƒå’¬ = true;
 
     protected bool armIsDrop = false;
     protected bool headIsDrop = false;
     protected bool level1ArmorIsDrop = false;
     protected bool level2ArmorIsDrop = false;
     
-    public bool ÌúÃÅÀà½©Ê¬ = false;
+    public bool é“é—¨ç±»åƒµå°¸ = false;
 
     public int zombieID;
     /// <summary>
-    /// 0ÎªÆÕÍ¨½©Ê¬£¬1ÎªÂ·ÕÏ£¬2ÎªÌúÍ°
+    /// 0ä¸ºæ™®é€šåƒµå°¸ï¼Œ1ä¸ºè·¯éšœï¼Œ2ä¸ºé“æ¡¶
     /// </summary>
-    public int »ù´¡½©Ê¬ÀàĞÍ;
+    public int åŸºç¡€åƒµå°¸ç±»å‹;
 
     //[HideInInspector]
-    public int pos_row;   //Î»ÓÚµÚ¼¸ĞĞ
+    public int pos_row;   //ä½äºç¬¬å‡ è¡Œ
 
-    //ÉúÃüÏà¹Ø
+    //ç”Ÿå‘½ç›¸å…³
     [HideInInspector]
-    public int ÑªÁ¿;   //ÑªÁ¿
+    public int è¡€é‡;   //è¡€é‡
 
     [HideInInspector]
-    public int ×î´óÑªÁ¿;
+    public int æœ€å¤§è¡€é‡;
 
     /// <summary>
-    /// Ò»Àà·À¾ß
+    /// ä¸€ç±»é˜²å…·
     /// </summary>
     [HideInInspector]
     public int level1ArmorHealth;
@@ -48,30 +48,30 @@ public class Zombie: MonoBehaviour
 
 
     /// <summary>
-    /// ¶şÀà·À¾ß
+    /// äºŒç±»é˜²å…·
     /// </summary>
     [HideInInspector]
     public int level2ArmorHealth;
     [HideInInspector]
     public int level2ArmorMaxHealth;
 
-    protected bool Ò»Àà·À¾ß°ëÆÆËğÒÑ¾­ÇĞ»» = false;
-    protected bool Ò»Àà·À¾ßÍêÈ«ÆÆËğÒÑ¾­ÇĞ»» = false;
+    protected bool ä¸€ç±»é˜²å…·åŠç ´æŸå·²ç»åˆ‡æ¢ = false;
+    protected bool ä¸€ç±»é˜²å…·å®Œå…¨ç ´æŸå·²ç»åˆ‡æ¢ = false;
     [HideInInspector]
-    public bool ¶şÀà°ëÆÆËğÒÑ¾­ÇĞ»» = false;
+    public bool äºŒç±»åŠç ´æŸå·²ç»åˆ‡æ¢ = false;
     [HideInInspector]
-    public bool ¶şÀàÍêÈ«ÆÆËğÒÑ¾­ÇĞ»» = false;
+    public bool äºŒç±»å®Œå…¨ç ´æŸå·²ç»åˆ‡æ¢ = false;
 
     [HideInInspector]
     public bool alive = true;
 
-    //¹¥»÷Ïà¹Ø
+    //æ”»å‡»ç›¸å…³
     [HideInInspector]
-    public int ¹¥»÷Á¦;  //¹¥»÷Á¦
-    protected Plant attackPlant;   //µ±Ç°Ëù¹¥»÷Ö²ÎïµÄPlant×é¼ş
+    public int æ”»å‡»åŠ›;  //æ”»å‡»åŠ›
+    protected Plant attackPlant;   //å½“å‰æ‰€æ”»å‡»æ¤ç‰©çš„Plantç»„ä»¶
     protected Zombie attackZombie;
 
-    protected Animator myAnimator;   //¶¯»­×é¼ş
+    protected Animator myAnimator;   //åŠ¨ç”»ç»„ä»¶
     
 
     [HideInInspector]
@@ -80,34 +80,34 @@ public class Zombie: MonoBehaviour
     //static int orderOffset = 0;
 
     [HideInInspector]
-    public Material highlightMaterial; // ÔÚInspectorÖĞÖ¸¶¨µÄ¸ß¹â²ÄÖÊ
+    public Material highlightMaterial; // åœ¨Inspectorä¸­æŒ‡å®šçš„é«˜å…‰æè´¨
 
     [HideInInspector]
-    public const float highlightDuration = 0.06f; // ¸ß¹âĞ§¹ûµÄ³ÖĞøÊ±¼ä£¨Ãë£©
+    public const float highlightDuration = 0.06f; // é«˜å…‰æ•ˆæœçš„æŒç»­æ—¶é—´ï¼ˆç§’ï¼‰
 
     [HideInInspector]
-    public Renderer[] allRenderers;    // ËùÓĞ Renderer ×é¼ş
+    public Renderer[] allRenderers;    // æ‰€æœ‰ Renderer ç»„ä»¶
 
-    private float ¼õËÙÊ±¼ä = 5f; // ¼ÙÉèµÚÒ»´Î¶³½áµÄÊ±¼äÎª5Ãë£¨¿ÉÒÔ¸ù¾İĞèÇóµ÷Õû£©
-    private Coroutine ¼õËÙĞ­³Ì; // ÓÃÀ´´æ´¢Ğ­³ÌµÄÒıÓÃ
+    private float å‡é€Ÿæ—¶é—´ = 5f; // å‡è®¾ç¬¬ä¸€æ¬¡å†»ç»“çš„æ—¶é—´ä¸º5ç§’ï¼ˆå¯ä»¥æ ¹æ®éœ€æ±‚è°ƒæ•´ï¼‰
+    private Coroutine å‡é€Ÿåç¨‹; // ç”¨æ¥å­˜å‚¨åç¨‹çš„å¼•ç”¨
 
-    private bool ÖĞ¶¾Ğ§¹ûÖĞ = false;
-    private bool ±ù¶³Ğ§¹ûÖĞ = false;
+    private bool ä¸­æ¯’æ•ˆæœä¸­ = false;
+    private bool å†°å†»æ•ˆæœä¸­ = false;
 
 
-    public Sprite coneBroken1;//Â·ÕÏÈı¸ö
+    public Sprite coneBroken1;//è·¯éšœä¸‰ä¸ª
     public Sprite coneBroken2;
     public Sprite coneBroken3;
     public GameObject coneDrop;
 
-    public Sprite bucketBroken1; //ÌúÍ°Èı¸ö
+    public Sprite bucketBroken1; //é“æ¡¶ä¸‰ä¸ª
     public Sprite bucketBroken2;
     public Sprite bucketBroken3;
     public GameObject bucketDrop;
 
     public Sprite fullHead;
 
-    public Sprite brokenArm;//ÊÜÉËµÄÊÖ±ÛÍ¼Æ¬
+    public Sprite brokenArm;//å—ä¼¤çš„æ‰‹è‡‚å›¾ç‰‡
 
     public GameObject zombieHeadDrops;
     public GameObject zombieArmDrops;
@@ -115,44 +115,44 @@ public class Zombie: MonoBehaviour
 
     public bool dontHaveDropHead;
 
-    public Coroutine ¸ßÁÁ;
+    public Coroutine é«˜äº®;
 
     public bool isEating;
 
     public ZombieForestSlider zombieForestSlider;
 
-    public GameObject ÕıÔÚ¿ĞÒ§Ä¿±ê;
+    public GameObject æ­£åœ¨å•ƒå’¬ç›®æ ‡;
 
     //[HideInInspector]
     public bool dying = false;
 
-    public Sprite[] DoorSprite;//ÌúÃÅÍ¼Æ¬
-    private GameObject[] ÌúÃÅ½©Ê¬¿ĞÒ§ÏÔÊ¾µÄ;
-    private GameObject[] ÌúÃÅ½©Ê¬ĞĞ×ßÏÔÊ¾µÄ;
-    private GameObject[] ÌúÃÅ½©Ê¬ÎŞÌúÃÅĞĞ×ßÊ±ÏÔÊ¾µÄ;
-    private GameObject[] ÌúÃÅ;
-    private GameObject[] ÌúÃÅ¶Ï±ÛÊ±Ç¿ÖÆ²»ÏÔÊ¾;
-    private GameObject[] ÌúÃÅ¶Ï±ÛÊ±Ç¿ÖÆÏÔÊ¾;
-    private GameObject[] ÌúÃÅÈ«²¿;
+    public Sprite[] DoorSprite;//é“é—¨å›¾ç‰‡
+    private GameObject[] é“é—¨åƒµå°¸å•ƒå’¬æ˜¾ç¤ºçš„;
+    private GameObject[] é“é—¨åƒµå°¸è¡Œèµ°æ˜¾ç¤ºçš„;
+    private GameObject[] é“é—¨åƒµå°¸æ— é“é—¨è¡Œèµ°æ—¶æ˜¾ç¤ºçš„;
+    private GameObject[] é“é—¨;
+    private GameObject[] é“é—¨æ–­è‡‚æ—¶å¼ºåˆ¶ä¸æ˜¾ç¤º;
+    private GameObject[] é“é—¨æ–­è‡‚æ—¶å¼ºåˆ¶æ˜¾ç¤º;
+    private GameObject[] é“é—¨å…¨éƒ¨;
 
-    private float ¿ñ±©ËÙ¶È³ËÇø = 1f;
-    private float ¼õËÙËÙ¶È³ËÇø = 1f;
-    private float Ëæ»úËÙ¶È³ËÇø = 1f;
-    private float ¹Ø¿¨ÌØÊâ³ËÇø = 1f;
+    private float ç‹‚æš´é€Ÿåº¦ä¹˜åŒº = 1f;
+    private float å‡é€Ÿé€Ÿåº¦ä¹˜åŒº = 1f;
+    private float éšæœºé€Ÿåº¦ä¹˜åŒº = 1f;
+    private float å…³å¡ç‰¹æ®Šä¹˜åŒº = 1f;
     [SerializeField]
-    private float _»·¾³ËÙ¶È³ËÇø = 1f;
+    private float _ç¯å¢ƒé€Ÿåº¦ä¹˜åŒº = 1f;
 
     
-    protected virtual float »·¾³ËÙ¶È³ËÇø//ÓÃÓÚ¸²Ğ´
+    protected virtual float ç¯å¢ƒé€Ÿåº¦ä¹˜åŒº//ç”¨äºè¦†å†™
     {
-        get => _»·¾³ËÙ¶È³ËÇø;
-        set => _»·¾³ËÙ¶È³ËÇø = value;
+        get => _ç¯å¢ƒé€Ÿåº¦ä¹˜åŒº;
+        set => _ç¯å¢ƒé€Ÿåº¦ä¹˜åŒº = value;
     }
 
-    private TMP_Text ÑªÁ¿ÏÔÊ¾;
+    private TMP_Text è¡€é‡æ˜¾ç¤º;
 
-    public ½©Ê¬debuff debuff;
-    public ½©Ê¬buff buff;
+    public åƒµå°¸debuff debuff;
+    public åƒµå°¸buff buff;
 
     public bool newZombie = false;
 
@@ -161,28 +161,28 @@ public class Zombie: MonoBehaviour
     private bool isEntrance = false;
     #endregion
 
-    #region ¿ªÊ¼Ê±Ö´ĞĞ
+    #region å¼€å§‹æ—¶æ‰§è¡Œ
     protected virtual void Awake()
     {
         //highlightMaterial = Resources.Load<Material>("Shader/highLight");
         myAnimator = gameObject.GetComponent<Animator>();
         allRenderers = GetComponentsInChildren<Renderer>(true);
 
-        if (GameManagement.instance != null && GameManagement.instance.ÓÎÏ·½øĞĞ && ZombieManagement.instance != null)
+        if (GameManagement.instance != null && GameManagement.instance.æ¸¸æˆè¿›è¡Œ && ZombieManagement.instance != null)
         {
             ZombieManagement.instance.GetComponent<ZombieManagement>().addZombieNumAll(gameObject);
         }
         else
         {
-            Õ¹Ê¾¶¯»­³õÊ¼»¯();
+            å±•ç¤ºåŠ¨ç”»åˆå§‹åŒ–();
         }
 
-        TMP_Text ¼ÓÔØÑªÁ¿ÎïÌå = Resources.Load<TMP_Text>("Prefabs/Effects/ÑªÁ¿ÏÔÊ¾/ÆÕÍ¨½©Ê¬ÑªÁ¿ÏÔÊ¾");
-        ÑªÁ¿ÏÔÊ¾ = Instantiate(¼ÓÔØÑªÁ¿ÎïÌå, transform.position, Quaternion.identity, transform);
-        ÑªÁ¿ÏÔÊ¾.gameObject.SetActive(false);
+        TMP_Text åŠ è½½è¡€é‡ç‰©ä½“ = Resources.Load<TMP_Text>("Prefabs/Effects/è¡€é‡æ˜¾ç¤º/æ™®é€šåƒµå°¸è¡€é‡æ˜¾ç¤º");
+        è¡€é‡æ˜¾ç¤º = Instantiate(åŠ è½½è¡€é‡ç‰©ä½“, transform.position, Quaternion.identity, transform);
+        è¡€é‡æ˜¾ç¤º.gameObject.SetActive(false);
 
-        Ëæ»úËÙ¶È³ËÇø = Random.Range(0.8f, 1.2f);
-        ¼ÓÔØ¶¯»­ËÙ¶È();
+        éšæœºé€Ÿåº¦ä¹˜åŒº = Random.Range(0.8f, 1.2f);
+        åŠ è½½åŠ¨ç”»é€Ÿåº¦();
         //foreach (Renderer renderer in allRenderers)
         //{
         //    if (renderer != null && renderer.material != highlightMaterial)
@@ -197,72 +197,72 @@ public class Zombie: MonoBehaviour
     // Start is called before the first frame update
     protected virtual void Start()
     {
-        ÑªÁ¿ÏÔÊ¾.gameObject.SetActive(true);
+        è¡€é‡æ˜¾ç¤º.gameObject.SetActive(true);
         Vector3 parentScale = transform.localScale;
         float safeX = parentScale.x != 0 ? parentScale.x : 1f;
         float safeY = parentScale.y != 0 ? parentScale.y : 1f;
         float safeZ = parentScale.z != 0 ? parentScale.z : 1f;
-        ÑªÁ¿ÏÔÊ¾.transform.localScale = new Vector3(
+        è¡€é‡æ˜¾ç¤º.transform.localScale = new Vector3(
             0.05f / safeX,
             0.05f / safeY,
             0.05f / safeZ
         );
-        ÑªÁ¿ÏÔÊ¾.gameObject.SetActive(false);
-        ÑªÁ¿ÏÔÊ¾.gameObject.SetActive(true);
-        ÑªÁ¿ÏÔÊ¾.gameObject.SetActive(GameManagement.ÊÇ·ñÏÔÊ¾ÑªÁ¿);
+        è¡€é‡æ˜¾ç¤º.gameObject.SetActive(false);
+        è¡€é‡æ˜¾ç¤º.gameObject.SetActive(true);
+        è¡€é‡æ˜¾ç¤º.gameObject.SetActive(GameManagement.æ˜¯å¦æ˜¾ç¤ºè¡€é‡);
 
-        ÌúÃÅ³õÊ¼»¯();
+        é“é—¨åˆå§‹åŒ–();
 
         zombieForestSlider = GameManagement.instance.zombieForestSlider;
 
-        ÓÎÏ·¶¯»­³õÊ¼»¯();
+        æ¸¸æˆåŠ¨ç”»åˆå§‹åŒ–();
 
-        ÑªÁ¿ = ZombieStructManager.GetZombieStructById(zombieID).BaseHP;
+        è¡€é‡ = ZombieStructManager.GetZombieStructById(zombieID).BaseHP;
         level1ArmorHealth = ZombieStructManager.GetZombieStructById(zombieID).Armor1HP;
         level2ArmorHealth = ZombieStructManager.GetZombieStructById(zombieID).Armor2HP;
         level1ArmorMaxHealth = level1ArmorHealth;
         level2ArmorMaxHealth = level2ArmorHealth;
 
-        ¹¥»÷Á¦ = 50;
+        æ”»å‡»åŠ› = 50;
 
-        switch (»ù´¡½©Ê¬ÀàĞÍ)
+        switch (åŸºç¡€åƒµå°¸ç±»å‹)
         {
             case 1: loadCone(1); break;
             case 2: loadBucket(1); break;
             default: break;
         }
-        if(ÌúÃÅÀà½©Ê¬)
+        if(é“é—¨ç±»åƒµå°¸)
         {
             List<GameObject> combinedList = new List<GameObject>();
-            AddUnique(ÌúÃÅ½©Ê¬¿ĞÒ§ÏÔÊ¾µÄ, combinedList);
-            AddUnique(ÌúÃÅ½©Ê¬ĞĞ×ßÏÔÊ¾µÄ, combinedList);
-            AddUnique(ÌúÃÅ½©Ê¬ÎŞÌúÃÅĞĞ×ßÊ±ÏÔÊ¾µÄ, combinedList);
-            AddUnique(ÌúÃÅ, combinedList);
-            AddUnique(ÌúÃÅ¶Ï±ÛÊ±Ç¿ÖÆ²»ÏÔÊ¾, combinedList);
-            AddUnique(ÌúÃÅ¶Ï±ÛÊ±Ç¿ÖÆÏÔÊ¾, combinedList);
-            ÌúÃÅÈ«²¿ = combinedList.ToArray();
-            ÌúÃÅĞĞ×ßÏÔÊ¾Âß¼­();
+            AddUnique(é“é—¨åƒµå°¸å•ƒå’¬æ˜¾ç¤ºçš„, combinedList);
+            AddUnique(é“é—¨åƒµå°¸è¡Œèµ°æ˜¾ç¤ºçš„, combinedList);
+            AddUnique(é“é—¨åƒµå°¸æ— é“é—¨è¡Œèµ°æ—¶æ˜¾ç¤ºçš„, combinedList);
+            AddUnique(é“é—¨, combinedList);
+            AddUnique(é“é—¨æ–­è‡‚æ—¶å¼ºåˆ¶ä¸æ˜¾ç¤º, combinedList);
+            AddUnique(é“é—¨æ–­è‡‚æ—¶å¼ºåˆ¶æ˜¾ç¤º, combinedList);
+            é“é—¨å…¨éƒ¨ = combinedList.ToArray();
+            é“é—¨è¡Œèµ°æ˜¾ç¤ºé€»è¾‘();
 
         }
 
 
         if(GameManagement.levelData.LevelType == levelType.TheDreamOfPotatoMine)
         {
-            ¹Ø¿¨ÌØÊâ³ËÇø *= 1.5f * GameManagement.GameDifficult;
+            å…³å¡ç‰¹æ®Šä¹˜åŒº *= 1.5f * GameManagement.GameDifficult;
         }
-        //Ìí¼ÓËæ»úËÙ¶ÈÔö·ù
+        //æ·»åŠ éšæœºé€Ÿåº¦å¢å¹…
         
-        ¼ÓÔØ¶¯»­ËÙ¶È();
+        åŠ è½½åŠ¨ç”»é€Ÿåº¦();
 
 
         activate();
         
         
-        ×î´óÑªÁ¿ = ÑªÁ¿;
+        æœ€å¤§è¡€é‡ = è¡€é‡;
 
-        InvokeRepeating("¼ÆËã¶¾ÉË", 0, 2f);
+        InvokeRepeating("è®¡ç®—æ¯’ä¼¤", 0, 2f);
 
-        ¼ÓÔØÑªÁ¿ÎÄ±¾();
+        åŠ è½½è¡€é‡æ–‡æœ¬();
     }
 
 
@@ -272,7 +272,7 @@ public class Zombie: MonoBehaviour
         gameObject.SetActive(true);
     }
 
-    protected virtual void doAfterStartSomeTimes()//ÓÃÓÚÉ­ÁÖ½©Ê¬10 - 30ÃëºóÉú³É²İ´Ô²¢É±ËÀ×Ô¼º
+    protected virtual void doAfterStartSomeTimes()//ç”¨äºæ£®æ—åƒµå°¸10 - 30ç§’åç”Ÿæˆè‰ä¸›å¹¶æ€æ­»è‡ªå·±
     {
         
     }
@@ -288,7 +288,7 @@ public class Zombie: MonoBehaviour
     {
         try
         {
-            if (ZombieManagement.instance != null && ZombieManagement.instance.isActiveAndEnabled && this != null && gameObject != null && !GameManagement.instance.ÓÎÏ·½øĞĞ) 
+            if (ZombieManagement.instance != null && ZombieManagement.instance.isActiveAndEnabled && this != null && gameObject != null && !GameManagement.instance.æ¸¸æˆè¿›è¡Œ) 
             {
                 ZombieManagement.instance.minusZombieNumAll(gameObject);
             }
@@ -322,23 +322,23 @@ public class Zombie: MonoBehaviour
         }
     }
 
-    #region ¿ĞÒ§Óë¹¥»÷
+    #region å•ƒå’¬ä¸æ”»å‡»
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if(¿ÉÒÔ¿ĞÒ§ && !dying)
+        if(å¯ä»¥å•ƒå’¬ && !dying)
         {
-            if (!debuff.÷È»ó
+            if (!debuff.é­…æƒ‘
             && collision.tag == "Plant"
             && myAnimator.GetBool("Attack") == false
             )
             {
                 attackPlant = collision.GetComponent<Plant>();
                 attackZombie = collision.GetComponent<Zombie>();
-                if(attackPlant != null && attackPlant.row == pos_row && attackPlant.Ö²ÎïÀàĞÍ != PlantType.µØ´ÌÀàÖ²Îï && attackPlant.¿É±»¹¥»÷)
+                if(attackPlant != null && attackPlant.row == pos_row && attackPlant.æ¤ç‰©ç±»å‹ != PlantType.åœ°åˆºç±»æ¤ç‰© && attackPlant.å¯è¢«æ”»å‡»)
                 {
 
                 }
-                else if(attackZombie != null && attackZombie.pos_row == pos_row && attackZombie.debuff.÷È»ó != debuff.÷È»ó)
+                else if(attackZombie != null && attackZombie.pos_row == pos_row && attackZombie.debuff.é­…æƒ‘ != debuff.é­…æƒ‘)
                 {
 
                 }
@@ -347,37 +347,37 @@ public class Zombie: MonoBehaviour
                     return;
                 }
 
-                ÕıÔÚ¿ĞÒ§Ä¿±ê = collision.gameObject;
+                æ­£åœ¨å•ƒå’¬ç›®æ ‡ = collision.gameObject;
                 myAnimator.SetBool("Walk", false);
                 myAnimator.SetBool("Attack", true);
                 isEating = true;
 
-                if (ÌúÃÅÀà½©Ê¬)
+                if (é“é—¨ç±»åƒµå°¸)
                 {
-                    ÌúÃÅ¿ĞÒ§ÏÔÊ¾Âß¼­();
+                    é“é—¨å•ƒå’¬æ˜¾ç¤ºé€»è¾‘();
                 }
             }
             else if (collision.tag == "Zombie"
             && collision.GetComponent<Zombie>().pos_row == pos_row
-            && collision.GetComponent<Zombie>().debuff.÷È»ó != debuff.÷È»ó
+            && collision.GetComponent<Zombie>().debuff.é­…æƒ‘ != debuff.é­…æƒ‘
             && myAnimator.GetBool("Attack") == false
             )
             {
-                ÕıÔÚ¿ĞÒ§Ä¿±ê = collision.gameObject;
+                æ­£åœ¨å•ƒå’¬ç›®æ ‡ = collision.gameObject;
                 myAnimator.SetBool("Walk", false);
                 myAnimator.SetBool("Attack", true);
                 isEating = true;
                 attackZombie = collision.GetComponent<Zombie>();
 
-                if (ÌúÃÅÀà½©Ê¬)
+                if (é“é—¨ç±»åƒµå°¸)
                 {
-                    ÌúÃÅ¿ĞÒ§ÏÔÊ¾Âß¼­();
+                    é“é—¨å•ƒå’¬æ˜¾ç¤ºé€»è¾‘();
                 }
 
             }
         }
         
-        if (!debuff.÷È»ó && collision.tag == "GameOverLine" && !dying && alive)
+        if (!debuff.é­…æƒ‘ && collision.tag == "GameOverLine" && !dying && alive)
         {
             GameManagement.instance.GetComponent<GameManagement>().gameOver();
         }
@@ -401,31 +401,31 @@ public class Zombie: MonoBehaviour
 
     protected virtual void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject == ÕıÔÚ¿ĞÒ§Ä¿±ê)
+        if (collision.gameObject == æ­£åœ¨å•ƒå’¬ç›®æ ‡)
         {
             myAnimator.SetBool("Attack", false);
             myAnimator.SetBool("Walk", true);
             isEating = false;
-            ÕıÔÚ¿ĞÒ§Ä¿±ê = null;
+            æ­£åœ¨å•ƒå’¬ç›®æ ‡ = null;
             attackPlant = null;
             attackZombie = null;
 
             GetComponent<Collider2D>().enabled = false;
             GetComponent<Collider2D>().enabled = true;
 
-            if (ÌúÃÅÀà½©Ê¬)
+            if (é“é—¨ç±»åƒµå°¸)
             {
                 if (!level2ArmorIsDrop)
                 {
-                    ÌúÃÅĞĞ×ßÏÔÊ¾Âß¼­();
+                    é“é—¨è¡Œèµ°æ˜¾ç¤ºé€»è¾‘();
                 }
                 else
                 {
-                    ÌúÃÅÎŞÃÅĞĞ×ßÏÔÊ¾Âß¼­();
+                    é“é—¨æ— é—¨è¡Œèµ°æ˜¾ç¤ºé€»è¾‘();
                 }
             }
         }
-        //else if (collision.tag == "½çÍâËÀÍö")
+        //else if (collision.tag == "ç•Œå¤–æ­»äº¡")
         //{
         //    die();
         //}
@@ -433,7 +433,7 @@ public class Zombie: MonoBehaviour
 
     //protected virtual void OnTriggerStay2D(Collider2D collision)
     //{
-    //    ////if (¿ÉÒÔ¿ĞÒ§ &&
+    //    ////if (å¯ä»¥å•ƒå’¬ &&
     //    ////    !dying &&
     //    ////    !isEating && collision.tag == "Plant" && collision.GetComponent<Plant>().row == pos_row && collision.GetComponent<Plant>().plantType == 0 && collision.GetComponent<Plant>().canBeAttacked)
     //    ////{
@@ -441,11 +441,11 @@ public class Zombie: MonoBehaviour
     //    ////    myAnimator.SetBool("Attack", true);
     //    ////    isEating = true;
     //    ////    plant = collision.GetComponent<Plant>();
-    //    ////    ÕıÔÚ¿ĞÒ§Ä¿±ê = collision.gameObject;
-    //    ////    ¿ĞÒ§Ä¿±ê·½·¨ = ÕıÔÚ¿ĞÒ§Ä¿±ê.GetComponent<Plant>();
+    //    ////    æ­£åœ¨å•ƒå’¬ç›®æ ‡ = collision.gameObject;
+    //    ////    å•ƒå’¬ç›®æ ‡æ–¹æ³• = æ­£åœ¨å•ƒå’¬ç›®æ ‡.GetComponent<Plant>();
     //    ////    if (isDoorZombie)
     //    ////    {
-    //    ////        ÌúÃÅ¿ĞÒ§ÏÔÊ¾Âß¼­();
+    //    ////        é“é—¨å•ƒå’¬æ˜¾ç¤ºé€»è¾‘();
     //    ////    }
     //    ////}
     //    //if (isEating && plant.row != pos_row)
@@ -453,17 +453,17 @@ public class Zombie: MonoBehaviour
     //    //    myAnimator.SetBool("Attack", false);
     //    //    myAnimator.SetBool("Walk", true);
     //    //    isEating = false;
-    //    //    ÕıÔÚ¿ĞÒ§Ä¿±ê = null;
+    //    //    æ­£åœ¨å•ƒå’¬ç›®æ ‡ = null;
     //    //    plant = null;
     //    //    if (isDoorZombie)
     //    //    {
     //    //        if (!level2ArmorIsDrop)
     //    //        {
-    //    //            ÌúÃÅĞĞ×ßÏÔÊ¾Âß¼­();
+    //    //            é“é—¨è¡Œèµ°æ˜¾ç¤ºé€»è¾‘();
     //    //        }
     //    //        else
     //    //        {
-    //    //            ÌúÃÅÎŞÃÅĞĞ×ßÏÔÊ¾Âß¼­();
+    //    //            é“é—¨æ— é—¨è¡Œèµ°æ˜¾ç¤ºé€»è¾‘();
     //    //        }
     //    //    }
     //    //}
@@ -472,17 +472,17 @@ public class Zombie: MonoBehaviour
     {
         if (attackPlant != null && !dying)
         {
-            attackPlant.beAttacked(¹¥»÷Á¦, "beEated", gameObject);
+            attackPlant.beAttacked(æ”»å‡»åŠ›, "beEated", gameObject);
         }
         else if(attackZombie != null && !dying)
         {
-            attackZombie.beAttacked(¹¥»÷Á¦, 1, -1);
+            attackZombie.beAttacked(æ”»å‡»åŠ›, 1, -1);
         }
     }
     #endregion
 
-    #region ÊÜ»÷
-    public virtual void beAttacked(int hurt, int BulletType ,int AttackedMusicType)//AttackedMusicTypeÎª2Ê±ÊÇµØ´Ì¹¥»÷£¬½ö²¥·Å±¾ÌåÊÜÉËÒôĞ§£¬Îª-1Ê±²»²¥·ÅÒôĞ§
+    #region å—å‡»
+    public virtual void beAttacked(int hurt, int BulletType ,int AttackedMusicType)//AttackedMusicTypeä¸º2æ—¶æ˜¯åœ°åˆºæ”»å‡»ï¼Œä»…æ’­æ”¾æœ¬ä½“å—ä¼¤éŸ³æ•ˆï¼Œä¸º-1æ—¶ä¸æ’­æ”¾éŸ³æ•ˆ
     {
         if(AttackedMusicType != -1)
         {
@@ -499,100 +499,100 @@ public class Zombie: MonoBehaviour
 
         TriggerHighlight(BulletType);
 
-        if (BulletType == 0) // ±¾ÌåÉËº¦£¬¿Û³ı±¾ÌåÑªÁ¿
+        if (BulletType == 0) // æœ¬ä½“ä¼¤å®³ï¼Œæ‰£é™¤æœ¬ä½“è¡€é‡
         {
-            HandleBodyDamage(hurt); // µ÷ÓÃ±¾ÌåÊÜÉËµÄ´¦Àí·½·¨
+            HandleBodyDamage(hurt); // è°ƒç”¨æœ¬ä½“å—ä¼¤çš„å¤„ç†æ–¹æ³•
         }
-        else if (BulletType == 1 || BulletType==3) // Ò»ÀàÉËº¦
+        else if (BulletType == 1 || BulletType==3) // ä¸€ç±»ä¼¤å®³
         {
-            if (level2ArmorHealth > 0) // Èç¹û¶şÀà·À¾ßÓĞÑªÁ¿
+            if (level2ArmorHealth > 0) // å¦‚æœäºŒç±»é˜²å…·æœ‰è¡€é‡
             {
-                // ¶şÀà·À¾ßÏÈ¿ÛÑª
+                // äºŒç±»é˜²å…·å…ˆæ‰£è¡€
                 int level2Damage = Mathf.Min(hurt, level2ArmorHealth);
                 level2ArmorHealth -= level2Damage;
-                hurt -= level2Damage; // Ê£ÓàÉËº¦¼ÌĞø´¦Àí
-                HandleLevel2ArmorDamage(level2Damage); // µ÷ÓÃ¶şÀà·À¾ßÊÜÉË´¦Àí
+                hurt -= level2Damage; // å‰©ä½™ä¼¤å®³ç»§ç»­å¤„ç†
+                HandleLevel2ArmorDamage(level2Damage); // è°ƒç”¨äºŒç±»é˜²å…·å—ä¼¤å¤„ç†
 
-                if (hurt > 0) // Èç¹ûÈÔÓĞÉËº¦Î´±»µÖÏû
+                if (hurt > 0) // å¦‚æœä»æœ‰ä¼¤å®³æœªè¢«æŠµæ¶ˆ
                 {
-                    // Ò»Àà·À¾ß¿ÛÑª
+                    // ä¸€ç±»é˜²å…·æ‰£è¡€
                     int level1Damage = Mathf.Min(hurt, level1ArmorHealth);
                     level1ArmorHealth -= level1Damage;
-                    hurt -= level1Damage; // Ê£ÓàÉËº¦¼ÌĞø´¦Àí
-                    HandleLevel1ArmorDamage(level1Damage); // µ÷ÓÃÒ»Àà·À¾ßÊÜÉË´¦Àí
+                    hurt -= level1Damage; // å‰©ä½™ä¼¤å®³ç»§ç»­å¤„ç†
+                    HandleLevel1ArmorDamage(level1Damage); // è°ƒç”¨ä¸€ç±»é˜²å…·å—ä¼¤å¤„ç†
 
-                    if (hurt > 0) // Èç¹ûÈÔÓĞÉËº¦Î´±»µÖÏû
+                    if (hurt > 0) // å¦‚æœä»æœ‰ä¼¤å®³æœªè¢«æŠµæ¶ˆ
                     {
-                        HandleBodyDamage(hurt); // ¼ÌĞø¿Û³ı±¾ÌåÑªÁ¿
+                        HandleBodyDamage(hurt); // ç»§ç»­æ‰£é™¤æœ¬ä½“è¡€é‡
                     }
                 }
             }
-            else // ¶şÀà·À¾ßÃ»ÓĞÑªÁ¿£¬Ö±½Ó¿ÛÒ»Àà·À¾ßºÍ±¾Ìå
+            else // äºŒç±»é˜²å…·æ²¡æœ‰è¡€é‡ï¼Œç›´æ¥æ‰£ä¸€ç±»é˜²å…·å’Œæœ¬ä½“
             {
-                // Ò»Àà·À¾ßÏÈ¿ÛÑª
+                // ä¸€ç±»é˜²å…·å…ˆæ‰£è¡€
                 int level1Damage = Mathf.Min(hurt, level1ArmorHealth);
                 level1ArmorHealth -= level1Damage;
-                hurt -= level1Damage; // Ê£ÓàÉËº¦¼ÌĞø´¦Àí
-                HandleLevel1ArmorDamage(level1Damage); // µ÷ÓÃÒ»Àà·À¾ßÊÜÉË´¦Àí
+                hurt -= level1Damage; // å‰©ä½™ä¼¤å®³ç»§ç»­å¤„ç†
+                HandleLevel1ArmorDamage(level1Damage); // è°ƒç”¨ä¸€ç±»é˜²å…·å—ä¼¤å¤„ç†
 
-                if (hurt > 0) // Èç¹ûÈÔÓĞÉËº¦Î´±»µÖÏû
+                if (hurt > 0) // å¦‚æœä»æœ‰ä¼¤å®³æœªè¢«æŠµæ¶ˆ
                 {
-                    HandleBodyDamage(hurt); // ¼ÌĞø¿Û³ı±¾ÌåÑªÁ¿
+                    HandleBodyDamage(hurt); // ç»§ç»­æ‰£é™¤æœ¬ä½“è¡€é‡
                 }
             }
         }
-        else if (BulletType == 2) // ¶şÀàÉËº¦
+        else if (BulletType == 2) // äºŒç±»ä¼¤å®³
         {
-            if (level1ArmorHealth > 0) // Èç¹ûÒ»Àà·À¾ßÓĞÑªÁ¿
+            if (level1ArmorHealth > 0) // å¦‚æœä¸€ç±»é˜²å…·æœ‰è¡€é‡
             {
-                // ÏÈ¿Û³ıÒ»Àà·À¾ßµÄÑªÁ¿
+                // å…ˆæ‰£é™¤ä¸€ç±»é˜²å…·çš„è¡€é‡
                 int level1Damage = Mathf.Min(hurt, level1ArmorHealth);
                 level1ArmorHealth -= level1Damage;
-                hurt -= level1Damage; // Ê£ÓàÉËº¦¼ÌĞø´¦Àí
-                HandleLevel1ArmorDamage(level1Damage); // µ÷ÓÃÒ»Àà·À¾ßÊÜÉË´¦Àí
+                hurt -= level1Damage; // å‰©ä½™ä¼¤å®³ç»§ç»­å¤„ç†
+                HandleLevel1ArmorDamage(level1Damage); // è°ƒç”¨ä¸€ç±»é˜²å…·å—ä¼¤å¤„ç†
             }
 
-            if (hurt > 0) // Èç¹ûÒ»Àà·À¾ßÒÑ¾­Ã»ÓĞÑªÁ¿£¬¼ÌĞø¿Û³ı±¾ÌåÑªÁ¿
+            if (hurt > 0) // å¦‚æœä¸€ç±»é˜²å…·å·²ç»æ²¡æœ‰è¡€é‡ï¼Œç»§ç»­æ‰£é™¤æœ¬ä½“è¡€é‡
             {
-                HandleBodyDamage(hurt); // ¼ÌĞø¿Û³ı±¾ÌåÑªÁ¿
+                HandleBodyDamage(hurt); // ç»§ç»­æ‰£é™¤æœ¬ä½“è¡€é‡
             }
         }
         loadArmorStatus();
     }
 
-    // Ò»Àà·À¾ßÊÜµ½ÉËº¦Ê±µ÷ÓÃµÄ´¦Àí·½·¨
+    // ä¸€ç±»é˜²å…·å—åˆ°ä¼¤å®³æ—¶è°ƒç”¨çš„å¤„ç†æ–¹æ³•
     protected virtual void HandleLevel1ArmorDamage(int hurt)
     {
-        // ÕâÀï¿ÉÒÔÌí¼ÓÒ»Àà·À¾ßÊÜÉËºóµÄÂß¼­£¬ÀıÈç²¥·ÅÒ»Àà·À¾ßµÄËğ»µ¶¯»­¡¢ÒôĞ§µÈ
-        //Debug.Log($"Ò»Àà·À¾ßÊÜµ½ {hurt} µãÉËº¦");
+        // è¿™é‡Œå¯ä»¥æ·»åŠ ä¸€ç±»é˜²å…·å—ä¼¤åçš„é€»è¾‘ï¼Œä¾‹å¦‚æ’­æ”¾ä¸€ç±»é˜²å…·çš„æŸååŠ¨ç”»ã€éŸ³æ•ˆç­‰
+        //Debug.Log($"ä¸€ç±»é˜²å…·å—åˆ° {hurt} ç‚¹ä¼¤å®³");
     }
 
-    // ¶şÀà·À¾ßÊÜµ½ÉËº¦Ê±µ÷ÓÃµÄ´¦Àí·½·¨
+    // äºŒç±»é˜²å…·å—åˆ°ä¼¤å®³æ—¶è°ƒç”¨çš„å¤„ç†æ–¹æ³•
     protected virtual void HandleLevel2ArmorDamage(int hurt)
     {
-        // ÕâÀï¿ÉÒÔÌí¼Ó¶şÀà·À¾ßÊÜÉËºóµÄÂß¼­£¬ÀıÈç²¥·Å¶şÀà·À¾ßµÄËğ»µ¶¯»­¡¢ÒôĞ§µÈ
-        //Debug.Log($"¶şÀà·À¾ßÊÜµ½ {hurt} µãÉËº¦");
+        // è¿™é‡Œå¯ä»¥æ·»åŠ äºŒç±»é˜²å…·å—ä¼¤åçš„é€»è¾‘ï¼Œä¾‹å¦‚æ’­æ”¾äºŒç±»é˜²å…·çš„æŸååŠ¨ç”»ã€éŸ³æ•ˆç­‰
+        //Debug.Log($"äºŒç±»é˜²å…·å—åˆ° {hurt} ç‚¹ä¼¤å®³");
     }
 
-    // ±¾ÌåÊÜµ½ÉËº¦Ê±µ÷ÓÃµÄ´¦Àí·½·¨
+    // æœ¬ä½“å—åˆ°ä¼¤å®³æ—¶è°ƒç”¨çš„å¤„ç†æ–¹æ³•
     protected virtual void HandleBodyDamage(int hurt)
     {
-        // ÕâÀï¿ÉÒÔ´¦Àí±¾ÌåÊÜÉËºóµÄÂß¼­£¬ÀıÈç¿Û³ıÑªÁ¿¡¢²¥·ÅÊÜÉËÒôĞ§¡¢¶¯»­µÈ
-        ÑªÁ¿ -= hurt;
-        //Debug.Log($"±¾ÌåÊÜµ½ {hurt} µãÉËº¦£¬Ê£ÓàÑªÁ¿: {bloodVolume}");
-        // ¿ÉÒÔÔÚÕâÀïÌí¼Ó±¾ÌåÊÜÉËºóµÄÆäËûÂß¼­£¬ÀıÈç²¥·ÅÊÜÉË¶¯»­¡¢ÒôĞ§µÈ
+        // è¿™é‡Œå¯ä»¥å¤„ç†æœ¬ä½“å—ä¼¤åçš„é€»è¾‘ï¼Œä¾‹å¦‚æ‰£é™¤è¡€é‡ã€æ’­æ”¾å—ä¼¤éŸ³æ•ˆã€åŠ¨ç”»ç­‰
+        è¡€é‡ -= hurt;
+        //Debug.Log($"æœ¬ä½“å—åˆ° {hurt} ç‚¹ä¼¤å®³ï¼Œå‰©ä½™è¡€é‡: {bloodVolume}");
+        // å¯ä»¥åœ¨è¿™é‡Œæ·»åŠ æœ¬ä½“å—ä¼¤åçš„å…¶ä»–é€»è¾‘ï¼Œä¾‹å¦‚æ’­æ”¾å—ä¼¤åŠ¨ç”»ã€éŸ³æ•ˆç­‰
     }
-    //±»×ÆÉË£¬±»»ğÑæ¹¥»÷Ê±µ÷ÓÃ
+    //è¢«ç¼ä¼¤ï¼Œè¢«ç«ç„°æ”»å‡»æ—¶è°ƒç”¨
     public virtual void beBurned(int damage)
     {
         beAttacked(damage, 1, 1);
-        ÇĞ»»±ù¶³×´Ì¬(false);
+        åˆ‡æ¢å†°å†»çŠ¶æ€(false);
     }
     public virtual void beSquashed()
     {
-        if (buff.ÒşÄä) return;
+        if (buff.éšåŒ¿) return;
         beAttacked(1800, 1, -1);
-        if (ÑªÁ¿ <= 0 && !alive)
+        if (è¡€é‡ <= 0 && !alive)
         {
             ZombieManagement.instance.minusZombieNumAll(gameObject);
             Destroy(gameObject);
@@ -605,15 +605,15 @@ public class Zombie: MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void ¼ÆËã¼áÈÍ(){
-        level1ArmorHealth += buff.¼áÈÍ * 50;
+    public void è®¡ç®—åšéŸ§(){
+        level1ArmorHealth += buff.åšéŸ§ * 50;
     }
 
     public void beAshAttacked()
     {
-        if(ÑªÁ¿ <= 1800)
+        if(è¡€é‡ <= 1800)
         {
-            Vector3 offset = new Vector3(0.137f, -0.088f, 0f); // zÖá±£³Ö²»±ä
+            Vector3 offset = new Vector3(0.137f, -0.088f, 0f); // zè½´ä¿æŒä¸å˜
             GameObject charredZombie = Instantiate(
                 Resources.Load<GameObject>("Prefabs/Zombies/Zombie_Other/Zombie_charred"),
                 gameObject.transform.position + offset,
@@ -631,59 +631,59 @@ public class Zombie: MonoBehaviour
 
     #endregion
 
-    #region ÒôĞ§²¥·Å
-    // ²¥·Å±»¹¥»÷ÒôĞ§
+    #region éŸ³æ•ˆæ’­æ”¾
+    // æ’­æ”¾è¢«æ”»å‡»éŸ³æ•ˆ
     public virtual void playAudioOfBeingAttacked(int bulletType)
     {
-        if (ÌúÃÅÀà½©Ê¬ && !level2ArmorIsDrop && bulletType == 1)
+        if (é“é—¨ç±»åƒµå°¸ && !level2ArmorIsDrop && bulletType == 1)
         {
-            // Ê¹ÓÃ AudioManager ²¥·ÅÒôĞ§
-            AudioManager.Instance.PlaySoundEffect(11); // ¶ÔÓ¦ shieldhit ÒôĞ§
+            // ä½¿ç”¨ AudioManager æ’­æ”¾éŸ³æ•ˆ
+            AudioManager.Instance.PlaySoundEffect(11); // å¯¹åº” shieldhit éŸ³æ•ˆ
         }
         else
         {
             if (!level1ArmorIsDrop)
             {
-                switch (»ù´¡½©Ê¬ÀàĞÍ)
+                switch (åŸºç¡€åƒµå°¸ç±»å‹)
                 {
                     case 0:
-                        // Ê¹ÓÃ AudioManager ²¥·Å²»Í¬µÄÒôĞ§
-                        AudioManager.Instance.PlaySoundEffect(audioIndex == 1 ? 2 : 3); // ¶ÔÓ¦ bodyhit1 »ò bodyhit2
+                        // ä½¿ç”¨ AudioManager æ’­æ”¾ä¸åŒçš„éŸ³æ•ˆ
+                        AudioManager.Instance.PlaySoundEffect(audioIndex == 1 ? 2 : 3); // å¯¹åº” bodyhit1 æˆ– bodyhit2
                         break;
                     case 1:
-                        AudioManager.Instance.PlaySoundEffect(audioIndex == 1 ? 9 : 10); // ¶ÔÓ¦ conehit1 »ò conehit2
+                        AudioManager.Instance.PlaySoundEffect(audioIndex == 1 ? 9 : 10); // å¯¹åº” conehit1 æˆ– conehit2
                         break;
                     case 2:
-                        AudioManager.Instance.PlaySoundEffect(audioIndex == 1 ? 11 : 12); // ¶ÔÓ¦ shieldhit1 »ò shieldhit2
+                        AudioManager.Instance.PlaySoundEffect(audioIndex == 1 ? 11 : 12); // å¯¹åº” shieldhit1 æˆ– shieldhit2
                         break;
                 }
             }
             else
             {
-                // Ê¹ÓÃ AudioManager ²¥·ÅÄ¬ÈÏµÄÒôĞ§
-                AudioManager.Instance.PlaySoundEffect(audioIndex == 1 ? 2 : 3); // ¶ÔÓ¦ bodyhit1 »ò bodyhit2
+                // ä½¿ç”¨ AudioManager æ’­æ”¾é»˜è®¤çš„éŸ³æ•ˆ
+                AudioManager.Instance.PlaySoundEffect(audioIndex == 1 ? 2 : 3); // å¯¹åº” bodyhit1 æˆ– bodyhit2
             }
         }
 
-        // ÇĞ»»ÒôĞ§Ë÷Òı
+        // åˆ‡æ¢éŸ³æ•ˆç´¢å¼•
         audioIndex = (audioIndex == 1) ? 2 : 1;
     }
 
-    // ²¥·ÅÉíÌåÊÜÉËÒôĞ§
-    public virtual void playAudioOfBodyBeingAttacked() // µØ´Ì¹¥»÷Ê¹ÓÃ£¬²¥·ÅÉíÌåÊÜÉË
+    // æ’­æ”¾èº«ä½“å—ä¼¤éŸ³æ•ˆ
+    public virtual void playAudioOfBodyBeingAttacked() // åœ°åˆºæ”»å‡»ä½¿ç”¨ï¼Œæ’­æ”¾èº«ä½“å—ä¼¤
     {
-        // Ê¹ÓÃ AudioManager ²¥·ÅÒôĞ§
-        AudioManager.Instance.PlaySoundEffect(audioIndex == 1 ? 2 : 3); // ¶ÔÓ¦ bodyhit1 »ò bodyhit2
+        // ä½¿ç”¨ AudioManager æ’­æ”¾éŸ³æ•ˆ
+        AudioManager.Instance.PlaySoundEffect(audioIndex == 1 ? 2 : 3); // å¯¹åº” bodyhit1 æˆ– bodyhit2
 
-        // ÇĞ»»ÒôĞ§Ë÷Òı
+        // åˆ‡æ¢éŸ³æ•ˆç´¢å¼•
         audioIndex = (audioIndex == 1) ? 2 : 1;
     }
 
-    // ²¥·Å½©Ê¬¿ĞÒ§µÄÒôĞ§
+    // æ’­æ”¾åƒµå°¸å•ƒå’¬çš„éŸ³æ•ˆ
     public virtual void PlayEatAudio()
     {
-        // ²¥·ÅËæ»úµÄ¿ĞÒ§ÒôĞ§ (chomp1 »ò chomp2)
-        AudioManager.Instance.PlaySoundEffect(Random.Range(13, 15)); // ¶ÔÓ¦ chomp1 »ò chomp2
+        // æ’­æ”¾éšæœºçš„å•ƒå’¬éŸ³æ•ˆ (chomp1 æˆ– chomp2)
+        AudioManager.Instance.PlaySoundEffect(Random.Range(13, 15)); // å¯¹åº” chomp1 æˆ– chomp2
     }
 
     public virtual void fallDown()
@@ -692,10 +692,10 @@ public class Zombie: MonoBehaviour
     }
     #endregion
 
-    #region ÖĞ¶¾¡¢±ù¶³µÈ×´Ì¬ÇĞ»»
-    private void ÇĞ»»²ÄÖÊ×´Ì¬(int ×´Ì¬ÀàĞÍ)
+    #region ä¸­æ¯’ã€å†°å†»ç­‰çŠ¶æ€åˆ‡æ¢
+    private void åˆ‡æ¢æè´¨çŠ¶æ€(int çŠ¶æ€ç±»å‹)
     {
-        switch(×´Ì¬ÀàĞÍ)
+        switch(çŠ¶æ€ç±»å‹)
         {
             case 0:
                 foreach (Renderer renderer in allRenderers)
@@ -754,99 +754,99 @@ public class Zombie: MonoBehaviour
         }
     }
 
-    private void ÇĞ»»±ù¶³×´Ì¬(bool ¿ªÊ¼)//0Îª½â³ı£¬1Îª¿ªÊ¼
+    private void åˆ‡æ¢å†°å†»çŠ¶æ€(bool å¼€å§‹)//0ä¸ºè§£é™¤ï¼Œ1ä¸ºå¼€å§‹
     {
-        if (±ù¶³Ğ§¹ûÖĞ == ¿ªÊ¼) return; // Èç¹ûµ±Ç°×´Ì¬ÒÑ¾­ÊÇÄ¿±ê×´Ì¬£¬ÔòÖ±½Ó·µ»Ø
-        if(¿ªÊ¼)
+        if (å†°å†»æ•ˆæœä¸­ == å¼€å§‹) return; // å¦‚æœå½“å‰çŠ¶æ€å·²ç»æ˜¯ç›®æ ‡çŠ¶æ€ï¼Œåˆ™ç›´æ¥è¿”å›
+        if(å¼€å§‹)
         {
-            ÇĞ»»ÖĞ¶¾×´Ì¬(false);
+            åˆ‡æ¢ä¸­æ¯’çŠ¶æ€(false);
         }
-        ±ù¶³Ğ§¹ûÖĞ = ¿ªÊ¼;
-        ¼õËÙËÙ¶È³ËÇø = ¿ªÊ¼ ? 0.5f : 1f;  // Ê¹ÓÃÈıÔªÔËËã·ûÀ´¼ò»¯¸³Öµ
-        ÇĞ»»²ÄÖÊ×´Ì¬(¿ªÊ¼ ? 1 : 0);
-        ¼ÓÔØ¶¯»­ËÙ¶È();
+        å†°å†»æ•ˆæœä¸­ = å¼€å§‹;
+        å‡é€Ÿé€Ÿåº¦ä¹˜åŒº = å¼€å§‹ ? 0.5f : 1f;  // ä½¿ç”¨ä¸‰å…ƒè¿ç®—ç¬¦æ¥ç®€åŒ–èµ‹å€¼
+        åˆ‡æ¢æè´¨çŠ¶æ€(å¼€å§‹ ? 1 : 0);
+        åŠ è½½åŠ¨ç”»é€Ÿåº¦();
     }
-    public virtual void ¸½¼Ó¼õËÙ() // ÓÃÓÚ¼õËÙ
+    public virtual void é™„åŠ å‡é€Ÿ() // ç”¨äºå‡é€Ÿ
     {
-        if (¼õËÙĞ­³Ì == null)
+        if (å‡é€Ÿåç¨‹ == null)
         {
-            debuff.¼õËÙ = ¼õËÙÊ±¼ä;
-            ¼õËÙĞ­³Ì = StartCoroutine(¼õËÙĞ§¹ûĞ­³Ì(debuff.¼õËÙ));
+            debuff.å‡é€Ÿ = å‡é€Ÿæ—¶é—´;
+            å‡é€Ÿåç¨‹ = StartCoroutine(å‡é€Ÿæ•ˆæœåç¨‹(debuff.å‡é€Ÿ));
         }
         else
         {
-            debuff.¼õËÙ = ¼õËÙÊ±¼ä;
-            StopCoroutine(¼õËÙĞ­³Ì);
-            ¼õËÙĞ­³Ì = StartCoroutine(¼õËÙĞ§¹ûĞ­³Ì(debuff.¼õËÙ));
+            debuff.å‡é€Ÿ = å‡é€Ÿæ—¶é—´;
+            StopCoroutine(å‡é€Ÿåç¨‹);
+            å‡é€Ÿåç¨‹ = StartCoroutine(å‡é€Ÿæ•ˆæœåç¨‹(debuff.å‡é€Ÿ));
         }
     }
-    private IEnumerator ¼õËÙĞ§¹ûĞ­³Ì(float ¼õËÙÊ±¼ä)
+    private IEnumerator å‡é€Ÿæ•ˆæœåç¨‹(float å‡é€Ÿæ—¶é—´)
     {
-        ÇĞ»»±ù¶³×´Ì¬(true);
+        åˆ‡æ¢å†°å†»çŠ¶æ€(true);
         float elapsedTime = 0f;
-        while (elapsedTime < ¼õËÙÊ±¼ä)
+        while (elapsedTime < å‡é€Ÿæ—¶é—´)
         {
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        ½â³ı¼õËÙ×´Ì¬();
+        è§£é™¤å‡é€ŸçŠ¶æ€();
     }
-    protected void ½â³ı¼õËÙ×´Ì¬()
+    protected void è§£é™¤å‡é€ŸçŠ¶æ€()
     {
-        ÇĞ»»±ù¶³×´Ì¬(false);
+        åˆ‡æ¢å†°å†»çŠ¶æ€(false);
     }
 
-    private void ÇĞ»»ÖĞ¶¾×´Ì¬(bool ¿ªÊ¼)//0Îª½â³ı£¬1Îª¿ªÊ¼
+    private void åˆ‡æ¢ä¸­æ¯’çŠ¶æ€(bool å¼€å§‹)//0ä¸ºè§£é™¤ï¼Œ1ä¸ºå¼€å§‹
     {
-        if (ÖĞ¶¾Ğ§¹ûÖĞ == ¿ªÊ¼) return;
-        if(¿ªÊ¼)
+        if (ä¸­æ¯’æ•ˆæœä¸­ == å¼€å§‹) return;
+        if(å¼€å§‹)
         {
-            ÇĞ»»±ù¶³×´Ì¬(false);
-            ÇĞ»»¿ñ±©×´Ì¬(false);
+            åˆ‡æ¢å†°å†»çŠ¶æ€(false);
+            åˆ‡æ¢ç‹‚æš´çŠ¶æ€(false);
         }
-        if(!¿ªÊ¼)
+        if(!å¼€å§‹)
         {
-            debuff.ÖĞ¶¾ = 0;
+            debuff.ä¸­æ¯’ = 0;
         }
-        ÖĞ¶¾Ğ§¹ûÖĞ = ¿ªÊ¼;
+        ä¸­æ¯’æ•ˆæœä¸­ = å¼€å§‹;
 
         
-        ÇĞ»»²ÄÖÊ×´Ì¬(¿ªÊ¼ ? 3 : 0);
+        åˆ‡æ¢æè´¨çŠ¶æ€(å¼€å§‹ ? 3 : 0);
       
-        ¼ÓÔØ¶¯»­ËÙ¶È();
+        åŠ è½½åŠ¨ç”»é€Ÿåº¦();
 
-        ¼ÓÔØÑªÁ¿ÎÄ±¾();
+        åŠ è½½è¡€é‡æ–‡æœ¬();
     }
 
-    public void ¸½¼ÓÖĞ¶¾(int ¸½¼ÓÖĞ¶¾²ãÊı)
+    public void é™„åŠ ä¸­æ¯’(int é™„åŠ ä¸­æ¯’å±‚æ•°)
     {
-        debuff.ÖĞ¶¾ += ¸½¼ÓÖĞ¶¾²ãÊı;
+        debuff.ä¸­æ¯’ += é™„åŠ ä¸­æ¯’å±‚æ•°;
 
-        ÇĞ»»¿ñ±©×´Ì¬(false);
+        åˆ‡æ¢ç‹‚æš´çŠ¶æ€(false);
 
 
        
-        for(int i = 0;i < ¸½¼ÓÖĞ¶¾²ãÊı;i++)
+        for(int i = 0;i < é™„åŠ ä¸­æ¯’å±‚æ•°;i++)
         {
             Invoke("DecreasePoisonLayer", 6f);
         }
-        if(debuff.ÖĞ¶¾ > 60)
+        if(debuff.ä¸­æ¯’ > 60)
         {
-            SetAchievement.SetAchievementCompleted("ÎÒ²»ÊÇ¶¾Éñ");
+            SetAchievement.SetAchievementCompleted("æˆ‘ä¸æ˜¯æ¯’ç¥");
         }
-        if (debuff.ÖĞ¶¾ > 0 && !ÖĞ¶¾Ğ§¹ûÖĞ)
+        if (debuff.ä¸­æ¯’ > 0 && !ä¸­æ¯’æ•ˆæœä¸­)
         {
-            ÇĞ»»ÖĞ¶¾×´Ì¬(true);
-            ÖĞ¶¾Ğ§¹ûÖĞ = true;
+            åˆ‡æ¢ä¸­æ¯’çŠ¶æ€(true);
+            ä¸­æ¯’æ•ˆæœä¸­ = true;
         }
 
-        ¼ÓÔØÑªÁ¿ÎÄ±¾();
+        åŠ è½½è¡€é‡æ–‡æœ¬();
     }
-    public void Òı±¬¶¾ÉË(int Òı±¬´ÎÊı)
+    public void å¼•çˆ†æ¯’ä¼¤(int å¼•çˆ†æ¬¡æ•°)
     {
-        if (debuff.ÖĞ¶¾ > 0 && Òı±¬´ÎÊı > 0)
+        if (debuff.ä¸­æ¯’ > 0 && å¼•çˆ†æ¬¡æ•° > 0)
         {
-            beAttacked(debuff.ÖĞ¶¾ * ×î´óÑªÁ¿ / 100 * Òı±¬´ÎÊı, 3, -1);
+            beAttacked(debuff.ä¸­æ¯’ * æœ€å¤§è¡€é‡ / 100 * å¼•çˆ†æ¬¡æ•°, 3, -1);
         }
         else
         {
@@ -855,35 +855,35 @@ public class Zombie: MonoBehaviour
     }
     public void DecreasePoisonLayer()
     {
-        debuff.ÖĞ¶¾ -= 1;
-        if (debuff.ÖĞ¶¾ < 0)
-            debuff.ÖĞ¶¾ = 0;
+        debuff.ä¸­æ¯’ -= 1;
+        if (debuff.ä¸­æ¯’ < 0)
+            debuff.ä¸­æ¯’ = 0;
 
-        if (debuff.ÖĞ¶¾ == 0 && ÖĞ¶¾Ğ§¹ûÖĞ)
+        if (debuff.ä¸­æ¯’ == 0 && ä¸­æ¯’æ•ˆæœä¸­)
         {
-            ÇĞ»»ÖĞ¶¾×´Ì¬(false);
+            åˆ‡æ¢ä¸­æ¯’çŠ¶æ€(false);
         }
 
-        ¼ÓÔØÑªÁ¿ÎÄ±¾();
+        åŠ è½½è¡€é‡æ–‡æœ¬();
     }
-    public void DecreasePoisonLayer(int ¼õÉÙµÄ²ãÊı)
+    public void DecreasePoisonLayer(int å‡å°‘çš„å±‚æ•°)
     {
-        debuff.ÖĞ¶¾ -= ¼õÉÙµÄ²ãÊı;
-        if (debuff.ÖĞ¶¾ < 0)
-            debuff.ÖĞ¶¾ = 0;
+        debuff.ä¸­æ¯’ -= å‡å°‘çš„å±‚æ•°;
+        if (debuff.ä¸­æ¯’ < 0)
+            debuff.ä¸­æ¯’ = 0;
 
-        if (debuff.ÖĞ¶¾ == 0 && ÖĞ¶¾Ğ§¹ûÖĞ)
+        if (debuff.ä¸­æ¯’ == 0 && ä¸­æ¯’æ•ˆæœä¸­)
         {
-            ÇĞ»»ÖĞ¶¾×´Ì¬(false);
+            åˆ‡æ¢ä¸­æ¯’çŠ¶æ€(false);
         }
 
-        ¼ÓÔØÑªÁ¿ÎÄ±¾();
+        åŠ è½½è¡€é‡æ–‡æœ¬();
     }
-    public void ¼ÆËã¶¾ÉË()
+    public void è®¡ç®—æ¯’ä¼¤()
     {
-        if(debuff.ÖĞ¶¾ > 0)
+        if(debuff.ä¸­æ¯’ > 0)
         {
-            beAttacked(debuff.ÖĞ¶¾ * 3, 1,-1);
+            beAttacked(debuff.ä¸­æ¯’ * 3, 1,-1);
         }
         else
         {
@@ -891,72 +891,72 @@ public class Zombie: MonoBehaviour
         }
     }
 
-    public void ÇĞ»»¿ñ±©×´Ì¬(bool ¿ª)//0Îª½â³ı£¬1Îª¿ªÊ¼
+    public void åˆ‡æ¢ç‹‚æš´çŠ¶æ€(bool å¼€)//0ä¸ºè§£é™¤ï¼Œ1ä¸ºå¼€å§‹
     {
         
-        if(debuff.¿ñ±© == ¿ª)
+        if(debuff.ç‹‚æš´ == å¼€)
         {
             return;
         }
         else
         {
-            if(¿ª)
+            if(å¼€)
             {
-                if (¿ª)
+                if (å¼€)
                 {
-                    ÇĞ»»±ù¶³×´Ì¬(false);
-                    ÇĞ»»ÖĞ¶¾×´Ì¬(false);
+                    åˆ‡æ¢å†°å†»çŠ¶æ€(false);
+                    åˆ‡æ¢ä¸­æ¯’çŠ¶æ€(false);
                 }
-                ÇĞ»»²ÄÖÊ×´Ì¬(5);
-                debuff.¿ñ±© = true;
-                ¿ñ±©ËÙ¶È³ËÇø = 3f;
+                åˆ‡æ¢æè´¨çŠ¶æ€(5);
+                debuff.ç‹‚æš´ = true;
+                ç‹‚æš´é€Ÿåº¦ä¹˜åŒº = 3f;
             }
             else
             {
-                ÇĞ»»²ÄÖÊ×´Ì¬(0);
-                debuff.¿ñ±© = false;
-                ¿ñ±©ËÙ¶È³ËÇø = 1f;
+                åˆ‡æ¢æè´¨çŠ¶æ€(0);
+                debuff.ç‹‚æš´ = false;
+                ç‹‚æš´é€Ÿåº¦ä¹˜åŒº = 1f;
             }
             
         }
-        ¼ÓÔØ¶¯»­ËÙ¶È();
+        åŠ è½½åŠ¨ç”»é€Ÿåº¦();
 
     }
 
-    public void ÇĞ»»÷È»ó×´Ì¬()//÷È»óÖ»ÄÜ½øÈë£¬ÎŞ·¨ÍË³ö
+    public void åˆ‡æ¢é­…æƒ‘çŠ¶æ€()//é­…æƒ‘åªèƒ½è¿›å…¥ï¼Œæ— æ³•é€€å‡º
     {
-        if (debuff.÷È»ó)
+        if (debuff.é­…æƒ‘)
             return;
-        debuff.÷È»ó = true;
+        debuff.é­…æƒ‘ = true;
         transform.Rotate(0f, 180f, 0f);
-        ÑªÁ¿ÏÔÊ¾.transform.Rotate(0f, 180f, 0f);
-        ÇĞ»»ÖĞ¶¾×´Ì¬(false);
-        ÇĞ»»±ù¶³×´Ì¬(false);
-        ÇĞ»»¿ñ±©×´Ì¬(false);
-        ÇĞ»»²ÄÖÊ×´Ì¬(4);
+        è¡€é‡æ˜¾ç¤º.transform.Rotate(0f, 180f, 0f);
+        åˆ‡æ¢ä¸­æ¯’çŠ¶æ€(false);
+        åˆ‡æ¢å†°å†»çŠ¶æ€(false);
+        åˆ‡æ¢ç‹‚æš´çŠ¶æ€(false);
+        åˆ‡æ¢æè´¨çŠ¶æ€(4);
         ZombieManagement.instance.minusZombieNumAll(gameObject);
         gameObject.tag = "Plant";
         //myAnimator.SetBool("Attack", false);
         //myAnimator.SetBool("Walk", true);
         //isEating = false;
-        //ÕıÔÚ¿ĞÒ§Ä¿±ê = null;
+        //æ­£åœ¨å•ƒå’¬ç›®æ ‡ = null;
         //attackPlant = null;
-        //if (ÌúÃÅÀà½©Ê¬)
+        //if (é“é—¨ç±»åƒµå°¸)
         //{
         //    if (!level2ArmorIsDrop)
         //    {
-        //        ÌúÃÅĞĞ×ßÏÔÊ¾Âß¼­();
+        //        é“é—¨è¡Œèµ°æ˜¾ç¤ºé€»è¾‘();
         //    }
         //    else
         //    {
-        //        ÌúÃÅÎŞÃÅĞĞ×ßÏÔÊ¾Âß¼­();
+        //        é“é—¨æ— é—¨è¡Œèµ°æ˜¾ç¤ºé€»è¾‘();
         //    }
         //}
         GetComponent<Collider2D>().enabled = false;
         GetComponent<Collider2D>().enabled = true;
     }
 
-    public void Õ¹Ê¾¶¯»­³õÊ¼»¯()
+    public void å±•ç¤ºåŠ¨ç”»åˆå§‹åŒ–()
     {
         if (newZombie)
         {
@@ -969,12 +969,12 @@ public class Zombie: MonoBehaviour
             }
             else
             {
-                Debug.LogWarning($"¶¯»­ '{randomAnim}' ²»´æÔÚ£¬ÎŞ·¨²¥·Å");
+                Debug.LogWarning($"åŠ¨ç”» '{randomAnim}' ä¸å­˜åœ¨ï¼Œæ— æ³•æ’­æ”¾");
             }
         }
     }
 
-    public void ÓÎÏ·¶¯»­³õÊ¼»¯()
+    public void æ¸¸æˆåŠ¨ç”»åˆå§‹åŒ–()
     {
         if (!newZombie)
         {
@@ -995,7 +995,7 @@ public class Zombie: MonoBehaviour
             }
             else
             {
-                Debug.LogWarning($"¶¯»­ '{randomAnim}' ²»´æÔÚ£¬ÎŞ·¨²¥·Å");
+                Debug.LogWarning($"åŠ¨ç”» '{randomAnim}' ä¸å­˜åœ¨ï¼Œæ— æ³•æ’­æ”¾");
             }
         }
     }
@@ -1016,24 +1016,24 @@ public class Zombie: MonoBehaviour
 
 
 
-    private void ¼ÓÔØ¶¯»­ËÙ¶È()
+    private void åŠ è½½åŠ¨ç”»é€Ÿåº¦()
     {
         if(myAnimator != null)
         {
-            myAnimator.speed = ¿ñ±©ËÙ¶È³ËÇø * ¼õËÙËÙ¶È³ËÇø * Ëæ»úËÙ¶È³ËÇø * ¹Ø¿¨ÌØÊâ³ËÇø * »·¾³ËÙ¶È³ËÇø;
+            myAnimator.speed = ç‹‚æš´é€Ÿåº¦ä¹˜åŒº * å‡é€Ÿé€Ÿåº¦ä¹˜åŒº * éšæœºé€Ÿåº¦ä¹˜åŒº * å…³å¡ç‰¹æ®Šä¹˜åŒº * ç¯å¢ƒé€Ÿåº¦ä¹˜åŒº;
         }
     }
 
     #endregion
 
-    #region ¼ÓÔØ²»Í¬×´Ì¬£¨ÌúÃÅ¶ÀÁ¢ÔÚÌúÃÅ´úÂëÖĞ£©
+    #region åŠ è½½ä¸åŒçŠ¶æ€ï¼ˆé“é—¨ç‹¬ç«‹åœ¨é“é—¨ä»£ç ä¸­ï¼‰
     protected virtual void hideHead()
     {
         if(!dying)
         {
             dying = true;
 
-            StartCoroutine(±ôËÀ¿ÛÑª());
+            StartCoroutine(æ¿’æ­»æ‰£è¡€());
 
             AudioManager.Instance.PlaySoundEffect(59);
             if(!newZombie)
@@ -1094,25 +1094,25 @@ public class Zombie: MonoBehaviour
     }
     protected Transform FindInChildren(Transform parent,string beFind)
     {
-        foreach (Transform child in parent.GetComponentsInChildren<Transform>(true)) // µÚ¶ş¸ö²ÎÊıÉèÖÃÎªtrue£¬²éÕÒËùÓĞ×ÓÎïÌå£¨°üÀ¨Î´¼¤»îµÄ£©
+        foreach (Transform child in parent.GetComponentsInChildren<Transform>(true)) // ç¬¬äºŒä¸ªå‚æ•°è®¾ç½®ä¸ºtrueï¼ŒæŸ¥æ‰¾æ‰€æœ‰å­ç‰©ä½“ï¼ˆåŒ…æ‹¬æœªæ¿€æ´»çš„ï¼‰
         {
             if (child.name == beFind)
             {
                 return child;
             }
         }
-        return null; // Ã»ÓĞÕÒµ½ÃûÎª×ÓÎïÌå
+        return null; // æ²¡æœ‰æ‰¾åˆ°åä¸ºå­ç‰©ä½“
     }
-    public void loadCone(int loadType)//¸ù¾İ²»Í¬ÉËº¦¼ÓÔØÂ·ÕÏ
+    public void loadCone(int loadType)//æ ¹æ®ä¸åŒä¼¤å®³åŠ è½½è·¯éšœ
     {
         if(!newZombie)
         {
-            // ²éÕÒÃûÎª "Cone" µÄËùÓĞ×ÓÎïÌå£¨°üÀ¨Î´¼¤»îµÄ£©
+            // æŸ¥æ‰¾åä¸º "Cone" çš„æ‰€æœ‰å­ç‰©ä½“ï¼ˆåŒ…æ‹¬æœªæ¿€æ´»çš„ï¼‰
             Transform coneTransform = FindInChildren(transform, "Cone");
 
             if (coneTransform != null)
             {
-                // »ñÈ¡¸Ã×ÓÎïÌåµÄSpriteRenderer×é¼ş
+                // è·å–è¯¥å­ç‰©ä½“çš„SpriteRendererç»„ä»¶
                 SpriteRenderer coneSpriteRenderer = coneTransform.GetComponent<SpriteRenderer>();
 
                 if (coneSpriteRenderer != null)
@@ -1141,12 +1141,12 @@ public class Zombie: MonoBehaviour
         }
         else
         {
-            // ²éÕÒÃûÎª "Cone" µÄËùÓĞ×ÓÎïÌå£¨°üÀ¨Î´¼¤»îµÄ£©
+            // æŸ¥æ‰¾åä¸º "Cone" çš„æ‰€æœ‰å­ç‰©ä½“ï¼ˆåŒ…æ‹¬æœªæ¿€æ´»çš„ï¼‰
             Transform coneTransform = FindInChildren(transform, "ZOMBIE_CONE1");
 
             if (coneTransform != null)
             {
-                // »ñÈ¡¸Ã×ÓÎïÌåµÄSpriteRenderer×é¼ş
+                // è·å–è¯¥å­ç‰©ä½“çš„SpriteRendererç»„ä»¶
                 SpriteRenderer coneSpriteRenderer = coneTransform.GetComponent<SpriteRenderer>();
 
                 if (coneSpriteRenderer != null)
@@ -1179,16 +1179,16 @@ public class Zombie: MonoBehaviour
         }
         
     }
-    public virtual void loadBucket(int loadType)//¸ù¾İ²»Í¬ÉËº¦¼ÓÌúÍ°
+    public virtual void loadBucket(int loadType)//æ ¹æ®ä¸åŒä¼¤å®³åŠ é“æ¡¶
     {
         if(!newZombie)
         {
-            // ²éÕÒÃûÎª "Cone" µÄËùÓĞ×ÓÎïÌå£¨°üÀ¨Î´¼¤»îµÄ£©
+            // æŸ¥æ‰¾åä¸º "Cone" çš„æ‰€æœ‰å­ç‰©ä½“ï¼ˆåŒ…æ‹¬æœªæ¿€æ´»çš„ï¼‰
             Transform bucketTransform = FindInChildren(transform, "Bucket");
 
             if (bucketTransform != null)
             {
-                // »ñÈ¡¸Ã×ÓÎïÌåµÄSpriteRenderer×é¼ş
+                // è·å–è¯¥å­ç‰©ä½“çš„SpriteRendererç»„ä»¶
                 SpriteRenderer bucketSpriteRenderer = bucketTransform.GetComponent<SpriteRenderer>();
 
                 if (bucketSpriteRenderer != null)
@@ -1217,12 +1217,12 @@ public class Zombie: MonoBehaviour
         }
         else
         {
-            // ²éÕÒÃûÎª "Cone" µÄËùÓĞ×ÓÎïÌå£¨°üÀ¨Î´¼¤»îµÄ£©
+            // æŸ¥æ‰¾åä¸º "Cone" çš„æ‰€æœ‰å­ç‰©ä½“ï¼ˆåŒ…æ‹¬æœªæ¿€æ´»çš„ï¼‰
             Transform bucketTransform = FindInChildren(transform, "ZOMBIE_BUCKET1");
 
             if (bucketTransform != null)
             {
-                // »ñÈ¡¸Ã×ÓÎïÌåµÄSpriteRenderer×é¼ş
+                // è·å–è¯¥å­ç‰©ä½“çš„SpriteRendererç»„ä»¶
                 SpriteRenderer bucketSpriteRenderer = bucketTransform.GetComponent<SpriteRenderer>();
 
                 if (bucketSpriteRenderer != null)
@@ -1255,7 +1255,7 @@ public class Zombie: MonoBehaviour
         
     }
 
-    protected virtual void dropArm()//ÊÖ±ÛµôÂä
+    protected virtual void dropArm()//æ‰‹è‡‚æ‰è½
     {
         if (!armIsDrop)
         {
@@ -1263,7 +1263,7 @@ public class Zombie: MonoBehaviour
             AudioManager.Instance.PlaySoundEffect(59);
             if (!newZombie)
             {
-                // ²éÕÒÃûÎª "Cone" µÄËùÓĞ×ÓÎïÌå£¨°üÀ¨Î´¼¤»îµÄ£©
+                // æŸ¥æ‰¾åä¸º "Cone" çš„æ‰€æœ‰å­ç‰©ä½“ï¼ˆåŒ…æ‹¬æœªæ¿€æ´»çš„ï¼‰
                 Transform createPosition = FindInChildren(transform, "CreateDropArmPosition");
                 Transform shouldBeHide1 = FindInChildren(transform, "Zombie_outerarm_lower");
                 Transform shouldBeHide2 = FindInChildren(transform, "Zombie_outerarm_hand");
@@ -1313,27 +1313,27 @@ public class Zombie: MonoBehaviour
     }
     virtual public void loadArmorStatus()
     {
-        switch (»ù´¡½©Ê¬ÀàĞÍ)
+        switch (åŸºç¡€åƒµå°¸ç±»å‹)
         {
             case 1:
                 if (!level1ArmorIsDrop)
                 {
-                    if (!Ò»Àà·À¾ß°ëÆÆËğÒÑ¾­ÇĞ»»)
+                    if (!ä¸€ç±»é˜²å…·åŠç ´æŸå·²ç»åˆ‡æ¢)
                     {
 
                         if (level1ArmorHealth <= level1ArmorMaxHealth / 3 * 2)
                         {
-                            Ò»Àà·À¾ß°ëÆÆËğÒÑ¾­ÇĞ»» = true;
+                            ä¸€ç±»é˜²å…·åŠç ´æŸå·²ç»åˆ‡æ¢ = true;
                             loadCone(2);
                         }
 
                     }
-                    if (!Ò»Àà·À¾ßÍêÈ«ÆÆËğÒÑ¾­ÇĞ»»)
+                    if (!ä¸€ç±»é˜²å…·å®Œå…¨ç ´æŸå·²ç»åˆ‡æ¢)
                     {
 
                         if (level1ArmorHealth <= level1ArmorMaxHealth / 3)
                         {
-                            Ò»Àà·À¾ßÍêÈ«ÆÆËğÒÑ¾­ÇĞ»» = true;
+                            ä¸€ç±»é˜²å…·å®Œå…¨ç ´æŸå·²ç»åˆ‡æ¢ = true;
                             loadCone(3);
                         }
 
@@ -1350,22 +1350,22 @@ public class Zombie: MonoBehaviour
             case 2:
                 if (!level1ArmorIsDrop)
                 {
-                    if (!Ò»Àà·À¾ß°ëÆÆËğÒÑ¾­ÇĞ»»)
+                    if (!ä¸€ç±»é˜²å…·åŠç ´æŸå·²ç»åˆ‡æ¢)
                     {
 
                         if (level1ArmorHealth <= level1ArmorMaxHealth / 3 * 2)
                         {
-                            Ò»Àà·À¾ß°ëÆÆËğÒÑ¾­ÇĞ»» = true;
+                            ä¸€ç±»é˜²å…·åŠç ´æŸå·²ç»åˆ‡æ¢ = true;
                             loadBucket(2);
                         }
 
                     }
-                    if (!Ò»Àà·À¾ßÍêÈ«ÆÆËğÒÑ¾­ÇĞ»»)
+                    if (!ä¸€ç±»é˜²å…·å®Œå…¨ç ´æŸå·²ç»åˆ‡æ¢)
                     {
 
                         if (level1ArmorHealth <= level1ArmorMaxHealth / 3)
                         {
-                            Ò»Àà·À¾ßÍêÈ«ÆÆËğÒÑ¾­ÇĞ»» = true;
+                            ä¸€ç±»é˜²å…·å®Œå…¨ç ´æŸå·²ç»åˆ‡æ¢ = true;
                             loadBucket(3);
                         }
 
@@ -1380,25 +1380,25 @@ public class Zombie: MonoBehaviour
                 break;
             default: break;
         }
-        if (ÌúÃÅÀà½©Ê¬)
+        if (é“é—¨ç±»åƒµå°¸)
         {
             loadDoorStatus();
         }
 
-        if (ÑªÁ¿ <= ×î´óÑªÁ¿ / 2)//¶ÏÊÖ
+        if (è¡€é‡ <= æœ€å¤§è¡€é‡ / 2)//æ–­æ‰‹
         {
             dropArm();
         }
-        if (ÑªÁ¿ <= ×î´óÑªÁ¿ / 3)//¶ÏÍ·  
+        if (è¡€é‡ <= æœ€å¤§è¡€é‡ / 3)//æ–­å¤´  
         {
-            //Òş²ØÍ·
+            //éšè—å¤´
             hideHead();
         }
-        if (ÑªÁ¿ <= 0 && alive == true)
+        if (è¡€é‡ <= 0 && alive == true)
         {
             die();
         }
-        ¼ÓÔØÑªÁ¿ÎÄ±¾();
+        åŠ è½½è¡€é‡æ–‡æœ¬();
         
         
     }
@@ -1409,59 +1409,59 @@ public class Zombie: MonoBehaviour
 
         alive = false;
 
-        ÇĞ»»ÖĞ¶¾×´Ì¬(false);
-        ÇĞ»»±ù¶³×´Ì¬(false);
-        ÇĞ»»¿ñ±©×´Ì¬(false);
+        åˆ‡æ¢ä¸­æ¯’çŠ¶æ€(false);
+        åˆ‡æ¢å†°å†»çŠ¶æ€(false);
+        åˆ‡æ¢ç‹‚æš´çŠ¶æ€(false);
 
-        // ? ¶¯»­¿ØÖÆÆ÷°²È«¼ì²é
+        // ? åŠ¨ç”»æ§åˆ¶å™¨å®‰å…¨æ£€æŸ¥
         if (myAnimator != null)
         {
             if (HasParameter(myAnimator, "Walk"))
                 myAnimator.SetBool("Walk", false);
             else
-                Debug.LogWarning("Animator È±ÉÙ²ÎÊı: Walk");
+                Debug.LogWarning("Animator ç¼ºå°‘å‚æ•°: Walk");
 
             if (HasParameter(myAnimator, "Die"))
                 myAnimator.SetBool("Die", true);
             else
-                Debug.LogWarning("Animator È±ÉÙ²ÎÊı: Die");
+                Debug.LogWarning("Animator ç¼ºå°‘å‚æ•°: Die");
         }
         else
         {
-            Debug.LogError("myAnimator Î´±»¸³Öµ£¡");
+            Debug.LogError("myAnimator æœªè¢«èµ‹å€¼ï¼");
         }
 
-        // ? ÑªÁ¿´¦Àí
+        // ? è¡€é‡å¤„ç†
         level1ArmorHealth = 0;
         level2ArmorHealth = 0;
-        ÑªÁ¿ = 0;
+        è¡€é‡ = 0;
         loadArmorStatus();
 
-        // ? Ê§Ğ§Åö×²ÌåÇ°È·ÈÏ´æÔÚ
+        // ? å¤±æ•ˆç¢°æ’ä½“å‰ç¡®è®¤å­˜åœ¨
         Collider2D col = gameObject.GetComponent<Collider2D>();
         if (col != null)
             col.enabled = false;
         else
-            Debug.LogWarning("Î´ÕÒµ½ Collider2D ×é¼ş");
+            Debug.LogWarning("æœªæ‰¾åˆ° Collider2D ç»„ä»¶");
 
-        // ? Í¨Öª ZombieManagement£¨´ø¿ÕÒıÓÃ¼ì²é£©
+        // ? é€šçŸ¥ ZombieManagementï¼ˆå¸¦ç©ºå¼•ç”¨æ£€æŸ¥ï¼‰
         if (GameManagement.instance.zombieManagement != null)    
         {
             ZombieManagement zm = GameManagement.instance.zombieManagement.GetComponent<ZombieManagement>();
             if (zm != null)
                 zm.minusZombieNumAll(gameObject);
             else
-                Debug.LogWarning("zombieManagement ¶ÔÏóÉÏÃ»ÓĞ ZombieManagement ×é¼ş");
+                Debug.LogWarning("zombieManagement å¯¹è±¡ä¸Šæ²¡æœ‰ ZombieManagement ç»„ä»¶");
         }
         else
         {
-            Debug.LogWarning("GameManagement.zombieManagement Îª null");
+            Debug.LogWarning("GameManagement.zombieManagement ä¸º null");
         }
 
         
     }
 
-    // ?? ¹¤¾ß·½·¨£º¼ì²é Animator ÊÇ·ñ°üº¬Ä³²ÎÊı
+    // ?? å·¥å…·æ–¹æ³•ï¼šæ£€æŸ¥ Animator æ˜¯å¦åŒ…å«æŸå‚æ•°
     private bool HasParameter(Animator anim, string paramName)
     {
         foreach (AnimatorControllerParameter param in anim.parameters)
@@ -1474,14 +1474,14 @@ public class Zombie: MonoBehaviour
 
     public virtual void LawnMowerDie()
     {
-        ÑªÁ¿ = 0;
+        è¡€é‡ = 0;
         level1ArmorHealth = 0;
         level2ArmorHealth = 0;
         loadArmorStatus();
         Destroy(gameObject);
         alive = false;
         dying = true;
-        //È«³¡½©Ê¬Êı¼õÒ»
+        //å…¨åœºåƒµå°¸æ•°å‡ä¸€
         GameManagement.instance.zombieManagement.GetComponent<ZombieManagement>().minusZombieNumAll(gameObject);
     }
 
@@ -1555,14 +1555,14 @@ public class Zombie: MonoBehaviour
     //    }
     //}
 
-    protected IEnumerator ±ôËÀ¿ÛÑª()
+    protected IEnumerator æ¿’æ­»æ‰£è¡€()
     {
         float timer = 0f;
         while (true)
         {
             if (alive)
             {
-                beAttacked(×î´óÑªÁ¿ / 10, 2, -1);
+                beAttacked(æœ€å¤§è¡€é‡ / 10, 2, -1);
                 yield return new WaitForSeconds(1f);
                 timer += 1f;
 
@@ -1594,40 +1594,40 @@ public class Zombie: MonoBehaviour
     }
     #endregion
 
-    #region ÉèÖÃÍ¼²ã
+    #region è®¾ç½®å›¾å±‚
     public virtual void setPosRow(int pos)
     {
-        //ÉèÖÃËùÔÚĞĞ
+        //è®¾ç½®æ‰€åœ¨è¡Œ
         pos_row = pos;
 
-        //ÉèÖÃË³ĞòÍ¼²ã¼°ÏÔÊ¾Ë³Ğò
+        //è®¾ç½®é¡ºåºå›¾å±‚åŠæ˜¾ç¤ºé¡ºåº
         SpriteRenderer[] spriteRenderers = gameObject.GetComponentsInChildren<SpriteRenderer>(true);
         GetComponent<SortingGroup>().sortingLayerName = "Zombie-" + pos_row;
         //GetComponent<SortingGroup>().sortingOrder += orderOffset * 20;
         //orderOffset++;
     }
 
-    public virtual void SetSortingOrder(int ÅÅĞò)
+    public virtual void SetSortingOrder(int æ’åº)
     {
         SpriteRenderer[] spriteRenderers = gameObject.GetComponentsInChildren<SpriteRenderer>(true);
-        GetComponent<SortingGroup>().sortingOrder += ÅÅĞò * 50;
+        GetComponent<SortingGroup>().sortingOrder += æ’åº * 50;
         
     }
     #endregion
 
-    #region ²ÄÖÊ
+    #region æè´¨
     public virtual void TriggerHighlight(int bulletType)
     {
         if(!GameManagement.isPerformance)
         {
-            if(¸ßÁÁ == null)
+            if(é«˜äº® == null)
             {
-                ¸ßÁÁ = StartCoroutine(HighlightCoroutine(bulletType));
+                é«˜äº® = StartCoroutine(HighlightCoroutine(bulletType));
             }
             else
             {
-                StopCoroutine(¸ßÁÁ);
-                ¸ßÁÁ = StartCoroutine(HighlightCoroutine(bulletType));
+                StopCoroutine(é«˜äº®);
+                é«˜äº® = StartCoroutine(HighlightCoroutine(bulletType));
             }
             
         }
@@ -1636,23 +1636,23 @@ public class Zombie: MonoBehaviour
 
     public virtual IEnumerator HighlightCoroutine(int bulletType)
     {
-        float duration = 0.15f; // ¸ßÁÁºÍ»Ö¸´µÄ³ÖĞøÊ±¼ä
+        float duration = 0.15f; // é«˜äº®å’Œæ¢å¤çš„æŒç»­æ—¶é—´
         float startTime = Time.time;
 
-        // »ñÈ¡µ±Ç°Í¸Ã÷¶È
+        // è·å–å½“å‰é€æ˜åº¦
         float currentAlpha = 0f;
 
-        // Í¸Ã÷¶ÈÔö¼Ó£º´Óµ±Ç°Í¸Ã÷¶Èµ½×î´óÖµ 1
+        // é€æ˜åº¦å¢åŠ ï¼šä»å½“å‰é€æ˜åº¦åˆ°æœ€å¤§å€¼ 1
         while (Time.time - startTime < duration)
         {
-            float lerpValue = Mathf.Lerp(currentAlpha, 0.2f, (Time.time - startTime) / duration); // ´Óµ±Ç°Í¸Ã÷¶Èµ½ 1
+            float lerpValue = Mathf.Lerp(currentAlpha, 0.2f, (Time.time - startTime) / duration); // ä»å½“å‰é€æ˜åº¦åˆ° 1
             foreach (Renderer renderer in allRenderers)
             {
                 if (renderer != null && renderer.gameObject.name != "Shadow")
                 {
                     Material mat = renderer.material;
                     Color currentColor = mat.GetColor("_Color");
-                    currentColor.a = lerpValue;  // ¸üĞÂÍ¸Ã÷¶È
+                    currentColor.a = lerpValue;  // æ›´æ–°é€æ˜åº¦
                     mat.SetColor("_Color", currentColor);
                 }
             }
@@ -1660,43 +1660,43 @@ public class Zombie: MonoBehaviour
         }
         startTime = Time.time;
 
-        // Í¸Ã÷¶È¼õÉÙ£º´Ó 1 µ½ 0
+        // é€æ˜åº¦å‡å°‘ï¼šä» 1 åˆ° 0
         while (Time.time - startTime < duration)
         {
-            float lerpValue = Mathf.Lerp(0.2f, 0f, (Time.time - startTime) / duration); // ´Ó 1 µ½ 0
+            float lerpValue = Mathf.Lerp(0.2f, 0f, (Time.time - startTime) / duration); // ä» 1 åˆ° 0
             foreach (Renderer renderer in allRenderers)
             {
                 if (renderer != null && renderer.gameObject.name != "Shadow")
                 {
                     Material mat = renderer.material;
                     Color currentColor = mat.GetColor("_Color");
-                    currentColor.a = lerpValue;  // ¸üĞÂÍ¸Ã÷¶È
+                    currentColor.a = lerpValue;  // æ›´æ–°é€æ˜åº¦
                     mat.SetColor("_Color", currentColor);
                 }
             }
             yield return null;
         }
 
-        // È·±£Í¸Ã÷¶È×îÖÕÎª 0
+        // ç¡®ä¿é€æ˜åº¦æœ€ç»ˆä¸º 0
         foreach (Renderer renderer in allRenderers)
         {
             if (renderer != null && renderer.gameObject.name != "Shadow")
             {
                 Material mat = renderer.material;
                 Color currentColor = mat.GetColor("_Color");
-                currentColor.a = 0f;  // ×îÖÕÍ¸Ã÷¶ÈÎª 0
+                currentColor.a = 0f;  // æœ€ç»ˆé€æ˜åº¦ä¸º 0
                 mat.SetColor("_Color", currentColor);
             }
         }
     }
 
-    private IEnumerator FadeBlendColor()//ËÀÍöÊ±Öğ½¥ÏûÊ§
+    private IEnumerator FadeBlendColor()//æ­»äº¡æ—¶é€æ¸æ¶ˆå¤±
     {
         yield return new WaitForSeconds(0.5f);
 
         float elapsed = 0f;
 
-        // ÔÚ¿ªÊ¼Ç°£¬½«ËùÓĞ²ÄÖÊµÄ³õÊ¼ÑÕÉ«»º´æÏÂÀ´
+        // åœ¨å¼€å§‹å‰ï¼Œå°†æ‰€æœ‰æè´¨çš„åˆå§‹é¢œè‰²ç¼“å­˜ä¸‹æ¥
         var initialColors = new Color[allRenderers.Length][];
         for (int i = 0; i < allRenderers.Length; i++)
         {
@@ -1707,14 +1707,14 @@ public class Zombie: MonoBehaviour
                 if (mats[j].HasProperty("_BlendColor"))
                     initialColors[i][j] = mats[j].GetColor("_BlendColor");
                 else
-                    initialColors[i][j] = Color.clear; // Õ¼Î»
+                    initialColors[i][j] = Color.clear; // å ä½
             }
         }
 
-        // ½¥±ä¹ı³Ì
+        // æ¸å˜è¿‡ç¨‹
         while (elapsed < 1f)
         {
-            float t = elapsed / 1f; // ´Ó 0 µ½ 1
+            float t = elapsed / 1f; // ä» 0 åˆ° 1
             for (int i = 0; i < allRenderers.Length; i++)
             {
                 var mats = allRenderers[i].materials;
@@ -1723,7 +1723,7 @@ public class Zombie: MonoBehaviour
                     if (mats[j].HasProperty("_BlendColor"))
                     {
                         Color c = initialColors[i][j];
-                        // °Ñ alpha ´Ó³õÊ¼ (Í¨³£Îª1) lerp µ½ 0
+                        // æŠŠ alpha ä»åˆå§‹ (é€šå¸¸ä¸º1) lerp åˆ° 0
                         c.a = Mathf.Lerp(initialColors[i][j].a, 0f, t);
                         mats[j].SetColor("_BlendColor", c);
                     }
@@ -1734,7 +1734,7 @@ public class Zombie: MonoBehaviour
             yield return null;
         }
 
-        // È·±£×îÖÕÍêÈ«Í¸Ã÷
+        // ç¡®ä¿æœ€ç»ˆå®Œå…¨é€æ˜
         for (int i = 0; i < allRenderers.Length; i++)
         {
             var mats = allRenderers[i].materials;
@@ -1753,28 +1753,28 @@ public class Zombie: MonoBehaviour
     }
     #endregion
 
-    #region Åö×²Ïä
-    public virtual void ¹Ø±ÕÅö×²Ïä()
+    #region ç¢°æ’ç®±
+    public virtual void å…³é—­ç¢°æ’ç®±()
     {
     }
 
-    public virtual void ¿ªÆôÅö×²Ïä()
+    public virtual void å¼€å¯ç¢°æ’ç®±()
     {
     }
     #endregion
 
-    #region ÌúÃÅ´úÂë
+    #region é“é—¨ä»£ç 
     public void loadDoorStatus()
     {
-        ÌúÃÅ¶Ï±Û¿ØÖÆ();
+        é“é—¨æ–­è‡‚æ§åˆ¶();
         if (!level2ArmorIsDrop)
         {
-            if (!¶şÀà°ëÆÆËğÒÑ¾­ÇĞ»»)
+            if (!äºŒç±»åŠç ´æŸå·²ç»åˆ‡æ¢)
             {
                 if (level2ArmorHealth <= level2ArmorMaxHealth / 3 * 2)
                 {
-                    ¶şÀà°ëÆÆËğÒÑ¾­ÇĞ»» = true;
-                    foreach (GameObject gameObject in ÌúÃÅ)
+                    äºŒç±»åŠç ´æŸå·²ç»åˆ‡æ¢ = true;
+                    foreach (GameObject gameObject in é“é—¨)
                     {
                         if (gameObject != null)
                         {
@@ -1783,12 +1783,12 @@ public class Zombie: MonoBehaviour
                     }
                 }
             }
-            if (!¶şÀàÍêÈ«ÆÆËğÒÑ¾­ÇĞ»»)
+            if (!äºŒç±»å®Œå…¨ç ´æŸå·²ç»åˆ‡æ¢)
             {
                 if (level2ArmorHealth <= level2ArmorMaxHealth / 3 * 1)
                 {
-                    ¶şÀàÍêÈ«ÆÆËğÒÑ¾­ÇĞ»» = true;
-                    foreach (GameObject gameObject in ÌúÃÅ)
+                    äºŒç±»å®Œå…¨ç ´æŸå·²ç»åˆ‡æ¢ = true;
+                    foreach (GameObject gameObject in é“é—¨)
                     {
                         if (gameObject != null)
                         {
@@ -1800,50 +1800,50 @@ public class Zombie: MonoBehaviour
             }
             if (level2ArmorHealth <= 0)
             {
-                ÌúÃÅÎŞÃÅĞĞ×ßÏÔÊ¾Âß¼­();
+                é“é—¨æ— é—¨è¡Œèµ°æ˜¾ç¤ºé€»è¾‘();
                 level2ArmorIsDrop = true;
                 myAnimator.SetBool("LostDoor", true);
                 if (newZombie)
                 {
                     GameObject go = DynamicObjectPoolManager.Instance.GetFromPool(PoolType.ZombiePendantDrop);
                     go.GetComponent<ParticleSystem>().textureSheetAnimation.RemoveSprite(0);
-                    go.GetComponent<ParticleSystem>().textureSheetAnimation.AddSprite(ÌúÃÅ[0].GetComponent<SpriteRenderer>().sprite);
-                    go.transform.position = ÌúÃÅ[0].transform.position;
+                    go.GetComponent<ParticleSystem>().textureSheetAnimation.AddSprite(é“é—¨[0].GetComponent<SpriteRenderer>().sprite);
+                    go.transform.position = é“é—¨[0].transform.position;
                     go.transform.rotation = Quaternion.identity;
                 }
             }
         }
         
-        if(ÑªÁ¿ <= 0)
+        if(è¡€é‡ <= 0)
         {
-            ÌúÃÅÎŞÃÅĞĞ×ßÏÔÊ¾Âß¼­();
+            é“é—¨æ— é—¨è¡Œèµ°æ˜¾ç¤ºé€»è¾‘();
         }
     }
-    public void ÌúÃÅĞĞ×ßÏÔÊ¾Âß¼­()
+    public void é“é—¨è¡Œèµ°æ˜¾ç¤ºé€»è¾‘()
     {
-        SetActiveForObjects(ÌúÃÅÈ«²¿, false);
-        SetActiveForObjects(ÌúÃÅ½©Ê¬ĞĞ×ßÏÔÊ¾µÄ, true);
-        ÌúÃÅ¶Ï±Û¿ØÖÆ();
+        SetActiveForObjects(é“é—¨å…¨éƒ¨, false);
+        SetActiveForObjects(é“é—¨åƒµå°¸è¡Œèµ°æ˜¾ç¤ºçš„, true);
+        é“é—¨æ–­è‡‚æ§åˆ¶();
     }
 
-    public void ÌúÃÅ¿ĞÒ§ÏÔÊ¾Âß¼­()
+    public void é“é—¨å•ƒå’¬æ˜¾ç¤ºé€»è¾‘()
     {
-        SetActiveForObjects(ÌúÃÅÈ«²¿, false);
-        SetActiveForObjects(ÌúÃÅ½©Ê¬¿ĞÒ§ÏÔÊ¾µÄ, true);
-        ÌúÃÅ¶Ï±Û¿ØÖÆ();
+        SetActiveForObjects(é“é—¨å…¨éƒ¨, false);
+        SetActiveForObjects(é“é—¨åƒµå°¸å•ƒå’¬æ˜¾ç¤ºçš„, true);
+        é“é—¨æ–­è‡‚æ§åˆ¶();
     }
 
-    public void ÌúÃÅÎŞÃÅĞĞ×ßÏÔÊ¾Âß¼­()
+    public void é“é—¨æ— é—¨è¡Œèµ°æ˜¾ç¤ºé€»è¾‘()
     {
-        SetActiveForObjects(ÌúÃÅÈ«²¿, false);
-        SetActiveForObjects(ÌúÃÅ½©Ê¬ÎŞÌúÃÅĞĞ×ßÊ±ÏÔÊ¾µÄ, true);
-        SetActiveForObjects(ÌúÃÅ, false);
-        ÌúÃÅ¶Ï±Û¿ØÖÆ();
+        SetActiveForObjects(é“é—¨å…¨éƒ¨, false);
+        SetActiveForObjects(é“é—¨åƒµå°¸æ— é“é—¨è¡Œèµ°æ—¶æ˜¾ç¤ºçš„, true);
+        SetActiveForObjects(é“é—¨, false);
+        é“é—¨æ–­è‡‚æ§åˆ¶();
     }
-    public void ÌúÃÅÏú»Ù()
+    public void é“é—¨é”€æ¯()
     {
-        SetActiveForObjects(ÌúÃÅ, false);
-        foreach (GameObject objects in ÌúÃÅ)
+        SetActiveForObjects(é“é—¨, false);
+        foreach (GameObject objects in é“é—¨)
         {
             if (objects != null)
             {
@@ -1852,12 +1852,12 @@ public class Zombie: MonoBehaviour
         }
     }
 
-    public void ÌúÃÅ¶Ï±Û¿ØÖÆ()
+    public void é“é—¨æ–­è‡‚æ§åˆ¶()
     {
         if (armIsDrop)
         {
-            SetActiveForObjects(ÌúÃÅ¶Ï±ÛÊ±Ç¿ÖÆ²»ÏÔÊ¾, false);
-            SetActiveForObjects(ÌúÃÅ¶Ï±ÛÊ±Ç¿ÖÆÏÔÊ¾, true);
+            SetActiveForObjects(é“é—¨æ–­è‡‚æ—¶å¼ºåˆ¶ä¸æ˜¾ç¤º, false);
+            SetActiveForObjects(é“é—¨æ–­è‡‚æ—¶å¼ºåˆ¶æ˜¾ç¤º, true);
         }
     }
     private void SetActiveForObjects(GameObject[] objects, bool isActive)
@@ -1871,42 +1871,42 @@ public class Zombie: MonoBehaviour
         }
     }
 
-    public void ÌúÃÅ³õÊ¼»¯()
+    public void é“é—¨åˆå§‹åŒ–()
     {
         Transform[] allChildrens = GetComponentsInChildren<Transform>(true);
 
         if (!newZombie)
         {
-            ÌúÃÅ½©Ê¬¿ĞÒ§ÏÔÊ¾µÄ = GetGameObjectsByNames(allChildrens, new string[]
+            é“é—¨åƒµå°¸å•ƒå’¬æ˜¾ç¤ºçš„ = GetGameObjectsByNames(allChildrens, new string[]
         {
         "Zombie_outerarm_upper", "Zombie_outerarm_lower", "Zombie_outerarm_hand",
         "Zombie_innerarm_upper", "Zombie_innerarm_lower", "Zombie_innerarm_hand",
         "ScreenDoor_Eating"
         });
 
-            ÌúÃÅ½©Ê¬ĞĞ×ßÏÔÊ¾µÄ = GetGameObjectsByNames(allChildrens, new string[]
+            é“é—¨åƒµå°¸è¡Œèµ°æ˜¾ç¤ºçš„ = GetGameObjectsByNames(allChildrens, new string[]
             {
         "ScreenDoor", "ScreenDoor_outerarm", "Screen_innerhand", "Screen_innerarm"
             });
 
-            ÌúÃÅ½©Ê¬ÎŞÌúÃÅĞĞ×ßÊ±ÏÔÊ¾µÄ = GetGameObjectsByNames(allChildrens, new string[]
+            é“é—¨åƒµå°¸æ— é“é—¨è¡Œèµ°æ—¶æ˜¾ç¤ºçš„ = GetGameObjectsByNames(allChildrens, new string[]
             {
         "Zombie_outerarm_upper", "Zombie_outerarm_lower", "Zombie_outerarm_hand",
         "Zombie_innerarm_upper", "Zombie_innerarm_lower", "Zombie_innerarm_hand",
         "ScreenDoor"
             });
 
-            ÌúÃÅ = GetGameObjectsByNames(allChildrens, new string[]
+            é“é—¨ = GetGameObjectsByNames(allChildrens, new string[]
             {
         "ScreenDoor", "ScreenDoor_Eating"
             });
 
-            ÌúÃÅ¶Ï±ÛÊ±Ç¿ÖÆ²»ÏÔÊ¾ = GetGameObjectsByNames(allChildrens, new string[]
+            é“é—¨æ–­è‡‚æ—¶å¼ºåˆ¶ä¸æ˜¾ç¤º = GetGameObjectsByNames(allChildrens, new string[]
             {
         "ScreenDoor_outerarm", "ScreenDoor_outerarm", "Screen_innerarm","Screen_innerhand"
             });
 
-            ÌúÃÅ¶Ï±ÛÊ±Ç¿ÖÆÏÔÊ¾ = GetGameObjectsByNames(allChildrens, new string[]
+            é“é—¨æ–­è‡‚æ—¶å¼ºåˆ¶æ˜¾ç¤º = GetGameObjectsByNames(allChildrens, new string[]
             {
         "Zombie_outerarm_upper"
             });
@@ -1914,31 +1914,31 @@ public class Zombie: MonoBehaviour
         else
         {
 
-            ÌúÃÅ½©Ê¬ĞĞ×ßÏÔÊ¾µÄ = GetGameObjectsByNames(allChildrens, new string[]
+            é“é—¨åƒµå°¸è¡Œèµ°æ˜¾ç¤ºçš„ = GetGameObjectsByNames(allChildrens, new string[]
             {
         "ZOMBIE_SCREENDOOR1", "ZOMBIE_OUTERARM_SCREENDOOR", "ZOMBIE_INNERARM_SCREENDOOR_HAND", "ZOMBIE_INNERARM_SCREENDOOR"
             });
 
-            ÌúÃÅ½©Ê¬ÎŞÌúÃÅĞĞ×ßÊ±ÏÔÊ¾µÄ = GetGameObjectsByNames(allChildrens, new string[]//Ò²ÊÇÌúÃÅ½©Ê¬¿ĞÒ§ÏÔÊ¾
+            é“é—¨åƒµå°¸æ— é“é—¨è¡Œèµ°æ—¶æ˜¾ç¤ºçš„ = GetGameObjectsByNames(allChildrens, new string[]//ä¹Ÿæ˜¯é“é—¨åƒµå°¸å•ƒå’¬æ˜¾ç¤º
             {
         "ZOMBIE_OUTERARM_UPPER", "ZOMBIE_OUTERARM_LOWER", "ZOMBIE_OUTERARM_HAND",
         "ZOMBIE_INNERARM_UPPER", "ZOMBIE_INNERARM_LOWER", "ZOMBIE_INNERARM_HAND",
         "ZOMBIE_SCREENDOOR1"
             });
 
-            ÌúÃÅ½©Ê¬¿ĞÒ§ÏÔÊ¾µÄ = ÌúÃÅ½©Ê¬ÎŞÌúÃÅĞĞ×ßÊ±ÏÔÊ¾µÄ;
+            é“é—¨åƒµå°¸å•ƒå’¬æ˜¾ç¤ºçš„ = é“é—¨åƒµå°¸æ— é“é—¨è¡Œèµ°æ—¶æ˜¾ç¤ºçš„;
 
-            ÌúÃÅ = GetGameObjectsByNames(allChildrens, new string[]
+            é“é—¨ = GetGameObjectsByNames(allChildrens, new string[]
             {
         "ZOMBIE_SCREENDOOR1"
             });
 
-            ÌúÃÅ¶Ï±ÛÊ±Ç¿ÖÆ²»ÏÔÊ¾ = GetGameObjectsByNames(allChildrens, new string[]
+            é“é—¨æ–­è‡‚æ—¶å¼ºåˆ¶ä¸æ˜¾ç¤º = GetGameObjectsByNames(allChildrens, new string[]
             {
         "ZOMBIE_OUTERARM_SCREENDOOR", "ZOMBIE_INNERARM_SCREENDOOR","ZOMBIE_INNERARM_SCREENDOOR_HAND"
             });
 
-            ÌúÃÅ¶Ï±ÛÊ±Ç¿ÖÆÏÔÊ¾ = GetGameObjectsByNames(allChildrens, new string[]
+            é“é—¨æ–­è‡‚æ—¶å¼ºåˆ¶æ˜¾ç¤º = GetGameObjectsByNames(allChildrens, new string[]
             {
         "ZOMBIE_OUTERARM_UPPER"
             });
@@ -1951,7 +1951,7 @@ public class Zombie: MonoBehaviour
         {
             foreach (GameObject item in sourceArray)
             {
-                if (!list.Contains(item)) // Èç¹ûlist²»°üº¬Õâ¸öÔªËØ
+                if (!list.Contains(item)) // å¦‚æœlistä¸åŒ…å«è¿™ä¸ªå…ƒç´ 
                 {
                     list.Add(item);
                 }
@@ -2008,58 +2008,58 @@ public class Zombie: MonoBehaviour
     }
     #endregion
 
-    #region ÑªÁ¿ÏÔÊ¾
+    #region è¡€é‡æ˜¾ç¤º
 
-    private string ÑªÁ¿ÎÄ±¾()
+    private string è¡€é‡æ–‡æœ¬()
     {
         string healthDisplay = "";
-        if (ÑªÁ¿ > 0)
+        if (è¡€é‡ > 0)
         {
-            healthDisplay += "±¾Ìå£º" + ÑªÁ¿ + "/" + ×î´óÑªÁ¿ + "\n";
+            healthDisplay += "æœ¬ä½“ï¼š" + è¡€é‡ + "/" + æœ€å¤§è¡€é‡ + "\n";
         }
         if (level1ArmorHealth > 0)
         {
-            healthDisplay += "Ò»Àà£º" + level1ArmorHealth + "/" + level1ArmorMaxHealth + "\n";
+            healthDisplay += "ä¸€ç±»ï¼š" + level1ArmorHealth + "/" + level1ArmorMaxHealth + "\n";
         }
         if (level2ArmorHealth > 0)
         {
-            healthDisplay += "¶şÀà£º" + level2ArmorHealth + "/" + level2ArmorMaxHealth + "\n";
+            healthDisplay += "äºŒç±»ï¼š" + level2ArmorHealth + "/" + level2ArmorMaxHealth + "\n";
         }
-        if (debuff.ÖĞ¶¾ > 0)
+        if (debuff.ä¸­æ¯’ > 0)
         {
-            healthDisplay += "¶¾ËØ£º" + debuff.ÖĞ¶¾;
+            healthDisplay += "æ¯’ç´ ï¼š" + debuff.ä¸­æ¯’;
         }
         return healthDisplay;
     }
 
-    public void ¼ÓÔØÑªÁ¿ÎÄ±¾()
+    public void åŠ è½½è¡€é‡æ–‡æœ¬()
     {
-        ÑªÁ¿ÏÔÊ¾.text = ÑªÁ¿ÎÄ±¾();
+        è¡€é‡æ˜¾ç¤º.text = è¡€é‡æ–‡æœ¬();
     }
 
-    public void ±ä¸üÑªÁ¿ÏÔÊ¾(bool b)
+    public void å˜æ›´è¡€é‡æ˜¾ç¤º(bool b)
     {
-        ÑªÁ¿ÏÔÊ¾.gameObject.SetActive(b);
+        è¡€é‡æ˜¾ç¤º.gameObject.SetActive(b);
     }
 
 
     #endregion
 }
 
-public struct ½©Ê¬debuff
+public struct åƒµå°¸debuff
 {
-    public float ¼õËÙ;//¼õËÙÊ±¼ä
-    public int ÖĞ¶¾;//ÖĞ¶¾²ãÊı
-    public bool ÷È»ó;
-    public bool ¿ñ±©;
-    public bool ¶³½á;
+    public float å‡é€Ÿ;//å‡é€Ÿæ—¶é—´
+    public int ä¸­æ¯’;//ä¸­æ¯’å±‚æ•°
+    public bool é­…æƒ‘;
+    public bool ç‹‚æš´;
+    public bool å†»ç»“;
     
 }
 
-public struct ½©Ê¬buff {
-    public bool ÒşÄä;
-    public int ¼áÈÍ;
-    public bool ÃâÒßÃëÉ±;
-    public bool ÃâÒß±ù¶³;
-    public bool ÃâÒß÷È»ó;
+public struct åƒµå°¸buff {
+    public bool éšåŒ¿;
+    public int åšéŸ§;
+    public bool å…ç–«ç§’æ€;
+    public bool å…ç–«å†°å†»;
+    public bool å…ç–«é­…æƒ‘;
 }
