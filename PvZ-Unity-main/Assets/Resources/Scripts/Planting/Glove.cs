@@ -1,29 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Glove : MonoBehaviour
 {
     public GameObject gloveUI;   //UI，控制可见与否
-    public GloveUI倒计时 GloveUI;
+    public GloveUICountdown GloveUI;
     Vector3 mouseWorldPos;   //鼠标位置
 
-    public GameObject 抓取图像;
-    private SpriteRenderer 图像组件;
+    [FormerlySerializedAs("抓取图像")] [Header("抓取图像")]
+    public GameObject grabImage;
+/// <summary>
+/// 图像组件
+/// </summary>
+    private SpriteRenderer _grabSpriteRenderer;
     
     // Start is called before the first frame update
     void Start()
     {
-        图像组件 = 抓取图像.GetComponent<SpriteRenderer>();
+        _grabSpriteRenderer = grabImage.GetComponent<SpriteRenderer>();
         gameObject.SetActive(false);   //自身不可见
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (图像组件.sprite == null && StaticThingsManagement.glovePlant != null && StaticThingsManagement.glovePlant.GetComponent<Plant>().ownSprite != null)
+        if (_grabSpriteRenderer.sprite == null && StaticThingsManagement.glovePlant != null && StaticThingsManagement.glovePlant.GetComponent<Plant>().ownSprite != null)
         {
-            图像组件.sprite = StaticThingsManagement.glovePlant.GetComponent<Plant>().ownSprite;
+            _grabSpriteRenderer.sprite = StaticThingsManagement.glovePlant.GetComponent<Plant>().ownSprite;
         }
 
         //Shovel始终跟随鼠标
@@ -45,13 +50,13 @@ public class Glove : MonoBehaviour
             Cursor.visible = true;
             gloveUI.SetActive(true);
             gameObject.SetActive(false);
-            图像组件.sprite = null;
+            _grabSpriteRenderer.sprite = null;
         }
     }
 
     public void clickGlove()
     {
-        if(!GloveUI.冷却中)
+        if(!GloveUI.isCoolingDown)
         {
             if (gameObject.activeSelf == false)
             {
@@ -73,7 +78,7 @@ public class Glove : MonoBehaviour
                 Cursor.visible = true;
                 gloveUI.SetActive(true);
                 gameObject.SetActive(false);
-                图像组件.sprite = null;
+                _grabSpriteRenderer.sprite = null;
             }
         }
         else
@@ -88,12 +93,15 @@ public class Glove : MonoBehaviour
 
     }
 
-    public void 取消()
+    /// <summary>
+    /// 取消	
+    /// </summary>
+    public void Cancel()
     {
         StaticThingsManagement.glovePlant = null;
         Cursor.visible = true;
         gloveUI.SetActive(true);
         gameObject.SetActive(false);
-        图像组件.sprite = null;
+        _grabSpriteRenderer.sprite = null;
     }
 }

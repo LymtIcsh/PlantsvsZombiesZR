@@ -6,7 +6,7 @@ public class Leafs_Bad : MonoBehaviour
 {
     public void OnEnable()//启用增加剧毒伤害
     {
-        foreach (GameObject z in ZombieManagement.场上僵尸)
+        foreach (GameObject z in ZombieManagement.zombiesOnField)
         {
 
             if (z != null)
@@ -14,7 +14,7 @@ public class Leafs_Bad : MonoBehaviour
                 Zombie zombie = z.GetComponent<Zombie>();
                 if (zombie != null)
                 {
-                    zombie.切换狂暴状态(true);
+                    zombie.SwitchFuriousState(true);
                 }
 
 
@@ -22,14 +22,14 @@ public class Leafs_Bad : MonoBehaviour
                     ForestZombie forestzombie = z.GetComponent<ForestZombie>();
                     if (forestzombie != null)
                     {
-                        forestzombie.血量 *= 2;
-                        forestzombie.最大血量 *= 2;
+                        forestzombie.Health *= 2;
+                        forestzombie.MaxHealth *= 2;
                     }
 
                 }
                
             }
-            else { ZombieManagement.场上僵尸.Remove(z); }
+            else { ZombieManagement.zombiesOnField.Remove(z); }
         }
 
     }

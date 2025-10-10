@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class EndMenu : MonoBehaviour
@@ -10,53 +11,63 @@ public class EndMenu : MonoBehaviour
     public ManagedAudioSource backgroundAudio;   //背景音乐的播放组件
     public GameObject Trophies;
     public GameObject zombieWin;
-    public bool 已经产生结局提示;
+    [FormerlySerializedAs("已经产生结局提示")] [Header("已经产生结局提示")]
+    public bool OutcomePromptBeenGenerated;
 
-    public Sprite[] 背景;
+    [FormerlySerializedAs("背景")] [Header("背景")]
+    public Sprite[] backgroundSpritesAry;
     public void Start()
     {
-        已经产生结局提示 = false;
+        OutcomePromptBeenGenerated = false;
     }
 
     public void gameOver()
     {
-        if (!已经产生结局提示)
+        if (!OutcomePromptBeenGenerated)
         {
-            GameObject 奖杯 = Instantiate(zombieWin, new Vector3(0, 0, 0), Quaternion.identity);
-            奖杯.GetComponent<ZombieWin>().backgroundAudio = backgroundAudio;
-            已经产生结局提示 = true;
+            //奖杯
+            GameObject trophyObj = Instantiate(zombieWin, new Vector3(0, 0, 0), Quaternion.identity);
+            trophyObj.GetComponent<ZombieWin>().backgroundAudio = backgroundAudio;
+            OutcomePromptBeenGenerated = true;
         }
     }
 
-    public void win()
+    public void Win()
     {
         GameManagement.instance.GetComponent<GameManagement>().win();
 
     }
 
-    public void win(bool 初次通关,int level)
+    
+    /// <summary>
+    /// 胜利
+    /// </summary>
+    /// <param name="firstSuccessful">初次通关</param>
+    /// <param name="level"></param>
+    public void Win(bool firstSuccessful,int level)
     {
-        if (!已经产生结局提示)
+        if (!OutcomePromptBeenGenerated)
         {
-            GameObject 奖杯 = Instantiate(Trophies, new Vector3(0, 0, 0), Quaternion.identity);
-            奖杯.GetComponent<TrophiesWin>().backgroundAudio = backgroundAudio;
-            已经产生结局提示 = true;
+            //奖杯
+            GameObject trophyObj = Instantiate(Trophies, new Vector3(0, 0, 0), Quaternion.identity);
+            trophyObj.GetComponent<TrophiesWin>().backgroundAudio = backgroundAudio;
+            OutcomePromptBeenGenerated = true;
 
-            if (初次通关 && 
+            if (firstSuccessful && 
                 Resources.Load<Sprite>(
                     "Sprites/Plants/" + PlantStructManager.GetPlantStructByGetLevel(level).plantName
                     ) != null)
             {
                 Debug.Log("存在");
-                奖杯.GetComponent<SpriteRenderer>().sprite = 背景[1];
-                奖杯.transform.Find("Card").GetComponent<SpriteRenderer>().sprite = 
+                trophyObj.GetComponent<SpriteRenderer>().sprite = backgroundSpritesAry[1];
+                trophyObj.transform.Find("Card").GetComponent<SpriteRenderer>().sprite = 
                     Resources.Load<Sprite>(
                         "Sprites/Plants/" + PlantStructManager.GetPlantStructByGetLevel(level).plantName
                         );
             }
             else
             {
-                奖杯.GetComponent<SpriteRenderer>().sprite = 背景[0];
+                trophyObj.GetComponent<SpriteRenderer>().sprite = backgroundSpritesAry[0];
             }
         }
         

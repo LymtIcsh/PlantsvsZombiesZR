@@ -6,22 +6,29 @@ public class CursorManagement : MonoBehaviour
 {
     public static CursorManagement instance;
 
-    public static Texture2D[] 光标 = new Texture2D[2];
+    [Header("光标")]
+    public static Texture2D[] cursorTexture2DAry = new Texture2D[2];
     void Start()
     {
-        加载并初始化光标();
+        LoadAndInitializeCursor();
     }
 
-
-    void 加载并初始化光标()
+/// <summary>
+/// 加载并初始化光标
+/// </summary>
+    void LoadAndInitializeCursor()
     {
-        光标[0] = Resources.Load<Texture2D>("Sprites/特殊/光标/CursorDefault");
-        光标[1] = Resources.Load<Texture2D>("Sprites/特殊/光标/CursorClick");
-        Cursor.SetCursor(光标[0], Vector2.zero, CursorMode.Auto);
+        cursorTexture2DAry[0] = Resources.Load<Texture2D>("Sprites/特殊/光标/CursorDefault");
+        cursorTexture2DAry[1] = Resources.Load<Texture2D>("Sprites/特殊/光标/CursorClick");
+        Cursor.SetCursor(cursorTexture2DAry[0], Vector2.zero, CursorMode.Auto);
     }
 
-    public static void 切换光标(int i)
+/// <summary>
+/// 切换光标
+/// </summary>
+/// <param name="i"></param>
+    public static void SwitchCursor(int i)
     {
-        Cursor.SetCursor(光标[i], Vector2.zero, CursorMode.Auto);
+        Cursor.SetCursor(cursorTexture2DAry[i], Vector2.zero, CursorMode.Auto);
     }
 }

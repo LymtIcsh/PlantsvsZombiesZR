@@ -29,7 +29,7 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_Steel",
             backgroundSuffix = "_Day",
-            一周目可选卡 = true,
+            canSelectCardsInFirstPlaythrough = true,
             DontFallSun = true,
             LevelType = levelType.FaithHill,
             GloveHaveNoCD = true,
@@ -60,7 +60,7 @@ public class LevelController : MonoBehaviour
             isDay = true,       // 是否白天
             plantingManagementSuffix = "_Sod1row",   // 对应的种植管理组件后缀
             backgroundSuffix = "_Day",   // 对应背景音乐后缀
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             zombieInitPosY = new List<float> { -0.151f, },
             plantCards = new List<string>
             {
@@ -83,7 +83,7 @@ public class LevelController : MonoBehaviour
             isDay = true,       // 是否白天
             plantingManagementSuffix = "_Sod3row",   // 对应的种植管理组件后缀
             backgroundSuffix = "_Day",   // 对应背景音乐后缀
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             zombieInitPosY = new List<float> { -1.25f, -0.35f, 0.7f },
             plantCards = new List<string>
             {
@@ -122,7 +122,7 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_OriginalLawn",
             backgroundSuffix = "_Day",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             zombieInitPosY = new List<float> { -2.3f, -1.25f, -0.35f, 0.7f, 1.7f },
             plantCards = new List<string>
         {
@@ -147,7 +147,7 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_OriginalLawn",
             backgroundSuffix = "_Day",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             zombieInitPosY = new List<float> { -2.3f, -1.25f, -0.35f, 0.7f, 1.7f },
             plantCards = new List<string>
         {
@@ -173,7 +173,7 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_OriginalLawn",
             backgroundSuffix = "_Day",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             zombieInitPosY = new List<float> { -2.3f, -1.25f, -0.35f, 0.7f, 1.7f },
             plantCards = new List<string>
         {
@@ -200,7 +200,7 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_OriginalLawn",
             backgroundSuffix = "_Day",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             zombieInitPosY = new List<float> { -2.3f, -1.25f, -0.35f, 0.7f, 1.7f },
             plantCards = new List<string>
         {
@@ -228,7 +228,7 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_OriginalLawn",
             backgroundSuffix = "_Day",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             zombieInitPosY = new List<float> { -2.3f, -1.25f, -0.35f, 0.7f, 1.7f },
             plantCards = new List<string>
         {
@@ -257,7 +257,7 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_OriginalLawn",
             backgroundSuffix = "_Day",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             zombieInitPosY = new List<float> { -2.3f, -1.25f, -0.35f, 0.7f, 1.7f },
             plantCards = new List<string>
         {
@@ -287,7 +287,7 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_OriginalLawn",
             backgroundSuffix = "_Day",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             zombieInitPosY = new List<float> { -2.3f, -1.25f, -0.35f, 0.7f, 1.7f },
             plantCards = new List<string>
         {
@@ -318,7 +318,7 @@ public class LevelController : MonoBehaviour
             isDay = false,
             plantingManagementSuffix = "_OriginalLawn",
             backgroundSuffix = "_Night",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             zombieInitPosY = new List<float> { -2.3f, -1.25f, -0.35f, 0.7f, 1.7f },
             plantCards = new List<string>
         {
@@ -350,7 +350,7 @@ public class LevelController : MonoBehaviour
             isDay = false,
             plantingManagementSuffix = "_OriginalLawn",
             backgroundSuffix = "_Night",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             zombieInitPosY = new List<float> { -2.3f, -1.25f, -0.35f, 0.7f, 1.7f },
             plantCards = new List<string>
         {
@@ -383,7 +383,7 @@ public class LevelController : MonoBehaviour
             isDay = false,
             plantingManagementSuffix = "_OriginalLawn",
             backgroundSuffix = "_Night",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             zombieInitPosY = new List<float> { -2.3f, -1.25f, -0.35f, 0.7f, 1.7f },
             plantCards = new List<string>
         {
@@ -417,7 +417,7 @@ public class LevelController : MonoBehaviour
             isDay = false,
             plantingManagementSuffix = "_OriginalLawn",
             backgroundSuffix = "_Night",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             zombieInitPosY = new List<float> { -2.3f, -1.25f, -0.35f, 0.7f, 1.7f },
             plantCards = new List<string>
         {
@@ -451,7 +451,7 @@ public class LevelController : MonoBehaviour
             isDay = false,
             plantingManagementSuffix = "_OriginalLawn",
             backgroundSuffix = "_Night",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             zombieInitPosY = new List<float> { -2.3f, -1.25f, -0.35f, 0.7f, 1.7f },
             plantCards = new List<string>
         {
@@ -486,7 +486,7 @@ public class LevelController : MonoBehaviour
             isDay = false,
             plantingManagementSuffix = "_OriginalLawn",
             backgroundSuffix = "_Night",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             TheSizeofNeck = 0.88f,
             zombieInitPosY = new List<float> { -2.3f, -1.25f, -0.35f, 0.7f, 1.7f },
             plantCards = new List<string>
@@ -523,7 +523,7 @@ public class LevelController : MonoBehaviour
             isDay = false,
             plantingManagementSuffix = "_OriginalLawn",
             backgroundSuffix = "_Night",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             TheSizeofNeck = 0.86f,
             zombieInitPosY = new List<float> { -2.3f, -1.25f, -0.35f, 0.7f, 1.7f },
             plantCards = new List<string>
@@ -568,7 +568,7 @@ public class LevelController : MonoBehaviour
             plantingManagementSuffix = "_Forest",
             backgroundSuffix = "_ForestDay",
             StartSunNumber = 8000,
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             EnablesForestBushGeneration = false,
             zombieInitPosY = new List<float> { -1.976f, -0.986f, -0.276f, 0.7f, 1.574f },
             plantCards = new List<string>
@@ -603,7 +603,7 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_Forest",
             backgroundSuffix = "_ForestDay",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             EnablesForestBushGeneration = false,
             zombieInitPosY = new List<float> { -1.976f, -0.986f, -0.276f, 0.7f, 1.574f },
             plantCards = new List<string>
@@ -636,7 +636,7 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_Forest",
             backgroundSuffix = "_ForestDay",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             EnablesForestBushGeneration = false,
             zombieInitPosY = new List<float> { -1.976f, -0.986f, -0.276f, 0.7f, 1.574f },
             plantCards = new List<string>
@@ -671,7 +671,7 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_Forest",
             backgroundSuffix = "_ForestDay",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             EnablesForestBushGeneration = false,
             zombieInitPosY = new List<float> { -1.976f, -0.986f, -0.276f, 0.7f, 1.574f },
             plantCards = new List<string>
@@ -707,7 +707,7 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_Forest",
             backgroundSuffix = "_ForestDay",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             zombieInitPosY = new List<float> { -1.976f, -0.986f, -0.276f, 0.7f, 1.574f },
             plantCards = new List<string>
         {
@@ -744,7 +744,7 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_Forest",
             backgroundSuffix = "_ForestDay",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             TheSizeofNeck = 0.82f,
             zombieInitPosY = new List<float> { -1.976f, -0.986f, -0.276f, 0.7f, 1.574f },
             plantCards = new List<string>
@@ -783,7 +783,7 @@ public class LevelController : MonoBehaviour
             isDay = false,
             plantingManagementSuffix = "_Forest",
             backgroundSuffix = "_ForestNight",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             TheSizeofNeck = 0.82f,
             zombieInitPosY = new List<float> { -1.976f, -0.986f, -0.276f, 0.7f, 1.574f },
             plantCards = new List<string>
@@ -822,7 +822,7 @@ public class LevelController : MonoBehaviour
             isDay = false,
             plantingManagementSuffix = "_Forest",
             backgroundSuffix = "_ForestNight",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             zombieInitPosY = new List<float> { -1.976f, -0.986f, -0.276f, 0.7f, 1.574f },
             plantCards = new List<string>
         {
@@ -858,7 +858,7 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_Forest",
             backgroundSuffix = "_ForestBattle",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             TheSizeofNeck = 0.82f,
             zombieInitPosY = new List<float> { -1.976f, -0.986f, -0.276f, 0.7f, 1.574f },
             plantCards = new List<string>
@@ -897,7 +897,7 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_Forest",
             backgroundSuffix = "_ForestBattle",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             zombieInitPosY = new List<float> { -1.976f, -0.986f, -0.276f, 0.7f, 1.574f },
             plantCards = new List<string>
         {
@@ -943,7 +943,7 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_Steel",
             backgroundSuffix = "_Day",
-            一周目可选卡 = true,
+            canSelectCardsInFirstPlaythrough = true,
             DontFallSun = true,
             LevelType = levelType.FaithHill,
             GloveHaveNoCD = true,
@@ -976,8 +976,8 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_OriginalLawn",
             backgroundSuffix = "_Day",
-            一周目可选卡 = false,
-            禁止任何周目选卡 = true,
+            canSelectCardsInFirstPlaythrough = false,
+            disableCardSelection = true,
             DontFallSun = true,
             LevelType = levelType.FaithHill,
             ConveyorGame = true,
@@ -1007,7 +1007,7 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_OriginalLawn",
             backgroundSuffix = "_Day",
-            一周目可选卡 = true,
+            canSelectCardsInFirstPlaythrough = true,
             LevelType = levelType.FaithHill,
             GloveHaveNoCD = true,
             zombieInitPosY = new List<float> { -2.3f, -1.25f, -0.35f, 0.7f, 1.7f },
@@ -1030,8 +1030,8 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_OriginalLawn",
             backgroundSuffix = "_Day",
-            一周目可选卡 = false,
-            禁止任何周目选卡 = true,
+            canSelectCardsInFirstPlaythrough = false,
+            disableCardSelection = true,
             DontFallSun = true,
             LevelType = levelType.TheDreamOfWood,
             
@@ -1055,8 +1055,8 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_OriginalLawn",
             backgroundSuffix = "_Day",
-            一周目可选卡 = false,
-            禁止任何周目选卡 = true,
+            canSelectCardsInFirstPlaythrough = false,
+            disableCardSelection = true,
             DontFallSun = true,
             LevelType = levelType.TheDreamOfWood,
 
@@ -1080,8 +1080,8 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_OriginalLawn",
             backgroundSuffix = "_Day",
-            一周目可选卡 = false,
-            禁止任何周目选卡 = true,
+            canSelectCardsInFirstPlaythrough = false,
+            disableCardSelection = true,
             DontFallSun = true,
             LevelType = levelType.TheDreamOfWood,
 
@@ -1105,8 +1105,8 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_OriginalLawn",
             backgroundSuffix = "_Day",
-            一周目可选卡 = false,
-            禁止任何周目选卡 = true,
+            canSelectCardsInFirstPlaythrough = false,
+            disableCardSelection = true,
             DontFallSun = true,
             LevelType = levelType.TheDreamOfWood,
             StartSunNumber = 20090505,
@@ -1130,8 +1130,8 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_OriginalLawn",
             backgroundSuffix = "_Day",
-            一周目可选卡 = false,
-            禁止任何周目选卡 = true,
+            canSelectCardsInFirstPlaythrough = false,
+            disableCardSelection = true,
             DontFallSun = true,
             LevelType = levelType.FaithHill,
             ConveyorGame = true,
@@ -1162,8 +1162,8 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_OriginalLawn",
             backgroundSuffix = "_Day",
-            一周目可选卡 = false,
-            禁止任何周目选卡 = true,
+            canSelectCardsInFirstPlaythrough = false,
+            disableCardSelection = true,
             DontFallSun = true,
             LevelType = levelType.TheDreamOfPotatoMine,
             StartSunNumber = 0,
@@ -1187,7 +1187,7 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_Forest",
             backgroundSuffix = "_ForestDay",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             StartSunNumber = 300,
             LevelType = levelType.None,
             zombieInitPosY = new List<float> { -1.976f, -0.986f, -0.276f, 0.7f, 1.574f },
@@ -1225,7 +1225,7 @@ public class LevelController : MonoBehaviour
             isDay = true,
             plantingManagementSuffix = "_Forest",
             backgroundSuffix = "_ForestDay",
-            一周目可选卡 = false,
+            canSelectCardsInFirstPlaythrough = false,
             StartSunNumber = 500,
             LevelType = levelType.None,
             zombieInitPosY = new List<float> { -1.976f, -0.986f, -0.276f, 0.7f, 1.574f },

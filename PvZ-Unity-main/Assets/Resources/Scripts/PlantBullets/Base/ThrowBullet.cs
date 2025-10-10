@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.XR;
 using System;
+using UnityEngine.Serialization;
 
 public class ThrowBullet : MonoBehaviour
 {
@@ -22,9 +23,12 @@ public class ThrowBullet : MonoBehaviour
     private float b;
 
     public int bulletType;  // 子弹类型: 0-普通, 1-中毒, 2-减速
-    public int 附加中毒层数;
-    public int 引爆中毒层数;
-    public int 增加森林值;
+    [FormerlySerializedAs("附加中毒层数")] [Header("附加中毒层数")]
+    public int _addPoisoningLevels;
+    [FormerlySerializedAs("引爆中毒层数")] [Header("引爆中毒层数")]
+    public int _explosionPoisoningLevels;
+    [FormerlySerializedAs("增加森林值")] [Header("增加森林值")]
+    public int _increaseForestValue;
 
 
     void Update()
@@ -112,14 +116,14 @@ public class ThrowBullet : MonoBehaviour
 
     protected virtual void attack(Zombie zombie)
     {
-        if (!zombie.buff.隐匿)
+        if (!zombie.buff.Stealth)
         {
             // 对僵尸执行攻击逻辑
             switch (bulletType)
         {
             case 0: break; // 普通子弹无效果
-            case 1: zombie.附加中毒(附加中毒层数); zombie.引爆毒伤(引爆中毒层数); GameManagement.instance.forestSlider.DecreaseSliderValueSmooth(增加森林值) ; break; // 中毒
-            case 2: zombie.附加减速(); break; // 冰冻
+            case 1: zombie.ApplyPoison(_addPoisoningLevels); zombie.DetonatePoisonDamage(_explosionPoisoningLevels); GameManagement.instance.forestSlider.DecreaseSliderValueSmooth(_increaseForestValue) ; break; // 中毒
+            case 2: zombie.ApplyDeceleration(); break; // 冰冻
             default: break;
         }
 

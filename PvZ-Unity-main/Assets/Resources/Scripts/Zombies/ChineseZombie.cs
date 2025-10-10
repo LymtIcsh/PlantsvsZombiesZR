@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.U2D.Animation;
 
 public class ChineseZombie : Zombie
@@ -14,7 +15,8 @@ public class ChineseZombie : Zombie
 
     bool isAttacking = false;   //是否正在吃，用于符落时换动画
 
-    public bool 可以狂暴暴走;
+    [FormerlySerializedAs("可以狂暴暴走")] [Header("可以狂暴暴走")]
+    public bool CanIntoViolentRage;
 
     //重写Start函数，不赋予随机速度增幅
     protected override void Start()
@@ -107,17 +109,17 @@ public class ChineseZombie : Zombie
         myAnimator.SetBool("Mad", false);
 
         float randAmp;
-        if(可以狂暴暴走)
+        if(CanIntoViolentRage)
         {
             //行动加速
             randAmp = Random.Range(3f, 5f);  //随机增幅
-            攻击力 *= 4;
+            AttackPower *= 4;
         }
         else
         {
             //行动加速
             randAmp = Random.Range(1.5f, 2.0f);  //随机增幅
-            攻击力 *= 2;
+            AttackPower *= 2;
         }
         
         

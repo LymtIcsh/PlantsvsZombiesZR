@@ -34,9 +34,9 @@ public class ChickenZombie : Zombie
             Zombie zombieGeneric = chicken.GetComponent<Zombie>();
             zombieGeneric.pos_row = rand;
             zombieGeneric.setPosRow(zombieGeneric.pos_row);
-            if(debuff.÷È»ó)
+            if(debuff.Charmed)
             {
-                zombieGeneric.ÇÐ»»÷È»ó×´Ì¬();
+                zombieGeneric.SwitchCharmedState();
                 Debug.Log("¼¦ÇÐ»»÷È»ó");
             }
         }
@@ -48,7 +48,7 @@ public class ChickenZombie : Zombie
     public override void beAttacked(int hurt, int BulletType, int AttackedMusicType)
     {
         base.beAttacked(hurt, BulletType, AttackedMusicType);
-        if (ÑªÁ¿ <= ×î´óÑªÁ¿ * 0.9 && created == false) {
+        if (Health <= MaxHealth * 0.9 && created == false) {
             CreateChicken();
         }
     }
@@ -67,7 +67,7 @@ public class ChickenZombie : Zombie
         if (!dying)
         {
             dying = true;
-            StartCoroutine(±ôËÀ¿ÛÑª());
+            StartCoroutine(DyingHealthDeduction());
             AudioManager.Instance.PlaySoundEffect(59);
             Transform createPosition = FindInChildren(transform, "Zombie_head");
             Transform hidePosition = FindInChildren(transform, "Zombie_jaw");

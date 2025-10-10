@@ -5,14 +5,16 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class ChooseCardManager : MonoBehaviour
 {
     public GameObject cardGroup;
     public GameObject seedBank;
-    public GameObject 卡片背景;
-    public GameObject 卡片;
+    [FormerlySerializedAs("卡片背景")] [Header("卡片背景")]
+    public GameObject _cardBackground;
+    [FormerlySerializedAs("卡片")][Header("卡片")] public GameObject _card;
     public int cardWidth = 43;
     public int additionalWidth = 78;
     public GameObject gameManagement;
@@ -78,8 +80,8 @@ public class ChooseCardManager : MonoBehaviour
             returnLocalPosition = new Vector3(startLocalPosition.x - moveDistance, startLocalPosition.y, startLocalPosition.z);
         }
 
-        if ((GameManagement.levelData.一周目可选卡 || LevelManagerStatic.IsLevelCompleted(GameManagement.level))
-            && FinishChoosing == false && !GameManagement.levelData.禁止任何周目选卡 && !GameManagement.levelData.ConveyorGame)
+        if ((GameManagement.levelData.canSelectCardsInFirstPlaythrough || LevelManagerStatic.IsLevelCompleted(GameManagement.level))
+            && FinishChoosing == false && !GameManagement.levelData.disableCardSelection && !GameManagement.levelData.ConveyorGame)
         {
             /*
             seedBank.SetActive(true);
@@ -90,7 +92,7 @@ public class ChooseCardManager : MonoBehaviour
             GenerateCards(13);
             // int count = cardDict.Count;
             int count = PlantStructManager.GetDataBaseLength();
-            初始化待选择卡片(count);
+            InitializeCardsSelected(count);
         }
         else
         {
@@ -112,8 +114,8 @@ public class ChooseCardManager : MonoBehaviour
 
     public void 场景移动后()
     {
-        gameObject.GetComponent<ShowZombieManager>().清除展示僵尸();
-        gameManagement.GetComponent<GameManagement>().初始化游戏();
+        gameObject.GetComponent<ShowZombieManager>().ClearDisplayZombies();
+        gameManagement.GetComponent<GameManagement>().InitializeGame();
     }
     #region 初始设置
     public void GenerateCards(int cardCount)//设置卡片槽卡片背景
@@ -126,7 +128,7 @@ public class ChooseCardManager : MonoBehaviour
         // 动态生成卡片背景
         for (int i = 0; i < cardCount; i++)
         {
-            GameObject newCardBackGround = Instantiate(卡片背景, cardGroup.transform);
+            GameObject newCardBackGround = Instantiate(_cardBackground, cardGroup.transform);
             newCardBackGround.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
             availableCardPositions.Add(newCardBackGround); // 记录卡片背景的位置
             RectTransform cardRectTransform = newCardBackGround.GetComponent<RectTransform>();
@@ -139,7 +141,11 @@ public class ChooseCardManager : MonoBehaviour
         seedBank.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, cardGroupWidth + additionalWidth);
     }
 
-    public void 初始化待选择卡片(int cardCount)
+    /// <summary>
+    /// 初始化待选择卡片
+    /// </summary>
+    /// <param name="cardCount"></param>
+    public void InitializeCardsSelected(int cardCount)
     {
         foreach(GameObject page in Pages)
         {
@@ -151,79 +157,83 @@ public class ChooseCardManager : MonoBehaviour
         }
         
 
-        int 列 = 1;
-        int 行 = 1;
+        //列
+        int column = 1;
+        //行
+        int row = 1;
         float yOffset = 0;
 
         
 
         foreach (GameObject page in Pages)
         {
-            列 = 1;
-            行 = 1;
+            column = 1;
+            row = 1;
             yOffset = 0;
             for (int i = 0; i < 30; i++)
             {
 
-                GameObject cardBackground = Instantiate(卡片背景, page.transform);
+                GameObject cardBackground = Instantiate(_cardBackground, page.transform);
                 RectTransform cardRectTransform = cardBackground.GetComponent<RectTransform>();
-                cardRectTransform.anchoredPosition = new Vector2((列 - 1) * cardWidth, yOffset);
-                列++;
-                if (列 > 6)
+                cardRectTransform.anchoredPosition = new Vector2((column - 1) * cardWidth, yOffset);
+                column++;
+                if (column > 6)
                 {
-                    列 = 1;
+                    column = 1;
                     yOffset -= 61;
                 }
             }
         }
 
-        列 = 1;
+        column = 1;
         yOffset = 0;
-        foreach (PlantStruct 植物 in PlantStructManager.PlantStructDatabase)
+        //植物	
+        foreach (PlantStruct plant in PlantStructManager.PlantStructDatabase)
         {
-            if ((LevelManagerStatic.IsLevelCompleted(植物.GetLevel) || 植物.GetLevel == -1) && 植物.envType != EnvironmentType.Other)
+            if ((LevelManagerStatic.IsLevelCompleted(plant.GetLevel) || plant.GetLevel == -1) && plant.envType != EnvironmentType.Other)
             {
-                GameObject 灰色卡片 = Instantiate(卡片, Pages[0].transform);
-                Vector3 vector3 = 灰色卡片.transform.position;
+                //灰色卡片
+                GameObject grayCard = Instantiate(_card, Pages[0].transform);
+                Vector3 vector3 = grayCard.transform.position;
                 vector3.z += 1;
-                灰色卡片.transform.position = vector3;
-                GameObject newCard = Instantiate(卡片, Pages[0].transform);
+                grayCard.transform.position = vector3;
+                GameObject newCard = Instantiate(_card, Pages[0].transform);
 
-                灰色卡片.GetComponent<Image>().color = Color.gray;
-                灰色卡片.GetComponent<CardClickListener>().PlantImage.color = Color.gray;
-                灰色卡片.GetComponent<Button>().enabled = false;
+                grayCard.GetComponent<Image>().color = Color.gray;
+                grayCard.GetComponent<CardClickListener>().PlantImage.color = Color.gray;
+                grayCard.GetComponent<Button>().enabled = false;
                 waitingCards.Add(newCard); // 添加到待选择卡片列表
                 RectTransform newCardTransform = newCard.GetComponent<RectTransform>();
-                newCardTransform.anchoredPosition = new Vector2((列 - 1) * cardWidth, yOffset);
-                灰色卡片.GetComponent<RectTransform>().anchoredPosition = new Vector2((列 - 1) * cardWidth, yOffset);
+                newCardTransform.anchoredPosition = new Vector2((column - 1) * cardWidth, yOffset);
+                grayCard.GetComponent<RectTransform>().anchoredPosition = new Vector2((column - 1) * cardWidth, yOffset);
 
 
 
 
-                灰色卡片.GetComponent<CardClickListener>().Initialize(this, 植物);
-                newCard.GetComponent<CardClickListener>().Initialize(this, 植物);
+                grayCard.GetComponent<CardClickListener>().Initialize(this, plant);
+                newCard.GetComponent<CardClickListener>().Initialize(this, plant);
 
-                列++;
-                if (列 > 6
+                column++;
+                if (column > 6
                     )
                 {
-                    列 = 1;
-                    行 += 1;
-                    yOffset = -(行 - 1) * 61;
+                    column = 1;
+                    row += 1;
+                    yOffset = -(row - 1) * 61;
                 }
 
 
 
 
 
-                灰色卡片.transform.SetParent(Pages[CardPage].transform);
+                grayCard.transform.SetParent(Pages[CardPage].transform);
                 newCard.transform.SetParent(Pages[CardPage].transform);
 
 
-                if (行 > 5)
+                if (row > 5)
                 {
-                    行 = 1;
-                    yOffset = -(行 - 1) * 61;
+                    row = 1;
+                    yOffset = -(row - 1) * 61;
                     CardPage++;
                 }
                 //设置卡片的初始激活情况
@@ -347,7 +357,7 @@ public class ChooseCardManager : MonoBehaviour
     public void RoadCards()//将选好的卡片以Card的形式放进卡槽中
     {
         GameManagement.levelData.plantCards.Clear();//清空之前的选卡
-        StaticThingsManagement.保存上次选择卡牌.Clear();
+        StaticThingsManagement.SavedLastSelectedCards.Clear();
         for (int i = 0; i < selectedCards.Count; i++)
         {
             GameManagement.levelData.plantCards.Add(selectedCards[i].
@@ -355,7 +365,7 @@ public class ChooseCardManager : MonoBehaviour
         }
         for (int i = 0; i < selectedCards.Count; i++)
         {
-            StaticThingsManagement.保存上次选择卡牌.Add(selectedCards[i]);
+            StaticThingsManagement.SavedLastSelectedCards.Add(selectedCards[i]);
         }
     }
 

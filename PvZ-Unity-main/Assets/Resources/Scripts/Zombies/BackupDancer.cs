@@ -11,7 +11,7 @@ public class BackupDancer : Zombie
         {
             dying = true;
 
-            StartCoroutine(±ôËÀ¿ÛÑª());
+            StartCoroutine(DyingHealthDeduction());
 
             AudioManager.Instance.PlaySoundEffect(59);
 

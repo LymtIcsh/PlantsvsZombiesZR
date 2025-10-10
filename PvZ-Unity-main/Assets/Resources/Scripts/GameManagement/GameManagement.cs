@@ -2,20 +2,28 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class GameManagement : MonoBehaviour
 {
-    public GameObject 种植特效;
-    public GameObject[] 变化特效;
+    [FormerlySerializedAs("种植特效")] [Header("种植特效")]
+    public GameObject _plantingEffects;
+    [FormerlySerializedAs("变化特效")] [Header("变化特效")]
+    public GameObject[] _transformationEffects;
 
+   
     public static GameManagement instance; // 添加此行
-    public static bool isPerformance = false;//是否开启性能优化
-    public static bool 是否显示血量;
+    [Header("是否开启性能优化")]
+    public static bool isPerformance = false;
+    [Header("是否显示血量")]
+    public static bool isShowHp;
     public static float GameDifficult = 2.0f;
-    public static float 局内游戏速度 = 1.0f;
+    [Header("局内游戏速度")]
+    public static float InternalGameSpeed = 1.0f;
     public static bool CollectSun = true;
-    public bool 游戏进行;
+    [FormerlySerializedAs("游戏进行")] [Header("游戏进行")]
+    public bool IsGameing;
     public bool lockMusic = false;
 
     public static int level;   //当前LevelNumber
@@ -37,27 +45,34 @@ public class GameManagement : MonoBehaviour
     public GameObject melonPollingObject; //西瓜保龄球控制
     public GameObject Glove;
     public GameObject Shovel;
-    public GameObject 一行地图;
+    [FormerlySerializedAs("一行地图")] 
+    [Header("一行地图")]
+    public GameObject aRowMaps;
     public ForestSlider forestSlider;
     public ZombieForestSlider zombieForestSlider;
     public SunNumber SunText;
-    public GameObject 树桩的梦想控制器;
-    public GameObject 树桩的梦想手机适配;
-    public GloveUI倒计时 GloveUI倒计时;
-    public GameObject 卡槽;
+    [FormerlySerializedAs("树桩的梦想控制器")] [Header("树桩的梦想控制器")]
+    public GameObject TreeStumpDreamController;
+    [FormerlySerializedAs("树桩的梦想手机适配")] [Header("树桩的梦想手机适配")]
+    public GameObject TreeStumpDreamMobilePhoneCompatibility;
+    [FormerlySerializedAs("GloveUI倒计时")] [Header("GloveUI倒计时")]
+    public GloveUICountdown _gloveUICountdown;
+    [FormerlySerializedAs("卡槽")] [Header("卡槽")]
+    public GameObject cardSlot;
     public GameObject[] TheDreamOfPotatoMine;
-    public static GameManagement gameManagement;
-    public Text 名称显示;
+
+    [FormerlySerializedAs("名称显示")] [Header("名称显示")]
+    public Text nameShowText;
     public GameObject sunManagement;
     public void Awake()
     {
         instance = this;
-        名称显示.text = LevelManagerStatic.GetCurrentSaveName() + "的房子";
-        名称显示.gameObject.SetActive(true);
-        gameManagement = gameObject.GetComponent<GameManagement>();
+        nameShowText.text = LevelManagerStatic.GetCurrentSaveName() + "的房子";
+        nameShowText.gameObject.SetActive(true);
+    
         if (SceneManager.GetActiveScene().name == "GameScene")
         {
-            Time.timeScale = GameManagement.局内游戏速度;
+            Time.timeScale = GameManagement.InternalGameSpeed;
         }
     }
 
@@ -86,18 +101,18 @@ public class GameManagement : MonoBehaviour
         //设置背景音乐
         background.GetComponent<BGMusicControl>()
             .changeMusic("Music_ChooseGame");
-        if((!LevelManagerStatic.IsLevelCompleted(level) && !levelData.一周目可选卡) || (levelData.禁止任何周目选卡))
+        if((!LevelManagerStatic.IsLevelCompleted(level) && !levelData.canSelectCardsInFirstPlaythrough) || (levelData.disableCardSelection))
         {
-            卡槽.transform.localScale = new Vector3(levelData.TheSizeofNeck, levelData.TheSizeofNeck, levelData.TheSizeofNeck);
+            cardSlot.transform.localScale = new Vector3(levelData.TheSizeofNeck, levelData.TheSizeofNeck, levelData.TheSizeofNeck);
         }
         else
         {
-            卡槽.transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
+            cardSlot.transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
         }
         
         if (level == 2)
         {
-            GameObject gameObject = Instantiate(一行地图, new Vector3(0.85f, -0.1036548f, 0), Quaternion.identity);
+            GameObject gameObject = Instantiate(aRowMaps, new Vector3(0.85f, -0.1036548f, 0), Quaternion.identity);
             gameObject.transform.SetParent(background.transform,true);
             
         }
@@ -105,10 +120,13 @@ public class GameManagement : MonoBehaviour
 
     private void OnDisable()
     {
-        游戏进行 = false;
+        IsGameing = false;
     }
 
-    public void 初始化游戏()
+    /// <summary>
+    /// 初始化游戏
+    /// </summary>
+    public void InitializeGame()
     {
         SettingButton.SetActive(false);
 
@@ -165,7 +183,7 @@ public class GameManagement : MonoBehaviour
     {
         Debug.Log("Awake");
         SettingButton.SetActive(true);
-        游戏进行 = true;
+        IsGameing = true;
         foreach (GameObject gameObject in awakeList)
         {
             gameObject.SetActive(true);
@@ -173,13 +191,13 @@ public class GameManagement : MonoBehaviour
         uiManagement.GetComponent<UIManagement>().appear();
         zombieManagement.GetComponent<ZombieManagement>().activate();
         levelController.activate();
-        Invoke("转换音乐",2f);
+        Invoke("SwitchMusic",2f);
 
         if (levelData.LevelType == levelType.TheDreamOfWood)
         {
-            树桩的梦想控制器.gameObject.SetActive(true);
+            TreeStumpDreamController.gameObject.SetActive(true);
 #if UNITY_EDITOR || UNITY_ANDROID || UNITY_IOS || UNITY_WEBGL
-            树桩的梦想手机适配.gameObject.SetActive(true);
+            TreeStumpDreamMobilePhoneCompatibility.gameObject.SetActive(true);
 #endif
         }
         else if(levelData.LevelType == levelType.TheDreamOfPotatoMine)
@@ -187,11 +205,14 @@ public class GameManagement : MonoBehaviour
             foreach(GameObject gameObject in TheDreamOfPotatoMine)
             gameObject.SetActive(true);
         }
-        关卡特殊种植();
+        LevelSpecialPlanting();
         EventHandler.CallGameStart();
     }
 
-    public void 关卡特殊种植()
+    /// <summary>
+    /// 关卡特殊种植
+    /// </summary>
+    public void LevelSpecialPlanting()
     {
         switch(level)
         {
@@ -207,14 +228,17 @@ public class GameManagement : MonoBehaviour
         }
     }
 
-    public virtual void 转换音乐()
+    /// <summary>
+    /// 转换音乐
+    /// </summary>
+    public virtual void SwitchMusic()
     {
         background.GetComponent<BGMusicControl>().changeMusicSmoothly("Music" + levelData.backgroundSuffix);
     }
 
     public void gameOver()
     {
-        游戏进行 = false;
+        IsGameing = false;
         if (levelData.MustLost) win();
         else
         {
@@ -224,8 +248,8 @@ public class GameManagement : MonoBehaviour
 
     public void win()
     {
-        游戏进行 = false;
-        endMenuPanel.GetComponent<EndMenu>().win(!LevelManagerStatic.IsLevelCompleted(level), level);
+        IsGameing = false;
+        endMenuPanel.GetComponent<EndMenu>().Win(!LevelManagerStatic.IsLevelCompleted(level), level);
         LevelManagerStatic.SetLevelCompleted(level);
     }
 }

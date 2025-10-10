@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class WoodWallNut : WallNut
 {
     public GameObject SpineBullet;
-    public int 坚韧层数;
+    [FormerlySerializedAs("坚韧层数")] [Header("坚韧层数")]
+    public int DegreeTenacity;
 
    
     public override int beAttacked(int hurt, string form, GameObject zombieObject)
@@ -22,19 +24,19 @@ public class WoodWallNut : WallNut
         }
         if (hurt > 0)
         {
-            血量 -= hurt;
-            计算坚韧();
+            Health -= hurt;
+            CalculateResilience();
             
-            if (血量 <= 0)
+            if (Health <= 0)
             {
                 die(form, gameObject);
             }
-            else if (血量 <= crackedPoint2)
+            else if (Health <= crackedPoint2)
             {
 
                 GetComponent<Animator>().SetBool("Cracked2", true);
             }
-            else if (血量 <= crackedPoint1)
+            else if (Health <= crackedPoint1)
             {
                 GetComponent<Animator>().SetBool("Cracked1", true);
             }
@@ -57,25 +59,28 @@ public class WoodWallNut : WallNut
             }
               spineBullet.GetComponent<SpecialStraightBullet>().TheWay = Way;
         }
-        加载血量文本();
-        return 血量;
+        LoadHealthText();
+        return Health;
 
     }
     public override void recover(int value)
     {
         base.recover(value/5);
     }
-    private void 计算坚韧() {
+    /// <summary>
+    /// 计算坚韧
+    /// </summary>
+    private void CalculateResilience() {
         if (GameManagement.levelData.levelEnviornment == "Forest")
         {
 
-            Armor += 坚韧层数 * 50;
-            加载血量文本();
+            Armor += DegreeTenacity * 50;
+            LoadHealthText();
             forestSlider.IncreaseSliderValueSmooth(2);
         }
         else
         {
-            Armor += 坚韧层数 * 20;
+            Armor += DegreeTenacity * 20;
         }
 
     }

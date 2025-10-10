@@ -56,7 +56,7 @@ public class ForestSunFlower : SunFlower
                         }
                         Instantiate(redflowersunPrefab, plant.transform.position, Quaternion.Euler(0, 0, 0), sunManagement);
                         plant.normal();
-                        plant.recover(AttackPower*2+plant.血量/20);//阳光高时强化治疗能力，但是需要消耗阳光
+                        plant.recover(AttackPower*2+plant.Health/20);//阳光高时强化治疗能力，但是需要消耗阳光
                     //    plant.beAttacked(0, null, null);//只是方便显示血量，之后请在recover加上文本更新
 
                     }

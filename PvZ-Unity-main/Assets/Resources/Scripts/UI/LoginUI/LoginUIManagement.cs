@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class LoginUIManagement : MonoBehaviour
@@ -27,9 +28,10 @@ public class LoginUIManagement : MonoBehaviour
     public Text GameDifficultyText;
     public Text GameDifficultyText2;
 
-    public bool 可以设置性能优化模式;
-
-    public Toggle 性能优化按钮;
+    [FormerlySerializedAs("可以设置性能优化模式")] [Header("可以设置性能优化模式")]
+    public bool canSetPerformanceMode;
+[FormerlySerializedAs("性能优化按钮")] [Header("性能优化按钮")]
+    public Toggle performanceToggle;
 
     public Canvas targetCanvas;
     private bool isTopLayer = false;
@@ -74,10 +76,10 @@ public class LoginUIManagement : MonoBehaviour
         musicVolumeSlider.onValueChanged.AddListener(AudioManager.Instance.SetMusicVolume);
         sfxVolumeSlider.onValueChanged.AddListener(AudioManager.Instance.SetSFXVolume);
 
-        if (可以设置性能优化模式)
+        if (canSetPerformanceMode)
         {
-            性能优化按钮.onValueChanged.AddListener(OnPerformanceValueChanged);
-            性能优化按钮.isOn = GameManagement.isPerformance;
+            performanceToggle.onValueChanged.AddListener(OnPerformanceValueChanged);
+            performanceToggle.isOn = GameManagement.isPerformance;
         }
 
 
@@ -131,9 +133,9 @@ public class LoginUIManagement : MonoBehaviour
 
         collectSunToggle.isOn = GameManagement.CollectSun;
         difficultySlider.value = GameManagement.GameDifficult;
-        
-        StaticThingsManagement.打开二级界面 = true;
-        
+
+        StaticThingsManagement.IsSecondaryPanelOpen = true;
+
         gameSettings.SetActive(true);
     }
 
@@ -143,10 +145,10 @@ public class LoginUIManagement : MonoBehaviour
         if (HasSpeedSlider)
         {
             Time.timeScale = speedSlider.value;
-            GameManagement.局内游戏速度 = speedSlider.value;
+            GameManagement.InternalGameSpeed = speedSlider.value;
         }
 
-        StaticThingsManagement.打开二级界面 = false;
+        StaticThingsManagement.IsSecondaryPanelOpen = false;
 
         gameSettings.SetActive(false);
     }

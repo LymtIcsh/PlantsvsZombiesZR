@@ -26,7 +26,7 @@ public class TrophiesWin : MonoBehaviour
         
     }
 
-    public void IdleÎªÕæ()
+    public void IdleChange()
     {
         animator.SetBool("Idle", true);
     }

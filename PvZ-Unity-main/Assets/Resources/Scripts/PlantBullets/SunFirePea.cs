@@ -46,7 +46,7 @@ public class SunFirePea : StraightBulletAnimationSwitch
         }
         else
         {
-            if (collision.tag == "Plant" && collision.GetComponent<Plant>() != null && row == collision.GetComponent<Plant>().row && collision.GetComponent<Plant>().植物类型 == PlantType.正常植物)
+            if (collision.tag == "Plant" && collision.GetComponent<Plant>() != null && row == collision.GetComponent<Plant>().row && collision.GetComponent<Plant>()._plantType == PlantType.NormalPlants)
             {
 if (peaType == 1)
                 {

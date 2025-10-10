@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SteelZombie : Zombie
 {
-    protected override float 环境速度乘区
+    protected override float EnvironmentSpeedZone
     {
         get => 0.75f;
-        set => base.环境速度乘区 = value;
+        set => base.EnvironmentSpeedZone = value;
     }
 }

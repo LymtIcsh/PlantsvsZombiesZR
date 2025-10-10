@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 using System.Security.Permissions;
 using System.Collections;
 using System;
+using UnityEngine.Serialization;
+
 public class CommodityManager : MonoBehaviour
 {
     //商品管理
@@ -18,7 +20,8 @@ public class CommodityManager : MonoBehaviour
 
     private Coroutine ClearCoroutine;//用于清除商品的协程
 
-    public Animator 卡车动画;
+    [FormerlySerializedAs("卡车动画")] [Header("卡车动画")]
+    public Animator truckAnimation;
 
     private void Start()
     {
@@ -40,7 +43,7 @@ public class CommodityManager : MonoBehaviour
 
     public void ChangePage(bool Type) 
     {
-        卡车动画.Play("CarDoor");
+        truckAnimation.Play("CarDoor");
         
         //翻页,false为上一页，true为下一页
         if (Type == false)

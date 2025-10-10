@@ -12,11 +12,11 @@ public class Bushes : Zombie
         base.Start();
         int StartTime = Random.Range(100, 150);
         Invoke("CreateZombie", StartTime);
-        ZombieManagement.场上僵尸.Remove(this.gameObject);
+        ZombieManagement.zombiesOnField.Remove(this.gameObject);
 
         GetComponent<SortingGroup>().sortingLayerName = "EnvironmentThings-" + pos_row;
         
-        变更血量显示(false);
+        ChangeHealthDisplay(false);
     }
     #region 碰撞
     protected virtual void OnTriggerStay2D(Collider2D collision)
@@ -28,7 +28,7 @@ public class Bushes : Zombie
             {
                 if (z.pos_row == pos_row)
                 {
-                    z.buff.隐匿 = true;
+                    z.buff.Stealth = true;
                     myAnimator.SetBool("Shake", true);
                 }
             }
@@ -58,7 +58,7 @@ public class Bushes : Zombie
                 if (collision.tag == "Zombie" && z.pos_row == pos_row)
                 {
                     myAnimator.SetBool("Shake", false);
-                    z.buff.隐匿 = false;
+                    z.buff.Stealth = false;
                 }
             }
         }

@@ -26,7 +26,7 @@ public class PicoButton : Button
     public override void OnPointerEnter(PointerEventData eventData)
     {
         base.OnPointerEnter(eventData);
-        CursorManagement.切换光标(1);
+        CursorManagement.SwitchCursor(1);
         if (interactable)
         {
             DoStateTransition(SelectionState.Highlighted, true);
@@ -36,7 +36,7 @@ public class PicoButton : Button
     public override void OnPointerExit(PointerEventData eventData)
     {
         base.OnPointerExit(eventData);
-        CursorManagement.切换光标(0);
+        CursorManagement.SwitchCursor(0);
         if (interactable)
         {
             DoStateTransition(SelectionState.Normal, true);

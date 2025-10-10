@@ -13,8 +13,8 @@ public class BoneZombie : Zombie
 
     public override void beAttacked(int hurt, int BulletType, int AttackedMusicType)
     {
-        血量 -= hurt;
-        if (血量 <= 0)
+        Health -= hurt;
+        if (Health <= 0)
         {
             split();
         }
@@ -46,7 +46,7 @@ public class BoneZombie : Zombie
         myAnimator.SetBool("Die", false);
         myAnimator.SetBool("Walk", true);
         //血量恢复
-        血量 = 最大血量;
+        Health = MaxHealth;
         //碰撞体生效
         gameObject.GetComponent<Collider2D>().enabled = true;
     }

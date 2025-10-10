@@ -44,7 +44,7 @@ public class Collider2DButton : MonoBehaviour
 
     void OnMouseEnter()
     {
-        if(StaticThingsManagement.打开二级界面)
+        if(StaticThingsManagement.IsSecondaryPanelOpen)
         {
             return;
         }

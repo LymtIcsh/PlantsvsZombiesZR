@@ -27,7 +27,7 @@ public class FumeShroom : Shroom
             // 获取僵尸组件
             Zombie zombieGeneric = hitResults[i].transform.GetComponent<Zombie>();
            
-            if (zombieGeneric != null && !zombieGeneric.debuff.魅惑)
+            if (zombieGeneric != null && !zombieGeneric.debuff.Charmed)
             {
                 if (zombieGeneric.pos_row == row )
                 {

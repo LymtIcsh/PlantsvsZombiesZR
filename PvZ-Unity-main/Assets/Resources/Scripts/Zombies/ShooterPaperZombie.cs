@@ -24,12 +24,12 @@ public class ShooterPaperZombie : PaperZombie
     protected override void HandleLevel1ArmorDamage(int hurt)//此类二爷报纸视为一类护甲
     {
        
-        if (level1ArmorHealth <= level1ArmorMaxHealth * 2 / 3 && !一类防具半破损已经切换)
+        if (level1ArmorHealth <= level1ArmorMaxHealth * 2 / 3 && !Level1ArmorHalfDamagedSwitched)
         {
             loadPaper(2);
-            一类防具半破损已经切换 = true;
+            Level1ArmorHalfDamagedSwitched = true;
         }
-        if (level1ArmorHealth <= level1ArmorMaxHealth / 3 && !一类防具完全破损已经切换)
+        if (level1ArmorHealth <= level1ArmorMaxHealth / 3 && !Level1ArmorFullyDamagedSwitched)
         {
             loadPaper(3);
         }
@@ -60,7 +60,7 @@ public class ShooterPaperZombie : PaperZombie
 
                 bullet.GetComponent<StraightBullet>().initialize(this.pos_row);
 
-                if(!debuff.魅惑)
+                if(!debuff.Charmed)
                 {
                     bullet.GetComponent<StraightBullet>().Camp = 1;
                     // 水平翻转子弹 (反转 X 轴的缩放)
@@ -80,7 +80,7 @@ public class ShooterPaperZombie : PaperZombie
 
                 bullet.GetComponent<StraightBullet>().initialize(this.pos_row);
 
-                if (!debuff.魅惑)
+                if (!debuff.Charmed)
                 {
                     bullet.GetComponent<StraightBullet>().Camp = 1;
                     // 水平翻转子弹 (反转 X 轴的缩放)
@@ -93,7 +93,7 @@ public class ShooterPaperZombie : PaperZombie
         }
 
     }
-    public override void 附加减速() // 自身免疫冰冻
+    public override void ApplyDeceleration() // 自身免疫冰冻
     {
 
 

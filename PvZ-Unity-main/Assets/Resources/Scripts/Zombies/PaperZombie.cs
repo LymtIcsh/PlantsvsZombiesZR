@@ -69,13 +69,13 @@ public class PaperZombie : Zombie
     }
     protected override void HandleLevel1ArmorDamage(int hurt)
     {
-        if (level1ArmorHealth <= level1ArmorMaxHealth * 2 / 3 && !一类防具半破损已经切换) {
+        if (level1ArmorHealth <= level1ArmorMaxHealth * 2 / 3 && !Level1ArmorHalfDamagedSwitched) {
             loadPaper(2);
-            一类防具半破损已经切换 = true;
+            Level1ArmorHalfDamagedSwitched = true;
         }
-        if (level1ArmorHealth <= level1ArmorMaxHealth / 3 && !一类防具完全破损已经切换) {
+        if (level1ArmorHealth <= level1ArmorMaxHealth / 3 && !Level1ArmorFullyDamagedSwitched) {
             loadPaper(3);
-            一类防具完全破损已经切换 = true;
+            Level1ArmorFullyDamagedSwitched = true;
         }
         if (level1ArmorHealth <= 0 && LostPaper == false) {
             loadPaper(0);
@@ -90,7 +90,7 @@ public class PaperZombie : Zombie
         if (!dying)
         {
             dying = true;
-            StartCoroutine(濒死扣血());
+            StartCoroutine(DyingHealthDeduction());
             AudioManager.Instance.PlaySoundEffect(59);
             Transform createPosition = FindInChildren(transform, "Zombie_head");
             Transform hidePosition = FindInChildren(transform, "Zombie_jaw");

@@ -40,7 +40,7 @@ public class FireGunZ : Zombie
     }
 
 
-    public override void 附加减速() // 自身免疫冰冻
+    public override void ApplyDeceleration() // 自身免疫冰冻
     {
       
      

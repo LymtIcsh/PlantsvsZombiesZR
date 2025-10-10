@@ -34,7 +34,7 @@ public class SunFlowerZ : Zombie
         //播放音效
         //audioSource.Play();
 
-        if(!debuff.魅惑)
+        if(!debuff.Charmed)
         {
             //生成太阳
             Instantiate(SunPrefabZ, CreatePoint.transform.position, Quaternion.Euler(0, 0, 0), sunManagement);
@@ -46,7 +46,7 @@ public class SunFlowerZ : Zombie
         
 
       
-        if (debuff.减速 > 0) {
+        if (debuff.Deceleration > 0) {
             createDuration = 48f;
         }
         Invoke("createToTruth", createDuration);

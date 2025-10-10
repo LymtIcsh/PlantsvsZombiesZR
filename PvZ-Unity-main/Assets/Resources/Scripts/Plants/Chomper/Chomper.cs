@@ -24,9 +24,9 @@ public class Chomper : Plant
         }
     }
 
-    public override void 重新计算攻击碰撞箱()
+    public override void Re_CalculateAttackCollisionBox()
     {
-        base.重新计算攻击碰撞箱();
+        base.Re_CalculateAttackCollisionBox();
         chomperDetectZombieRegion.GetComponent<Collider2D>().enabled = false;
         chomperDetectZombieRegion.GetComponent<Collider2D>().enabled = true;
     }

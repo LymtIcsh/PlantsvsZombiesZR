@@ -142,10 +142,10 @@ public class PlantingManagement : MonoBehaviour
 
     private void AttackPlant()
     {//攻击
-        for (int i = 0; i < PlantManagement.场上植物.Count; i++) {
+        for (int i = 0; i < PlantManagement.PlantsInFieldList.Count; i++) {
 
-            PlantManagement.场上植物[i].GetComponent<Plant>().beAttacked(
-                PlantManagement.场上植物[i].GetComponent<Plant>().最大血量/20
+            PlantManagement.PlantsInFieldList[i].GetComponent<Plant>().beAttacked(
+                PlantManagement.PlantsInFieldList[i].GetComponent<Plant>().MaxHealth/20
                 , null, null);
         }
        

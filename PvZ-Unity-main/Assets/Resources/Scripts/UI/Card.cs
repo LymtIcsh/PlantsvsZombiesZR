@@ -109,7 +109,7 @@ public class Card : MonoBehaviour
             }
         }
 
-        if (dev.开发者模式)
+        if (dev.DeveloperMode)
         {
             coolingTime = 0;
             sunNeeded = 0;

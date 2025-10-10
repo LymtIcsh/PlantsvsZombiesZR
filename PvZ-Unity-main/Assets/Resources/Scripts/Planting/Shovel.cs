@@ -37,7 +37,7 @@ public class Shovel : MonoBehaviour
         {
             if(glove.activeSelf)
             {
-                glove.GetComponent<Glove>().取消();
+                glove.GetComponent<Glove>().Cancel();
             }
             //ShovelUI不可见
             shovelUI.SetActive(false);
@@ -58,7 +58,10 @@ public class Shovel : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-    public void 取消()
+    /// <summary>
+    /// 取消
+    /// </summary>
+    public void Cancel()
     {
         Cursor.visible = true;
         shovelUI.SetActive(true);

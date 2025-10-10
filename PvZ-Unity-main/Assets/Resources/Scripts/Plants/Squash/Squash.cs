@@ -37,14 +37,14 @@ public class Squash : Plant
     {
         if(idle == true)
         {
-            血量 -= hurt;
-            加载血量文本();
-            if (血量 <= 0)
+            Health -= hurt;
+            LoadHealthText();
+            if (Health <= 0)
             {
                 die(form, gameObject);
             }
         }
-        return 血量;
+        return Health;
     }
 
     public void hmm()

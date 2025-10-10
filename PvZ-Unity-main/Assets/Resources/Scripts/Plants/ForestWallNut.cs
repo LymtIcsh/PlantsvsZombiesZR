@@ -8,7 +8,7 @@ public class ForestWallNut :  WallNut
     protected override void Start()
     {
         base.Start();
-        加载血量文本();
+        LoadHealthText();
         InvokeRepeating("RecoverItself",0f,10f);
     }
 
@@ -23,7 +23,7 @@ public class ForestWallNut :  WallNut
     {
         if (zombieObject != null)
         {
-            zombieObject.GetComponent<Zombie>().附加中毒(1);
+            zombieObject.GetComponent<Zombie>().ApplyPoison(1);
         }
     }
 

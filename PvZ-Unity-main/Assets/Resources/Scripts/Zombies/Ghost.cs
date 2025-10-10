@@ -17,13 +17,13 @@ public class Ghost : Zombie
     protected override void Update()
     {
         base.Update();
-        buff.ÒþÄä = true;
+        buff.Stealth = true;
     }
 
     //ÖØÐ´Îª¿Õ
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!debuff.÷È»ó && collision.tag == "GameOverLine")
+        if (!debuff.Charmed && collision.tag == "GameOverLine")
         {
             GameManagement.instance.GetComponent<GameManagement>().gameOver();
         }

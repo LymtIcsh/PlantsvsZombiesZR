@@ -19,7 +19,7 @@ public class IceBlockZombie : Zombie
     //有冰块时，会受到很大的火伤害
     public override void beBurned(int damage)
     {
-        解除减速状态();
+        RemoveDecelerationState();
         if (iceState == IceBlockZombieState.IceComplete ||
             iceState == IceBlockZombieState.IceIncomplete1 ||
             iceState == IceBlockZombieState.IceIncomplete2)
@@ -97,10 +97,10 @@ public class IceBlockZombie : Zombie
         }
     }
 
-    public override  void 附加减速() // 用于减速
+    public override  void ApplyDeceleration() // 用于减速
     {
         if (level1ArmorHealth > 0) { return; }
-        else { base.附加减速(); }
+        else { base.ApplyDeceleration(); }
     }
 }
 enum IceBlockZombieState { IceComplete, IceIncomplete1, IceIncomplete2, NoIce, NoArm };

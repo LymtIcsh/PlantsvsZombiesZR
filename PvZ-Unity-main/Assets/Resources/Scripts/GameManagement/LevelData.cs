@@ -16,8 +16,14 @@ public class LevelData
     public string plantingManagementSuffix;   //对应的种植管理组件后缀
     public string backgroundSuffix;   //对应背景音乐后缀
 
-    public bool 一周目可选卡 = true;
-    public bool 禁止任何周目选卡 = false;
+    /// <summary>
+    /// 一周目可选卡
+    /// </summary>
+    public bool canSelectCardsInFirstPlaythrough = true;
+    /// <summary>
+    /// 禁止任何周目选卡
+    /// </summary>
+    public bool disableCardSelection = false;
 
     public bool GloveHaveNoCD = false;
     public float TheSizeofNeck = 0.9f;

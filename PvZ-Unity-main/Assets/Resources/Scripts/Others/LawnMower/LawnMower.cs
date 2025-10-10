@@ -40,7 +40,7 @@ public class LawnMower : MonoBehaviour
         Zombie z = collision.GetComponent<Zombie>();
         if (z != null)
         {
-            if ((collision.tag == "Zombie"|| collision.tag == "Tombstone") && z.pos_row == row && !z.debuff.÷È»ó)
+            if ((collision.tag == "Zombie"|| collision.tag == "Tombstone") && z.pos_row == row && !z.debuff.Charmed)
             {
                 
                 if(!z.dying)

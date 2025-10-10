@@ -10,7 +10,7 @@ public class HypnoShroom : Plant
         {
             AudioManager.Instance.PlaySoundEffect(57);
             Instantiate(Resources.Load<GameObject>("Prefabs/Effects/MindControl/MindControl"),zombieObject.transform.position,Quaternion.identity);
-            zombieObject.GetComponent<Zombie>().ÇÐ»»÷È»ó×´Ì¬();
+            zombieObject.GetComponent<Zombie>().SwitchCharmedState();
             die("", zombieObject);
             return;
         }

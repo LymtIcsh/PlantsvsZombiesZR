@@ -38,7 +38,7 @@ public class BowlingBall_Zombie : MonoBehaviour
                     Destroy(gameObject);
                     return;
                 }
-                plant.beAttacked(hurt+plant.血量/10, null,null); // 对植物执行攻击
+                plant.beAttacked(hurt+plant.Health/10, null,null); // 对植物执行攻击
             }
           
             AudioManager.Instance.PlaySoundEffect(27);

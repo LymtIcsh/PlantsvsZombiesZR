@@ -46,17 +46,17 @@ public class SnowZombie : ForestZombie
                     transform.position + new Vector3(-0.3f, 0, 0),
                     Quaternion.Euler(0, 0, 0));
         grass.GetComponent<Zombie>().setPosRow(pos_row);
-        if (debuff.÷È»ó)
+        if (debuff.Charmed)
         {
-            grass.GetComponent<Zombie>().ÇÐ»»÷È»ó×´Ì¬();
+            grass.GetComponent<Zombie>().SwitchCharmedState();
         }
     }
 
     //ÑªÁ¿»Ö¸´º¯Êý
     public void recover()
     {
-        ÑªÁ¿ += 200;
-        if(ÑªÁ¿ >= ×î´óÑªÁ¿)
+        Health += 200;
+        if(Health >= MaxHealth)
         {
             myAnimator.SetBool("Walk", true);
         }
@@ -84,7 +84,7 @@ public class SnowZombie : ForestZombie
     public override void beAttacked(int hurt, int bulletTupe,int music)
     {
         base.beAttacked(hurt, bulletTupe,music);
-        if (ÑªÁ¿ <= ×î´óÑªÁ¿/2 && haveIce == false)
+        if (Health <= MaxHealth/2 && haveIce == false)
         {
             haveIce = true;
             myAnimator.SetBool("CreateIce", true);
@@ -98,7 +98,7 @@ public class SnowZombie : ForestZombie
         if (!dying)
         {
             dying = true;
-            StartCoroutine(±ôËÀ¿ÛÑª());
+            StartCoroutine(DyingHealthDeduction());
             AudioManager.Instance.PlaySoundEffect(59);
             Transform createPosition = FindInChildren(transform, "head");
             Transform hidePosition = FindInChildren(transform, "jaw");

@@ -28,10 +28,10 @@ public class ForestZombie : Zombie
         //Ö²Îï±»¹¥»÷
         if (attackPlant != null && !dying)
         {
-            if (debuff.¿ñ±©) { attackPlant.beAttacked(¹¥»÷Á¦ * 2, "beEated", gameObject); }
+            if (debuff.Furious) { attackPlant.beAttacked(AttackPower * 2, "beEated", gameObject); }
             else
             {
-                attackPlant.beAttacked(¹¥»÷Á¦, "beEated", gameObject);
+                attackPlant.beAttacked(AttackPower, "beEated", gameObject);
             }
         }
     }

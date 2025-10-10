@@ -14,7 +14,7 @@ public class SymbioticForestTorchWood : Plant
         base.Start();
         fireParticleSystem.SetActive(false);
         int i = 0;
-        foreach(GameObject plant in PlantManagement.场上植物.ToList())
+        foreach(GameObject plant in PlantManagement.PlantsInFieldList.ToList())
         {
             Plant plantS = plant.GetComponent<Plant>();
             if (plantS != null)
@@ -35,16 +35,16 @@ public class SymbioticForestTorchWood : Plant
     {
         fireParticleSystem.SetActive(true);
         AudioManager.Instance.PlaySoundEffect(56);
-        foreach (GameObject plant in PlantManagement.场上植物.ToList())
+        foreach (GameObject plant in PlantManagement.PlantsInFieldList.ToList())
         {
             Plant plantS = plant.GetComponent<Plant>();
             if (plantS != null)
             {
-                plantS.recover(plantS.最大血量 / 5);
+                plantS.recover(plantS.MaxHealth / 5);
                 WallNut wallNut = plant.GetComponent<WallNut>();
                 if (wallNut != null)
                 {
-                    plantS.increaseMaxHP(plantS.最大血量 / 10);
+                    plantS.increaseMaxHP(plantS.MaxHealth / 10);
                 }
             }
         }
@@ -62,7 +62,7 @@ public class SymbioticForestTorchWood : Plant
             GameObject diamondpea = Instantiate(diamonPea, collision.transform.position, Quaternion.identity);
 
             diamondpea.GetComponent<StraightBullet>().initialize(row);
-            diamondpea.GetComponent<StraightBullet>().hurt += 最大血量 / 100;
+            diamondpea.GetComponent<StraightBullet>().hurt += MaxHealth / 100;
 
             Destroy(collision.gameObject);
 

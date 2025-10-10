@@ -30,7 +30,7 @@ public class JalapenoBullet : StraightBullet
         }
         else
         {
-            if (collision.tag == "Plant" && row == collision.GetComponent<Plant>().row && collision.GetComponent<Plant>().植物类型 == PlantType.正常植物)
+            if (collision.tag == "Plant" && row == collision.GetComponent<Plant>().row && collision.GetComponent<Plant>()._plantType == PlantType.NormalPlants)
             {
 
                 if (peaType == 1)

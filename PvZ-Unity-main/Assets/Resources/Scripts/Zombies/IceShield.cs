@@ -29,14 +29,14 @@ public class IceShield : Zombie
 
     public override void beBurned(int damage)
     {
-        解除减速状态();
+        RemoveDecelerationState();
         beAttacked(damage*20, 1, 1);
     }
 
     public override void beSquashed()
     {
-        血量 -= 1800;
-        if (血量 <= 0)
+        Health -= 1800;
+        if (Health <= 0)
         {
             //僵尸消失
             Destroy(gameObject);
@@ -52,7 +52,7 @@ public class IceShield : Zombie
     }
 
 
-    public override void 附加减速()
+    public override void ApplyDeceleration()
     {
         
     }

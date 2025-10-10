@@ -30,7 +30,7 @@ public class StaticDetecter : DetectZombieRegion
 
         myCollider.enabled = true;
     }
-    public override void 重新计算区域()//用于如果Glove移动
+    public override void Re_CalculateArea()//用于如果Glove移动
     {
       
         myCollider.enabled = false;

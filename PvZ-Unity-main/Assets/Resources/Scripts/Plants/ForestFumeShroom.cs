@@ -25,12 +25,12 @@ public class ForestFumeShroom : FumeShroom
             // 获取僵尸组件
             Zombie zombieGeneric = hitResults[i].transform.GetComponent<Zombie>();
 
-            if (zombieGeneric != null && !zombieGeneric.debuff.魅惑)
+            if (zombieGeneric != null && !zombieGeneric.debuff.Charmed)
             {
                 if (zombieGeneric.pos_row == row)
                 {
 
-                    zombieGeneric.附加中毒(3);
+                    zombieGeneric.ApplyPoison(3);
                     
                     zombieGeneric.beAttacked(20, 2, 0);
                 }
@@ -49,8 +49,8 @@ public class ForestFumeShroom : FumeShroom
 
                 if (zombieGeneric != null && row == zombieGeneric.pos_row) // 如果是 Zombie
                 {
-                    zombieGeneric.附加中毒(10);
-                    zombieGeneric.引爆毒伤(1);
+                    zombieGeneric.ApplyPoison(10);
+                    zombieGeneric.DetonatePoisonDamage(1);
                 }
 
             }

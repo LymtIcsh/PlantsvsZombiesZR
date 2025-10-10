@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class WatermelonSplashing : MonoBehaviour
 {
     public int splashingHurt;  // 水果溅射伤害
     public int bulletType;     // 子弹类型：1 为中毒，2 为减速
-    public int 附加毒伤层数;
+    [FormerlySerializedAs("附加中毒层数")] [Header("附加中毒层数")]
+    public int _addPoisoningLevels;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Zombie")
@@ -16,7 +18,7 @@ public class WatermelonSplashing : MonoBehaviour
 
             if (zombie != null)  // 确保是 Zombie 类型
             {
-                if (zombie.buff.隐匿 == false && !zombie.debuff.魅惑)//不能打到隐匿的僵尸
+                if (zombie.buff.Stealth == false && !zombie.debuff.Charmed)//不能打到隐匿的僵尸
                 {
                     HandleAttack(zombie);
                     zombie.beAttacked(splashingHurt, 2, 1);  // 第二个参数为攻击模式
@@ -34,10 +36,10 @@ public class WatermelonSplashing : MonoBehaviour
             case 0:
                 break;  // 无特殊效果
             case 1:
-                zombie.附加中毒(附加毒伤层数);  // 中毒
+                zombie.ApplyPoison(_addPoisoningLevels);  // 中毒
                 break;
             case 2:
-                zombie.附加减速();  // 减速
+                zombie.ApplyDeceleration();  // 减速
                 break;
             default:
                 break;

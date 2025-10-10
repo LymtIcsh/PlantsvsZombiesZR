@@ -146,8 +146,10 @@ public class ShowZombieManager : MonoBehaviour
 
     }
 
-
-    public void 清除展示僵尸()
+/// <summary>
+/// 清除展示僵尸
+/// </summary>
+    public void ClearDisplayZombies()
     {
         foreach (GameObject zombie in spawnedZombies)
         {

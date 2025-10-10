@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class StraightBullet : MonoBehaviour
 {
@@ -15,8 +16,10 @@ public class StraightBullet : MonoBehaviour
     public bool canFreeze;//是否可以减速敌方
     public GameObject shatterEffectPrefab;
 
-    public bool 可以施加中毒状态 = false;
-    public int 附加中毒层数;
+    [FormerlySerializedAs("可以施加中毒状态")] [Header("可以施加中毒状态")]
+    public bool _canPoisoningEffectApplied = false;
+    [FormerlySerializedAs("附加中毒层数")] [Header("附加中毒层数")]
+    public int _additionalPoisoningLevels;
     // Update is called once per frame
     protected virtual void Update()
     {
@@ -43,7 +46,7 @@ public class StraightBullet : MonoBehaviour
                 // 判断是否是 Zombie 类型
                 Zombie zombieGeneric = collision.GetComponent<Zombie>();
               
-                if (zombieGeneric != null && row == zombieGeneric.pos_row && zombieGeneric.buff.隐匿==false && !zombieGeneric.debuff.魅惑) // 如果是 Zombie
+                if (zombieGeneric != null && row == zombieGeneric.pos_row && zombieGeneric.buff.Stealth==false && !zombieGeneric.debuff.Charmed) // 如果是 Zombie
                 {
                     if (boomState == false)
                     {
@@ -56,7 +59,7 @@ public class StraightBullet : MonoBehaviour
         }
         else
         {
-            if (collision.tag == "Plant"&&row== collision.GetComponent<Plant>().row&& collision.GetComponent<Plant>().植物类型 == PlantType.正常植物)
+            if (collision.tag == "Plant"&&row== collision.GetComponent<Plant>().row&& collision.GetComponent<Plant>()._plantType == PlantType.NormalPlants)
             {
                 
                 if(peaType == 0)
@@ -124,15 +127,15 @@ public class StraightBullet : MonoBehaviour
     {
         if (canFreeze)
         {
-            target.附加减速();
+            target.ApplyDeceleration();
         }
         
         //僵尸被攻击
         target.beAttacked(hurt, 1, 1);
 
-        if (可以施加中毒状态)
+        if (_canPoisoningEffectApplied)
         {
-            target.附加中毒(附加中毒层数);
+            target.ApplyPoison(_additionalPoisoningLevels);
             GameManagement.instance .forestSlider.DecreaseSliderValueSmooth(1);
         }
         boom();

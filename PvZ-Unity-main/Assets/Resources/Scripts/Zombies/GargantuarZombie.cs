@@ -32,32 +32,32 @@ public class GargantuarZombie : Zombie
         base.beAttacked(hurt, BulletType, AttackedMusicType);
         if (hasBucket)
         {
-            if (血量 <= 最大血量 - 3000)
+            if (Health <= MaxHealth - 3000)
             {
                 SpriteRenderer bucketSprite = bucket.GetComponent<SpriteRenderer>();
                 bucketSprite.enabled = false;
                 GameObject gargantuarBucketDropEffect = Instantiate(gargantuarBucketDrop, bucket.transform.position, Quaternion.identity);
                 hasBucket = false;
             }
-            else if (血量 <= 最大血量 - 2000)
+            else if (Health <= MaxHealth - 2000)
             {
                 SpriteRenderer bucketSprite = bucket.GetComponent<SpriteRenderer>();
                 bucketSprite.sprite = bucket_Broken2;
             }
-            else if (血量 <= 最大血量 - 1000)
+            else if (Health <= MaxHealth - 1000)
             {
                 SpriteRenderer bucketSprite = bucket.GetComponent<SpriteRenderer>();
                 bucketSprite.sprite = bucket_Broken1;
             }
 
 
-            if (血量 <= 最大血量 / 3 * 2)
+            if (Health <= MaxHealth / 3 * 2)
             {
 
                 SpriteRenderer lowerSprite = gargantuar_outerarm_lower.GetComponent<SpriteRenderer>();
                 lowerSprite.sprite = lower_Broken;
             }
-            if (血量 <= 最大血量 / 3)
+            if (Health <= MaxHealth / 3)
             {
                 SpriteRenderer headSprite = gargantuar_head.GetComponent<SpriteRenderer>();
                 headSprite.sprite = head_Broken;
@@ -65,32 +65,32 @@ public class GargantuarZombie : Zombie
         }
         if (hasHelmet)
         {
-            if (血量 <= 最大血量 - 6000)
+            if (Health <= MaxHealth - 6000)
             {
                 SpriteRenderer bucketSprite = bucket.GetComponent<SpriteRenderer>();
                 bucketSprite.enabled = false;
                 GameObject gargantuarBucketDropEffect = Instantiate(gargantuarBucketDrop, bucket.transform.position, Quaternion.identity);
                 hasHelmet = false;
             }
-            else if (血量 <= 最大血量 - 4000)
+            else if (Health <= MaxHealth - 4000)
             {
                 SpriteRenderer bucketSprite = bucket.GetComponent<SpriteRenderer>();
                 bucketSprite.sprite = bucket_Broken2;
             }
-            else if (血量 <= 最大血量 - 2000)
+            else if (Health <= MaxHealth - 2000)
             {
                 SpriteRenderer bucketSprite = bucket.GetComponent<SpriteRenderer>();
                 bucketSprite.sprite = bucket_Broken1;
             }
 
 
-            if (血量 <= 最大血量 / 3 * 2)
+            if (Health <= MaxHealth / 3 * 2)
             {
 
                 SpriteRenderer lowerSprite = gargantuar_outerarm_lower.GetComponent<SpriteRenderer>();
                 lowerSprite.sprite = lower_Broken;
             }
-            if (血量 <= 最大血量 / 3)
+            if (Health <= MaxHealth / 3)
             {
                 SpriteRenderer headSprite = gargantuar_head.GetComponent<SpriteRenderer>();
                 headSprite.sprite = head_Broken;
@@ -98,13 +98,13 @@ public class GargantuarZombie : Zombie
         }
         else
         {
-            if (血量 <= 最大血量 / 3 * 2)
+            if (Health <= MaxHealth / 3 * 2)
             {
                 
                 SpriteRenderer lowerSprite = gargantuar_outerarm_lower.GetComponent<SpriteRenderer>();
                 lowerSprite.sprite = lower_Broken;
             }
-            if (血量 <= 最大血量 / 3)
+            if (Health <= MaxHealth / 3)
             {
                 SpriteRenderer headSprite = gargantuar_head.GetComponent<SpriteRenderer>();
                 headSprite.sprite = head_Broken;

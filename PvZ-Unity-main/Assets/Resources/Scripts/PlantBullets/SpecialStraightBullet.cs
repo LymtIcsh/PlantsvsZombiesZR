@@ -34,7 +34,7 @@ public class SpecialStraightBullet : StraightBullet
                 // 判断是否是 Zombie 类型
                 Zombie zombieGeneric = collision.GetComponent<Zombie>();
 
-                if (zombieGeneric != null && zombieGeneric.buff.隐匿 == false) // 如果是 Zombie
+                if (zombieGeneric != null && zombieGeneric.buff.Stealth == false) // 如果是 Zombie
                 {
                     if (boomState == false)
                     {
@@ -47,7 +47,7 @@ public class SpecialStraightBullet : StraightBullet
         }
         else
         {
-            if (collision.tag == "Plant" && collision.GetComponent<Plant>().植物类型 == PlantType.正常植物)
+            if (collision.tag == "Plant" && collision.GetComponent<Plant>()._plantType == PlantType.NormalPlants)
             {
 
                 if (peaType == 0)

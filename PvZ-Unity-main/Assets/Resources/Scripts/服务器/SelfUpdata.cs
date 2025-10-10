@@ -6,6 +6,7 @@ using System.Threading;
 using UnityEngine.UI;
 using System.Text;
 using System.Collections;
+using UnityEngine.Serialization;
 
 public class SelfUpdata : MonoBehaviour
 {
@@ -16,8 +17,9 @@ public class SelfUpdata : MonoBehaviour
     public GameObject updatePanel;       // 更新面板
     public Text updateText;              // 更新中显示文本
     public Button cancelButton;          // 取消检测按钮
-    public Button reloadButton;          // 重新加载按钮
-    public Button 更新;
+    public Button reloadButton;    
+    [FormerlySerializedAs("更新")] [Header("更新 btn ")]// 重新加载按钮
+    public Button updateBtn;
     private Thread getUrlThread;         // 获取网页的线程
     private string urlContent;           // 网页内容
     private string urlVersion;           // 服务器版本号
@@ -25,7 +27,8 @@ public class SelfUpdata : MonoBehaviour
     private bool isConnecting = false;   // 是否正在连接服务器
     private bool isUrlContentReady = false; // 网页内容是否准备好
     private float connectionTimer = 0f;  // 连接计时器
-    public static bool 是否显示过 = false;
+    [Header("是否显示过")]
+    public static bool isShowOver = false;
 
     private void Start()
     {
@@ -34,12 +37,12 @@ public class SelfUpdata : MonoBehaviour
         
         cancelButton.onClick.AddListener(OnCancelButtonClicked);
         reloadButton.onClick.AddListener(OnReloadButtonClicked);
-        更新.onClick.AddListener(OnUpdateButtonClicked);
-        if(!是否显示过)
+        updateBtn.onClick.AddListener(OnUpdateButtonClicked);
+        if(!isShowOver)
         {
             // 开始检测更新
             StartUpdateCheck();
-            是否显示过 = true;
+            isShowOver = true;
         }
         
 
@@ -82,7 +85,7 @@ public class SelfUpdata : MonoBehaviour
     private void StartUpdateCheck()
     {
         updatePanel.SetActive(true);
-        StaticThingsManagement.打开二级界面 = true;
+        StaticThingsManagement.IsSecondaryPanelOpen = true;
         updateText.text = "正在连接到服务器.";
         isConnecting = true;
 
@@ -132,10 +135,13 @@ public class SelfUpdata : MonoBehaviour
 
         try
         {
-            string[] sArray = urlContent.Split(new char[] { 'π', 'π' });
+              
+            //string[] sArray = urlContent.Split(new char[] { 'π', 'π' });
+            string[] sArray = urlContent.Split("π");
             if (sArray.Length > 1)
             {
-                string[] arrat2 = sArray[1].Split(new char[] { '$', '$' });
+                //string[] arrat2 = sArray[1].Split(new char[] { '$', '$' });
+                string[] arrat2 = sArray[1].Split("$");
                 if (arrat2.Length > 2)
                 {
                     urlVersion = arrat2[1];          // 服务器版本号
@@ -205,7 +211,7 @@ public class SelfUpdata : MonoBehaviour
     private void OnCancelButtonClicked()
     {
         updatePanel.SetActive(false);
-        StaticThingsManagement.打开二级界面 = false;
+        StaticThingsManagement.IsSecondaryPanelOpen = false;
         if (getUrlThread != null && getUrlThread.IsAlive)
         {
             getUrlThread.Abort();

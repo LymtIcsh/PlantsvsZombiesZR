@@ -18,7 +18,7 @@ public class ForestSmallPuff : SmallPuff
 
                 if (zombieGeneric != null && row == zombieGeneric.pos_row) // 如果是 Zombie
                 {
-                    zombieGeneric.附加中毒(10);
+                    zombieGeneric.ApplyPoison(10);
                 }
 
             }

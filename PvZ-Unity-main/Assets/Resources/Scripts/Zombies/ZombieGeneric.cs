@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.Rendering;
+using UnityEngine.Serialization;
 using UnityEngine.U2D;
 using UnityEngine.UI;
 
@@ -12,30 +13,43 @@ public class Zombie: MonoBehaviour
 {
     #region 定义
 
-    public bool 可以啃咬 = true;
+    /// <summary>
+    /// 可以啃咬 - 标识僵尸是否可以啃咬植物
+    /// </summary>
+    [FormerlySerializedAs("可以啃咬")] public bool CanBite = true;
 
     protected bool armIsDrop = false;
     protected bool headIsDrop = false;
     protected bool level1ArmorIsDrop = false;
     protected bool level2ArmorIsDrop = false;
-    
-    public bool 铁门类僵尸 = false;
+
+    /// <summary>
+    /// 铁门类僵尸 - 标识是否为铁门类僵尸
+    /// </summary>
+    [FormerlySerializedAs("铁门类僵尸")] public bool IsIronDoorZombie = false;
 
     public int zombieID;
+
     /// <summary>
-    /// 0为普通僵尸，1为路障，2为铁桶
+    /// 基础僵尸类型 - 0为普通僵尸，1为路障，2为铁桶
     /// </summary>
-    public int 基础僵尸类型;
+    [FormerlySerializedAs("基础僵尸类型")] public int BaseZombieType;
 
     //[HideInInspector]
     public int pos_row;   //位于第几行
 
     //生命相关
-    [HideInInspector]
-    public int 血量;   //血量
+    /// <summary>
+    /// 血量 - 当前血量
+    /// </summary>
+    [FormerlySerializedAs("血量")] [HideInInspector]
+    public int Health;
 
-    [HideInInspector]
-    public int 最大血量;
+    /// <summary>
+    /// 最大血量 - 最大血量值
+    /// </summary>
+    [FormerlySerializedAs("最大血量")] [HideInInspector]
+    public int MaxHealth;
 
     /// <summary>
     /// 一类防具
@@ -55,24 +69,43 @@ public class Zombie: MonoBehaviour
     [HideInInspector]
     public int level2ArmorMaxHealth;
 
-    protected bool 一类防具半破损已经切换 = false;
-    protected bool 一类防具完全破损已经切换 = false;
-    [HideInInspector]
-    public bool 二类半破损已经切换 = false;
-    [HideInInspector]
-    public bool 二类完全破损已经切换 = false;
+    /// <summary>
+    /// 一类防具半破损已经切换 - 标识一类防具半破损状态是否已切换
+    /// </summary>
+    protected bool Level1ArmorHalfDamagedSwitched = false;
+
+    /// <summary>
+    /// 一类防具完全破损已经切换 - 标识一类防具完全破损状态是否已切换
+    /// </summary>
+    protected bool Level1ArmorFullyDamagedSwitched = false;
+
+    /// <summary>
+    /// 二类半破损已经切换 - 标识二类防具半破损状态是否已切换
+    /// </summary>
+    [FormerlySerializedAs("二类半破损已经切换")] [HideInInspector]
+    public bool Level2ArmorHalfDamagedSwitched = false;
+
+    /// <summary>
+    /// 二类完全破损已经切换 - 标识二类防具完全破损状态是否已切换
+    /// </summary>
+    [FormerlySerializedAs("二类完全破损已经切换")] [HideInInspector]
+    public bool Level2ArmorFullyDamagedSwitched = false;
 
     [HideInInspector]
     public bool alive = true;
 
     //攻击相关
-    [HideInInspector]
-    public int 攻击力;  //攻击力
+    /// <summary>
+    /// 攻击力 - 僵尸的攻击力
+    /// </summary>
+    [FormerlySerializedAs("攻击力")] [HideInInspector]
+    public int AttackPower;
+
     protected Plant attackPlant;   //当前所攻击植物的Plant组件
     protected Zombie attackZombie;
 
     protected Animator myAnimator;   //动画组件
-    
+
 
     [HideInInspector]
     public int audioIndex = 1;
@@ -88,11 +121,25 @@ public class Zombie: MonoBehaviour
     [HideInInspector]
     public Renderer[] allRenderers;    // 所有 Renderer 组件
 
-    private float 减速时间 = 5f; // 假设第一次冻结的时间为5秒（可以根据需求调整）
-    private Coroutine 减速协程; // 用来存储协程的引用
+    /// <summary>
+    /// 减速时间 - 减速效果的持续时间
+    /// </summary>
+    private float _decelerationTime = 5f;
 
-    private bool 中毒效果中 = false;
-    private bool 冰冻效果中 = false;
+    /// <summary>
+    /// 减速协程 - 用来存储减速协程的引用
+    /// </summary>
+    private Coroutine _decelerationCoroutine;
+
+    /// <summary>
+    /// 中毒效果中 - 标识是否正在中毒效果中
+    /// </summary>
+    private bool _isPoisoned = false;
+
+    /// <summary>
+    /// 冰冻效果中 - 标识是否正在冰冻效果中
+    /// </summary>
+    private bool _isFrozen = false;
 
 
     public Sprite coneBroken1;//路障三个
@@ -115,44 +162,109 @@ public class Zombie: MonoBehaviour
 
     public bool dontHaveDropHead;
 
-    public Coroutine 高亮;
+    /// <summary>
+    /// 高亮 - 高亮效果协程
+    /// </summary>
+    public Coroutine _highlightCoroutine;
 
     public bool isEating;
 
     public ZombieForestSlider zombieForestSlider;
 
-    public GameObject 正在啃咬目标;
+    /// <summary>
+    /// 正在啃咬目标 - 当前正在啃咬的目标对象
+    /// </summary>
+    [FormerlySerializedAs("正在啃咬目标")] public GameObject CurrentBiteTarget;
 
     //[HideInInspector]
     public bool dying = false;
 
     public Sprite[] DoorSprite;//铁门图片
-    private GameObject[] 铁门僵尸啃咬显示的;
-    private GameObject[] 铁门僵尸行走显示的;
-    private GameObject[] 铁门僵尸无铁门行走时显示的;
-    private GameObject[] 铁门;
-    private GameObject[] 铁门断臂时强制不显示;
-    private GameObject[] 铁门断臂时强制显示;
-    private GameObject[] 铁门全部;
 
-    private float 狂暴速度乘区 = 1f;
-    private float 减速速度乘区 = 1f;
-    private float 随机速度乘区 = 1f;
-    private float 关卡特殊乘区 = 1f;
+    /// <summary>
+    /// 铁门僵尸啃咬显示的 - 铁门僵尸啃咬时显示的对象数组
+    /// </summary>
+    private GameObject[] _ironDoorZombieBiteDisplay;
+
+    /// <summary>
+    /// 铁门僵尸行走显示的 - 铁门僵尸行走时显示的对象数组
+    /// </summary>
+    private GameObject[] _ironDoorZombieWalkDisplay;
+
+    /// <summary>
+    /// 铁门僵尸无铁门行走时显示的 - 铁门僵尸无铁门行走时显示的对象数组
+    /// </summary>
+    private GameObject[] _ironDoorZombieWalkWithoutDoorDisplay;
+
+    /// <summary>
+    /// 铁门 - 铁门对象数组
+    /// </summary>
+    private GameObject[] _ironDoors;
+
+    /// <summary>
+    /// 铁门断臂时强制不显示 - 铁门断臂时强制不显示的对象数组
+    /// </summary>
+    private GameObject[] _ironDoorArmBrokenForceHide;
+
+    /// <summary>
+    /// 铁门断臂时强制显示 - 铁门断臂时强制显示的对象数组
+    /// </summary>
+    private GameObject[] _ironDoorArmBrokenForceShow;
+
+    /// <summary>
+    /// 铁门全部 - 所有铁门相关对象数组
+    /// </summary>
+    private GameObject[] _ironDoorAll;
+
+    /// <summary>
+    /// 狂暴速度乘区 - 狂暴状态的速度倍率
+    /// </summary>
+    private float _furiousSpeedZone = 1f;
+
+    /// <summary>
+    /// 减速速度乘区 - 减速状态的速度倍率
+    /// </summary>
+    private float _decelerationSpeedZone = 1f;
+
+    /// <summary>
+    /// 随机速度乘区 - 随机速度倍率
+    /// </summary>
+    private float _randomSpeedZone = 1f;
+
+    /// <summary>
+    /// 关卡特殊乘区 - 关卡特殊速度倍率
+    /// </summary>
+    private float _levelSpecialZone = 1f;
+
+    /// <summary>
+    /// 环境速度乘区 - 环境速度倍率（私有字段）
+    /// </summary>
     [SerializeField]
-    private float _环境速度乘区 = 1f;
+    private float _environmentSpeedZone = 1f;
 
-    
-    protected virtual float 环境速度乘区//用于覆写
+    /// <summary>
+    /// 环境速度乘区 - 环境速度倍率（用于覆写）
+    /// </summary>
+    protected virtual float EnvironmentSpeedZone
     {
-        get => _环境速度乘区;
-        set => _环境速度乘区 = value;
+        get => _environmentSpeedZone;
+        set => _environmentSpeedZone = value;
     }
 
-    private TMP_Text 血量显示;
+    /// <summary>
+    /// 血量显示 - 血量显示文本组件
+    /// </summary>
+    private TMP_Text _healthDisplay;
 
-    public 僵尸debuff debuff;
-    public 僵尸buff buff;
+    /// <summary>
+    /// debuff - 僵尸的负面效果
+    /// </summary>
+    public ZombieDebuff debuff;
+
+    /// <summary>
+    /// buff - 僵尸的增益效果
+    /// </summary>
+    public ZombieBuff buff;
 
     public bool newZombie = false;
 
@@ -168,21 +280,21 @@ public class Zombie: MonoBehaviour
         myAnimator = gameObject.GetComponent<Animator>();
         allRenderers = GetComponentsInChildren<Renderer>(true);
 
-        if (GameManagement.instance != null && GameManagement.instance.游戏进行 && ZombieManagement.instance != null)
+        if (GameManagement.instance != null && GameManagement.instance.IsGameing && ZombieManagement.instance != null)
         {
             ZombieManagement.instance.GetComponent<ZombieManagement>().addZombieNumAll(gameObject);
         }
         else
         {
-            展示动画初始化();
+            InitializeDisplayAnimation();
         }
 
-        TMP_Text 加载血量物体 = Resources.Load<TMP_Text>("Prefabs/Effects/血量显示/普通僵尸血量显示");
-        血量显示 = Instantiate(加载血量物体, transform.position, Quaternion.identity, transform);
-        血量显示.gameObject.SetActive(false);
+        TMP_Text loadHealthObject = Resources.Load<TMP_Text>("Prefabs/Effects/血量显示/普通僵尸血量显示");
+        _healthDisplay = Instantiate(loadHealthObject, transform.position, Quaternion.identity, transform);
+        _healthDisplay.gameObject.SetActive(false);
 
-        随机速度乘区 = Random.Range(0.8f, 1.2f);
-        加载动画速度();
+        _randomSpeedZone = Random.Range(0.8f, 1.2f);
+        LoadAnimationSpeed();
         //foreach (Renderer renderer in allRenderers)
         //{
         //    if (renderer != null && renderer.material != highlightMaterial)
@@ -197,72 +309,72 @@ public class Zombie: MonoBehaviour
     // Start is called before the first frame update
     protected virtual void Start()
     {
-        血量显示.gameObject.SetActive(true);
+        _healthDisplay.gameObject.SetActive(true);
         Vector3 parentScale = transform.localScale;
         float safeX = parentScale.x != 0 ? parentScale.x : 1f;
         float safeY = parentScale.y != 0 ? parentScale.y : 1f;
         float safeZ = parentScale.z != 0 ? parentScale.z : 1f;
-        血量显示.transform.localScale = new Vector3(
+        _healthDisplay.transform.localScale = new Vector3(
             0.05f / safeX,
             0.05f / safeY,
             0.05f / safeZ
         );
-        血量显示.gameObject.SetActive(false);
-        血量显示.gameObject.SetActive(true);
-        血量显示.gameObject.SetActive(GameManagement.是否显示血量);
+        _healthDisplay.gameObject.SetActive(false);
+        _healthDisplay.gameObject.SetActive(true);
+        _healthDisplay.gameObject.SetActive(GameManagement.isShowHp);
 
-        铁门初始化();
+        InitializeIronDoor();
 
         zombieForestSlider = GameManagement.instance.zombieForestSlider;
 
-        游戏动画初始化();
+        InitializeGameAnimation();
 
-        血量 = ZombieStructManager.GetZombieStructById(zombieID).BaseHP;
+        Health = ZombieStructManager.GetZombieStructById(zombieID).BaseHP;
         level1ArmorHealth = ZombieStructManager.GetZombieStructById(zombieID).Armor1HP;
         level2ArmorHealth = ZombieStructManager.GetZombieStructById(zombieID).Armor2HP;
         level1ArmorMaxHealth = level1ArmorHealth;
         level2ArmorMaxHealth = level2ArmorHealth;
 
-        攻击力 = 50;
+        AttackPower = 50;
 
-        switch (基础僵尸类型)
+        switch (BaseZombieType)
         {
             case 1: loadCone(1); break;
             case 2: loadBucket(1); break;
             default: break;
         }
-        if(铁门类僵尸)
+        if(IsIronDoorZombie)
         {
             List<GameObject> combinedList = new List<GameObject>();
-            AddUnique(铁门僵尸啃咬显示的, combinedList);
-            AddUnique(铁门僵尸行走显示的, combinedList);
-            AddUnique(铁门僵尸无铁门行走时显示的, combinedList);
-            AddUnique(铁门, combinedList);
-            AddUnique(铁门断臂时强制不显示, combinedList);
-            AddUnique(铁门断臂时强制显示, combinedList);
-            铁门全部 = combinedList.ToArray();
-            铁门行走显示逻辑();
+            AddUnique(_ironDoorZombieBiteDisplay, combinedList);
+            AddUnique(_ironDoorZombieWalkDisplay, combinedList);
+            AddUnique(_ironDoorZombieWalkWithoutDoorDisplay, combinedList);
+            AddUnique(_ironDoors, combinedList);
+            AddUnique(_ironDoorArmBrokenForceHide, combinedList);
+            AddUnique(_ironDoorArmBrokenForceShow, combinedList);
+            _ironDoorAll = combinedList.ToArray();
+            IronDoorWalkDisplayLogic();
 
         }
 
 
         if(GameManagement.levelData.LevelType == levelType.TheDreamOfPotatoMine)
         {
-            关卡特殊乘区 *= 1.5f * GameManagement.GameDifficult;
+            _levelSpecialZone *= 1.5f * GameManagement.GameDifficult;
         }
         //添加随机速度增幅
-        
-        加载动画速度();
+
+        LoadAnimationSpeed();
 
 
         activate();
-        
-        
-        最大血量 = 血量;
 
-        InvokeRepeating("计算毒伤", 0, 2f);
 
-        加载血量文本();
+        MaxHealth = Health;
+
+        InvokeRepeating("CalculatePoisonDamage", 0, 2f);
+
+        LoadHealthText();
     }
 
 
@@ -288,7 +400,7 @@ public class Zombie: MonoBehaviour
     {
         try
         {
-            if (ZombieManagement.instance != null && ZombieManagement.instance.isActiveAndEnabled && this != null && gameObject != null && !GameManagement.instance.游戏进行) 
+            if (ZombieManagement.instance != null && ZombieManagement.instance.isActiveAndEnabled && this != null && gameObject != null && !GameManagement.instance.IsGameing) 
             {
                 ZombieManagement.instance.minusZombieNumAll(gameObject);
             }
@@ -325,20 +437,20 @@ public class Zombie: MonoBehaviour
     #region 啃咬与攻击
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if(可以啃咬 && !dying)
+        if(CanBite && !dying)
         {
-            if (!debuff.魅惑
+            if (!debuff.Charmed
             && collision.tag == "Plant"
             && myAnimator.GetBool("Attack") == false
             )
             {
                 attackPlant = collision.GetComponent<Plant>();
                 attackZombie = collision.GetComponent<Zombie>();
-                if(attackPlant != null && attackPlant.row == pos_row && attackPlant.植物类型 != PlantType.地刺类植物 && attackPlant.可被攻击)
+                if(attackPlant != null && attackPlant.row == pos_row && attackPlant._plantType != PlantType.GroundHuggingPlants && attackPlant.CanSubjectAttack)
                 {
 
                 }
-                else if(attackZombie != null && attackZombie.pos_row == pos_row && attackZombie.debuff.魅惑 != debuff.魅惑)
+                else if(attackZombie != null && attackZombie.pos_row == pos_row && attackZombie.debuff.Charmed != debuff.Charmed)
                 {
 
                 }
@@ -347,37 +459,37 @@ public class Zombie: MonoBehaviour
                     return;
                 }
 
-                正在啃咬目标 = collision.gameObject;
+                CurrentBiteTarget = collision.gameObject;
                 myAnimator.SetBool("Walk", false);
                 myAnimator.SetBool("Attack", true);
                 isEating = true;
 
-                if (铁门类僵尸)
+                if (IsIronDoorZombie)
                 {
-                    铁门啃咬显示逻辑();
+                    IronDoorBiteDisplayLogic();
                 }
             }
             else if (collision.tag == "Zombie"
             && collision.GetComponent<Zombie>().pos_row == pos_row
-            && collision.GetComponent<Zombie>().debuff.魅惑 != debuff.魅惑
+            && collision.GetComponent<Zombie>().debuff.Charmed != debuff.Charmed
             && myAnimator.GetBool("Attack") == false
             )
             {
-                正在啃咬目标 = collision.gameObject;
+                CurrentBiteTarget = collision.gameObject;
                 myAnimator.SetBool("Walk", false);
                 myAnimator.SetBool("Attack", true);
                 isEating = true;
                 attackZombie = collision.GetComponent<Zombie>();
 
-                if (铁门类僵尸)
+                if (IsIronDoorZombie)
                 {
-                    铁门啃咬显示逻辑();
+                    IronDoorBiteDisplayLogic();
                 }
 
             }
         }
-        
-        if (!debuff.魅惑 && collision.tag == "GameOverLine" && !dying && alive)
+
+        if (!debuff.Charmed && collision.tag == "GameOverLine" && !dying && alive)
         {
             GameManagement.instance.GetComponent<GameManagement>().gameOver();
         }
@@ -401,27 +513,27 @@ public class Zombie: MonoBehaviour
 
     protected virtual void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject == 正在啃咬目标)
+        if (collision.gameObject == CurrentBiteTarget)
         {
             myAnimator.SetBool("Attack", false);
             myAnimator.SetBool("Walk", true);
             isEating = false;
-            正在啃咬目标 = null;
+            CurrentBiteTarget = null;
             attackPlant = null;
             attackZombie = null;
 
             GetComponent<Collider2D>().enabled = false;
             GetComponent<Collider2D>().enabled = true;
 
-            if (铁门类僵尸)
+            if (IsIronDoorZombie)
             {
                 if (!level2ArmorIsDrop)
                 {
-                    铁门行走显示逻辑();
+                    IronDoorWalkDisplayLogic();
                 }
                 else
                 {
-                    铁门无门行走显示逻辑();
+                    IronDoorWalkWithoutDoorDisplayLogic();
                 }
             }
         }
@@ -472,11 +584,11 @@ public class Zombie: MonoBehaviour
     {
         if (attackPlant != null && !dying)
         {
-            attackPlant.beAttacked(攻击力, "beEated", gameObject);
+            attackPlant.beAttacked(AttackPower, "beEated", gameObject);
         }
         else if(attackZombie != null && !dying)
         {
-            attackZombie.beAttacked(攻击力, 1, -1);
+            attackZombie.beAttacked(AttackPower, 1, -1);
         }
     }
     #endregion
@@ -578,7 +690,7 @@ public class Zombie: MonoBehaviour
     protected virtual void HandleBodyDamage(int hurt)
     {
         // 这里可以处理本体受伤后的逻辑，例如扣除血量、播放受伤音效、动画等
-        血量 -= hurt;
+        Health -= hurt;
         //Debug.Log($"本体受到 {hurt} 点伤害，剩余血量: {bloodVolume}");
         // 可以在这里添加本体受伤后的其他逻辑，例如播放受伤动画、音效等
     }
@@ -586,13 +698,13 @@ public class Zombie: MonoBehaviour
     public virtual void beBurned(int damage)
     {
         beAttacked(damage, 1, 1);
-        切换冰冻状态(false);
+        SwitchFrozenState(false);
     }
     public virtual void beSquashed()
     {
-        if (buff.隐匿) return;
+        if (buff.Stealth) return;
         beAttacked(1800, 1, -1);
-        if (血量 <= 0 && !alive)
+        if (Health <= 0 && !alive)
         {
             ZombieManagement.instance.minusZombieNumAll(gameObject);
             Destroy(gameObject);
@@ -605,13 +717,16 @@ public class Zombie: MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void 计算坚韧(){
-        level1ArmorHealth += buff.坚韧 * 50;
+    /// <summary>
+    /// 计算坚韧 - 计算并应用坚韧效果
+    /// </summary>
+    public void CalculateToughness(){
+        level1ArmorHealth += buff.Toughness * 50;
     }
 
     public void beAshAttacked()
     {
-        if(血量 <= 1800)
+        if(Health <= 1800)
         {
             Vector3 offset = new Vector3(0.137f, -0.088f, 0f); // z轴保持不变
             GameObject charredZombie = Instantiate(
@@ -635,7 +750,7 @@ public class Zombie: MonoBehaviour
     // 播放被攻击音效
     public virtual void playAudioOfBeingAttacked(int bulletType)
     {
-        if (铁门类僵尸 && !level2ArmorIsDrop && bulletType == 1)
+        if (IsIronDoorZombie && !level2ArmorIsDrop && bulletType == 1)
         {
             // 使用 AudioManager 播放音效
             AudioManager.Instance.PlaySoundEffect(11); // 对应 shieldhit 音效
@@ -644,7 +759,7 @@ public class Zombie: MonoBehaviour
         {
             if (!level1ArmorIsDrop)
             {
-                switch (基础僵尸类型)
+                switch (BaseZombieType)
                 {
                     case 0:
                         // 使用 AudioManager 播放不同的音效
@@ -693,9 +808,9 @@ public class Zombie: MonoBehaviour
     #endregion
 
     #region 中毒、冰冻等状态切换
-    private void 切换材质状态(int 状态类型)
+    private void SwitchMaterialState(int _state)
     {
-        switch(状态类型)
+        switch(_state)
         {
             case 0:
                 foreach (Renderer renderer in allRenderers)
@@ -754,136 +869,178 @@ public class Zombie: MonoBehaviour
         }
     }
 
-    private void 切换冰冻状态(bool 开始)//0为解除，1为开始
+    /// <summary>
+    /// 切换冰冻状态 - 切换僵尸的冰冻状态
+    /// </summary>
+    /// <param name="start">开始 - true为开始冰冻，false为解除冰冻</param>
+    private void SwitchFrozenState(bool start)
     {
-        if (冰冻效果中 == 开始) return; // 如果当前状态已经是目标状态，则直接返回
-        if(开始)
+        if (_isFrozen == start) return; // 如果当前状态已经是目标状态，则直接返回
+        if(start)
         {
-            切换中毒状态(false);
+            SwitchPoisonedState(false);
         }
-        冰冻效果中 = 开始;
-        减速速度乘区 = 开始 ? 0.5f : 1f;  // 使用三元运算符来简化赋值
-        切换材质状态(开始 ? 1 : 0);
-        加载动画速度();
+        _isFrozen = start;
+        _decelerationSpeedZone = start ? 0.5f : 1f;  // 使用三元运算符来简化赋值
+        SwitchMaterialState(start ? 1 : 0);
+        LoadAnimationSpeed();
     }
-    public virtual void 附加减速() // 用于减速
+
+    /// <summary>
+    /// 附加减速 - 为僵尸附加减速效果
+    /// </summary>
+    public virtual void ApplyDeceleration()
     {
-        if (减速协程 == null)
+        if (_decelerationCoroutine == null)
         {
-            debuff.减速 = 减速时间;
-            减速协程 = StartCoroutine(减速效果协程(debuff.减速));
+            debuff.Deceleration = _decelerationTime;
+            _decelerationCoroutine = StartCoroutine(DecelerationEffectCoroutine(debuff.Deceleration));
         }
         else
         {
-            debuff.减速 = 减速时间;
-            StopCoroutine(减速协程);
-            减速协程 = StartCoroutine(减速效果协程(debuff.减速));
+            debuff.Deceleration = _decelerationTime;
+            StopCoroutine(_decelerationCoroutine);
+            _decelerationCoroutine = StartCoroutine(DecelerationEffectCoroutine(debuff.Deceleration));
         }
     }
-    private IEnumerator 减速效果协程(float 减速时间)
+
+    /// <summary>
+    /// 减速效果协程 - 减速效果的协程
+    /// </summary>
+    /// <param name="decelerationTime">减速时间 - 减速持续时间</param>
+    private IEnumerator DecelerationEffectCoroutine(float decelerationTime)
     {
-        切换冰冻状态(true);
+        SwitchFrozenState(true);
         float elapsedTime = 0f;
-        while (elapsedTime < 减速时间)
+        while (elapsedTime < decelerationTime)
         {
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        解除减速状态();
-    }
-    protected void 解除减速状态()
-    {
-        切换冰冻状态(false);
+        RemoveDecelerationState();
     }
 
-    private void 切换中毒状态(bool 开始)//0为解除，1为开始
+    /// <summary>
+    /// 解除减速状态 - 解除僵尸的减速状态
+    /// </summary>
+    protected void RemoveDecelerationState()
     {
-        if (中毒效果中 == 开始) return;
-        if(开始)
+        SwitchFrozenState(false);
+    }
+
+    /// <summary>
+    /// 切换中毒状态 - 切换僵尸的中毒状态
+    /// </summary>
+    /// <param name="start">开始 - true为开始中毒，false为解除中毒</param>
+    private void SwitchPoisonedState(bool start)
+    {
+        if (_isPoisoned == start) return;
+        if(start)
         {
-            切换冰冻状态(false);
-            切换狂暴状态(false);
+            SwitchFrozenState(false);
+            SwitchFuriousState(false);
         }
-        if(!开始)
+        if(!start)
         {
-            debuff.中毒 = 0;
+            debuff.Poison = 0;
         }
-        中毒效果中 = 开始;
+        _isPoisoned = start;
 
-        
-        切换材质状态(开始 ? 3 : 0);
-      
-        加载动画速度();
 
-        加载血量文本();
+        SwitchMaterialState(start ? 3 : 0);
+
+        LoadAnimationSpeed();
+
+        LoadHealthText();
     }
 
-    public void 附加中毒(int 附加中毒层数)
+    /// <summary>
+    /// 附加中毒 - 为僵尸附加中毒效果
+    /// </summary>
+    /// <param name="addPoisonLayers">附加中毒层数 - 要添加的中毒层数</param>
+    public void ApplyPoison(int addPoisonLayers)
     {
-        debuff.中毒 += 附加中毒层数;
+        debuff.Poison += addPoisonLayers;
 
-        切换狂暴状态(false);
+        SwitchFuriousState(false);
 
 
-       
-        for(int i = 0;i < 附加中毒层数;i++)
+
+        for(int i = 0;i < addPoisonLayers;i++)
         {
             Invoke("DecreasePoisonLayer", 6f);
         }
-        if(debuff.中毒 > 60)
+        if(debuff.Poison > 60)
         {
             SetAchievement.SetAchievementCompleted("我不是毒神");
         }
-        if (debuff.中毒 > 0 && !中毒效果中)
+        if (debuff.Poison > 0 && !_isPoisoned)
         {
-            切换中毒状态(true);
-            中毒效果中 = true;
+            SwitchPoisonedState(true);
+            _isPoisoned = true;
         }
 
-        加载血量文本();
+        LoadHealthText();
     }
-    public void 引爆毒伤(int 引爆次数)
+    /// <summary>
+    /// 引爆毒伤 - 引爆中毒伤害
+    /// </summary>
+    /// <param name="detonationCount">引爆次数 - 引爆的次数</param>
+    public void DetonatePoisonDamage(int detonationCount)
     {
-        if (debuff.中毒 > 0 && 引爆次数 > 0)
+        if (debuff.Poison > 0 && detonationCount > 0)
         {
-            beAttacked(debuff.中毒 * 最大血量 / 100 * 引爆次数, 3, -1);
+            beAttacked(debuff.Poison * MaxHealth / 100 * detonationCount, 3, -1);
         }
         else
         {
             return;
         }
     }
+
+    /// <summary>
+    /// DecreasePoisonLayer - 减少中毒层数
+    /// </summary>
     public void DecreasePoisonLayer()
     {
-        debuff.中毒 -= 1;
-        if (debuff.中毒 < 0)
-            debuff.中毒 = 0;
+        debuff.Poison -= 1;
+        if (debuff.Poison < 0)
+            debuff.Poison = 0;
 
-        if (debuff.中毒 == 0 && 中毒效果中)
+        if (debuff.Poison == 0 && _isPoisoned)
         {
-            切换中毒状态(false);
+            SwitchPoisonedState(false);
         }
 
-        加载血量文本();
+        LoadHealthText();
     }
-    public void DecreasePoisonLayer(int 减少的层数)
-    {
-        debuff.中毒 -= 减少的层数;
-        if (debuff.中毒 < 0)
-            debuff.中毒 = 0;
 
-        if (debuff.中毒 == 0 && 中毒效果中)
+    /// <summary>
+    /// DecreasePoisonLayer - 减少指定层数的中毒
+    /// </summary>
+    /// <param name="decreaseLayers">减少的层数 - 要减少的中毒层数</param>
+    public void DecreasePoisonLayer(int decreaseLayers)
+    {
+        debuff.Poison -= decreaseLayers;
+        if (debuff.Poison < 0)
+            debuff.Poison = 0;
+
+        if (debuff.Poison == 0 && _isPoisoned)
         {
-            切换中毒状态(false);
+            SwitchPoisonedState(false);
         }
 
-        加载血量文本();
+        LoadHealthText();
     }
-    public void 计算毒伤()
+
+    /// <summary>
+    /// 计算毒伤 - 计算并应用中毒伤害
+    /// </summary>
+    public void CalculatePoisonDamage()
     {
-        if(debuff.中毒 > 0)
+        if(debuff.Poison > 0)
         {
-            beAttacked(debuff.中毒 * 3, 1,-1);
+            beAttacked(debuff.Poison * 3, 1,-1);
         }
         else
         {
@@ -891,49 +1048,56 @@ public class Zombie: MonoBehaviour
         }
     }
 
-    public void 切换狂暴状态(bool 开)//0为解除，1为开始
+    /// <summary>
+    /// 切换狂暴状态 - 切换僵尸的狂暴状态
+    /// </summary>
+    /// <param name="on">开 - true为开启狂暴，false为关闭狂暴</param>
+    public void SwitchFuriousState(bool on)
     {
-        
-        if(debuff.狂暴 == 开)
+
+        if(debuff.Furious == on)
         {
             return;
         }
         else
         {
-            if(开)
+            if(on)
             {
-                if (开)
+                if (on)
                 {
-                    切换冰冻状态(false);
-                    切换中毒状态(false);
+                    SwitchFrozenState(false);
+                    SwitchPoisonedState(false);
                 }
-                切换材质状态(5);
-                debuff.狂暴 = true;
-                狂暴速度乘区 = 3f;
+                SwitchMaterialState(5);
+                debuff.Furious = true;
+                _furiousSpeedZone = 3f;
             }
             else
             {
-                切换材质状态(0);
-                debuff.狂暴 = false;
-                狂暴速度乘区 = 1f;
+                SwitchMaterialState(0);
+                debuff.Furious = false;
+                _furiousSpeedZone = 1f;
             }
-            
+
         }
-        加载动画速度();
+        LoadAnimationSpeed();
 
     }
 
-    public void 切换魅惑状态()//魅惑只能进入，无法退出
+    /// <summary>
+    /// 切换魅惑状态 - 切换僵尸的魅惑状态（魅惑只能进入，无法退出）
+    /// </summary>
+    public void SwitchCharmedState()
     {
-        if (debuff.魅惑)
+        if (debuff.Charmed)
             return;
-        debuff.魅惑 = true;
+        debuff.Charmed = true;
         transform.Rotate(0f, 180f, 0f);
-        血量显示.transform.Rotate(0f, 180f, 0f);
-        切换中毒状态(false);
-        切换冰冻状态(false);
-        切换狂暴状态(false);
-        切换材质状态(4);
+        _healthDisplay.transform.Rotate(0f, 180f, 0f);
+        SwitchPoisonedState(false);
+        SwitchFrozenState(false);
+        SwitchFuriousState(false);
+        SwitchMaterialState(4);
         ZombieManagement.instance.minusZombieNumAll(gameObject);
         gameObject.tag = "Plant";
         //myAnimator.SetBool("Attack", false);
@@ -956,7 +1120,10 @@ public class Zombie: MonoBehaviour
         GetComponent<Collider2D>().enabled = true;
     }
 
-    public void 展示动画初始化()
+    /// <summary>
+    /// 展示动画初始化 - 初始化展示模式的动画
+    /// </summary>
+    public void InitializeDisplayAnimation()
     {
         if (newZombie)
         {
@@ -974,7 +1141,10 @@ public class Zombie: MonoBehaviour
         }
     }
 
-    public void 游戏动画初始化()
+    /// <summary>
+    /// 游戏动画初始化 - 初始化游戏模式的动画
+    /// </summary>
+    public void InitializeGameAnimation()
     {
         if (!newZombie)
         {
@@ -1016,11 +1186,14 @@ public class Zombie: MonoBehaviour
 
 
 
-    private void 加载动画速度()
+    /// <summary>
+    /// 加载动画速度 - 根据各种速度倍率加载动画速度
+    /// </summary>
+    private void LoadAnimationSpeed()
     {
         if(myAnimator != null)
         {
-            myAnimator.speed = 狂暴速度乘区 * 减速速度乘区 * 随机速度乘区 * 关卡特殊乘区 * 环境速度乘区;
+            myAnimator.speed = _furiousSpeedZone * _decelerationSpeedZone * _randomSpeedZone * _levelSpecialZone * EnvironmentSpeedZone;
         }
     }
 
@@ -1033,7 +1206,7 @@ public class Zombie: MonoBehaviour
         {
             dying = true;
 
-            StartCoroutine(濒死扣血());
+            StartCoroutine(DyingHealthDeduction());
 
             AudioManager.Instance.PlaySoundEffect(59);
             if(!newZombie)
@@ -1313,27 +1486,27 @@ public class Zombie: MonoBehaviour
     }
     virtual public void loadArmorStatus()
     {
-        switch (基础僵尸类型)
+        switch (BaseZombieType)
         {
             case 1:
                 if (!level1ArmorIsDrop)
                 {
-                    if (!一类防具半破损已经切换)
+                    if (!Level1ArmorHalfDamagedSwitched)
                     {
 
                         if (level1ArmorHealth <= level1ArmorMaxHealth / 3 * 2)
                         {
-                            一类防具半破损已经切换 = true;
+                            Level1ArmorHalfDamagedSwitched = true;
                             loadCone(2);
                         }
 
                     }
-                    if (!一类防具完全破损已经切换)
+                    if (!Level1ArmorFullyDamagedSwitched)
                     {
 
                         if (level1ArmorHealth <= level1ArmorMaxHealth / 3)
                         {
-                            一类防具完全破损已经切换 = true;
+                            Level1ArmorFullyDamagedSwitched = true;
                             loadCone(3);
                         }
 
@@ -1350,22 +1523,22 @@ public class Zombie: MonoBehaviour
             case 2:
                 if (!level1ArmorIsDrop)
                 {
-                    if (!一类防具半破损已经切换)
+                    if (!Level1ArmorHalfDamagedSwitched)
                     {
 
                         if (level1ArmorHealth <= level1ArmorMaxHealth / 3 * 2)
                         {
-                            一类防具半破损已经切换 = true;
+                            Level1ArmorHalfDamagedSwitched = true;
                             loadBucket(2);
                         }
 
                     }
-                    if (!一类防具完全破损已经切换)
+                    if (!Level1ArmorFullyDamagedSwitched)
                     {
 
                         if (level1ArmorHealth <= level1ArmorMaxHealth / 3)
                         {
-                            一类防具完全破损已经切换 = true;
+                            Level1ArmorFullyDamagedSwitched = true;
                             loadBucket(3);
                         }
 
@@ -1380,27 +1553,27 @@ public class Zombie: MonoBehaviour
                 break;
             default: break;
         }
-        if (铁门类僵尸)
+        if (IsIronDoorZombie)
         {
             loadDoorStatus();
         }
 
-        if (血量 <= 最大血量 / 2)//断手
+        if (Health <= MaxHealth / 2)//断手
         {
             dropArm();
         }
-        if (血量 <= 最大血量 / 3)//断头  
+        if (Health <= MaxHealth / 3)//断头  
         {
             //隐藏头
             hideHead();
         }
-        if (血量 <= 0 && alive == true)
+        if (Health <= 0 && alive == true)
         {
             die();
         }
-        加载血量文本();
-        
-        
+        LoadHealthText();
+
+
     }
 
     public virtual void die()
@@ -1409,9 +1582,9 @@ public class Zombie: MonoBehaviour
 
         alive = false;
 
-        切换中毒状态(false);
-        切换冰冻状态(false);
-        切换狂暴状态(false);
+        SwitchPoisonedState(false);
+        SwitchFrozenState(false);
+        SwitchFuriousState(false);
 
         // ? 动画控制器安全检查
         if (myAnimator != null)
@@ -1434,7 +1607,7 @@ public class Zombie: MonoBehaviour
         // ? 血量处理
         level1ArmorHealth = 0;
         level2ArmorHealth = 0;
-        血量 = 0;
+        Health = 0;
         loadArmorStatus();
 
         // ? 失效碰撞体前确认存在
@@ -1474,7 +1647,7 @@ public class Zombie: MonoBehaviour
 
     public virtual void LawnMowerDie()
     {
-        血量 = 0;
+        Health = 0;
         level1ArmorHealth = 0;
         level2ArmorHealth = 0;
         loadArmorStatus();
@@ -1555,14 +1728,17 @@ public class Zombie: MonoBehaviour
     //    }
     //}
 
-    protected IEnumerator 濒死扣血()
+    /// <summary>
+    /// 濒死扣血 - 濒死状态下持续扣血的协程
+    /// </summary>
+    protected IEnumerator DyingHealthDeduction()
     {
         float timer = 0f;
         while (true)
         {
             if (alive)
             {
-                beAttacked(最大血量 / 10, 2, -1);
+                beAttacked(MaxHealth / 10, 2, -1);
                 yield return new WaitForSeconds(1f);
                 timer += 1f;
 
@@ -1620,14 +1796,14 @@ public class Zombie: MonoBehaviour
     {
         if(!GameManagement.isPerformance)
         {
-            if(高亮 == null)
+            if(_highlightCoroutine == null)
             {
-                高亮 = StartCoroutine(HighlightCoroutine(bulletType));
+                _highlightCoroutine = StartCoroutine(HighlightCoroutine(bulletType));
             }
             else
             {
-                StopCoroutine(高亮);
-                高亮 = StartCoroutine(HighlightCoroutine(bulletType));
+                StopCoroutine(_highlightCoroutine);
+                _highlightCoroutine = StartCoroutine(HighlightCoroutine(bulletType));
             }
             
         }
@@ -1754,11 +1930,17 @@ public class Zombie: MonoBehaviour
     #endregion
 
     #region 碰撞箱
-    public virtual void 关闭碰撞箱()
+    /// <summary>
+    /// 关闭碰撞箱 - 关闭僵尸的碰撞箱
+    /// </summary>
+    public virtual void CloseCollider()
     {
     }
 
-    public virtual void 开启碰撞箱()
+    /// <summary>
+    /// 开启碰撞箱 - 开启僵尸的碰撞箱
+    /// </summary>
+    public virtual void OpenCollider()
     {
     }
     #endregion
@@ -1766,15 +1948,15 @@ public class Zombie: MonoBehaviour
     #region 铁门代码
     public void loadDoorStatus()
     {
-        铁门断臂控制();
+        IronDoorArmBrokenControl();
         if (!level2ArmorIsDrop)
         {
-            if (!二类半破损已经切换)
+            if (!Level2ArmorHalfDamagedSwitched)
             {
                 if (level2ArmorHealth <= level2ArmorMaxHealth / 3 * 2)
                 {
-                    二类半破损已经切换 = true;
-                    foreach (GameObject gameObject in 铁门)
+                    Level2ArmorHalfDamagedSwitched = true;
+                    foreach (GameObject gameObject in _ironDoors)
                     {
                         if (gameObject != null)
                         {
@@ -1783,12 +1965,12 @@ public class Zombie: MonoBehaviour
                     }
                 }
             }
-            if (!二类完全破损已经切换)
+            if (!Level2ArmorFullyDamagedSwitched)
             {
                 if (level2ArmorHealth <= level2ArmorMaxHealth / 3 * 1)
                 {
-                    二类完全破损已经切换 = true;
-                    foreach (GameObject gameObject in 铁门)
+                    Level2ArmorFullyDamagedSwitched = true;
+                    foreach (GameObject gameObject in _ironDoors)
                     {
                         if (gameObject != null)
                         {
@@ -1796,54 +1978,67 @@ public class Zombie: MonoBehaviour
                         }
                     }
                 }
-                
+
             }
             if (level2ArmorHealth <= 0)
             {
-                铁门无门行走显示逻辑();
+                IronDoorWalkWithoutDoorDisplayLogic();
                 level2ArmorIsDrop = true;
                 myAnimator.SetBool("LostDoor", true);
                 if (newZombie)
                 {
                     GameObject go = DynamicObjectPoolManager.Instance.GetFromPool(PoolType.ZombiePendantDrop);
                     go.GetComponent<ParticleSystem>().textureSheetAnimation.RemoveSprite(0);
-                    go.GetComponent<ParticleSystem>().textureSheetAnimation.AddSprite(铁门[0].GetComponent<SpriteRenderer>().sprite);
-                    go.transform.position = 铁门[0].transform.position;
+                    go.GetComponent<ParticleSystem>().textureSheetAnimation.AddSprite(_ironDoors[0].GetComponent<SpriteRenderer>().sprite);
+                    go.transform.position = _ironDoors[0].transform.position;
                     go.transform.rotation = Quaternion.identity;
                 }
             }
         }
-        
-        if(血量 <= 0)
+
+        if(Health <= 0)
         {
-            铁门无门行走显示逻辑();
+            IronDoorWalkWithoutDoorDisplayLogic();
         }
     }
-    public void 铁门行走显示逻辑()
+    /// <summary>
+    /// 铁门行走显示逻辑 - 控制铁门僵尸行走时的显示逻辑
+    /// </summary>
+    public void IronDoorWalkDisplayLogic()
     {
-        SetActiveForObjects(铁门全部, false);
-        SetActiveForObjects(铁门僵尸行走显示的, true);
-        铁门断臂控制();
+        SetActiveForObjects(_ironDoorAll, false);
+        SetActiveForObjects(_ironDoorZombieWalkDisplay, true);
+        IronDoorArmBrokenControl();
     }
 
-    public void 铁门啃咬显示逻辑()
+    /// <summary>
+    /// 铁门啃咬显示逻辑 - 控制铁门僵尸啃咬时的显示逻辑
+    /// </summary>
+    public void IronDoorBiteDisplayLogic()
     {
-        SetActiveForObjects(铁门全部, false);
-        SetActiveForObjects(铁门僵尸啃咬显示的, true);
-        铁门断臂控制();
+        SetActiveForObjects(_ironDoorAll, false);
+        SetActiveForObjects(_ironDoorZombieBiteDisplay, true);
+        IronDoorArmBrokenControl();
     }
 
-    public void 铁门无门行走显示逻辑()
+    /// <summary>
+    /// 铁门无门行走显示逻辑 - 控制铁门僵尸无门行走时的显示逻辑
+    /// </summary>
+    public void IronDoorWalkWithoutDoorDisplayLogic()
     {
-        SetActiveForObjects(铁门全部, false);
-        SetActiveForObjects(铁门僵尸无铁门行走时显示的, true);
-        SetActiveForObjects(铁门, false);
-        铁门断臂控制();
+        SetActiveForObjects(_ironDoorAll, false);
+        SetActiveForObjects(_ironDoorZombieWalkWithoutDoorDisplay, true);
+        SetActiveForObjects(_ironDoors, false);
+        IronDoorArmBrokenControl();
     }
-    public void 铁门销毁()
+
+    /// <summary>
+    /// 铁门销毁 - 销毁铁门对象
+    /// </summary>
+    public void DestroyIronDoor()
     {
-        SetActiveForObjects(铁门, false);
-        foreach (GameObject objects in 铁门)
+        SetActiveForObjects(_ironDoors, false);
+        foreach (GameObject objects in _ironDoors)
         {
             if (objects != null)
             {
@@ -1852,12 +2047,15 @@ public class Zombie: MonoBehaviour
         }
     }
 
-    public void 铁门断臂控制()
+    /// <summary>
+    /// 铁门断臂控制 - 控制铁门僵尸断臂时的显示
+    /// </summary>
+    public void IronDoorArmBrokenControl()
     {
         if (armIsDrop)
         {
-            SetActiveForObjects(铁门断臂时强制不显示, false);
-            SetActiveForObjects(铁门断臂时强制显示, true);
+            SetActiveForObjects(_ironDoorArmBrokenForceHide, false);
+            SetActiveForObjects(_ironDoorArmBrokenForceShow, true);
         }
     }
     private void SetActiveForObjects(GameObject[] objects, bool isActive)
@@ -1871,42 +2069,45 @@ public class Zombie: MonoBehaviour
         }
     }
 
-    public void 铁门初始化()
+    /// <summary>
+    /// 铁门初始化 - 初始化铁门僵尸的相关对象
+    /// </summary>
+    public void InitializeIronDoor()
     {
         Transform[] allChildrens = GetComponentsInChildren<Transform>(true);
 
         if (!newZombie)
         {
-            铁门僵尸啃咬显示的 = GetGameObjectsByNames(allChildrens, new string[]
+            _ironDoorZombieBiteDisplay = GetGameObjectsByNames(allChildrens, new string[]
         {
         "Zombie_outerarm_upper", "Zombie_outerarm_lower", "Zombie_outerarm_hand",
         "Zombie_innerarm_upper", "Zombie_innerarm_lower", "Zombie_innerarm_hand",
         "ScreenDoor_Eating"
         });
 
-            铁门僵尸行走显示的 = GetGameObjectsByNames(allChildrens, new string[]
+            _ironDoorZombieWalkDisplay = GetGameObjectsByNames(allChildrens, new string[]
             {
         "ScreenDoor", "ScreenDoor_outerarm", "Screen_innerhand", "Screen_innerarm"
             });
 
-            铁门僵尸无铁门行走时显示的 = GetGameObjectsByNames(allChildrens, new string[]
+            _ironDoorZombieWalkWithoutDoorDisplay = GetGameObjectsByNames(allChildrens, new string[]
             {
         "Zombie_outerarm_upper", "Zombie_outerarm_lower", "Zombie_outerarm_hand",
         "Zombie_innerarm_upper", "Zombie_innerarm_lower", "Zombie_innerarm_hand",
         "ScreenDoor"
             });
 
-            铁门 = GetGameObjectsByNames(allChildrens, new string[]
+            _ironDoors = GetGameObjectsByNames(allChildrens, new string[]
             {
         "ScreenDoor", "ScreenDoor_Eating"
             });
 
-            铁门断臂时强制不显示 = GetGameObjectsByNames(allChildrens, new string[]
+            _ironDoorArmBrokenForceHide = GetGameObjectsByNames(allChildrens, new string[]
             {
         "ScreenDoor_outerarm", "ScreenDoor_outerarm", "Screen_innerarm","Screen_innerhand"
             });
 
-            铁门断臂时强制显示 = GetGameObjectsByNames(allChildrens, new string[]
+            _ironDoorArmBrokenForceShow = GetGameObjectsByNames(allChildrens, new string[]
             {
         "Zombie_outerarm_upper"
             });
@@ -1914,36 +2115,36 @@ public class Zombie: MonoBehaviour
         else
         {
 
-            铁门僵尸行走显示的 = GetGameObjectsByNames(allChildrens, new string[]
+            _ironDoorZombieWalkDisplay = GetGameObjectsByNames(allChildrens, new string[]
             {
         "ZOMBIE_SCREENDOOR1", "ZOMBIE_OUTERARM_SCREENDOOR", "ZOMBIE_INNERARM_SCREENDOOR_HAND", "ZOMBIE_INNERARM_SCREENDOOR"
             });
 
-            铁门僵尸无铁门行走时显示的 = GetGameObjectsByNames(allChildrens, new string[]//也是铁门僵尸啃咬显示
+            _ironDoorZombieWalkWithoutDoorDisplay = GetGameObjectsByNames(allChildrens, new string[]//也是铁门僵尸啃咬显示
             {
         "ZOMBIE_OUTERARM_UPPER", "ZOMBIE_OUTERARM_LOWER", "ZOMBIE_OUTERARM_HAND",
         "ZOMBIE_INNERARM_UPPER", "ZOMBIE_INNERARM_LOWER", "ZOMBIE_INNERARM_HAND",
         "ZOMBIE_SCREENDOOR1"
             });
 
-            铁门僵尸啃咬显示的 = 铁门僵尸无铁门行走时显示的;
+            _ironDoorZombieBiteDisplay = _ironDoorZombieWalkWithoutDoorDisplay;
 
-            铁门 = GetGameObjectsByNames(allChildrens, new string[]
+            _ironDoors = GetGameObjectsByNames(allChildrens, new string[]
             {
         "ZOMBIE_SCREENDOOR1"
             });
 
-            铁门断臂时强制不显示 = GetGameObjectsByNames(allChildrens, new string[]
+            _ironDoorArmBrokenForceHide = GetGameObjectsByNames(allChildrens, new string[]
             {
         "ZOMBIE_OUTERARM_SCREENDOOR", "ZOMBIE_INNERARM_SCREENDOOR","ZOMBIE_INNERARM_SCREENDOOR_HAND"
             });
 
-            铁门断臂时强制显示 = GetGameObjectsByNames(allChildrens, new string[]
+            _ironDoorArmBrokenForceShow = GetGameObjectsByNames(allChildrens, new string[]
             {
         "ZOMBIE_OUTERARM_UPPER"
             });
         }
-        
+
     }
     void AddUnique(GameObject[] sourceArray, List<GameObject> list)
     {
@@ -2010,12 +2211,15 @@ public class Zombie: MonoBehaviour
 
     #region 血量显示
 
-    private string 血量文本()
+    /// <summary>
+    /// 血量文本 - 生成血量显示文本
+    /// </summary>
+    private string HealthText()
     {
         string healthDisplay = "";
-        if (血量 > 0)
+        if (Health > 0)
         {
-            healthDisplay += "本体：" + 血量 + "/" + 最大血量 + "\n";
+            healthDisplay += "本体：" + Health + "/" + MaxHealth + "\n";
         }
         if (level1ArmorHealth > 0)
         {
@@ -2025,41 +2229,92 @@ public class Zombie: MonoBehaviour
         {
             healthDisplay += "二类：" + level2ArmorHealth + "/" + level2ArmorMaxHealth + "\n";
         }
-        if (debuff.中毒 > 0)
+        if (debuff.Poison > 0)
         {
-            healthDisplay += "毒素：" + debuff.中毒;
+            healthDisplay += "毒素：" + debuff.Poison;
         }
         return healthDisplay;
     }
 
-    public void 加载血量文本()
+    /// <summary>
+    /// 加载血量文本 - 更新血量显示文本
+    /// </summary>
+    public void LoadHealthText()
     {
-        血量显示.text = 血量文本();
+        _healthDisplay.text = HealthText();
     }
 
-    public void 变更血量显示(bool b)
+    /// <summary>
+    /// 变更血量显示 - 切换血量显示的可见性
+    /// </summary>
+    /// <param name="visible">b - 是否显示</param>
+    public void ChangeHealthDisplay(bool visible)
     {
-        血量显示.gameObject.SetActive(b);
+        _healthDisplay.gameObject.SetActive(visible);
     }
 
 
     #endregion
 }
 
-public struct 僵尸debuff
+/// <summary>
+/// 僵尸debuff - 僵尸的负面效果结构体
+/// </summary>
+public struct ZombieDebuff
 {
-    public float 减速;//减速时间
-    public int 中毒;//中毒层数
-    public bool 魅惑;
-    public bool 狂暴;
-    public bool 冻结;
-    
+    /// <summary>
+    /// 减速 - 减速效果的持续时间
+    /// </summary>
+    public float Deceleration;
+
+    /// <summary>
+    /// 中毒 - 中毒层数
+    /// </summary>
+    public int Poison;
+
+    /// <summary>
+    /// 魅惑 - 是否被魅惑
+    /// </summary>
+    public bool Charmed;
+
+    /// <summary>
+    /// 狂暴 - 是否处于狂暴状态
+    /// </summary>
+    public bool Furious;
+
+    /// <summary>
+    /// 冻结 - 是否被冻结
+    /// </summary>
+    public bool Frozen;
 }
 
-public struct 僵尸buff {
-    public bool 隐匿;
-    public int 坚韧;
-    public bool 免疫秒杀;
-    public bool 免疫冰冻;
-    public bool 免疫魅惑;
+/// <summary>
+/// 僵尸buff - 僵尸的增益效果结构体
+/// </summary>
+public struct ZombieBuff
+{
+    /// <summary>
+    /// 隐匿 - 是否处于隐匿状态
+    /// </summary>
+    public bool Stealth;
+
+    /// <summary>
+    /// 坚韧 - 坚韧层数
+    /// </summary>
+    public int Toughness;
+
+    /// <summary>
+    /// 免疫秒杀 - 是否免疫秒杀效果
+    /// </summary>
+    public bool ImmuneToInstantKill;
+
+    /// <summary>
+    /// 免疫冰冻 - 是否免疫冰冻效果
+    /// </summary>
+    public bool ImmuneToFreeze;
+
+    /// <summary>
+    /// 免疫魅惑 - 是否免疫魅惑效果
+    /// </summary>
+    public bool ImmuneToCharm;
 }

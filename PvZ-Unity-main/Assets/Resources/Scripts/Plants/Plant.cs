@@ -3,100 +3,155 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class Plant : MonoBehaviour
 {
     #region 定义
+
     public int ID;
 
-    public PlantType 植物类型;//0为正常，1为地刺（不可啃咬，不可被子弹攻击），3为低矮植物(可被啃咬，不可被子弹攻击)
+    /// <summary>
+    /// 植物类型  //0为正常，1为地刺（不可啃咬，不可被子弹攻击），3为低矮植物(可被啃咬，不可被子弹攻击)
+    /// </summary>
+    [FormerlySerializedAs("植物类型")] public PlantType _plantType;
 
     public bool tallPlant = false;
 
-    [HideInInspector]
-    public PlantGrid myGrid;   //该植物所在Grid
+    /// <summary>
+    ///  该植物所在Grid
+    /// </summary>
+    [HideInInspector] public PlantGrid myGrid;
 
-    [HideInInspector]
-    public int row;  //该植物在第几行
+    /// <summary>
+    /// 该植物在第几行
+    /// </summary>
+    [HideInInspector] public int row;
 
 
-    [HideInInspector]
-    public PlantStruct plantStruct;
-    [HideInInspector]
-    public int 血量;
+    [HideInInspector] public PlantStruct plantStruct;
 
-    [HideInInspector]
-    public int 最大血量;
-    [HideInInspector]
-    public int Armor;
+    /// <summary>
+    /// 血量
+    /// </summary>
+    [FormerlySerializedAs("血量")] [HideInInspector]
+    public int Health;
+
+    /// <summary>
+    /// 最大血量
+    /// </summary>
+    [FormerlySerializedAs("最大血量")] [HideInInspector] public int MaxHealth;
+    [HideInInspector] public int Armor;
     //public int ArmorMax;
 
-    [HideInInspector]
-    public PlantState state = PlantState.Normal;
-    [HideInInspector]
-    protected int warmSource = 0;  //周围有几个温暖源
-    [HideInInspector]
-    protected bool intensified = false;   //是否处于强化状态
+    [HideInInspector] public PlantState state = PlantState.Normal;
+
+    /// <summary>
+    /// 周围有几个温暖源
+    /// </summary>
+    [HideInInspector] protected int warmSource = 0;
+
+    /// <summary>
+    /// 是否处于强化状态
+    /// </summary>
+    [HideInInspector] protected bool intensified = false;
+
+    /// <summary>
+    /// 在Inspector中指定的高光材质
+    /// </summary>
+    [HideInInspector] public Material highlightMaterial;
+
+    /// <summary>
+    /// 所有 Renderer 组件
+    /// </summary>
+    [HideInInspector] public Renderer[] allRenderers;
+
+    /// <summary>
+    /// 高亮
+    /// </summary>
+    [HideInInspector] public Coroutine _highlight;
+
+    /// <summary>
+    /// 可死亡
+    /// </summary>
+    [FormerlySerializedAs("可死亡")] public bool IsCanDie = true;
+
+    /// <summary>
+    /// 可被攻击
+    /// </summary>
+    [FormerlySerializedAs("可被攻击")] public bool CanSubjectAttack = true; //是否可以被攻击
+
+    [HideInInspector] public ForestSlider forestSlider;
+
+    [HideInInspector] public Animator animator;
+
+    /// <summary>
+    /// 狂暴速度乘区
+    /// </summary>
+    private float _furiousSpeedZone = 1f;
+    /// <summary>
+    /// 减速速度乘区
+    /// </summary>
+    private float _decelerationRateZone = 1f;
+    /// <summary>
+    /// 随机速度乘区
+    /// </summary>
+    private float _randomSpeedMultiplicationZone = 1f;
+    /// <summary>
+    /// 关卡特殊乘区
+    /// </summary>
+    private float _specialMultiplicationAreaOfTheLevel = 1f;
+    /// <summary>
+    /// 环境速度乘区
+    /// </summary>
+    [FormerlySerializedAs("_环境速度乘区")] [SerializeField] private float _environmentalVelocityZone = 1f;
 
 
-    [HideInInspector]
-    public Material highlightMaterial; // 在Inspector中指定的高光材质
-    [HideInInspector]
-    public Renderer[] allRenderers;    // 所有 Renderer 组件
-    [HideInInspector]
-    public Coroutine 高亮;
-
-    public bool 可死亡 = true;//是否可以死亡
-    public bool 可被攻击 = true;//是否可以被攻击
-
-    [HideInInspector]
-    public ForestSlider forestSlider;
-
-    [HideInInspector]
-    public Animator animator;
-
-    private float 狂暴速度乘区 = 1f;
-    private float 减速速度乘区 = 1f;
-    private float 随机速度乘区 = 1f;
-    private float 关卡特殊乘区 = 1f;
-    [SerializeField]
-    private float _环境速度乘区 = 1f;
-
-
-    protected virtual float 环境速度乘区//用于覆写
+    /// <summary>
+    /// 环境速度乘区  --用于覆写
+    /// </summary>
+    protected virtual float EnvironmentalSpeedZone_ForOverwriting //用于覆写
     {
-        get => _环境速度乘区;
-        set => _环境速度乘区 = value;
+        get => _environmentalVelocityZone;
+        set => _environmentalVelocityZone = value;
     }
 
     public DetectZombieRegion detectZombieRegion;
 
     public Sprite ownSprite;
-    [HideInInspector]
-    protected TMP_Text 血量显示;
+    /// <summary>
+    /// 血量显示的文本
+    /// </summary>
+    [HideInInspector] protected TMP_Text _healthShowText;
+
     #endregion
 
 
     #region 开始的设置
+
     protected virtual void Awake()
     {
-        初始化();
+        Init();
     }
 
-    public void 初始化()
+    /// <summary>
+    /// 初始化
+    /// </summary>
+    public void Init()
     {
         animator = GetComponent<Animator>();
         plantStruct = PlantStructManager.GetPlantStructById(ID);
         ID = plantStruct.id;
-        血量 = plantStruct.HP;
+        Health = plantStruct.HP;
         string resourcePath = "Sprites/Plants/" + plantStruct.plantName;
         if (Resources.Load<Sprite>(resourcePath) != null)
         {
             ownSprite = Resources.Load<Sprite>(resourcePath);
         }
-        随机速度乘区 = Random.Range(0.8f, 1.2f);
-        加载动画速度();
+
+        _randomSpeedMultiplicationZone = Random.Range(0.8f, 1.2f);
+        LoadingAnimationSpeed();
     }
 
     protected virtual void Start()
@@ -117,24 +172,24 @@ public class Plant : MonoBehaviour
         //}
 
 
-        最大血量 = 血量;
+        MaxHealth = Health;
 
         TMP_Text 加载血量物体 = Resources.Load<TMP_Text>("Prefabs/Effects/血量显示/普通植物血量显示");
-        血量显示 = Instantiate(加载血量物体, transform.position, Quaternion.identity, transform);
+        _healthShowText = Instantiate(加载血量物体, transform.position, Quaternion.identity, transform);
         Vector3 parentScale = transform.localScale;
         float safeX = parentScale.x != 0 ? parentScale.x : 1f;
         float safeY = parentScale.y != 0 ? parentScale.y : 1f;
         float safeZ = parentScale.z != 0 ? parentScale.z : 1f;
-        血量显示.transform.localScale = new Vector3(
+        _healthShowText.transform.localScale = new Vector3(
             0.05f / safeX,
             0.05f / safeY,
             0.05f / safeZ
         );
-        Vector3 vector = 血量显示.transform.position;
+        Vector3 vector = _healthShowText.transform.position;
         vector.y -= 0.35f;
-        血量显示.transform.position = vector;
-        加载血量文本();
-        血量显示.gameObject.SetActive(GameManagement.是否显示血量);
+        _healthShowText.transform.position = vector;
+        LoadHealthText();
+        _healthShowText.gameObject.SetActive(GameManagement.isShowHp);
 
         //// 设置图层顺序
         //SetSortingOrderBasedOnRow();
@@ -266,24 +321,23 @@ public class Plant : MonoBehaviour
             Armor -= ArmorDamage;
             hurt -= ArmorDamage;
         }
+
         if (hurt > 0)
         {
-            血量 -= hurt;
-           
-            if (血量 <= 0)
+            Health -= hurt;
+
+            if (Health <= 0)
             {
                 die(form, gameObject);
             }
-
-          
         }
-        加载血量文本();
-        return 血量;
+
+        LoadHealthText();
+        return Health;
     }
 
     public virtual void beAttackedMoment(int hurt, string reason, GameObject zombieObject)
     {
-
     }
 
     /// <summary>
@@ -294,7 +348,6 @@ public class Plant : MonoBehaviour
     public virtual void beBombAttacked(int hurt)
     {
         beAttacked(hurt, null, null);
-        
     }
 
     public virtual void cold()
@@ -345,30 +398,34 @@ public class Plant : MonoBehaviour
         GetComponent<Animator>().speed = 1f;
     }
 
-    private void 加载动画速度()
+    /// <summary>
+    /// 加载动画速度
+    /// </summary>
+    private void LoadingAnimationSpeed()
     {
         if (animator != null)
         {
-            animator.speed = 狂暴速度乘区 * 减速速度乘区 * 随机速度乘区 * 关卡特殊乘区 * 环境速度乘区;
+            animator.speed = _furiousSpeedZone * _decelerationRateZone * _randomSpeedMultiplicationZone * _specialMultiplicationAreaOfTheLevel * EnvironmentalSpeedZone_ForOverwriting;
         }
     }
 
     public virtual void recover(int value)
     {
         TriggerHighlight();
-        血量 += value;
-        if (血量 > 最大血量) 血量 = 最大血量;
-        加载血量文本();
+        Health += value;
+        if (Health > MaxHealth) Health = MaxHealth;
+        LoadHealthText();
     }
 
     public virtual void increaseMaxHP(int value)
     {
-        最大血量 += value;
-        if (最大血量 > 100000)
+        MaxHealth += value;
+        if (MaxHealth > 100000)
         {
-            最大血量 = 100000;
+            MaxHealth = 100000;
         }
-        加载血量文本();
+
+        LoadHealthText();
     }
 
     //强化函数，执行公共操作并调用特定操作函数
@@ -410,7 +467,6 @@ public class Plant : MonoBehaviour
 
     public virtual void attack(bool attack)
     {
-
     }
 
     public virtual void highlight()
@@ -425,18 +481,18 @@ public class Plant : MonoBehaviour
 
     public virtual void initialize(PlantGrid grid, string sortingLayer, int sortingOrder)
     {
-        
         // 设置自己和子物体的排序层
         SetSortingLayer(transform, sortingLayer);
-        
+
         // 遍历所有子物体并设置它们的 sortingOrder
         SetSortingOrderRecursive(transform, sortingOrder);
 
-        if(grid != null)
+        if (grid != null)
         {
             row = grid.row;
             myGrid = grid;
         }
+
         GetComponent<SpriteRenderer>().sortingOrder = sortingOrder;
         if (grid != null)
         {
@@ -444,62 +500,54 @@ public class Plant : MonoBehaviour
             myGrid = grid;
         }
 
-        重新计算攻击碰撞箱();
+        Re_CalculateAttackCollisionBox();
     }
 
 
     public void die(string reason, GameObject plant)
     {
-        if(可死亡)
+        if (IsCanDie)
         {
             HandleDeath(reason, plant);
         }
-        
     }
 
     private void HandleDeath(string reason, GameObject plant)
     {
         beforeDie();
         PlantManagement.RemovePlant(gameObject);
-        GetComponentInParent<PlantGrid>().plantDie(reason,gameObject);
+        GetComponentInParent<PlantGrid>().plantDie(reason, gameObject);
         Destroy(gameObject);
 
         AfterDestroy();
     }
 
 
-
     public virtual void AfterDestroy()
     {
-        
-        
     }
 
 
     // 死前需要处理的事，由具体植物实现
     protected virtual void beforeDie()
     {
-
     }
-
 
 
     public virtual void TriggerHighlight()
     {
         if (!GameManagement.isPerformance)
         {
-            if (高亮 == null)
+            if (_highlight == null)
             {
-                高亮 = StartCoroutine(HighlightCoroutine());
+                _highlight = StartCoroutine(HighlightCoroutine());
             }
             else
             {
-                StopCoroutine(高亮);
-                高亮 = StartCoroutine(HighlightCoroutine());
+                StopCoroutine(_highlight);
+                _highlight = StartCoroutine(HighlightCoroutine());
             }
-
         }
-
     }
 
     public virtual IEnumerator HighlightCoroutine()
@@ -520,12 +568,14 @@ public class Plant : MonoBehaviour
                 {
                     Material mat = renderer.material;
                     Color currentColor = mat.GetColor("_Color");
-                    currentColor.a = lerpValue;  // 更新透明度
+                    currentColor.a = lerpValue; // 更新透明度
                     mat.SetColor("_Color", currentColor);
                 }
             }
+
             yield return null;
         }
+
         startTime = Time.time;
 
         // 透明度减少：从 1 到 0
@@ -538,10 +588,11 @@ public class Plant : MonoBehaviour
                 {
                     Material mat = renderer.material;
                     Color currentColor = mat.GetColor("_Color");
-                    currentColor.a = lerpValue;  // 更新透明度
+                    currentColor.a = lerpValue; // 更新透明度
                     mat.SetColor("_Color", currentColor);
                 }
             }
+
             yield return null;
         }
 
@@ -552,52 +603,89 @@ public class Plant : MonoBehaviour
             {
                 Material mat = renderer.material;
                 Color currentColor = mat.GetColor("_Color");
-                currentColor.a = 0f;  // 最终透明度为 0
+                currentColor.a = 0f; // 最终透明度为 0
                 mat.SetColor("_Color", currentColor);
             }
         }
     }
-
-    public virtual void 重新计算攻击碰撞箱()
+/// <summary>
+/// 重新计算攻击碰撞箱
+/// </summary>
+    public virtual void Re_CalculateAttackCollisionBox()
     {
         Collider2D collider = GetComponent<Collider2D>();
-        if(collider != null)
+        if (collider != null)
         {
             collider.enabled = false;
             collider.enabled = true;
         }
-        if(detectZombieRegion!=null)
+
+        if (detectZombieRegion != null)
         {
-            detectZombieRegion.重新计算区域();
+            detectZombieRegion.Re_CalculateArea();
         }
     }
 
-    private string 血量文本()
+/// <summary>
+/// 血量文本
+/// </summary>
+/// <returns></returns>
+    private string BloodVolumeText()
     {
         string healthDisplay = "";
 
-      
+
         if (Armor > 0)
         {
             healthDisplay = "护甲:" + Armor + "\n" +
-                血量 + "/" + 最大血量 + "\n"; ;
+                            Health + "/" + MaxHealth + "\n";
+            ;
         }
-        else if(血量 > 0){
-            healthDisplay = 血量 + "/" + 最大血量 + "\n";
+        else if (Health > 0)
+        {
+            healthDisplay = Health + "/" + MaxHealth + "\n";
         }
+
         return healthDisplay;
     }
 
-    public virtual void 加载血量文本()
+    /// <summary>
+    /// 加载血量文本
+    /// </summary>
+    public virtual void LoadHealthText()
     {
-        血量显示.text = 血量文本();
+        _healthShowText.text = BloodVolumeText();
     }
 
-    public void 变更血量显示(bool b)
+    /// <summary>
+    /// 变更血量显示
+    /// </summary>
+    /// <param name="b"></param>
+    public void ChangeBloodBolumeDisplay(bool b)
     {
-        血量显示.gameObject.SetActive(b);
+        _healthShowText.gameObject.SetActive(b);
     }
 }
-public enum PlantState { Normal, Warm, Cold }
 
-public enum PlantType { 正常植物, 地刺类植物, 低矮植物 }
+public enum PlantState
+{
+    Normal,
+    Warm,
+    Cold
+}
+
+public enum PlantType
+{
+    /// <summary>
+    /// 正常植物
+    /// </summary>
+    NormalPlants,
+    /// <summary>
+    /// 地刺类植物
+    /// </summary>
+    GroundHuggingPlants,
+    /// <summary>
+    /// 低矮植物
+    /// </summary>
+    LowGrowingPlants
+}

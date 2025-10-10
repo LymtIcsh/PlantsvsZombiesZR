@@ -82,22 +82,34 @@ public class PotatoMine_Strong : PotatoMine
         }
     }
 
-    public void 上移动()
+    /// <summary>
+    /// 上移动
+    /// </summary>
+    public void MoveUp()
     {
         MoveToDirection(Vector3.up);
     }
 
-    public void 下移动()
+    /// <summary>
+    /// 下移动
+    /// </summary>
+    public void MoveDown()
     {
         MoveToDirection(Vector3.down);
     }
 
-    public void 左移动()
+    /// <summary>
+    /// 左移动
+    /// </summary>
+    public void MoveLeft()
     {
         MoveToDirection(Vector3.left);
     }
 
-    public void 右移动()
+    /// <summary>
+    /// 右移动
+    /// </summary>
+    public void MoveRight()
     {
         MoveToDirection(Vector3.right);
     }

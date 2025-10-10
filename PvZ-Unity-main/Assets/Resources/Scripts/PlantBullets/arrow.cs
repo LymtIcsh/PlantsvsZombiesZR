@@ -23,7 +23,7 @@ public class arrow : StraightBullet
                 // 判断是否是 Zombie 类型
                 Zombie zombieGeneric = collision.GetComponent<Zombie>();
 
-                if (zombieGeneric != null && row == zombieGeneric.pos_row && !zombieGeneric.debuff.魅惑) // 如果是 Zombie
+                if (zombieGeneric != null && row == zombieGeneric.pos_row && !zombieGeneric.debuff.Charmed) // 如果是 Zombie
                 {
                     if (boomState == false)
                     {
@@ -35,7 +35,7 @@ public class arrow : StraightBullet
         }
         else
         {
-            if (collision.tag == "Plant" && row == collision.GetComponent<Plant>().row && collision.GetComponent<Plant>().植物类型 ==  PlantType.正常植物)
+            if (collision.tag == "Plant" && row == collision.GetComponent<Plant>().row && collision.GetComponent<Plant>()._plantType ==  PlantType.NormalPlants)
             {
 
                 if (peaType == 0)
@@ -75,7 +75,7 @@ public class arrow : StraightBullet
     protected override void attack(Zombie target)
     {     
         //僵尸被攻击
-        target.beAttacked(hurt+target.debuff.中毒*20, 1, 1);
+        target.beAttacked(hurt+target.debuff.Poison*20, 1, 1);
         boom();
     }
 

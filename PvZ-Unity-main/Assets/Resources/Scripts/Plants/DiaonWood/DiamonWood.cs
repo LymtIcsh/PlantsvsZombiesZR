@@ -62,7 +62,7 @@ public class DiamonWood : Plant
             beAttacked(BePlantAttacked, null, gameObject);
 
             // 判断植物是否死亡
-            if (血量 <= 0)
+            if (Health <= 0)
             {
                 die(null, gameObject);
             }

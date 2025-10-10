@@ -23,13 +23,13 @@ public class TreePeopleZombie : Zombie
     protected override void Update()
     {
         base.Update();
-        if (isEating && buff.ÒşÄä)
+        if (isEating && buff.Stealth)
         {
-            buff.ÒşÄä = false;
+            buff.Stealth = false;
         }
-        else if(!isEating && !buff.ÒşÄä)
+        else if(!isEating && !buff.Stealth)
         {
-            buff.ÒşÄä = true;
+            buff.Stealth = true;
         }
     }
 }

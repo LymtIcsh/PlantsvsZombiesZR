@@ -1,17 +1,151 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &1
-MonoBehaviour:
-  m_ObjectHideFlags: 61
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de02f9e1d18f588468e474319d09a723, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shaderVariantLimit: 128
-  customInterpolatorErrorThreshold: 32
-  customInterpolatorWarningThreshold: 16
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+/// <summary>
+/// 关卡返回代码
+/// </summary>
+public static class LevelReturnCode
+{
+    /// <summary>
+    /// 冒险模式
+    /// </summary>
+    public static Dictionary<int, AdventureInfo> AdventureModeDict = new Dictionary<int, AdventureInfo>();
+    
+    /// <summary>
+    /// 环境模式
+    /// </summary>
+    public static Dictionary<int, EnvironmentInfo> EnvironmentModeDict = new Dictionary<int, EnvironmentInfo>();
+    
+    /// <summary>
+    /// 小游戏模式
+    /// </summary>
+    public static Dictionary<int, string> MiniGameModeDict = new Dictionary<int, string>();
+    
+    /// <summary>
+    /// 游戏模式
+    /// </summary>
+    public static GameMode CurrentGameMode;
+    
+    /// <summary>
+    /// 图鉴模式
+    /// </summary>
+    public static IllustratedMode CurrentIllustratedMode;
+    
+    static LevelReturnCode()
+    {
+        // 添加冒险模式关卡（level < 50）
+        AddAdventureMode(1, "1 - 1", NormalGameType.GrasslandDay);
+        AddAdventureMode(2, "1 - 2", NormalGameType.GrasslandDay);
+        // ... 其他关卡
+        
+        // 添加环境模式关卡
+        AddEnvironmentMode(51, "森林 - 1 - 1", EnvironmentType.Forest);
+        // ... 其他关卡
+        
+        // 小游戏模式
+        MiniGameModeDict.Add(242, "真正的排山倒海！");
+        // ... 其他小游戏
+    }
+
+    /// <summary>
+    /// 添加环境模式
+    /// </summary>
+    /// <param name="level">关卡等级</param>
+    /// <param name="name">关卡名称</param>
+    /// <param name="environmentType">环境类型</param>
+    public static void AddEnvironmentMode(int level, string name, EnvironmentType environmentType)
+    {
+        EnvironmentInfo info = new EnvironmentInfo
+        {
+            Name = name,
+            Type = environmentType
+        };
+        EnvironmentModeDict.Add(level, info);
+    }
+    
+    /// <summary>
+    /// 添加冒险模式
+    /// </summary>
+    /// <param name="level">关卡等级</param>
+    /// <param name="name">关卡名称</param>
+    /// <param name="normalGameType">普通游戏类型</param>
+    public static void AddAdventureMode(int level, string name, NormalGameType normalGameType)
+    {
+        AdventureInfo info = new AdventureInfo
+        {
+            Name = name,
+            Type = normalGameType
+        };
+        AdventureModeDict.Add(level, info);
+    }
+}
+
+/// <summary>
+/// 环境信息
+/// </summary>
+public class EnvironmentInfo
+{
+    public string Name { get; set; }
+    public EnvironmentType Type { get; set; }
+}
+
+/// <summary>
+/// 冒险信息
+/// </summary>
+public class AdventureInfo
+{
+    public string Name { get; set; }
+    public NormalGameType Type { get; set; }
+}
+
+/// <summary>
+/// 游戏模式
+/// </summary>
+public enum GameMode
+{
+    /// <summary>
+    /// 冒险模式
+    /// </summary>
+    AdventureMode,
+    /// <summary>
+    /// 小游戏模式
+    /// </summary>
+    MiniGameMode,
+    /// <summary>
+    /// 无尽模式
+    /// </summary>
+    EndlessMode,
+    /// <summary>
+    /// 环境模式
+    /// </summary>
+    EnvironmentMode
+}
+
+/// <summary>
+/// 图鉴模式
+/// </summary>
+public enum IllustratedMode
+{
+    /// <summary>
+    /// 植物图鉴
+    /// </summary>
+    PlantIllustrated,
+    /// <summary>
+    /// 僵尸图鉴
+    /// </summary>
+    ZombieIllustrated,
+}
+
+public enum NormalGameType
+{
+    /// <summary>
+    /// 草地白天
+    /// </summary>
+    GrasslandDay,
+    /// <summary>
+    /// 草地夜晚
+    /// </summary>
+    GrasslandNight
+}

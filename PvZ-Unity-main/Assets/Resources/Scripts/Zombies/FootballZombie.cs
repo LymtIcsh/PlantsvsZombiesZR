@@ -68,7 +68,7 @@ public class FootballZombie : Zombie
         {
             dying = true;
 
-            StartCoroutine(±ôËÀ¿ÛÑª());
+            StartCoroutine(DyingHealthDeduction());
             AudioManager.Instance.PlaySoundEffect(59);
 
             Transform createPosition = FindInChildren(transform, "createDropHead");

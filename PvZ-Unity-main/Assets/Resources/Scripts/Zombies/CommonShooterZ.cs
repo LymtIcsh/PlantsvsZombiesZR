@@ -22,7 +22,7 @@ public class CommonShooterZ : Zombie
 
                 bullet.GetComponent<StraightBullet>().initialize(this.pos_row);
 
-                if (!debuff.魅惑)
+                if (!debuff.Charmed)
                 {
                     bullet.GetComponent<StraightBullet>().Camp = 1;
                     // 水平翻转子弹 (反转 X 轴的缩放)

@@ -4,5 +4,8 @@ using UnityEngine;
 
 public static class dev
 {
-    public static bool 开发者模式 = false;
+    /// <summary>
+    /// 开发者模式
+    /// </summary>
+    public static bool DeveloperMode = false;
 }

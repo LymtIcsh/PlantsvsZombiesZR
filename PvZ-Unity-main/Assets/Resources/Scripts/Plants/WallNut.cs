@@ -10,8 +10,8 @@ public class WallNut : Plant
     {
         base.Start();
 
-        crackedPoint1 = 血量 * 2 / 3;
-        crackedPoint2 = 血量 / 3;
+        crackedPoint1 = Health * 2 / 3;
+        crackedPoint2 = Health / 3;
     }
     public override int beAttacked(int hurt, string form, GameObject zombieObject)
     {
@@ -26,49 +26,49 @@ public class WallNut : Plant
         }
         if (hurt > 0)
         {
-            血量 -= hurt;
+            Health -= hurt;
           
-            if (血量 <= 0)
+            if (Health <= 0)
             {
                 die(form, gameObject);
             }
-            else if (血量 <= crackedPoint2)
+            else if (Health <= crackedPoint2)
             {
 
                 GetComponent<Animator>().SetBool("Cracked2", true);
             }
-            else if (血量 <= crackedPoint1)
+            else if (Health <= crackedPoint1)
             {
                 GetComponent<Animator>().SetBool("Cracked1", true);
             }
         }
-        加载血量文本();
-        return 血量;
+        LoadHealthText();
+        return Health;
     }
 
     public override void recover(int value)
     {
-        血量 += value;
-        if (血量 > 最大血量) 血量 = 最大血量;
+        Health += value;
+        if (Health > MaxHealth) Health = MaxHealth;
 
-        if (血量 >= crackedPoint2)
+        if (Health >= crackedPoint2)
         {
             GetComponent<Animator>().SetBool("Cracked2", false);
         }
-        if (血量 <= crackedPoint1)
+        if (Health <= crackedPoint1)
         {
             GetComponent<Animator>().SetBool("Cracked1", false);
         }
-        if (血量 <= crackedPoint2)
+        if (Health <= crackedPoint2)
         {
             GetComponent<Animator>().SetBool("Cracked2", true);
         }
-        if (血量 <= crackedPoint1)
+        if (Health <= crackedPoint1)
         {
             GetComponent<Animator>().SetBool("Cracked1", true);
         }
 
-        加载血量文本();
+        LoadHealthText();
 
     }
 
@@ -76,19 +76,19 @@ public class WallNut : Plant
     {
         base.increaseMaxHP(value);
 
-        if (血量 >= crackedPoint2)
+        if (Health >= crackedPoint2)
         {
             GetComponent<Animator>().SetBool("Cracked2", false);
         }
-        if (血量 <= crackedPoint1)
+        if (Health <= crackedPoint1)
         {
             GetComponent<Animator>().SetBool("Cracked1", false);
         }
-        if (血量 <= crackedPoint2)
+        if (Health <= crackedPoint2)
         {
             GetComponent<Animator>().SetBool("Cracked2", true);
         }
-        if (血量 <= crackedPoint1)
+        if (Health <= crackedPoint1)
         {
             GetComponent<Animator>().SetBool("Cracked1", true);
         }

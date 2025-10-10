@@ -24,13 +24,13 @@ public class HunterZombie : Zombie
     public void GetTarget() {
         TargetPlant = null;
         int bloodMin = 100000;//存储血量的变量
-        for (int i = 0; i < PlantManagement.场上植物.Count; i++) {
+        for (int i = 0; i < PlantManagement.PlantsInFieldList.Count; i++) {
             print("寻找植物");
-            if (PlantManagement.场上植物[i] == null) { continue; }
+            if (PlantManagement.PlantsInFieldList[i] == null) { continue; }
             else {//遍历每个植物的血量
-                if (PlantManagement.场上植物[i].GetComponent<Plant>().血量 <= bloodMin) {
-                    TargetPlant = PlantManagement.场上植物[i].GetComponent<Plant>();
-                    bloodMin = PlantManagement.场上植物[i].GetComponent<Plant>().血量;
+                if (PlantManagement.PlantsInFieldList[i].GetComponent<Plant>().Health <= bloodMin) {
+                    TargetPlant = PlantManagement.PlantsInFieldList[i].GetComponent<Plant>();
+                    bloodMin = PlantManagement.PlantsInFieldList[i].GetComponent<Plant>().Health;
                 }
 
             }

@@ -38,7 +38,7 @@ public class Jalapeno_FireLine : MonoBehaviour
     protected virtual void OnTriggerEnter2D(Collider2D collision) {
         if (Camp == 0 && collision.CompareTag("Zombie")) {//Ö²Îï·½»ðÑæ 
             Zombie zombie = collision.GetComponent<Zombie>();
-            if (zombie!=null&&zombie.pos_row == this.Row && !zombie.debuff.÷È»ó)
+            if (zombie!=null&&zombie.pos_row == this.Row && !zombie.debuff.Charmed)
             {
                 //zombieGenerics.Add(zombie);
                 zombie.beAttacked(Attack, 1, 4);

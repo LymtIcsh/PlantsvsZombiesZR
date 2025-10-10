@@ -22,7 +22,7 @@ public class CardFatherGameObject : MonoBehaviour
     */
     private void Start()
     {
-        if(关卡返回代码.图鉴模式 == 图鉴模式.植物图鉴)
+        if(LevelReturnCode.CurrentIllustratedMode == IllustratedMode.PlantIllustrated)
         {
             isZombie = false;
         }

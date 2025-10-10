@@ -20,7 +20,7 @@ public class HiddenZombie : ForestZombie
 
     protected override void Update()
     {
-        this.buff.ÒşÄä = true;
+        this.buff.Stealth = true;
       
         base.Update();
         if (Timer < HiddingTime)

@@ -350,8 +350,20 @@ public class SteelManager : MonoBehaviour
 
 public enum SteelBonus//钢铁地图加成种类
 {
-    生机,
-    防御,
-    烈火,
-    穿刺
+    /// <summary>
+    /// 生机
+    /// </summary>
+    Vitality,
+    /// <summary>
+    /// 防御
+    /// </summary>
+    Defense,
+    /// <summary>
+    /// 烈火
+    /// </summary>
+    Fire,
+    /// <summary>
+    /// 穿刺
+    /// </summary>
+    Puncture
 }

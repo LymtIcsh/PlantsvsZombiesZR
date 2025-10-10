@@ -3,55 +3,56 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class PlantGrid : MonoBehaviour
 {
     #region 变量
 
-    public int row;   //在第几行
+    public int row; //在第几行
 
-    GameObject toBePlanted;   //To Be Planted对象
-    public GameObject selectedShovel;        //SelectedShovel对象
-    public GameObject selectedGlove;        //Glove对象
+    GameObject toBePlanted; //To Be Planted对象
+    public GameObject selectedShovel; //SelectedShovel对象
+    public GameObject selectedGlove; //Glove对象
 
-    public SpriteRenderer spriteRenderer;  //自身SpriteRenderer组件
+    public SpriteRenderer spriteRenderer; //自身SpriteRenderer组件
 
-    public bool havePlanted = false;   //该格是否已种植植物
-    public GameObject nowPlant;    //当前所种植物
+    public bool havePlanted = false; //该格是否已种植植物
+    public GameObject nowPlant; //当前所种植物
     public GameObject gameManagement;
 
-    public GameObject 种植特效;
-    public GameObject[] 变化特效;
 
-    public string EnvironmentString=null;//用于作为植物变种的字符串，为了以后按格子变换植物，不再只是按地图变换
+    [FormerlySerializedAs("种植特效")] [Header("种植特效")]
+    public GameObject _plantingEffects;
+
+    [FormerlySerializedAs("变化特效")] [Header("变化特效")]
+    public GameObject[] _transformationEffects;
+
+    public string EnvironmentString = null; //用于作为植物变种的字符串，为了以后按格子变换植物，不再只是按地图变换
 
     // 坑洞相关
-    private bool hasCrater = false;             // 标记当前格子上是否存在坑洞
-    private GameObject craterInstance;          // 当前坑洞实例
-
+    private bool hasCrater = false; // 标记当前格子上是否存在坑洞
+    private GameObject craterInstance; // 当前坑洞实例
 
     #endregion
 
     #region 系统消息
-
 
     private void Awake()
     {
         gameManagement = GameManagement.instance.gameObject;
         selectedShovel = gameManagement.GetComponent<GameManagement>().Shovel;
         selectedGlove = gameManagement.GetComponent<GameManagement>().Glove;
-        种植特效 = gameManagement.GetComponent<GameManagement>().种植特效;
-        变化特效 = gameManagement.GetComponent<GameManagement>().变化特效;
+        _plantingEffects = gameManagement.GetComponent<GameManagement>()._plantingEffects;
+        _transformationEffects = gameManagement.GetComponent<GameManagement>()._transformationEffects;
 
         spriteRenderer = GetComponent<SpriteRenderer>();
-
-        
     }
 
     private void Start()
     {
         toBePlanted = ToBePlanted.instance.gameObject;
-        if (EnvironmentString.Length==0)//若不自己填入，默认按照leveldata的环境来
+        if (EnvironmentString.Length == 0) //若不自己填入，默认按照leveldata的环境来
         {
             EnvironmentString = GameManagement.levelData.levelEnviornment;
         }
@@ -60,7 +61,7 @@ public class PlantGrid : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             spriteRenderer.sprite = null;
         }
@@ -68,15 +69,19 @@ public class PlantGrid : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if(hasCrater)
+        if (hasCrater)
         {
             return;
         }
-        if(havePlanted == false && toBePlanted.activeSelf == true && !PlantStructManager.GetPlantStructByName(toBePlanted.GetComponent<ToBePlanted>().plantName).IsPurpleCard)
+
+        if (havePlanted == false && toBePlanted.activeSelf == true && !PlantStructManager
+                .GetPlantStructByName(toBePlanted.GetComponent<ToBePlanted>().plantName).IsPurpleCard)
         {
-            PlantStruct plantStruct = PlantStructManager.GetPlantStructByName(toBePlanted.GetComponent<ToBePlanted>().plantName);
+            PlantStruct plantStruct =
+                PlantStructManager.GetPlantStructByName(toBePlanted.GetComponent<ToBePlanted>().plantName);
             spriteRenderer.sprite = toBePlanted.GetComponent<SpriteRenderer>().sprite;
-            if (GameManagement.levelData.LevelType==levelType.FaithHill && plantStruct.envType != EnvironmentType.Phonograph)
+            if (GameManagement.levelData.LevelType == levelType.FaithHill &&
+                plantStruct.envType != EnvironmentType.Phonograph)
             {
                 List<GameObject> matchingPlants = FindMatchingPlants();
                 Debug.Log(matchingPlants.Count);
@@ -84,16 +89,15 @@ public class PlantGrid : MonoBehaviour
                 {
                     if (!plant.gameObject.GetComponent<PlantGrid>().havePlanted)
                     {
-                        plant.gameObject.GetComponent<PlantGrid>().spriteRenderer.sprite = toBePlanted.GetComponent<SpriteRenderer>().sprite;
+                        plant.gameObject.GetComponent<PlantGrid>().spriteRenderer.sprite =
+                            toBePlanted.GetComponent<SpriteRenderer>().sprite;
                     }
                 }
             }
         }
-        else if(havePlanted == true && selectedGlove.activeSelf == true && StaticThingsManagement.glovePlant != null)
+        else if (havePlanted == true && selectedGlove.activeSelf == true && StaticThingsManagement.glovePlant != null)
         {
-
         }
-
     }
 
     private void OnMouseExit()
@@ -101,7 +105,7 @@ public class PlantGrid : MonoBehaviour
         if (havePlanted == false && toBePlanted.activeSelf == true)
         {
             spriteRenderer.sprite = null;
-            if (GameManagement.levelData.LevelType==levelType.FaithHill)
+            if (GameManagement.levelData.LevelType == levelType.FaithHill)
             {
                 List<GameObject> matchingPlants = FindMatchingPlants();
                 foreach (var plant in matchingPlants)
@@ -128,13 +132,15 @@ public class PlantGrid : MonoBehaviour
         {
             return;
         }
-        PlantStruct plantStruct = PlantStructManager.GetPlantStructByName(toBePlanted.GetComponent<ToBePlanted>().plantName);
+
+        PlantStruct plantStruct =
+            PlantStructManager.GetPlantStructByName(toBePlanted.GetComponent<ToBePlanted>().plantName);
         if (havePlanted == false && toBePlanted.activeSelf == true && plantStruct.IsPurpleCard == false)
         {
-            
             plant(plantStruct.plantName);
             Debug.Log(plantStruct.envType);
-            if (GameManagement.levelData.LevelType == levelType.FaithHill && plantStruct.envType != EnvironmentType.Phonograph)
+            if (GameManagement.levelData.LevelType == levelType.FaithHill &&
+                plantStruct.envType != EnvironmentType.Phonograph)
             {
                 Debug.Log("不是留声机");
                 List<GameObject> matchingPlants = FindMatchingPlants();
@@ -147,17 +153,17 @@ public class PlantGrid : MonoBehaviour
                 }
             }
         }
-        
+
         else if (havePlanted == true && selectedShovel.activeSelf == true)
         {
-            nowPlant.GetComponent<Plant>().die("shovelPlant",nowPlant);
+            nowPlant.GetComponent<Plant>().die("shovelPlant", nowPlant);
         }
-        else if (havePlanted == true && toBePlanted.activeSelf == true && plantStruct.IsPurpleCard == true && plantStruct.BasePlantName == nowPlant.GetComponent<Plant>().plantStruct.plantName)
+        else if (havePlanted == true && toBePlanted.activeSelf == true && plantStruct.IsPurpleCard == true &&
+                 plantStruct.BasePlantName == nowPlant.GetComponent<Plant>().plantStruct.plantName)
         {
             string nowPlantName = nowPlant.name;
             Destroy(nowPlant);
             plant(plantStruct.plantName);
-            
         }
         else if (havePlanted == true && selectedGlove.activeSelf == true && StaticThingsManagement.glovePlant == null)
         {
@@ -169,7 +175,7 @@ public class PlantGrid : MonoBehaviour
         }
         else if (havePlanted == false && selectedGlove.activeSelf == true && StaticThingsManagement.glovePlant != null)
         {
-            if(StaticThingsManagement.glovePlant != null)
+            if (StaticThingsManagement.glovePlant != null)
             {
                 AudioManager.Instance.PlaySoundEffect(32);
                 Transform parentTransform = StaticThingsManagement.glovePlant.transform.parent;
@@ -179,15 +185,15 @@ public class PlantGrid : MonoBehaviour
                 havePlanted = true;
                 nowPlant = StaticThingsManagement.glovePlant;
                 StaticThingsManagement.glovePlant = null;
-                
+
                 nowPlant.transform.position = transform.position + new Vector3(0, 0, 5);
                 nowPlant.GetComponent<Plant>().initialize(
-                this,
-                spriteRenderer.sortingLayerName,
-                spriteRenderer.sortingOrder
+                    this,
+                    spriteRenderer.sortingLayerName,
+                    spriteRenderer.sortingOrder
                 );
 
-                GameManagement.instance.GloveUI倒计时.启动冷却();
+                GameManagement.instance._gloveUICountdown.StartCooldown();
             }
         }
     }
@@ -207,9 +213,9 @@ public class PlantGrid : MonoBehaviour
             return;
         }
 
-        String name =  GetNameFromJson(this.EnvironmentString, Name);
-        
-        spriteRenderer.sprite = null;   //隐藏虚影
+        String name = GetNameFromJson(this.EnvironmentString, Name);
+
+        spriteRenderer.sprite = null; //隐藏虚影
         //if (GameManagement.levelData.LevelType==levelType.FaithHill)
         //{
         //    List<GameObject> matchingPlants = FindMatchingPlants();
@@ -219,48 +225,47 @@ public class PlantGrid : MonoBehaviour
         //    }
         //}
 
-        havePlanted = true;   //已种植物
+        havePlanted = true; //已种植物
 
-            //生成植物
-            nowPlant = Instantiate(Resources.Load<GameObject>("Prefabs/Plants/" + name),
-                                    transform.position + new Vector3(0, 0, 5),
-                                    Quaternion.Euler(0, 0, 0),
-                                    transform);
-            nowPlant.GetComponent<Plant>().initialize(
-                this,
-                spriteRenderer.sortingLayerName,
-                spriteRenderer.sortingOrder
-            );
+        //生成植物
+        nowPlant = Instantiate(Resources.Load<GameObject>("Prefabs/Plants/" + name),
+            transform.position + new Vector3(0, 0, 5),
+            Quaternion.Euler(0, 0, 0),
+            transform);
+        nowPlant.GetComponent<Plant>().initialize(
+            this,
+            spriteRenderer.sortingLayerName,
+            spriteRenderer.sortingOrder
+        );
 
-            if (name != null && name != Name)//植物变化时的特效
+        if (name != null && name != Name) //植物变化时的特效
+        {
+            switch (EnvironmentString)
             {
-                switch (EnvironmentString)
-                {
-                    case "Day":
-                        Instantiate(变化特效[0], nowPlant.transform.position, Quaternion.identity);
-                        break;
-                    case "Forest":
-                        Instantiate(变化特效[1], nowPlant.transform.position, Quaternion.identity);
-                        break;
-                    case "SnowIce":
-                        Instantiate(变化特效[2], nowPlant.transform.position, Quaternion.identity);
-                        break;
-                    case "Forest_P":
+                case "Day":
+                    Instantiate(_transformationEffects[0], nowPlant.transform.position, Quaternion.identity);
+                    break;
+                case "Forest":
+                    Instantiate(_transformationEffects[1], nowPlant.transform.position, Quaternion.identity);
+                    break;
+                case "SnowIce":
+                    Instantiate(_transformationEffects[2], nowPlant.transform.position, Quaternion.identity);
+                    break;
+                case "Forest_P":
                     Debug.Log(EnvironmentString);
-                        Instantiate(变化特效[3], nowPlant.transform.position, Quaternion.identity);
-                        break;
-                    default: break;
-                }
-
+                    Instantiate(_transformationEffects[3], nowPlant.transform.position, Quaternion.identity);
+                    break;
+                default: break;
             }
+        }
 
 
         AudioManager.Instance.PlaySoundEffect(32);
 
         Vector3 currentPosition = transform.position;
         Vector3 spawnPosition = new Vector3(currentPosition.x, currentPosition.y - 0.374f, currentPosition.z);
-        Instantiate(种植特效, spawnPosition, Quaternion.identity);
-      
+        Instantiate(_plantingEffects, spawnPosition, Quaternion.identity);
+
         //向PlantingManagement发送消息以处理UI相关事件
         PlantingManagement.instance.GetComponent<PlantingManagement>().plant();
 
@@ -273,10 +278,9 @@ public class PlantGrid : MonoBehaviour
         //        {
         //            plant.gameObject.GetComponent<PlantGrid>().plantByGod(name,true);
         //        }
-                
+
         //    }
         //}
-
     }
 
     //上帝模式种植，用于关卡开始对话生成参与对话的植物
@@ -287,13 +291,13 @@ public class PlantGrid : MonoBehaviour
             return null;
         }
 
-        havePlanted = true;   //已种植物
+        havePlanted = true; //已种植物
 
         //生成植物
         nowPlant = Instantiate(Resources.Load<GameObject>("Prefabs/Plants/" + name),
-                                          transform.position + new Vector3(0, 0, 5),
-                                          Quaternion.Euler(0, 0, 0),
-                                          transform);
+            transform.position + new Vector3(0, 0, 5),
+            Quaternion.Euler(0, 0, 0),
+            transform);
         nowPlant.GetComponent<Plant>().initialize(
             this,
             spriteRenderer.sortingLayerName,
@@ -303,25 +307,31 @@ public class PlantGrid : MonoBehaviour
         return nowPlant;
     }
 
-    //上帝模式种植，可以进行变种
-    public GameObject plantByGod(string name,bool 可以变种)
+    /// <summary>
+    /// 上帝模式种植，可以进行变种
+    /// </summary>
+    /// <param name="name"></param>
+    /// <param name="CanVary">CanVary</param>
+    /// <returns></returns>
+    public GameObject plantByGod(string name, bool CanVary)
     {
         if (hasCrater)
         {
             return null;
         }
 
-        if (可以变种)
+        if (CanVary)
         {
             name = GetNameFromJson(GameManagement.levelData.levelEnviornment, name);
         }
-        havePlanted = true;   //已种植物
+
+        havePlanted = true; //已种植物
 
         //生成植物
         nowPlant = Instantiate(Resources.Load<GameObject>("Prefabs/Plants/" + name),
-                                          transform.position + new Vector3(0, 0, 5),
-                                          Quaternion.Euler(0, 0, 0),
-                                          transform);
+            transform.position + new Vector3(0, 0, 5),
+            Quaternion.Euler(0, 0, 0),
+            transform);
         nowPlant.GetComponent<Plant>().initialize(
             this,
             spriteRenderer.sortingLayerName,
@@ -331,14 +341,14 @@ public class PlantGrid : MonoBehaviour
         return nowPlant;
     }
 
-    public void plantDie(string reason,GameObject plantObject)
+    public void plantDie(string reason, GameObject plantObject)
     {
-        havePlanted = false;   //已没有植物
-        if(reason == "shovelPlant")
+        havePlanted = false; //已没有植物
+        if (reason == "shovelPlant")
         {
             AudioManager.Instance.PlaySoundEffect(33);
         }
-        else if(reason == "beEated")
+        else if (reason == "beEated")
         {
             AudioManager.Instance.PlaySoundEffect(34);
         }
@@ -388,7 +398,7 @@ public class PlantGrid : MonoBehaviour
     }
 
 
-    List<GameObject> FindMatchingPlants()//用于查找对应列所有植物
+    List<GameObject> FindMatchingPlants() //用于查找对应列所有植物
     {
         List<GameObject> matchingPlants = new List<GameObject>();
 
@@ -412,16 +422,15 @@ public class PlantGrid : MonoBehaviour
             string[] otherParts = obj.name.Split('-');
             if (otherParts.Length == 3)
             {
-                string otherX1 = otherParts[1]; 
+                string otherX1 = otherParts[1];
                 string otherX2 = otherParts[2];
 
                 if (otherX1 == X1 && otherX2 != X2)
                 {
-                    if(obj.GetComponent<PlantGrid>() != null && !obj.GetComponent<PlantGrid>().hasCrater)
+                    if (obj.GetComponent<PlantGrid>() != null && !obj.GetComponent<PlantGrid>().hasCrater)
                     {
                         matchingPlants.Add(obj);
                     }
-                    
                 }
             }
         }
@@ -458,11 +467,10 @@ public class PlantGrid : MonoBehaviour
 
         // 如果没有找到符合的条目，则返回 Raw
         return raw;
-}
+    }
 
     // 用于从 JSON 文件读取 List 数据
 
-   
 
     // 用于初始化一个测试 JSON 文件
     public void WriteTestJson()
@@ -476,7 +484,6 @@ public class PlantGrid : MonoBehaviour
         ListWrapper listWrapper = new ListWrapper { items = dataList };
 
         string json = JsonUtility.ToJson(listWrapper, true);
-
     }
 
     [System.Serializable]
@@ -492,8 +499,6 @@ public class PlantGrid : MonoBehaviour
         public string Enviornment;
         public string Raw;
     }
-
-
 
     #endregion
 }

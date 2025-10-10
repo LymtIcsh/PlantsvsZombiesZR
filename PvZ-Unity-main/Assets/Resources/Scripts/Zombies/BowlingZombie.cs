@@ -8,7 +8,7 @@ public class BowlingZombie : Zombie
     public GameObject ShootPoint;
     protected virtual void fireEvent()
     {
-        if(debuff.÷È»ó)
+        if(debuff.Charmed)
             return;
         BowlingBall_Zombie ball = Instantiate(BowlingBall,
                 ShootPoint.transform.position,

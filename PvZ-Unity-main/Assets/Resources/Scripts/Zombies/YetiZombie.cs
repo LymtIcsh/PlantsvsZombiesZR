@@ -13,7 +13,7 @@ public class YetiZombie : Zombie
 
     public override void beBurned(int damage)
     {
-        ½â³ý¼õËÙ×´Ì¬();
+        RemoveDecelerationState();
         beAttacked(damage*2,1,1);
     }
 

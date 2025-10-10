@@ -65,8 +65,10 @@ public class DetectZombieRegion : MonoBehaviour
         myCollider.offset = new Vector2((rightEdge - leftEdge) / 2, 0);
         myCollider.enabled = true;
     }
-
-    public virtual void 重新计算区域()
+/// <summary>
+/// 重新计算区域
+/// </summary>
+    public virtual void Re_CalculateArea()
     {
         float rightEdge = 5.3f;
         float leftEdge = myPlant.transform.position.x;
@@ -86,7 +88,7 @@ public class DetectZombieRegion : MonoBehaviour
         if (collision.CompareTag("Zombie"))
         {
             Zombie zombieGeneric = collision.GetComponent<Zombie>();
-            if (IsZombieInRow(zombieGeneric) && !zombieGeneric.debuff.魅惑)
+            if (IsZombieInRow(zombieGeneric) && !zombieGeneric.debuff.Charmed)
             {
                 if (!zombiesInRegion.Contains(collision.gameObject))
                     zombiesInRegion.Add(collision.gameObject);

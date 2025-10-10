@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ZombieManagement : MonoBehaviour
 {
     public static ZombieManagement instance;
-    public GameObject 旗帜控制;
+    [FormerlySerializedAs("旗帜控制")] [Header("旗帜控制")]
+    public GameObject flagControl;
 
     //僵尸相关
     private GameObject[] zombies;  // 可生成僵尸列表
@@ -41,7 +43,8 @@ public class ZombieManagement : MonoBehaviour
 
     int lastWaveIndex = -1;//标记，不用管
 
-    public static List<GameObject> 场上僵尸 = new List<GameObject>();
+    [Header("场上僵尸")]
+    public static List<GameObject> zombiesOnField = new List<GameObject>();
     public static List<Zombie> allZombies = new List<Zombie>();//无论是否魅惑  
     public int ZombieCount;
 
@@ -50,7 +53,7 @@ public class ZombieManagement : MonoBehaviour
     private void Awake()
     {
         zombies = Resources.LoadAll<GameObject>("Prefabs/Zombies");
-        场上僵尸.Clear();
+        zombiesOnField.Clear();
         allZombies.Clear();
     }
 
@@ -94,7 +97,7 @@ public class ZombieManagement : MonoBehaviour
         }
         if(totalWaves > 0)
         {
-            GetChildByName(旗帜控制, totalWaves.ToString()).SetActive(true);
+            GetChildByName(flagControl, totalWaves.ToString()).SetActive(true);
         }
         else
         {
@@ -140,7 +143,7 @@ public class ZombieManagement : MonoBehaviour
     private void activateAfterDelay()
     {
         Debug.Log("5");
-        场上僵尸.Clear();
+        zombiesOnField.Clear();
         allZombies.Clear();
         //准备第一波
         Invoke("enterTimeNode", nowNode.deltaTime);
@@ -148,7 +151,7 @@ public class ZombieManagement : MonoBehaviour
 
     private void enterTimeNode()
     {
-        if(!GameManagement.instance.游戏进行)
+        if(!GameManagement.instance.IsGameing)
             return;
         if (nowNode.isWave == false)   //不是一波
         {
@@ -156,7 +159,7 @@ public class ZombieManagement : MonoBehaviour
         }
         else   //是一波
         {
-            if (场上僵尸.Count == 0)   //场上僵尸清零后才产生一波
+            if (zombiesOnField.Count == 0)   //场上僵尸清零后才产生一波
             {
                 waitWave = false;
                 if (nowNode.isFinalWave == false) caption.showWave();
@@ -173,7 +176,7 @@ public class ZombieManagement : MonoBehaviour
     // 把原来的 generateZombies 改为启动一个 Coroutine
     public void generateZombies()
     {
-        if (!this.isActiveAndEnabled || !GameManagement.instance.游戏进行) return;
+        if (!this.isActiveAndEnabled || !GameManagement.instance.IsGameing) return;
 
         // 1. 先算出这波要生成多少只
         int zombiesForThisWave = CalculateZombiesCount();
@@ -341,7 +344,7 @@ public class ZombieManagement : MonoBehaviour
         if (!this.isActiveAndEnabled) return;
 
         var musicControl = GameManagement.instance.background.GetComponent<BGMusicControl>();
-        int zombieCount = 场上僵尸.Count;
+        int zombieCount = zombiesOnField.Count;
 
         if(zombieCount > 3)
         {
@@ -398,8 +401,8 @@ public class ZombieManagement : MonoBehaviour
 
     public void addZombieNumAll(GameObject zombie)
     {
-        场上僵尸.Add(zombie);
-        ZombieCount = 场上僵尸.Count;
+        zombiesOnField.Add(zombie);
+        ZombieCount = zombiesOnField.Count;
         CheckMusic();
     }
 
@@ -409,27 +412,27 @@ public class ZombieManagement : MonoBehaviour
             return;
         try
         {
-            if (zombie != null && this != null && gameObject != null && 场上僵尸 != null)
+            if (zombie != null && this != null && gameObject != null && zombiesOnField != null)
             {
-                场上僵尸.Remove(zombie);
+                zombiesOnField.Remove(zombie);
             }
-            else if (场上僵尸 != null)
+            else if (zombiesOnField != null)
             {
-                场上僵尸.RemoveAll(z => z == null);
+                zombiesOnField.RemoveAll(z => z == null);
             }
             else
             {
                 return;
             }
 
-            ZombieCount = 场上僵尸.Count;
-            if (场上僵尸.Count <= 0)
+            ZombieCount = zombiesOnField.Count;
+            if (zombiesOnField.Count <= 0)
             {
-                for (int i = 0; i < 场上僵尸.Count; i++)
+                for (int i = 0; i < zombiesOnField.Count; i++)
                 {
-                    if (场上僵尸[i] == null)
+                    if (zombiesOnField[i] == null)
                     {
-                        场上僵尸.RemoveAt(i);
+                        zombiesOnField.RemoveAt(i);
                     }
                 }
                 if (waitWave)
@@ -443,7 +446,7 @@ public class ZombieManagement : MonoBehaviour
                 }
                 else if (isOver)
                 {
-                    if (isOver && 场上僵尸.Count == 0)
+                    if (isOver && zombiesOnField.Count == 0)
                     {
                         GameManagement.instance.GetComponent<GameManagement>().win();
                     }

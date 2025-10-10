@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Spikeweed : Plant
 {
-    public bool 是森林地刺 = false;
+    [FormerlySerializedAs("是森林地刺")] [Header("是森林地刺")]
+    public bool isForestThorn = false;
     public int hurt;
     private HashSet<GameObject> zombiesInRange = new HashSet<GameObject>(); // 追踪范围内的僵尸
 
@@ -15,7 +17,7 @@ public class Spikeweed : Plant
         {
             Zombie zombieGeneric = collision.transform.GetComponent<Zombie>();
             //Zombie zombie = collision.transform.GetComponent<Zombie>(); // 获取 Zombie
-            if (zombieGeneric != null && zombieGeneric.pos_row == row && !zombieGeneric.debuff.魅惑)
+            if (zombieGeneric != null && zombieGeneric.pos_row == row && !zombieGeneric.debuff.Charmed)
             {
                 // 检查僵尸是否进入攻击范围
                 zombiesInRange.Add(collision.gameObject); // 添加到范围内的僵尸集合
@@ -64,10 +66,10 @@ public class Spikeweed : Plant
                 if (zombieGeneric != null)
                 {
                     zombieGeneric.beAttacked(hurt,2,2);
-                    if(是森林地刺)
+                    if(isForestThorn)
                     {
                         forestSlider.DecreaseSliderValueSmooth(1);
-                        zombieGeneric.引爆毒伤(1);
+                        zombieGeneric.DetonatePoisonDamage(1);
                     }
                     
                 }
@@ -79,9 +81,9 @@ public class Spikeweed : Plant
         }
     }
 
-    public override void 重新计算攻击碰撞箱()
+    public override void Re_CalculateAttackCollisionBox()
     {
-        base.重新计算攻击碰撞箱();
+        base.Re_CalculateAttackCollisionBox();
         List<GameObject> zombiesCopy = new List<GameObject>(zombiesInRange);//防止在遍历时修改集合产生报错（恼！！！！）
         foreach (GameObject zombie in zombiesCopy)
         {

@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Serialization;
 
 public class ForestPolevaulterZombie : ForestZombie
 {
-    public 撑杆跳子物体翻越判定 子物体;
-    public GameObject 杆子;
+    [FormerlySerializedAs("子物体")] [Header("子物体")]
+    public PoleVaultingDetector subObj;
+    [FormerlySerializedAs("杆子")] [Header("杆子")]
+    public GameObject pole;
     protected override void Start()
     {
         base.Start();
-        子物体.row = pos_row;
+        subObj.row = pos_row;
        
     }
 
@@ -24,7 +27,7 @@ public class ForestPolevaulterZombie : ForestZombie
             {
                 if (collision.GetComponent<Bushes>().pos_row == pos_row)
                 {
-                    切换狂暴状态(true);
+                    SwitchFuriousState(true);
                 }
 
 
@@ -32,39 +35,41 @@ public class ForestPolevaulterZombie : ForestZombie
         }
     }
 
-
-    public void 删除杆子()
+/// <summary>
+/// 删除杆子
+/// </summary>
+    public void RemovePole()
     {
-        Destroy(杆子);
+        Destroy(pole);
     }
     public void DetectIfInterrupt()
     {
-        if (子物体.plantGrid.nowPlant != null && 子物体.plantGrid.nowPlant.GetComponent<Plant>().tallPlant)
+        if (subObj.plantGrid.nowPlant != null && subObj.plantGrid.nowPlant.GetComponent<Plant>().tallPlant)
         {
             myAnimator.SetBool("Interrupt", true);
-            开启碰撞箱();
+            OpenCollider();
             AudioManager.Instance.PlaySoundEffect(52);
         }
     }
 
-    public override void 关闭碰撞箱()
+    public override void CloseCollider()
     {
-        base.关闭碰撞箱();
-        可以啃咬 = false;
+        base.CloseCollider();
+        CanBite = false;
         GetComponentInParent<Animator>().SetBool("Walk", true);
         GetComponentInParent<Animator>().SetBool("Attack", false);
         isEating = false;
-        正在啃咬目标 = null;
+        CurrentBiteTarget = null;
     }
 
-    public override void 开启碰撞箱()
+    public override void OpenCollider()
     {
-        base.开启碰撞箱();
-        可以啃咬 = true;
+        base.OpenCollider();
+        CanBite = true;
         GetComponentInParent<Animator>().SetBool("Walk", true);
         GetComponentInParent<Animator>().SetBool("Attack", false);
         isEating = false;
-        正在啃咬目标 = null;
+        CurrentBiteTarget = null;
     }
 
     protected override void dropArm()
@@ -99,7 +104,7 @@ public class ForestPolevaulterZombie : ForestZombie
         if (!dying)
         {
             dying = true;
-            StartCoroutine(濒死扣血());
+            StartCoroutine(DyingHealthDeduction());
             AudioManager.Instance.PlaySoundEffect(59);
             Transform createPosition = FindInChildren(transform, "Zombie_head");
             SpriteRenderer shouldBeHideSpriteRenderer = createPosition.GetComponent<SpriteRenderer>();
