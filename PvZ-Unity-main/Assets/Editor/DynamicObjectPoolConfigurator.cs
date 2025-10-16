@@ -17,7 +17,7 @@ public class DynamicObjectPoolConfigurator : EditorWindow
 
     private void OnEnable()
     {
-        // ³¢ÊÔÕÒµ½³¡¾°ÖĞµÄ Manager
+        // å°è¯•æ‰¾åˆ°åœºæ™¯ä¸­çš„ Manager
         if (manager == null)
             manager = FindFirstObjectByType<DynamicObjectPoolManager>();
 
@@ -33,14 +33,14 @@ public class DynamicObjectPoolConfigurator : EditorWindow
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("Dynamic Object Pool Configurator", EditorStyles.boldLabel);
 
-        // 1. Ñ¡Ôñ»ò´´½¨ Manager
+        // 1. é€‰æ‹©æˆ–åˆ›å»º Manager
         EditorGUILayout.BeginHorizontal();
         manager = (DynamicObjectPoolManager)EditorGUILayout.ObjectField("Pool Manager", manager, typeof(DynamicObjectPoolManager), true);
         if (manager == null)
         {
             if (GUILayout.Button("Create", GUILayout.MaxWidth(60)))
             {
-                // ´´½¨Ò»¸öĞÂµÄ GameObject ²¢¹ÒÔØ½Å±¾
+                // åˆ›å»ºä¸€ä¸ªæ–°çš„ GameObject å¹¶æŒ‚è½½è„šæœ¬
                 var go = new GameObject("DynamicObjectPoolManager");
                 manager = go.AddComponent<DynamicObjectPoolManager>();
                 Undo.RegisterCreatedObjectUndo(go, "Create Pool Manager");
@@ -51,13 +51,13 @@ public class DynamicObjectPoolConfigurator : EditorWindow
 
         if (manager == null)
         {
-            EditorGUILayout.HelpBox("ÇëÏÈÖ¸¶¨»ò´´½¨Ò»¸ö DynamicObjectPoolManager ÊµÀı¡£", MessageType.Warning);
+            EditorGUILayout.HelpBox("è¯·å…ˆæŒ‡å®šæˆ–åˆ›å»ºä¸€ä¸ª DynamicObjectPoolManager å®ä¾‹ã€‚", MessageType.Warning);
             return;
         }
 
         so.Update();
 
-        // 2. ³ØÁĞ±í
+        // 2. æ± åˆ—è¡¨
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("Pool Items", EditorStyles.boldLabel);
         scrollPos = EditorGUILayout.BeginScrollView(scrollPos);
@@ -87,7 +87,7 @@ public class DynamicObjectPoolConfigurator : EditorWindow
 
         EditorGUILayout.EndScrollView();
 
-        // 3. Ìí¼ÓĞÂÏî
+        // 3. æ·»åŠ æ–°é¡¹
         EditorGUILayout.Space();
         if (GUILayout.Button("Add New Pool Item"))
         {
@@ -98,12 +98,12 @@ public class DynamicObjectPoolConfigurator : EditorWindow
             newItem.FindPropertyRelative("initialSize").intValue = manager.defaultInitialSize;
         }
 
-        // 4. Ó¦ÓÃ & ±£´æ
+        // 4. åº”ç”¨ & ä¿å­˜
         so.ApplyModifiedProperties();
         if (GUI.changed)
         {
             EditorUtility.SetDirty(manager);
-            // Èç¹ûÄãÏëÔÚ¸Ä¶¯Ê±×Ô¶¯³õÊ¼»¯³Ø£¬¿ÉÒÔÈ¡ÏûÏÂÃæ×¢ÊÍ£º
+            // å¦‚æœä½ æƒ³åœ¨æ”¹åŠ¨æ—¶è‡ªåŠ¨åˆå§‹åŒ–æ± ï¼Œå¯ä»¥å–æ¶ˆä¸‹é¢æ³¨é‡Šï¼š
             // manager.InitializePools();
         }
     }

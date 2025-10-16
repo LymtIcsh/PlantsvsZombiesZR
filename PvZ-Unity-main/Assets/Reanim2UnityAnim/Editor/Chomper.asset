@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6640d70be94248d0a11dc97da7ee0bc5, type: 3}
   m_Name: Chomper
   m_EditorClassIdentifier: 
-  filePath: D:/PVZQX1.5_Sourse/PvZ-Unity-main/Assets/Reanim2UnityAnim/reanim_all/Chomper.reanim
+  filePath: E:/Learn/PlantsvsZombiesZR/PvZ-Unity-main/Assets/Reanim2UnityAnim/reanim_all/Chomper.reanim
   center: {x: 0.45, y: 0.4}
   customPartitions: []
+  mode: 0

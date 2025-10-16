@@ -75,6 +75,261 @@ ScriptedImporter:
     compressionQualitySet: 0
     textureFormatSet: 0
     applyGammaDecoding: 0
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  multiSpriteImportData: []
+  layeredSpriteImportData:
+  - name: PeaShooter_frontleaf_lefttip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 153
+      width: 22
+      height: 29
+    spriteID: 983e73758761e3843949003389b672c3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 153}
+    spritePosition: {x: 56, y: 28}
+  - name: PeaShooter_frontleaf_righttip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 190
+      width: 16
+      height: 30
+    spriteID: 7d346042673b95340b6cae94bac81be7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 190}
+    spritePosition: {x: 122, y: 37}
+  - name: PeaShooter_frontleaf
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 75
+      width: 67
+      height: 40
+    spriteID: c410598849f97594db8e9f0909b4785c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 75}
+    spritePosition: {x: 63, y: 30}
+  - name: PeaShooter_backleaf_righttip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 58
+      y: 153
+      width: 12
+      height: 10
+    spriteID: e7401e73dee3ad943b9ec79284d92f2a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 58, y: 153}
+    spritePosition: {x: 106, y: 61}
+  - name: PeaShooter_backleaf_lefttip
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 34
+      y: 174
+      width: 15
+      height: 12
+    spriteID: a861578d6890fbd45be5e5ee058cd252
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 34, y: 174}
+    spritePosition: {x: 67, y: 59}
+  - name: PeaShooter_stalk_bottom
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 123
+      width: 15
+      height: 19
+    spriteID: d1e13c6a8fc41c541bbbe224895d0658
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 123}
+    spritePosition: {x: 87, y: 52}
+  - name: PeaShooter_stalk_top
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 228
+      width: 16
+      height: 13
+    spriteID: 726d8101d93c19543873426615546a23
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 228}
+    spritePosition: {x: 83, y: 67}
+  - name: PeaShooter_backleaf
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 123
+      width: 44
+      height: 22
+    spriteID: d3781a7dd7969a145b8a9d405e5df03b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 123}
+    spritePosition: {x: 71, y: 50}
+  - name: PeaShooter_sprout
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 34
+      y: 153
+      width: 16
+      height: 13
+    spriteID: 17916dc50b52ab747942cede3e27d420
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 34, y: 153}
+    spritePosition: {x: 42, y: 105}
+  - name: PeaShooter_mouth
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 82
+      y: 4
+      width: 35
+      height: 49
+    spriteID: b7eec7bcf5ab39b4a9a2016da38a8458
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 82, y: 4}
+    spritePosition: {x: 116, y: 92}
+  - name: "\u56FE\u5C42 1"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 70
+      height: 63
+    spriteID: 0f94c379c94b0ea4887a5006aecfeb00
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 58, y: 76}
   spriteImportData:
   - name: 
     originalName: 
@@ -97,7 +352,6 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
     spritePosition: {x: 0, y: 0}
-  mosaicSpriteImportData: []
   rigSpriteImportData:
   - name: PeaShooter_frontleaf_lefttip
     originalName: 
@@ -330,15 +584,16 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
     spritePosition: {x: 58, y: 76}
-  characterData:
+  sharedRigSpriteImportData: []
+  mosaicSpriteImportData: []
+  sharedRigCharacterData:
     bones: []
     parts: []
     dimension: {x: 0, y: 0}
     characterGroups: []
     pivot: {x: 0, y: 0}
     boneReadOnly: 0
-  sharedRigSpriteImportData: []
-  sharedRigCharacterData:
+  characterData:
     bones: []
     parts: []
     dimension: {x: 0, y: 0}
@@ -355,13 +610,157 @@ ScriptedImporter:
   generatePhysicsShape: 0
   paperDollMode: 0
   keepDupilcateSpriteName: 1
-  skeletonAssetReferenceID: 
   padding: 4
   spriteSizeExpand: 0
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
   spriteCategoryList:
     categories: []
   spritePackingTag: 
   resliceFromLayer: 0
+  pSDLayerImportSetting: []
+  psdLayers:
+  - name: "\u7EC4 1"
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 004016ca529ba384598559fc7345fe1a
+    layerID: 27
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: PeaShooter_frontleaf_lefttip
+    spriteName: PeaShooter_frontleaf_lefttip
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 983e73758761e3843949003389b672c3
+    layerID: 10
+    mosaicPosition: {x: 4, y: 153}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PeaShooter_frontleaf_righttip
+    spriteName: PeaShooter_frontleaf_righttip
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 7d346042673b95340b6cae94bac81be7
+    layerID: 9
+    mosaicPosition: {x: 4, y: 190}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PeaShooter_frontleaf
+    spriteName: PeaShooter_frontleaf
+    isGroup: 0
+    parentIndex: 0
+    spriteID: c410598849f97594db8e9f0909b4785c
+    layerID: 8
+    mosaicPosition: {x: 4, y: 75}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PeaShooter_backleaf_righttip
+    spriteName: PeaShooter_backleaf_righttip
+    isGroup: 0
+    parentIndex: 0
+    spriteID: e7401e73dee3ad943b9ec79284d92f2a
+    layerID: 13
+    mosaicPosition: {x: 58, y: 153}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PeaShooter_backleaf_lefttip
+    spriteName: PeaShooter_backleaf_lefttip
+    isGroup: 0
+    parentIndex: 0
+    spriteID: a861578d6890fbd45be5e5ee058cd252
+    layerID: 12
+    mosaicPosition: {x: 34, y: 174}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PeaShooter_blink2
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d78d4dca092169b46a3b595ff88340e0
+    layerID: 15
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: PeaShooter_blink1
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c91f75230fcf1b24e8691d21af0c1e1c
+    layerID: 14
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: PeaShooter_stalk_bottom
+    spriteName: PeaShooter_stalk_bottom
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d1e13c6a8fc41c541bbbe224895d0658
+    layerID: 7
+    mosaicPosition: {x: 56, y: 123}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PeaShooter_stalk_top
+    spriteName: PeaShooter_stalk_top
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 726d8101d93c19543873426615546a23
+    layerID: 6
+    mosaicPosition: {x: 4, y: 228}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PeaShooter_backleaf
+    spriteName: PeaShooter_backleaf
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d3781a7dd7969a145b8a9d405e5df03b
+    layerID: 11
+    mosaicPosition: {x: 4, y: 123}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PeaShooter_sprout
+    spriteName: PeaShooter_sprout
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 17916dc50b52ab747942cede3e27d420
+    layerID: 5
+    mosaicPosition: {x: 34, y: 153}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: PeaShooter_mouth
+    spriteName: PeaShooter_mouth
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b7eec7bcf5ab39b4a9a2016da38a8458
+    layerID: 4
+    mosaicPosition: {x: 82, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "\u56FE\u5C42 1"
+    spriteName: "\u56FE\u5C42 1"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0f94c379c94b0ea4887a5006aecfeb00
+    layerID: 2
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   mosaicPSDLayers: []
   rigPSDLayers:
   - name: "\u7EC4 1"
@@ -505,7 +904,6 @@ ScriptedImporter:
     isImported: 1
     isVisible: 1
   sharedRigPSDLayers: []
-  pSDLayerImportSetting: []
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   spriteSizeExpandChanged: 0

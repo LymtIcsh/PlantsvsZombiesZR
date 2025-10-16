@@ -75,6 +75,492 @@ ScriptedImporter:
     compressionQualitySet: 0
     textureFormatSet: 0
     applyGammaDecoding: 0
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  multiSpriteImportData: []
+  layeredSpriteImportData:
+  - name: Zombie_gargantuar_innerarm_thumb
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 895
+      y: 362
+      width: 75
+      height: 104
+    spriteID: d3f6ecdcb73d54044a550a8abe42bf35
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 895, y: 362}
+    spritePosition: {x: 718, y: 638}
+  - name: Zombie_gargantuar_outerarm_hand
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 542
+      y: 1596
+      width: 192
+      height: 170
+    spriteID: ea7208b631c2f7a44a428a03fe259124
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 542, y: 1596}
+    spritePosition: {x: 934, y: 551}
+  - name: Zombie_gargantuar_outerarm_lower
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1083
+      width: 217
+      height: 258
+    spriteID: 0d8889324b4b22a42b2ccabbe10b54f3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1083}
+    spritePosition: {x: 978, y: 648}
+  - name: Zombie_gargantuar_outerarm_upper
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1349
+      width: 233
+      height: 212
+    spriteID: 895c6302e46081b4ca43e05cb4fb9737
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1349}
+    spritePosition: {x: 994, y: 794}
+  - name: Zombie_gargantuar_telephonepole
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 721
+      height: 350
+    spriteID: f29d9e974a7e33a428acc2a52b455e87
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 441, y: 550}
+  - name: Zombie_gargantuar_jaw
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 820
+      y: 508
+      width: 150
+      height: 96
+    spriteID: 3f9916f7eed541d478e039f2e5ccd507
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 820, y: 508}
+    spritePosition: {x: 662, y: 811}
+  - name: Zombie_gargantuar_head
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 733
+      y: 4
+      width: 220
+      height: 283
+    spriteID: 86a2b76cb4de9a545b0a557cfab8f118
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 733, y: 4}
+    spritePosition: {x: 627, y: 849}
+  - name: Zombie_gargantuar_rope
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 800
+      width: 304
+      height: 275
+    spriteID: 139de1f74e2118c4d9ade46d47ec02d7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 800}
+    spritePosition: {x: 928, y: 746}
+  - name: Zombie_gargantuar_whiterope
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 733
+      y: 295
+      width: 208
+      height: 54
+    spriteID: 1ca6f511be9e05243b1db30affdcdf4d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 733, y: 295}
+    spritePosition: {x: 864, y: 1046}
+  - name: Zombie_gargantuar_body1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 362
+      width: 530
+      height: 430
+    spriteID: 68a3483cf00063b4aa30fa2febe45562
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 362}
+    spritePosition: {x: 697, y: 681}
+  - name: Zombie_gargantuar_trashcan1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 542
+      y: 1188
+      width: 171
+      height: 208
+    spriteID: cb1c7a1c2f6e94142bfdcabf132a59fc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 542, y: 1188}
+    spritePosition: {x: 1061, y: 900}
+  - name: Zombie_gargantuar_trashcan2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 542
+      y: 1952
+      width: 143
+      height: 83
+    spriteID: 3692c14777ba98b458b874e58524a739
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 542, y: 1952}
+    spritePosition: {x: 1064, y: 1052}
+  - name: Zombie_gargantuar_outerleg_upper
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 316
+      y: 800
+      width: 204
+      height: 154
+    spriteID: f2ac2c30d7f363e48aad152be3c227fd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 316, y: 800}
+    spritePosition: {x: 962, y: 572}
+  - name: Zombie_gargantuar_outerleg_lower
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 542
+      y: 843
+      width: 233
+      height: 158
+    spriteID: 6df650237bc94d44ab974c2e87f56404
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 542, y: 843}
+    spritePosition: {x: 962, y: 476}
+  - name: Zombie_gargantuar_foot
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1811
+      width: 270
+      height: 152
+    spriteID: ff2cea4531ea5c243adf1239d2e6d3bc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1811}
+    spritePosition: {x: 905, y: 373}
+  - name: Zombie_gargantuar_body2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 542
+      y: 362
+      width: 345
+      height: 138
+    spriteID: ab971188db4eb3d438a89ff3a81375ad
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 542, y: 362}
+    spritePosition: {x: 850, y: 625}
+  - name: Zombie_gargantuar_innerleg_upper
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 542
+      y: 1009
+      width: 213
+      height: 171
+    spriteID: a9876246e4f7a7b46b8993a5839f1657
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 542, y: 1009}
+    spritePosition: {x: 851, y: 563}
+  - name: Zombie_gargantuar_innerleg_lower
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 542
+      y: 668
+      width: 233
+      height: 167
+    spriteID: 60f66f5ad71c8804282e1e804dc6e00e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 542, y: 668}
+    spritePosition: {x: 851, y: 471}
+  - name: Zombie_gargantuar_foot
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 542
+      y: 508
+      width: 270
+      height: 152
+    spriteID: 6a9a79f826241e443bf3714c16f3270e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 542, y: 508}
+    spritePosition: {x: 760, y: 395}
+  - name: Zombie_gargantuar_innerarm_hand
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 542
+      y: 1774
+      width: 187
+      height: 170
+    spriteID: 4dc65f7ec7b0f55498e33ba4c56fb9c9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 542, y: 1774}
+    spritePosition: {x: 683, y: 598}
+  - name: Zombie_gargantuar_innerarm_lower
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 542
+      y: 1404
+      width: 188
+      height: 184
+    spriteID: f21794dd247ba824eb0dd5cc269135d6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 542, y: 1404}
+    spritePosition: {x: 707, y: 675}
+  - name: Zombie_gargantuar_innerarm_upper
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1569
+      width: 208
+      height: 234
+    spriteID: bc94343d3d060d349a1e8ff353c541ff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1569}
+    spritePosition: {x: 697, y: 708}
   spriteImportData:
   - name: 
     originalName: 
@@ -97,7 +583,6 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
     spritePosition: {x: 0, y: 0}
-  mosaicSpriteImportData: []
   rigSpriteImportData:
   - name: Zombie_gargantuar_innerarm_thumb
     originalName: 
@@ -561,6 +1046,15 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 1569}
     spritePosition: {x: 697, y: 708}
+  sharedRigSpriteImportData: []
+  mosaicSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
   characterData:
     bones: []
     parts:
@@ -766,14 +1260,6 @@ ScriptedImporter:
     characterGroups: []
     pivot: {x: 0.5, y: 0}
     boneReadOnly: 0
-  sharedRigSpriteImportData: []
-  sharedRigCharacterData:
-    bones: []
-    parts: []
-    dimension: {x: 0, y: 0}
-    characterGroups: []
-    pivot: {x: 0, y: 0}
-    boneReadOnly: 0
   platformSettings: []
   mosaicLayers: 1
   characterMode: 1
@@ -784,13 +1270,237 @@ ScriptedImporter:
   generatePhysicsShape: 0
   paperDollMode: 0
   keepDupilcateSpriteName: 1
-  skeletonAssetReferenceID: 
   padding: 4
   spriteSizeExpand: 0
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
   spriteCategoryList:
     categories: []
   spritePackingTag: 
   resliceFromLayer: 0
+  pSDLayerImportSetting: []
+  psdLayers:
+  - name: Zombie_gargantuar_innerarm_thumb
+    spriteName: Zombie_gargantuar_innerarm_thumb
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d3f6ecdcb73d54044a550a8abe42bf35
+    layerID: 13
+    mosaicPosition: {x: 895, y: 362}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_gargantuar_outerarm_hand
+    spriteName: Zombie_gargantuar_outerarm_hand
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ea7208b631c2f7a44a428a03fe259124
+    layerID: 18
+    mosaicPosition: {x: 542, y: 1596}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_gargantuar_outerarm_lower
+    spriteName: Zombie_gargantuar_outerarm_lower
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0d8889324b4b22a42b2ccabbe10b54f3
+    layerID: 19
+    mosaicPosition: {x: 4, y: 1083}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_gargantuar_outerarm_upper
+    spriteName: Zombie_gargantuar_outerarm_upper
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 895c6302e46081b4ca43e05cb4fb9737
+    layerID: 21
+    mosaicPosition: {x: 4, y: 1349}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_gargantuar_telephonepole
+    spriteName: Zombie_gargantuar_telephonepole
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f29d9e974a7e33a428acc2a52b455e87
+    layerID: 25
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_gargantuar_jaw
+    spriteName: Zombie_gargantuar_jaw
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3f9916f7eed541d478e039f2e5ccd507
+    layerID: 17
+    mosaicPosition: {x: 820, y: 508}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_gargantuar_head
+    spriteName: Zombie_gargantuar_head
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 86a2b76cb4de9a545b0a557cfab8f118
+    layerID: 9
+    mosaicPosition: {x: 733, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_gargantuar_rope
+    spriteName: Zombie_gargantuar_rope
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 139de1f74e2118c4d9ade46d47ec02d7
+    layerID: 24
+    mosaicPosition: {x: 4, y: 800}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_gargantuar_whiterope
+    spriteName: Zombie_gargantuar_whiterope
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1ca6f511be9e05243b1db30affdcdf4d
+    layerID: 28
+    mosaicPosition: {x: 733, y: 295}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_gargantuar_body1
+    spriteName: Zombie_gargantuar_body1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 68a3483cf00063b4aa30fa2febe45562
+    layerID: 3
+    mosaicPosition: {x: 4, y: 362}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_gargantuar_trashcan1
+    spriteName: Zombie_gargantuar_trashcan1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: cb1c7a1c2f6e94142bfdcabf132a59fc
+    layerID: 26
+    mosaicPosition: {x: 542, y: 1188}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_gargantuar_trashcan2
+    spriteName: Zombie_gargantuar_trashcan2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3692c14777ba98b458b874e58524a739
+    layerID: 27
+    mosaicPosition: {x: 542, y: 1952}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_gargantuar_outerleg_upper
+    spriteName: Zombie_gargantuar_outerleg_upper
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f2ac2c30d7f363e48aad152be3c227fd
+    layerID: 23
+    mosaicPosition: {x: 316, y: 800}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_gargantuar_outerleg_lower
+    spriteName: Zombie_gargantuar_outerleg_lower
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6df650237bc94d44ab974c2e87f56404
+    layerID: 22
+    mosaicPosition: {x: 542, y: 843}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_gargantuar_foot
+    spriteName: Zombie_gargantuar_foot
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ff2cea4531ea5c243adf1239d2e6d3bc
+    layerID: 29
+    mosaicPosition: {x: 4, y: 1811}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_gargantuar_body2
+    spriteName: Zombie_gargantuar_body2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ab971188db4eb3d438a89ff3a81375ad
+    layerID: 6
+    mosaicPosition: {x: 542, y: 362}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_gargantuar_innerleg_upper
+    spriteName: Zombie_gargantuar_innerleg_upper
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a9876246e4f7a7b46b8993a5839f1657
+    layerID: 16
+    mosaicPosition: {x: 542, y: 1009}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_gargantuar_innerleg_lower
+    spriteName: Zombie_gargantuar_innerleg_lower
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 60f66f5ad71c8804282e1e804dc6e00e
+    layerID: 15
+    mosaicPosition: {x: 542, y: 668}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_gargantuar_foot
+    spriteName: Zombie_gargantuar_foot
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6a9a79f826241e443bf3714c16f3270e
+    layerID: 7
+    mosaicPosition: {x: 542, y: 508}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_gargantuar_innerarm_hand
+    spriteName: Zombie_gargantuar_innerarm_hand
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4dc65f7ec7b0f55498e33ba4c56fb9c9
+    layerID: 11
+    mosaicPosition: {x: 542, y: 1774}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_gargantuar_innerarm_lower
+    spriteName: Zombie_gargantuar_innerarm_lower
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f21794dd247ba824eb0dd5cc269135d6
+    layerID: 12
+    mosaicPosition: {x: 542, y: 1404}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Zombie_gargantuar_innerarm_upper
+    spriteName: Zombie_gargantuar_innerarm_upper
+    isGroup: 0
+    parentIndex: -1
+    spriteID: bc94343d3d060d349a1e8ff353c541ff
+    layerID: 14
+    mosaicPosition: {x: 4, y: 1569}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   mosaicPSDLayers: []
   rigPSDLayers:
   - name: Zombie_gargantuar_innerarm_thumb
@@ -1014,7 +1724,6 @@ ScriptedImporter:
     isImported: 1
     isVisible: 1
   sharedRigPSDLayers: []
-  pSDLayerImportSetting: []
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   spriteSizeExpandChanged: 0

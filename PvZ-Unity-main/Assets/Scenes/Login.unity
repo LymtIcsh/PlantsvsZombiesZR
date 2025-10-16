@@ -2703,8 +2703,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1527935922}
-        m_TargetAssemblyTypeName: "\u5151\u6362\u7801, Assembly-CSharp"
-        m_MethodName: "\u9690\u85CF\u81EA\u8EAB"
+        m_TargetAssemblyTypeName: RedemptionCodeManager, Assembly-CSharp
+        m_MethodName: HideSelf
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6304,7 +6304,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1071931600}
   m_Direction: 2
   m_Value: 0.009259259
-  m_Size: 0.9999879
+  m_Size: 0.009258998
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6914,8 +6914,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 562701630}
-        m_TargetAssemblyTypeName: "\u5C0F\u6E38\u620F\u6A21\u5F0F, Assembly-CSharp"
-        m_MethodName: "\u88AB\u70B9\u51FB"
+        m_TargetAssemblyTypeName: MiniGameMode, Assembly-CSharp
+        m_MethodName: OnClickEvent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7808,8 +7808,8 @@ MonoBehaviour:
   hasmakerList: 0
   GameDifficultyText: {fileID: 599648604}
   GameDifficultyText2: {fileID: 0}
-  "\u53EF\u4EE5\u8BBE\u7F6E\u6027\u80FD\u4F18\u5316\u6A21\u5F0F": 1
-  "\u6027\u80FD\u4F18\u5316\u6309\u94AE": {fileID: 1366055298}
+  canSetPerformanceMode: 1
+  performanceToggle: {fileID: 1366055298}
   targetCanvas: {fileID: 0}
 --- !u!1 &584760271
 GameObject:
@@ -14211,7 +14211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91194123fc091f34f8d677f501574ab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "\u906E\u7F69": {fileID: 2113390355}
+  maskRenderer: {fileID: 2113390355}
 --- !u!114 &1193643004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14258,8 +14258,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1193643002}
-        m_TargetAssemblyTypeName: "\u73AF\u5883\u6A21\u5F0F, Assembly-CSharp"
-        m_MethodName: "\u88AB\u70B9\u51FB"
+        m_TargetAssemblyTypeName: EnvironmentMode, Assembly-CSharp
+        m_MethodName: OnClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17992,7 +17992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a6dfb2bb3593334c8a105f2f3557c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "\u80CC\u666F": {fileID: 1714815775}
+  background: {fileID: 1714815775}
   ScrollRect: {fileID: 1276539433}
 --- !u!114 &1467801655
 MonoBehaviour:
@@ -18140,7 +18140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1483591131
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18645,7 +18645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputField: {fileID: 192602532}
-  "\u786E\u5B9A": {fileID: 842614950}
+  confirmButton: {fileID: 842614950}
 --- !u!1 &1538136907
 GameObject:
   m_ObjectHideFlags: 0
@@ -19543,7 +19543,7 @@ MonoBehaviour:
   updateText: {fileID: 2093462140}
   cancelButton: {fileID: 88373912}
   reloadButton: {fileID: 1366866475}
-  "\u66F4\u65B0": {fileID: 1071175569}
+  updateBtn: {fileID: 1071175569}
 --- !u!1 &1613042744
 GameObject:
   m_ObjectHideFlags: 0
@@ -20701,7 +20701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a6dfb2bb3593334c8a105f2f3557c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "\u80CC\u666F": {fileID: 0}
+  background: {fileID: 0}
   ScrollRect: {fileID: 0}
 --- !u!1 &1715795846
 GameObject:
@@ -20852,8 +20852,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1527935922}
-        m_TargetAssemblyTypeName: "\u5151\u6362\u7801, Assembly-CSharp"
-        m_MethodName: "\u663E\u793A\u81EA\u8EAB"
+        m_TargetAssemblyTypeName: RedemptionCodeManager, Assembly-CSharp
+        m_MethodName: ShowSelf
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20878,7 +20878,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1721508482
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22806,10 +22806,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   saveDropdown: {fileID: 1444110144}
   loadSaveButton: {fileID: 857837462}
-  "\u5220\u9664\u5B58\u6863": {fileID: 1708722662}
-  "\u9009\u62E9\u8D26\u6237": {fileID: 1483591130}
-  "\u663E\u793A\u7528\u6237\u540D": {fileID: 470314677}
-  "\u5192\u9669\u6A21\u5F0F": {fileID: 2016864251}
+  DeleteSaveButton: {fileID: 1708722662}
+  SelectAccountPanel: {fileID: 1483591130}
+  DisplayUsername: {fileID: 470314677}
+  AdventureModeComponent: {fileID: 2016864251}
 --- !u!114 &1869198832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22822,10 +22822,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 956aba8c56855644d988d2ba4d324e59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "\u521B\u5EFA\u754C\u9762": {fileID: 89311338}
-  "\u6253\u5F00\u521B\u5EFA\u754C\u9762": {fileID: 1752493189}
-  "\u521B\u5EFA": {fileID: 706976188}
-  "\u53D6\u6D88": {fileID: 51434721}
+  CreatePanel: {fileID: 89311338}
+  OpenCreatePanelButton: {fileID: 1752493189}
+  CreateButton: {fileID: 706976188}
+  CancelButton: {fileID: 51434721}
   inputField: {fileID: 1354291526}
 --- !u!114 &1869198833
 MonoBehaviour:
@@ -22839,12 +22839,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f362af8a245994bbfcd86b6b859517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "\u5220\u9664\u5B58\u6863\u754C\u9762": {fileID: 1784913322}
-  "\u5220\u9664\u5B58\u6863\u540D": 
-  "\u5B58\u6863\u540D\u663E\u793A": {fileID: 1153179403}
-  "\u786E\u5B9A": {fileID: 1570090954}
-  "\u53D6\u6D88": {fileID: 1288469018}
-  "\u5192\u9669\u6A21\u5F0F": {fileID: 2016864251}
+  DeletePanel: {fileID: 1784913322}
+  SaveNameToDelete: 
+  SaveNameDisplay: {fileID: 1153179403}
+  ConfirmButton: {fileID: 1570090954}
+  CancelButton: {fileID: 1288469018}
+  AdventureModeComponent: {fileID: 2016864251}
 --- !u!1 &1875850594
 GameObject:
   m_ObjectHideFlags: 0
@@ -24907,17 +24907,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa054839c9254b4eab4f9f168f8b0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "\u5192\u9669\u4EA4\u4E92": {fileID: 2016864257}
-  "\u5192\u9669\u663E\u793A": {fileID: 2016864256}
-  "\u5927\u5173\u6587\u5B57": {fileID: 1138746389}
-  "\u5F00\u59CB\u5192\u9669": {fileID: -810181000384032170, guid: 97c7c23db58d3304d98571d649209fd3, type: 3}
-  "\u5F00\u59CB\u5192\u9669\u9AD8\u4EAE": {fileID: 8173730421063992857, guid: 4df8e5745ab4ce2459069eeb78b7f630, type: 3}
-  "\u5192\u9669": {fileID: -7641906616514644305, guid: e0500f9578a967b45851b94052dd6059, type: 3}
-  "\u5192\u9669\u9AD8\u4EAE": {fileID: -6962710108252089136, guid: e0500f9578a967b45851b94052dd6059, type: 3}
-  "\u50F5\u5C38\u624B": {fileID: 1703345710}
+  adventureInteraction: {fileID: 2016864257}
+  adventureDisplay: {fileID: 2016864256}
+  levelText: {fileID: 1138746389}
+  startAdventureSprite: {fileID: -810181000384032170, guid: 97c7c23db58d3304d98571d649209fd3, type: 3}
+  startAdventureHighlightSprite: {fileID: 8173730421063992857, guid: 4df8e5745ab4ce2459069eeb78b7f630, type: 3}
+  adventureSprite: {fileID: -7641906616514644305, guid: e0500f9578a967b45851b94052dd6059, type: 3}
+  adventureHighlightSprite: {fileID: -6962710108252089136, guid: e0500f9578a967b45851b94052dd6059, type: 3}
+  zombieHand: {fileID: 1703345710}
   animator: {fileID: 2016864253}
-  "\u95F4\u9694\u65F6\u95F4": 2
-  "\u68C0\u6D4B\u5173\u5361": 010000000200000003000000040000000500000006000000
+  intervalTime: 2
+  levelsToCheck: 010000000200000003000000040000000500000006000000
 --- !u!95 &2016864253
 Animator:
   serializedVersion: 7
@@ -24999,8 +24999,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2016864251}
-        m_TargetAssemblyTypeName: "\u5192\u9669\u6A21\u5F0F, Assembly-CSharp"
-        m_MethodName: "\u70B9\u51FB\u4E8B\u4EF6\u8C03\u7528"
+        m_TargetAssemblyTypeName: AdventureMode, Assembly-CSharp
+        m_MethodName: OnClickEvent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -344,7 +344,7 @@ Animator:
   m_GameObject: {fileID: 878373668625745429}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c739f0b44203e824cb9305a5772ce3be, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1b364a74aaa3c4248ace77110137c028, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -419,21 +419,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcb591eec9c82144a9959ecb7b39a9a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "\u53EF\u4EE5\u5543\u54AC": 1
-  "\u94C1\u95E8\u7C7B\u50F5\u5C38": 0
+  CanBite: 1
+  IsIronDoorZombie: 0
   zombieID: 1
-  "\u57FA\u7840\u50F5\u5C38\u7C7B\u578B": 0
+  BaseZombieType: 0
   pos_row: 0
-  "\u8840\u91CF": 0
-  "\u6700\u5927\u8840\u91CF": 0
+  Health: 0
+  MaxHealth: 0
   level1ArmorHealth: 0
   level1ArmorMaxHealth: 0
   level2ArmorHealth: 0
   level2ArmorMaxHealth: 0
-  "\u4E8C\u7C7B\u534A\u7834\u635F\u5DF2\u7ECF\u5207\u6362": 0
-  "\u4E8C\u7C7B\u5B8C\u5168\u7834\u635F\u5DF2\u7ECF\u5207\u6362": 0
+  Level2ArmorHalfDamagedSwitched: 0
+  Level2ArmorFullyDamagedSwitched: 0
   alive: 1
-  "\u653B\u51FB\u529B": 0
+  AttackPower: 0
   audioIndex: 1
   highlightMaterial: {fileID: 2100000, guid: 29862a078a525a649b6dbb7f687adefe, type: 2}
   allRenderers: []
@@ -452,10 +452,10 @@ MonoBehaviour:
   dontHaveDropHead: 0
   isEating: 0
   zombieForestSlider: {fileID: 0}
-  "\u6B63\u5728\u5543\u54AC\u76EE\u6807": {fileID: 0}
+  CurrentBiteTarget: {fileID: 0}
   dying: 0
   DoorSprite: []
-  "_\u73AF\u5883\u901F\u5EA6\u4E58\u533A": 1
+  _environmentSpeedZone: 1
   newZombie: 1
 --- !u!50 &5118041187005364144
 Rigidbody2D:

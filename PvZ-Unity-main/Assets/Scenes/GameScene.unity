@@ -1193,7 +1193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Shovel: {fileID: 152784525}
   Glove: {fileID: 1418652711}
-  "UI\u63A7\u5236\u5668": {fileID: 1473826203}
+  UIController: {fileID: 1473826203}
 --- !u!4 &90717513
 Transform:
   m_ObjectHideFlags: 0
@@ -1301,10 +1301,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glove: {fileID: 272491109}
-  "\u5012\u8BA1\u65F6\u65F6\u957F": 5
-  "\u5012\u8BA1\u65F6\u906E\u7F69": {fileID: 1211437263}
-  "\u80FD\u5426\u4F7F\u7528": {fileID: 77801294}
-  "\u51B7\u5374\u4E2D": 0
+  countdownDuration: 5
+  countdownMask: {fileID: 1211437263}
+  usabilityIndicator: {fileID: 77801294}
+  isCoolingDown: 0
 --- !u!1 &92504542
 GameObject:
   m_ObjectHideFlags: 0
@@ -7378,13 +7378,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2afd9082a39c5514b97f47665e80f6cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "\u79CD\u690D\u7279\u6548": {fileID: 1120213878916881, guid: a08155416c093c84b938da3decf4dff2, type: 3}
-  "\u53D8\u5316\u7279\u6548":
+  _plantingEffects: {fileID: 1120213878916881, guid: a08155416c093c84b938da3decf4dff2, type: 3}
+  _transformationEffects:
   - {fileID: 2964950061653982280, guid: 4a055ac9507831e40ba0bd2949d0296c, type: 3}
   - {fileID: 2964950061653982280, guid: 151c5fb04f2c58c44883ed7112e00f1d, type: 3}
   - {fileID: 2964950061653982280, guid: a5286c65ee91f144582cb04c0102d384, type: 3}
   - {fileID: 2964950061653982280, guid: 66bcc599e1da7764d8490ee8997db1b7, type: 3}
-  "\u6E38\u620F\u8FDB\u884C": 0
+  IsGameing: 0
   lockMusic: 0
   firstAwakeList:
   - {fileID: 1858417948}
@@ -7405,18 +7405,18 @@ MonoBehaviour:
   melonPollingObject: {fileID: 0}
   Glove: {fileID: 1418652711}
   Shovel: {fileID: 152784525}
-  "\u4E00\u884C\u5730\u56FE": {fileID: 5494014196446168521, guid: e1663eabd68613e41ae8366a82bcdaff, type: 3}
+  aRowMaps: {fileID: 5494014196446168521, guid: e1663eabd68613e41ae8366a82bcdaff, type: 3}
   forestSlider: {fileID: 1605068837}
   zombieForestSlider: {fileID: 778132246}
   SunText: {fileID: 1874403010}
-  "\u6811\u6869\u7684\u68A6\u60F3\u63A7\u5236\u5668": {fileID: 1536766031}
-  "\u6811\u6869\u7684\u68A6\u60F3\u624B\u673A\u9002\u914D": {fileID: 1062820188}
-  "GloveUI\u5012\u8BA1\u65F6": {fileID: 91524422}
-  "\u5361\u69FD": {fileID: 148151037}
+  TreeStumpDreamController: {fileID: 1536766031}
+  TreeStumpDreamMobilePhoneCompatibility: {fileID: 1062820188}
+  _gloveUICountdown: {fileID: 91524422}
+  cardSlot: {fileID: 148151037}
   TheDreamOfPotatoMine:
   - {fileID: 1791714342}
   - {fileID: 1777517221}
-  "\u540D\u79F0\u663E\u793A": {fileID: 1769034738}
+  nameShowText: {fileID: 1769034738}
   sunManagement: {fileID: 358259042}
 --- !u!4 &717509467
 Transform:
@@ -12175,10 +12175,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardGroup: {fileID: 1680410484}
-  "\u5F85\u9009\u62E9": {fileID: 66443075}
   seedBank: {fileID: 98023875}
-  "\u5361\u7247\u80CC\u666F": {fileID: 370657673577625092, guid: 9cc9a1b0f2830f64ca6cc3fcae2eaef0, type: 3}
-  "\u5361\u7247": {fileID: 3579655000015097555, guid: 47c23fef964177a46abb386ce37a29db, type: 3}
+  _cardBackground: {fileID: 370657673577625092, guid: 9cc9a1b0f2830f64ca6cc3fcae2eaef0, type: 3}
+  _card: {fileID: 3579655000015097555, guid: 47c23fef964177a46abb386ce37a29db, type: 3}
   cardWidth: 43
   additionalWidth: 78
   gameManagement: {fileID: 717509465}
@@ -14228,7 +14227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gloveUI: {fileID: 272491109}
   GloveUI: {fileID: 91524422}
-  "\u6293\u53D6\u56FE\u50CF": {fileID: 1122882385}
+  grabImage: {fileID: 1122882385}
 --- !u!114 &1418652717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14658,8 +14657,8 @@ MonoBehaviour:
   hasmakerList: 0
   GameDifficultyText: {fileID: 41260073}
   GameDifficultyText2: {fileID: 1990559227}
-  "\u53EF\u4EE5\u8BBE\u7F6E\u6027\u80FD\u4F18\u5316\u6A21\u5F0F": 0
-  "\u6027\u80FD\u4F18\u5316\u6309\u94AE": {fileID: 0}
+  canSetPerformanceMode: 0
+  performanceToggle: {fileID: 0}
   targetCanvas: {fileID: 44206065}
 --- !u!114 &1473826205
 MonoBehaviour:
@@ -18398,10 +18397,8 @@ MonoBehaviour:
   backgroundAudio: {fileID: 213340554}
   Trophies: {fileID: 966294716809553799, guid: b04efbb78a24a7c4a87ff810375fa4fe, type: 3}
   zombieWin: {fileID: 3374120058566231978, guid: 3a34b8eea6cf39c4681d4f25f3e4c8de, type: 3}
-  "\u5DF2\u7ECF\u4EA7\u751F\u7ED3\u5C40\u63D0\u793A": 0
-  "\u80CC\u666F":
-  - {fileID: 7725186693882697506, guid: 1c5cc762e79b4b8458d13d71ef9e2403, type: 3}
-  - {fileID: 21300000, guid: 83f272c718a37be4ea714baab3de7013, type: 3}
+  OutcomePromptBeenGenerated: 0
+  backgroundSpritesAry: []
 --- !u!114 &1840983544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18696,7 +18693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92f5525ef18b8d342a11c0c79757f899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "\u65D7\u5E1C\u63A7\u5236": {fileID: 2090727055}
+  flagControl: {fileID: 2090727055}
   timeNodes:
     totalZombies: 0
     info: []

@@ -1,4 +1,4 @@
-﻿Shader "Unlit/GameUnitShaderWithBossMouse"
+﻿Shader "Unlit/GameUnitShader"
 {
     Properties
     {
@@ -8,10 +8,7 @@
         _ScaleX ("ScaleX", Float) = 1.0
         _ScaleY ("ScaleY", Float) = 1.0
         _Alpha ("Alpha", Float) = 1
-        _IsVisible ("IsVisible", Range(-1, 0)) = 0
-        _Color("Add Color", Color) = (1, 1, 1, 0.7)
-        _TintColor("Tint Color", Color) = (1, 1, 1, 1)
-        _BlendColor("Blend Color", Color) = (1, 1, 1, 1)
+        _IsVisible ("IsVisible", Range(-1,0)) = 0
     }
     SubShader
     {
@@ -45,22 +42,16 @@
                 float4 vertex : SV_POSITION;
             };
 
-            // Properties from BossMouseShader
             sampler2D _MainTex;
-            fixed4 _Color;
-            fixed4 _TintColor;
-            fixed4 _BlendColor;
             float4 _MainTex_ST;
-
-            // Properties from Unlit/GameUnitShader
             float _AngleX;
             float _AngleY;
             float _ScaleX;
             float _ScaleY;
+            float _Rotation;
             float _Alpha;
             float _IsVisible;
 
-            // Helper functions for transformations
             float2 scale(float2 v, float s_x, float s_y)
             {
                 return float2(v.x * s_x, v.y * s_y);
@@ -81,9 +72,9 @@
             {
                 v2f o;
 
-                // Rotation and scaling from the GameUnitShader
                 float angle_x = _AngleX ;
                 float angle_y = -_AngleY;
+                
                 angle_x += angle_y;
                 const float rotation = angle_y;
 
@@ -104,28 +95,14 @@
 
             fixed4 frag(v2f i) : SV_Target
             {
-                fixed4 tex = tex2D(_MainTex, i.uv);
-
-                // BossMouseShader effect: Adding color highlight based on transparency and blending
-                fixed4 highlight = tex + _Color * tex.a;
-                tex = lerp(tex, highlight, _Color.a);
-
-                tex.rgb *= _TintColor.rgb;
-                tex.a *= _TintColor.a;
-
-                tex.rgb *= _BlendColor.rgb;
-                tex.a *= _BlendColor.a;
-
-                // Handling visibility from GameUnitShader
+                fixed4 tex_color = tex2D(_MainTex, i.uv);
                 if (_IsVisible == -1)
                 {
-                    tex.a = 0.0;
-                    return tex;
+                    tex_color.a = 0.0;
+                    return tex_color;
                 }
-
-                tex.a *= _Alpha;
-
-                return tex;
+                tex_color.a *= _Alpha;
+                return tex_color;
             }
             ENDCG
         }

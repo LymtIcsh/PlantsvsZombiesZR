@@ -657,7 +657,7 @@ Animator:
   m_GameObject: {fileID: 8428489000010157032}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: c021f445ade336842840da71dbc4d518, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1f861aab8316ce948a6a6160d8d5c02e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -828,20 +828,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 3
-  "\u690D\u7269\u7C7B\u578B": 0
+  _plantType: 0
   tallPlant: 0
   myGrid: {fileID: 0}
   row: 0
-  "\u8840\u91CF": 0
-  "\u6700\u5927\u8840\u91CF": 0
+  Health: 0
+  MaxHealth: 0
   Armor: 0
   state: 0
   highlightMaterial: {fileID: 2100000, guid: 29862a078a525a649b6dbb7f687adefe, type: 2}
   allRenderers: []
-  "\u53EF\u6B7B\u4EA1": 1
-  "\u53EF\u88AB\u653B\u51FB": 1
+  IsCanDie: 1
+  CanSubjectAttack: 1
   forestSlider: {fileID: 0}
   animator: {fileID: 0}
+  _environmentalVelocityZone: 1
   detectZombieRegion: {fileID: 0}
   ownSprite: {fileID: 0}
 --- !u!210 &-2505521874954360786
